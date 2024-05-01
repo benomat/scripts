@@ -87,6 +87,8 @@ local emoteTable = {
 ["faceframe"] = {14353421343},
 ["Block Partier"] = {6865011755},
 ["sliving"] = {15392927897},
+["strut"] = {14353425085},
+["twirl"] = {14353423348},
 }
 
 local equippedEmotes = getgenv().emotes
