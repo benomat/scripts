@@ -1,0 +1,11 @@
+if getgenv().animloaded then loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/anim.lua',true))()
+else 
+    wait(10)
+    game.Players.LocalPlayer.CharacterAdded:Connect(function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/anim.lua',true))()
+        print("set animation")
+    end)
+    
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/anim.lua',true))()
+    getgenv().animloaded='hi'
+end

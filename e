@@ -1,0 +1,12 @@
+if getgenv().emotesloaded then loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/emotes.lua',true))()
+else 
+    wait(10)
+    game.Players.LocalPlayer.CharacterAdded:Connect(function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/emotes.lua',true))()
+        print("set animation")
+    end)
+    
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/emotes.lua',true))()
+    getgenv().emotesloaded='hi'
+end
+
