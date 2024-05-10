@@ -26,3 +26,9 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/e')
 ```lua
 loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/lock'))()
 ```
+
+
+### domainx, not by me but very cool!
+```lua
+loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/DomainX/main/source',true))()
+```
