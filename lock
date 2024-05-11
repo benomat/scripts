@@ -201,7 +201,7 @@ Tab1:Dropdown("AimPart",{"Head","HumanoidRootPart","UpperTorso","LowerTorso"},fu
 end)
 
 local Tab2 = Window:Tab("Silent Aim",false)
-Tab2:Label("doesnt work")
+Tab2:Label("doesnt work (I tink)")
 Tab2:Toggle("Toggle Silent Aim",function(bool)
     DaHoodSettings.SilentAim = bool
 end)
