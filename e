@@ -1,3 +1,5 @@
+--this part doesnt work with solara yet (apperently)
+-- you gotta paste raw emotes.lua below the getgenv
 if getgenv().emotesloaded then loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/emotes.lua',true))()
 else 
     wait(10)

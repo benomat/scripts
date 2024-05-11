@@ -1,3 +1,5 @@
+--this part doesnt work with solara yet (apperently)
+-- you gotta paste raw anim.lua below the getgenv
 if getgenv().animloaded then loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/anim.lua',true))()
 else 
     wait(10)
