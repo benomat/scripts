@@ -8,7 +8,7 @@ Tab1:Label("Aimlock")
 
 Tab1:Button("Main Aimlock",function(bool)
     getgenv().AimPart = "HumanoidRootPart"
-	getgenv().AimlockKey = "q"
+	getgenv().AimlockKey = "e"
 	getgenv().AimRadius = 30
 	getgenv().ThirdPerson = true
 	getgenv().FirstPerson = true
@@ -188,7 +188,7 @@ Tab1:Button("Main Aimlock",function(bool)
         )
 end)
 
-Tab1:Textbox("Aimlock Keybind","Q",function(bool)
+Tab1:Textbox("Aimlock Keybind","E",function(bool)
     getgenv().AimlockKey = bool
 end)
 
