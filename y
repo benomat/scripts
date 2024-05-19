@@ -1,3 +1,2 @@
-print'hi you guys :>'
-wait(3)
+print'hi you guys :>, hi qui'
 setclipboard(true)
