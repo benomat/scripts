@@ -27,6 +27,10 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/e')
 loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/lock'))()
 ```
 
+## Script Hub (unfinished)
+```lua
+loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/vindex'))()
+```
 
 ### domainx, not by me but very cool!
 ```lua
