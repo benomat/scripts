@@ -1,5 +1,5 @@
 print("loading Vindex with executor" .. getexecutorname())
-local p=game.pId
+local p=game.PlaceId
 local g=game.GameId
 function notify(t)
     game:GetService("StarterGui"):SetCore("SendNotification", {
