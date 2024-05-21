@@ -18,7 +18,7 @@ for i,v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do
 end
 
 
--- // Vars \\ --
+-- // Vars \\a --
 local plr           = game:GetService("Players").LocalPlayer
 local TweenService  = game:GetService("TweenService")
 local noclipE       = false
