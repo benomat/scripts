@@ -7,7 +7,7 @@ repeat task.wait() until game:GetService("Players").LocalPlayer:FindFirstChild("
 wait(.5)
 notify("script compatibility by benomat, script originally by swag")
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Mapple7777/UI-Librarys/main/UI-1/UI.lua"))()
-local Window = Library:Create("Demonfall")
+local Window = Library:Create("Demonfall","benomat <3")
 
 -- // Pre Scripts
 game:GetService("UserInputService").MouseIconEnabled = true  ---- Shows You Your MOUSE  FUCK THAT DEMON FALL POINTER
