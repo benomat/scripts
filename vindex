@@ -51,7 +51,7 @@ elseif p==6403373529 then --slapbattles
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/Dusty1234567890/TestMain/main/SLAPBATTLESGUI5")))()
 elseif p==15532962292 then --solsrng
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/era7/main/Sols"))()
-elseif g=1650291138 then --demonfall
+elseif g==1650291138 then --demonfall
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/demonfall'))()
 else notify("Game not supported :'(")
 end
