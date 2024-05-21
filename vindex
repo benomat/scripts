@@ -1,7 +1,8 @@
 print("loading Vindex with executor" .. getexecutorname())
 local p=game.PlaceId
 local g=game.GameId
-function notify(t)
+notify=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/notify'))().New
+function OLDnotify(t)
     game:GetService("StarterGui"):SetCore("SendNotification", {
 		Title = "Vindex Hub";
 		Text = t})
@@ -15,7 +16,7 @@ elseif p==13772394625 then --bladeball
     loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/autoparry.lua"))()
 elseif p == 2753915549 then --bloxfruits
     setclipboard("xk06nst6bgj8a")
-    notify("Copied key to clipboard")
+    notify("Copied key to clipboard",10)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiSupremacy/Loader.xyz/main/Loader.Blurk%20ST%20%3A%20G"))()
 elseif p==4924922222 then --brookhaven
     loadstring(game:HttpGet('https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script'))()
