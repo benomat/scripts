@@ -3,7 +3,6 @@
 if getgenv().emotesloaded then loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/emotes.lua',true))()
 else 
     repeat task.wait() until game:IsLoaded()
-    repeat task.wait() until game:GetService("Players").LocalPlayer:FindFirstChild("GameLoaded")
     game.Players.LocalPlayer.CharacterAdded:Connect(function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/emotes.lua',true))()
         print("set animation")
