@@ -17,7 +17,7 @@ if g==111958650 then --arsenal
     loadstring(game:HttpGet("https://raw.githubusercontent.com/RuMiNDev/leg-hub/main/main.lua", true))()
 elseif p==1537690962 then --beswarm
     loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/29"))()
-elseif p==13772394625 then --bladeball
+elseif g==4777817887 then --bladeball
     loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/autoparry.lua"))()
 elseif p == 2753915549 then --bloxfruits
     setclipboard("xk06nst6bgj8a")
