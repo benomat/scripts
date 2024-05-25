@@ -3,7 +3,7 @@ local p=game.PlaceId
 local g=game.GameId
 setclipboard(p..","..g)
 ]]
-print("loading Vindex with executor" .. getexecutorname())
+print("loading benomats script hub with " .. getexecutorname())
 local p=game.PlaceId
 local g=game.GameId
 notify=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/notify'))().New
@@ -21,7 +21,7 @@ elseif g==4777817887 then --bladeball
     loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/autoparry.lua"))()
 elseif p == 2753915549 then --bloxfruits
     setclipboard("xk06nst6bgj8a")
-    notify("Copied key to clipboard",10)
+    notify("Copied key to clipboard",9)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiSupremacy/Loader.xyz/main/Loader.Blurk%20ST%20%3A%20G"))()
 elseif p==4924922222 then --brookhaven
     loadstring(game:HttpGet('https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script'))()
@@ -48,9 +48,11 @@ elseif p==292439477 then --phantomforces
 elseif p==155615604 then --prisonlife
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))()
 elseif p==6403373529 then --slapbattles
-    loadstring(game:HttpGet(("https://raw.githubusercontent.com/Dusty1234567890/TestMain/main/SLAPBATTLESGUI5")))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Dusty1234567890/TestMain/main/SLAPBATTLESGUI5"))()
 elseif p==15532962292 then --solsrng
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/era7/main/Sols"))()
+    loadstring(game:HttpGet('https://pastefy.app/55pnwOy3/raw'))()
+    setclipboard("vy5fBGS6nNUuJjgxWhCLpR")
+    notify("Copied key to clipboard",9)
 elseif g==1650291138 then --demonfall
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/demonfall'))()
 else notify("Game not supported :'(")

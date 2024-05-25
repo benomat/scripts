@@ -33,7 +33,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/dem
 
 ## Script Hub
 ```lua
-loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/vindex'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/hub'))()
 ```
 
 ### domainx, not by me but very cool!
