@@ -50,7 +50,7 @@ elseif p==8737899170 then --petsim99
 elseif p==292439477 then --phantomforces
     loadstring(game:HttpGet("https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/homohack.lua"))()
 elseif p==155615604 then --prison life
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/scam666/Prevail-X/main/src.lua", true))()
 elseif p==6403373529 then --slap battles
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Dusty1234567890/TestMain/main/SLAPBATTLESGUI5"))()
     --loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))()
