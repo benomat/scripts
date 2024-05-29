@@ -45,8 +45,8 @@ elseif p==13822889 then --lumbertycoon 2
 elseif p==142823291 then --mm2
     loadstring(game:HttpGet("https://pastebin.com/raw/mT10xnt7", true))()
 elseif p==8737899170 then --petsim99
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/HGIOD/AquaFlowX/main/FlowX'))()
-    --loadstring(game:HttpGet("https://raw.githubusercontent.com/idonthaveoneatm/lua/normal/games/PetSimulator99/SolaraVersion.lua"))()
+    --loadstring(game:HttpGet('https://raw.githubusercontent.com/HGIOD/AquaFlowX/main/FlowX'))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/idonthaveoneatm/lua/normal/games/PetSimulator99/SolaraVersion.lua"))()
 elseif p==292439477 then --phantomforces
     loadstring(game:HttpGet("https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/homohack.lua"))()
 elseif p==155615604 then --prisonlife
