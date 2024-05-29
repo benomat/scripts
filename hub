@@ -15,7 +15,7 @@ function OLDnotify(t)
 
 if g==111958650 then --arsenal
     loadstring(game:HttpGet("https://raw.githubusercontent.com/RuMiNDev/leg-hub/main/main.lua", true))()
-elseif p==1537690962 then --beswarm
+elseif p==1537690962 then --beeswarm
     loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/29"))()
 elseif g==4777817887 then --bladeball
     loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/autoparry.lua"))()
