@@ -14,7 +14,7 @@ function OLDnotify(t)
     end
 
 if g==111958650 then --arsenal
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/RuMiNDev/leg-hub/main/main.lua", true))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LEGHUBarsenal'))()
 elseif p==6872265039 then --bedwars
     loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
     --loadstring(game:HttpGet("https://raw.githubusercontent.com/AlSploit/AlSploit/main/MainScript"))()
