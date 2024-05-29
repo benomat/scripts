@@ -9,7 +9,7 @@ local g=game.GameId
 notify=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/notify'))().New
 function OLDnotify(t)
     game:GetService("StarterGui"):SetCore("SendNotification", {
-		Title = "Vindex Hub";
+		Title = "Benomat's Hub";
 		Text = t})
     end
 
