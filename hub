@@ -39,7 +39,7 @@ elseif p==6516141723 then --doors (2440500124)
 elseif p==16389395869 then --dustytrip
     loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/ADustyTrip",true))()
 elseif p==3214114884 then --flagwars
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/frankblox/rbxscripts/main/0flagwars/gsss"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/frankblox/rbxscripts/main/0flagwarssss"))()
 elseif p==13822889 then --lumbertycoon 2
     loadstring(game:HttpGet("https://pastebin.com/raw/ka0Y5Eug"))()
 elseif p==142823291 then --mm2
