@@ -26,10 +26,6 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/e')
 ```lua
 loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/lock'))()
 ```
-## Demonfall
-```lua
-loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/demonfall'))()
-```
 
 ## Script Hub
 ```lua
