@@ -3,7 +3,7 @@ local p=game.PlaceId
 local g=game.GameId
 setclipboard(p..","..g)
 ]]
-print("loading benomats script hub with " .. getexecutorname() .. "\n open an issue on https://github.com/benomat/scripts if any game that should be supported isnt working (NOT a feature of script being broken).")
+print("loading benomats script hub with " .. getexecutorname() .. "\n open an issue on https://github.com/benomat/scripts if any game that should be supported isnt working (NOT a feature of script being broken). You can also dm me on discord @benomat for this or if you have a script that you want to be added")
 local p=game.PlaceId
 local g=game.GameId
 notify=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/notify'))().New
