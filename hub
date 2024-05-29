@@ -43,17 +43,27 @@ elseif p==142823291 then --mm2
     loadstring(game:HttpGet("https://pastebin.com/raw/mT10xnt7", true))()
 elseif p==8737899170 then --petsim99
     loadstring(game:HttpGet('https://raw.githubusercontent.com/HGIOD/AquaFlowX/main/FlowX'))()
+    --loadstring(game:HttpGet("https://raw.githubusercontent.com/idonthaveoneatm/lua/normal/games/PetSimulator99/SolaraVersion.lua"))()
 elseif p==292439477 then --phantomforces
     loadstring(game:HttpGet("https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/homohack.lua"))()
 elseif p==155615604 then --prisonlife
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))()
 elseif p==6403373529 then --slapbattles
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Dusty1234567890/TestMain/main/SLAPBATTLESGUI5"))()
+    --loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))()
 elseif p==15532962292 then --solsrng
     loadstring(game:HttpGet('https://pastefy.app/55pnwOy3/raw'))()
     setclipboard("vy5fBGS6nNUuJjgxWhCLpR")
     notify("Copied key to clipboard",9)
 elseif g==1650291138 then --demonfall
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/demonfall'))()
+elseif p==4282985734 then --combat warriors
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/combatwarriors'))()
+elseif p==3351674303 then --driving empire
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Marco8642/science/main/drivingempire", true))()
+elseif p==893973440 then --flee the facility
+    loadstring(game:HttpGet('https://pastebin.com/raw/3uMsh1vn'))()
+elseif p==10449761463 then --strongest battlegrounds
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/TSBUtils.lua"))()
 else notify("Game not supported :'(")
 end
