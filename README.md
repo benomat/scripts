@@ -35,6 +35,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/dem
 ```lua
 loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/hub'))()
 ```
+supports: arsenal, bedwars, beeswarm simulator, bladeball, bloxfruits, brookhaven, build a boat, counterblox, doors, dustytrip, flagwars, lumbertycoon 2, mm2, petsim99, phantomforces, prisonlife, slapbattles, solsrng, demonfall, combat warriors, driving empire, flee the facility, strongest battlegrounds, jailbreak
 
 ### domainx, not by me but very cool!
 ```lua

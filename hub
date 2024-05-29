@@ -18,7 +18,7 @@ if g==111958650 then --arsenal
 elseif p==6872265039 then --bedwars
     loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
     --loadstring(game:HttpGet("https://raw.githubusercontent.com/AlSploit/AlSploit/main/MainScript"))()
-elseif p==1537690962 then --beeswarm
+elseif p==1537690962 then --beeswarm simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/29"))()
 elseif g==4777817887 then --bladeball
     loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/autoparry.lua"))()
@@ -28,7 +28,7 @@ elseif p == 2753915549 then --bloxfruits
     loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiSupremacy/Loader.xyz/main/Loader.Blurk%20ST%20%3A%20G"))()
 elseif p==4924922222 then --brookhaven
     loadstring(game:HttpGet('https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script'))()
-elseif p==537413528 then --buildaboat
+elseif p==537413528 then --build a boat
     loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/juywvm/-Roblox-Projects-/main/babft"))()
 elseif p==301549746 then --counterblox
     loadstring(game:HttpGet("https://raw.githubusercontent.com/fliskScript/jaran.vip/main/free.lua"))()
@@ -40,7 +40,7 @@ elseif p==16389395869 then --dustytrip
     loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/ADustyTrip",true))()
 elseif p==3214114884 then --flagwars
     loadstring(game:HttpGet("https://raw.githubusercontent.com/frankblox/rbxscripts/main/0flagwars/gsss"))()
-elseif p==13822889 then --lumbertycoon2
+elseif p==13822889 then --lumbertycoon 2
     loadstring(game:HttpGet("https://pastebin.com/raw/ka0Y5Eug"))()
 elseif p==142823291 then --mm2
     loadstring(game:HttpGet("https://pastebin.com/raw/mT10xnt7", true))()
