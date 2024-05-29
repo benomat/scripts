@@ -78,6 +78,8 @@ elseif p==2210085102 then--Naval Warfare
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/NavalWarfare.lua'))()
 elseif p==698448212 then--RoBeats
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/RoBeats.lua'))()
+elseif p==6447798030 then --funky friday
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoinkyPoinkie/FunkyFridayDevTools/main/Un-Obfuscated",true))()
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua"))()
