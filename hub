@@ -70,5 +70,13 @@ elseif p==10449761463 then --strongest battlegrounds
     loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/TSBUtils.lua"))()
 elseif p==606849621 then --jailbreak
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Pxsta72/ProjectAuto/main/AutoRobV4Release"))
+elseif p==8365905206 then--UTG (untitled tag game)
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/UTG.lua'))()
+elseif p==9791603388 then--underground war 2.0
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/UndergroundWar'))()
+elseif p==2210085102 then--UTG (untitled tag game)
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/NavalWarfare.lua'))()
+elseif p==698448212 then--RoBeats
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/RoBeats.lua'))()
 else notify("Game not supported :'(")
 end
