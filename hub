@@ -3,7 +3,7 @@ local p=game.PlaceId
 local g=game.GameId
 setclipboard(p..","..g)
 ]]
-print("loading benomats script hub with " .. getexecutorname())
+print("loading benomats script hub with " .. getexecutorname() .. "\n open an issue on https://github.com/benomat/scripts if any game that should be supported isnt working (NOT a feature of script being broken).")
 local p=game.PlaceId
 local g=game.GameId
 notify=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/notify'))().New
@@ -15,6 +15,9 @@ function OLDnotify(t)
 
 if g==111958650 then --arsenal
     loadstring(game:HttpGet("https://raw.githubusercontent.com/RuMiNDev/leg-hub/main/main.lua", true))()
+elseif p==6872265039 then --bedwars
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+    --loadstring(game:HttpGet("https://raw.githubusercontent.com/AlSploit/AlSploit/main/MainScript"))()
 elseif p==1537690962 then --beeswarm
     loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/29"))()
 elseif g==4777817887 then --bladeball
@@ -65,5 +68,7 @@ elseif p==893973440 then --flee the facility
     loadstring(game:HttpGet('https://pastebin.com/raw/3uMsh1vn'))()
 elseif p==10449761463 then --strongest battlegrounds
     loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/TSBUtils.lua"))()
+elseif p==606849621 then --jailbreak
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Pxsta72/ProjectAuto/main/AutoRobV4Release"))
 else notify("Game not supported :'(")
 end
