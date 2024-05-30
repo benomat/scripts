@@ -2,7 +2,7 @@ all scripts compatible with executors like solara or incognito
 
 # Scripts
 
-note: solara is currently pretty weird about getgenv
+note: solara is not updated rn :'(
 
 ## Animation changer (bundles)
 ```lua
