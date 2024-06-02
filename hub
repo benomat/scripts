@@ -3,7 +3,7 @@ local p=game.PlaceId
 local g=game.GameId
 setclipboard(p..","..g)
 ]]
-print("loading benomats script hub with " .. getexecutorname() .. "\n open an issue on https://github.com/benomat/scripts if any game that should be supported isnt working (NOT a feature of script being broken). You can also dm me on discord @benomat for this or if you have a script that you want to be added")
+print("loading benomat's script hub with " .. getexecutorname() .. "\n dm me if any script isn't supported that should be.\nYou can also send me scripts that you want to be added but DONT ask me to search for scripts.")
 local p=game.PlaceId
 local g=game.GameId
 notify=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/notify'))().New
@@ -11,8 +11,14 @@ function OLDnotify(t)
     game:GetService("StarterGui"):SetCore("SendNotification", {
 		Title = "Benomat's Hub";
 		Text = t})
-    end
-
+end
+if getexecutorname():sub(1, 6) == "solara" then
+    e = 1
+elseif getexecutorname():sub(1, 5) == "incog" then
+    e = 2
+else
+    e = 0
+end
 if g==111958650 then --arsenal
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LEGHUBarsenal'))()
 elseif p==6872265039 then --bedwars
@@ -49,7 +55,7 @@ elseif p==8737899170 then --petsim99
     loadstring(game:HttpGet("https://raw.githubusercontent.com/idonthaveoneatm/lua/normal/games/PetSimulator99/SolaraVersion.lua"))()
 elseif p==292439477 then --phantomforces
     loadstring(game:HttpGet("https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/homohack.lua"))()
-elseif p==155615604 then --prison life
+elseif p==155615604 and e~=2 then --prison life (solara only)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/scam666/Prevail-X/main/src.lua", true))()
 elseif p==6403373529 then --slap battles
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Dusty1234567890/TestMain/main/SLAPBATTLESGUI5"))()
@@ -67,7 +73,8 @@ elseif p==3351674303 then --driving empire
 elseif p==893973440 then --flee the facility
     loadstring(game:HttpGet('https://pastebin.com/raw/3uMsh1vn'))()
 elseif p==10449761463 then --strongest battlegrounds
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/TSBUtils.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/idontknowwhattonamemyself/a/Lua/tsb"))()
+    --loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/TSBUtils.lua"))() --this one might only work on solara or not at all
 elseif p==606849621 then --jailbreak
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Pxsta72/ProjectAuto/main/AutoRobV4Release"))
 elseif p==8365905206 then--untitled tag game (UTG)
