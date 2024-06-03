@@ -3,7 +3,7 @@ local p=game.PlaceId
 local g=game.GameId
 setclipboard(p..","..g)
 ]]
-print("loading benomat's script hub with " .. getexecutorname() .. "\n dm me if any script isn't supported that should be.\nYou can also send me scripts that you want to be added but DONT ask me to search for scripts.")
+print("loading benomat's script hub with " .. getexecutorname() .. "\n dm me if any script isn't supported that should be.\nYou can also send me scripts that you want to be added but DONT ask me to search for scripts or to make them.")
 local p=game.PlaceId
 local g=game.GameId
 notify=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/notify'))().New
@@ -12,7 +12,9 @@ function OLDnotify(t)
 		Title = "Benomat's Hub";
 		Text = t})
 end
-if getexecutorname():sub(1, 6) == "solara" then e = 1 elseif getexecutorname():sub(1, 5) == "incog" then e = 2 else e = 0 end
+
+
+if getexecutorname():sub(1, 6) == "solara" then e = 1 elseif getexecutorname():sub(1, 5) == "incog" then e = 2 else e = 0 end --executor identify
 
 
 if g==111958650 then --arsenal
@@ -94,9 +96,10 @@ elseif p==698448212 then--RoBeats
 elseif p==6447798030 then --funky friday -> might make a good autoplay in a month or so
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoinkyPoinkie/FunkyFridayDevTools/main/Un-Obfuscated",true))()
     -- alt link (same script) loadstring(game:HttpGet("https://raw.githubusercontent.com/Zivixian/FunkyFriday/main/ProjectBishopUpdated.lua"))()
+elseif (p==6804602922 or g==2583564222) and e~=2 then --Boxing Beta! 🥊
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/boxingbeta.lua'))()
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua"))()
 else notify("Game not supported :'(")
 end
--- meow
