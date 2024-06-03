@@ -1,7 +1,9 @@
 --[[
+```lua
 local p=game.PlaceId
 local g=game.GameId
 setclipboard("elseif (p=="..p.." and g=="..g..") then --"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
+```
 ]]
 print(" [V1.0] loading benomat's script hub with " .. getexecutorname())
 local p=game.PlaceId
@@ -62,8 +64,9 @@ elseif p==3214114884 then --flagwars
     loadstring(game:HttpGet("https://raw.githubusercontent.com/frankblox/rbxscripts/main/0flagwarssss"))()
 elseif p==13822889 then --lumbertycoon 2
     loadstring(game:HttpGet("https://pastebin.com/raw/ka0Y5Eug"))()
-elseif p==142823291 then --mm2
-    loadstring(game:HttpGet("https://pastebin.com/raw/mT10xnt7", true))()
+elseif (p==142823291 and g==66654135) then --Murder Mystery 2 mm2
+    fn("this might take a bit", "this script might take a while to load. Hang tight!",40)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Yousuck780/mm2/main/mm2"))()
 elseif p==8737899170 then --petsim99
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/HGIOD/AquaFlowX/main/FlowX'))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/idonthaveoneatm/lua/normal/games/PetSimulator99/SolaraVersion.lua"))()
