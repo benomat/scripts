@@ -17,8 +17,10 @@ if getexecutorname():sub(1, 6) == "solara" then e = 1 elseif getexecutorname():s
 
 if g==111958650 then --arsenal
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LEGHUBarsenal'))()
-elseif p==6872265039 then --bedwars
+elseif p==6872265039 and e~=2 then --bedwars
     loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+elseif p==6872265039 and e==2 then --bedwars
+    notify("bedwars is currently solara only, sorry.")
     --loadstring(game:HttpGet("https://raw.githubusercontent.com/AlSploit/AlSploit/main/MainScript"))()
 elseif p==1537690962 then --beeswarm simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/29"))()
