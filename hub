@@ -3,7 +3,7 @@ local p=game.PlaceId
 local g=game.GameId
 setclipboard("elseif (p=="..p.." and p=="..g..") then --"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
 ]]
-print("loading benomat's script hub with " .. getexecutorname() .. "\n dm me if any script isn't supported that should be.\nYou can also send me scripts that you want to be added but DONT ask me to search for scripts or to make them.")
+print(" [V1.0] loading benomat's script hub with " .. getexecutorname()")
 local p=game.PlaceId
 local g=game.GameId
 notify=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/notify'))().New
@@ -105,9 +105,9 @@ elseif p==698448212 then--RoBeats
 elseif p==6447798030 then --funky friday -> might make a good autoplay in a month or so
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoinkyPoinkie/FunkyFridayDevTools/main/Un-Obfuscated",true))()
     -- alt link (same script) loadstring(game:HttpGet("https://raw.githubusercontent.com/Zivixian/FunkyFriday/main/ProjectBishopUpdated.lua"))()
-elseif (p==6804602922 or g==2583564222) and e~=2 then --Boxing Beta! 🥊
+elseif (p==6804602922 or g==2583564222) and e~=2 then --Boxing Beta!
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/boxingbeta.lua'))()
-elseif (p==17017769292 and p==5836869368) then --Anime Defenders [🗿RAIDS]
+elseif (p==17017769292 and p==5836869368) then --Anime Defenders 
     loadstring(game:HttpGet("https://pastefy.app/I3MovqNs/raw"))()
     setclipboard("pyXkshcmEH85PuNgLYQ2dD")
     fn("Copied key to clipboard", "Just click into the text field and press ctrl+v if the key doesnt work you gotta get your own :'(",10)
