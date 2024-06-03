@@ -24,10 +24,14 @@ elseif p==1537690962 then --beeswarm simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/29"))()
 elseif g==4777817887 then --bladeball
     loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/autoparry.lua"))()
-elseif p == 2753915549 then --bloxfruits
+elseif p == 2753915549 or g==994732206 then --bloxfruits
+    if e==2 then 
+        notify("This doesnt seem to be supported on incognito :(")
+        OLDnotify("This doesnt seem to be supported on incognito :(")
+    end
     setclipboard("xk06nst6bgj8a")
     notify("Copied key to clipboard",9)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiSupremacy/Loader.xyz/main/Loader.Blurk%20ST%20%3A%20G"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiSupremacy/Loader.xyz/main/Loader.Blurk%20ST%20%3A%20G"))() --doesnt seem to worki :(
 elseif p==4924922222 then --brookhaven
     loadstring(game:HttpGet('https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script'))()
 elseif p==537413528 then --build a boat
