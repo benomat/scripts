@@ -12,10 +12,19 @@ function OLDnotify(t)
 		Title = "Benomat's Hub";
 		Text = t})
 end
+local msgb = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
+function AskLoad(t)
+    msgb.Show({Position = UDim2.new(0.5,0,0.5,0), Text = "Benomat's Hub", Description = t, MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
+        if (res == "Yes") then
+            return true
+        else return false
+        end
+     end})
+    end
 
 
 if getexecutorname():sub(1, 6) == "solara" then e = 1 elseif getexecutorname():sub(1, 5) == "incog" then e = 2 else e = 0 end --executor identify
-
+if e==2 then print("i hate incognito :(") end
 
 if g==111958650 then --arsenal
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LEGHUBarsenal'))()
@@ -28,14 +37,12 @@ elseif p==1537690962 then --beeswarm simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/29"))()
 elseif g==4777817887 then --bladeball
     loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/autoparry.lua"))()
-elseif p == 2753915549 or g==994732206 then --bloxfruits
-    if e==2 then 
-        notify("This doesnt seem to be supported on incognito :(")
-        OLDnotify("This doesnt seem to be supported on incognito :(")
-    end
+elseif (p == 2753915549 or g==994732206) and e==1 then --bloxfruits solara
     setclipboard("xk06nst6bgj8a")
     notify("Copied key to clipboard",9)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiSupremacy/Loader.xyz/main/Loader.Blurk%20ST%20%3A%20G"))() --doesnt seem to worki :(
+elseif (p == 2753915549 or g==994732206) and e~=1 then --bloxfruits others
+    if AskLoad("Sadly there's no good Blox Fruits script for your executor.\nDo you want to load a CHEST FARM script instead?") then loadstring(game:HttpGet("https://raw.githubusercontent.com/Yatsuraa/Yuri/main/AutoChest.lua"))() end
 elseif p==4924922222 then --brookhaven
     loadstring(game:HttpGet('https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script'))()
 elseif p==537413528 then --build a boat
@@ -81,9 +88,8 @@ elseif p==893973440 then --flee the facility
 elseif p==10449761463 then --strongest battlegrounds
     loadstring(game:HttpGet("https://raw.githubusercontent.com/idontknowwhattonamemyself/a/Lua/tsb"))()
     --loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/TSBUtils.lua"))() --this one might only work on solara or not at all
-elseif p==606849621 and e==1 then --jailbreak solara
+elseif p==606849621 and e~=2 then --jailbreak solara
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Pxsta72/ProjectAuto/main/AutoRobV4Release"))
-elseif p==606849621 and e~=1 then --jailbreak non solara
     loadstring(game:HttpGet("https://farmhub.lol/AutoCrateFree.lua"))()
 elseif p==8365905206 then--untitled tag game (UTG)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/UTG.lua'))()

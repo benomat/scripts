@@ -35,7 +35,6 @@ end)
 
 Section:NewButton("Speedbypass full flash", "ButtonInfo", function()
     function isNumber(str)
-
   if tonumber(str) ~= nil or str == 'inf' then
 
     return true
