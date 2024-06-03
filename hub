@@ -3,7 +3,7 @@ local p=game.PlaceId
 local g=game.GameId
 setclipboard("elseif (p=="..p.." and p=="..g..") then --"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
 ]]
-print(" [V1.0] loading benomat's script hub with " .. getexecutorname()")
+print(" [V1.0] loading benomat's script hub with " .. getexecutorname())
 local p=game.PlaceId
 local g=game.GameId
 notify=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/notify'))().New
