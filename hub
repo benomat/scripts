@@ -5,7 +5,7 @@ local g=game.GameId
 setclipboard("elseif (p=="..p.." and g=="..g..") then --"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
 ```
 ]]
-print(" [V1.0] loading benomat's script hub with " .. getexecutorname())
+print(" [V1.1] loading benomat's script hub with " .. getexecutorname())
 getgenv().joini=nil
 local p=game.PlaceId
 local g=game.GameId
