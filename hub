@@ -6,11 +6,12 @@ setclipboard("elseif (p=="..p.." and g=="..g..") then --"..game:GetService("Mark
 ```
 ]]
 print(" [V1.0] loading benomat's script hub with " .. getexecutorname())
+getgenv().joini=nil
 local p=game.PlaceId
 local g=game.GameId
 notify=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/notify'))().New
 fuckdude = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))().Notify
-sw1ndlernotify = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/1f2bb606eca6e2cf8ffd4fc5e1761afc19826720/paste/sw1ndlernotify.lua'))()
+sw1ndlernotify = loadstring(game:HttpGet('https://github.com/benomat/scripts/blob/m/paste/sw1ndlernotify.lua?raw=true'))()
 function OLDnotify(t)
     game:GetService("StarterGui"):SetCore("SendNotification", {
 		Title = "Benomat's Hub";
@@ -145,4 +146,22 @@ end
 if supported then 
     print("Loaded on "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." /// pId: "..p.." gId:"..g)
 end
-sAsk("Do you want to join the support server?","setclipboard('https://discord.gg/gUMYGXqPPw');sNotify('Copied the invite to your clipboard, simple paste it into your browser or discord')")
+sw1ndlernotify:CreatePromptNotif({
+    TweenSpeed = 1,
+    Title = "Benomat's Hub",
+    Text = "Do you want to join the support discord server?",
+    Duration = 15,
+    Callback = function(Value)
+        if Value then getgenv().joini=true
+        else getgenv().joini=false end
+    end
+    })
+c=0
+while getgenv().joini==nil and c<150 do
+    wait(.1)
+    if getgenv().joini then 
+        setclipboard('https://discord.gg/gUMYGXqPPw')
+        sNotify('Copied the invite to your clipboard, simply paste it into your browser or discord')
+    end
+    c+=1
+end
