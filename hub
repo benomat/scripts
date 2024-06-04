@@ -10,7 +10,7 @@ local p=game.PlaceId
 local g=game.GameId
 notify=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/notify'))().New
 fuckdude = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))().Notify
-sw1ndlernotify = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/sw1ndlernotify.lua'))()
+sw1ndlernotify = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/1f2bb606eca6e2cf8ffd4fc5e1761afc19826720/paste/sw1ndlernotify.lua'))()
 function OLDnotify(t)
     game:GetService("StarterGui"):SetCore("SendNotification", {
 		Title = "Benomat's Hub";
@@ -33,7 +33,7 @@ function sAsk(t,s)
         TweenSpeed = 1,
         Title = "Benomat's Hub",
         Text = t,
-        Duration = 5,
+        Duration = d,
         Callback = function(Value)
           if Value then loadstring(s)() end
         end
@@ -145,3 +145,4 @@ end
 if supported then 
     print("Loaded on "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." /// pId: "..p.." gId:"..g)
 end
+sAsk("Do you want to join the support server?","setclipboard('https://discord.gg/gUMYGXqPPw');sNotify('Copied the invite to your clipboard, simple paste it into your browser or discord')")
