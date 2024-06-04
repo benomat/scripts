@@ -27,17 +27,16 @@ function AskLoad(t)
 function fn(t,d,duration)
     fuckdude({Description = d;Title = t;Duration = duration;})
 end
-
 if getexecutorname():sub(1, 6) == "solara" then e = 1 elseif getexecutorname():sub(1, 5) == "incog" then e = 2 else e = 0 end --executor identify
 if e==2 then warn("i hate incognito :(") end
-
+supported=false
 if g==111958650 then --arsenal
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LEGHUBarsenal'))()
 elseif p==6872265039 and e~=2 then --bedwars
+    fn("Benomat's Hub","Press RIGHT SHIFT to open the menu!",20)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
 elseif p==6872265039 and e==2 then --bedwars
-    notify("bedwars is currently solara only, sorry.")
-    --loadstring(game:HttpGet("https://raw.githubusercontent.com/AlSploit/AlSploit/main/MainScript"))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ohmygodiloveketamine/aeolusv2/main/script'))()
 elseif p==1537690962 then --beeswarm simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/29"))()
 elseif g==4777817887 then --bladeball
@@ -118,5 +117,11 @@ elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,247416853
     notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua"))()
 --anime defenders: loadstring(game:HttpGet("https://raw.githubusercontent.com/buang5516/buanghub/main/BUANGHUB.lua"))() most likely solara only OR doesnt work at all
-else notify("Game not supported :'(")
+else 
+    notify("Game not supported :'(")
+    warn("unsupported game: "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." /// pId: "..p.." gId:"..g)
+    supported=false
+end
+if supported then 
+    print("Loaded on "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." /// pId: "..p.." gId:"..g)
 end
