@@ -109,7 +109,7 @@ function createBaseNotifications()
     False.Parent = ToggleNotif
     
     local LocalScript = Instance.new("LocalScript")
-    LocalScript.Parent = ScreenGui
+    --LocalScript.Parent = ScreenGui
     
     local DefaultNotif = Instance.new("Frame")
     DefaultNotif.Name = "DefaultNotif"
@@ -171,7 +171,7 @@ function createBaseNotifications()
         syn.protect_gui(ScreenGui)
     end
     
-    --ScreenGui.Parent = game:GetService("Players").LocalPlayer.PlayerGui
+    ScreenGui.Parent = game:GetService("Players").LocalPlayer.PlayerGui
     return ScreenGui
 end
 
