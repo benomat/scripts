@@ -39,12 +39,12 @@ function sAsk(t,s)
         end
        })
     end
-function sNotify(t)
+function sNotify(t,d)
     sw1ndlernotify:CreateDefaultNotif({
         TweenSpeed = 1,
         Title = "Benomat's Hub",
         Text = t,
-        Duration = 5
+        Duration = d
        })
     end
 if getexecutorname():sub(1, 6) == "solara" then e = 1 elseif getexecutorname():sub(1, 5) == "incog" then e = 2 else e = 0 end --executor identify
@@ -133,11 +133,12 @@ elseif (p==3233893879 and g==1168263273) then --Bad Business (esp)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/bbesp.lua'))()
 elseif (p==14363263080 and g==848145103) then --Dungeon quest!
     loadstring(game:HttpGet('https://pastebin.com/raw/F5vSFHZt'))()
+    sNotify("DONT use the walkspeed feature!")
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua"))()
 else 
-    sNotify("Game not supported :'(")
+    sNotify("Game not supported :'(",8)
     warn("unsupported game: "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." /// pId: "..p.." gId:"..g)
     supported=false
 end
