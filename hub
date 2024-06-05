@@ -62,7 +62,7 @@ if g==111958650 then --arsenal
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LEGHUBarsenal'))()
 elseif p==6872265039 and e~=2 then --bedwars
     fn("Benomat's Hub","Press RIGHT SHIFT to open the menu!",20)
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua"))()
 elseif p==6872265039 and e==2 then --bedwars
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ohmygodiloveketamine/aeolusv2/main/script'))()
 elseif p==1537690962 then --beeswarm simulator
@@ -82,11 +82,11 @@ elseif p==537413528 then --build a boat
 elseif p==301549746 then --counterblox
     loadstring(game:HttpGet('https://raw.githubusercontent.com/fliskScript/jaran.vip/main/free.lua'))()
 elseif p==2788229376 then
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/ImagineProUser/vortexdahood/main/vortex", true))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ImagineProUser/vortexdahood/main/vortex"))()
 elseif g==2440500124 then --DOORS
     loadstring(game:HttpGet('https://raw.githubusercontent.com/KINGHUB01/BlackKing/main/BlackKingMb'))()
 elseif p==16389395869 then --dustytrip
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/artemy133563/Utilities/main/ADustyTrip",true))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/artemy133563/Utilities/main/ADustyTrip"))()
 elseif p==3214114884 then --flagwars
     loadstring(game:HttpGet('https://raw.githubusercontent.com/frankblox/rbxscripts/main/0flagwarssss'))()
 elseif p==13822889 then --lumbertycoon 2
@@ -100,9 +100,9 @@ elseif p==8737899170 then --petsim99
 elseif (p==292439477 and g==113491250) then -- Phantom Forces PC
     loadstring(game:HttpGet('https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/homohack.lua'))()
 elseif p==155615604 and e==1 then --prison life (solara only)
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/scam666/Prevail-X/main/src.lua", true))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/scam666/Prevail-X/main/src.lua"))()
 elseif p==155615604 and e~=1 then --prisn
-    loadstring(game:HttpGet('https://pastebin.com/raw/wMagw9Cn", true))()
+    loadstring(game:HttpGet('https://pastebin.com/raw/wMagw9Cn"))()
 elseif p==6403373529 then --slap battles
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Dusty1234567890/TestMain/main/SLAPBATTLESGUI5'))()
     --loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))()
@@ -117,7 +117,7 @@ elseif p==4282985734 or p==11979315221 or g==1390601379 then --combat warriors
     if AskLoad("Would you like to load an autofarm script?") then  loadstring(game:HttpGet('https://pastebin.com/raw/pexrijZn'))() end
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/combatwarriors'))()
 elseif p==3351674303 then --driving empire
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/drivingempire", true))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/drivingempire"))()
 elseif p==893973440 then --flee the facility
     loadstring(game:HttpGet('https://pastebin.com/raw/3uMsh1vn'))()
 elseif p==10449761463 then --strongest battlegrounds
@@ -135,7 +135,7 @@ elseif p==2210085102 then--Naval Warfare
 elseif p==698448212 then--RoBeats
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/RoBeats.lua'))()
 elseif p==6447798030 then --funky friday -> might make a good autoplay in a month or so
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/ZoinkyPoinkie/FunkyFridayDevTools/main/Un-Obfuscated",true))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ZoinkyPoinkie/FunkyFridayDevTools/main/Un-Obfuscated"))()
     -- alt link (same script) loadstring(game:HttpGet('https://raw.githubusercontent.com/Zivixian/FunkyFriday/main/ProjectBishopUpdated.lua'))()
 elseif (p==6804602922 or g==2583564222) and e~=2 then --Boxing Beta!
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/boxingbeta.lua'))()
