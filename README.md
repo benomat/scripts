@@ -25,7 +25,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/e')
 ```lua
 loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/hub'))()
 ```
-supports: arsenal, bedwars, beeswarm sim, bladeball, bloxfruits, brookhaven, build a boat, counterblox, doors, dustytrip, flagwars, lumbertycoon2, murder mystery 2, petsim99, phantomforces, prison life, slap battles, solsrng, demonfall, combat warriors, driving empire, flee the facility, the strongest battlegrounds, jailbreak, untitled tag game, underground war 2.0, naval warfare, RoBeats, funky friday (trash), boxing beta,tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim, bad business (esp), Dungeon Quest!
+supports: arsenal, bedwars, beeswarm sim, bladeball, bloxfruits, brookhaven, build a boat, counterblox, doors, dustytrip, flagwars, lumbertycoon2, murder mystery 2, petsim99, phantomforces, prison life, slap battles, solsrng, demonfall, combat warriors, driving empire, flee the facility, the strongest battlegrounds, jailbreak, untitled tag game, underground war 2.0, naval warfare, RoBeats, funky friday (trash), boxing beta,tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim, bad business (esp), Dungeon Quest!, war tycoon, AOPG, 3008, ability wars (kinda broken), evade
 
 ### domainx, not by me but very cool!
 ```lua
