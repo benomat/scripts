@@ -148,8 +148,16 @@ elseif (p==14363263080 or g==848145103) then --Dungeon quest!
 elseif (p==4639625707 or  g==1526814825) then --War Tycoon
     loadstring(game:HttpGet('https://raw.githubusercontent.com/defrizletov/war-tycoon/main/war.lua'))()
 elseif (p==8396586868 or  g==3213362013) then --AOPG
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Testing-A-0ne-Piece-Game-LeadMarkerAOPG-1595"))()
+    loadstring(game:HttpGet('https://rawscripts.net/raw/Testing-A-0ne-Piece-Game-LeadMarkerAOPG-1595'))()
     sNotify('Click the little crosshair and then "main"',15)
+elseif (p==2768379856 or  g==1000233041) then --3008 [2.73]
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/chiepz/aslbnmnkhby7e/main/crqhryvjahdjwysrnegsf%5Csgd'))()
+elseif (p==8260276694 or  g==3168615253) then --Ability Wars
+    loadstring(game:HttpGet('https://paste.ee/r/Wo5Kj'))()
+    sNotify("Script is kinda broken.")
+    sNotify("Press the top bar for blatant mode or whatever!",40)
+elseif (p==9872472334 or  g==3647333358) then --Evade
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/PepesGH1/stuff/main/evade.lua'))()
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua'))()
