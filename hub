@@ -91,7 +91,7 @@ elseif p==3214114884 then --flagwars
     loadstring(game:HttpGet("https://raw.githubusercontent.com/frankblox/rbxscripts/main/0flagwarssss"))()
 elseif p==13822889 then --lumbertycoon 2
     loadstring(game:HttpGet("https://pastebin.com/raw/ka0Y5Eug"))()
-elseif (p==142823291 and g==66654135) then --Murder Mystery 2 mm2
+elseif (p==142823291 or g==66654135) then --Murder Mystery 2 mm2
     fn("this might take a bit", "this script might take a while to load. Hang tight!",40)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Yousuck780/mm2/main/mm2"))()
 elseif p==8737899170 then --petsim99
@@ -113,7 +113,9 @@ elseif p==15532962292 then --solsrng
 elseif g==1650291138 then --demonfall
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/demonfall'))()
 elseif p==4282985734 or p==11979315221 or g==1390601379 then --combat warriors
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/combatwarriors'))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/flare"))()
+    if AskLoad("Would you like to load an autofarm script?") then  loadstring(game:HttpGet('https://pastebin.com/raw/pexrijZn'))() end
+    --loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/combatwarriors'))()
 elseif p==3351674303 then --driving empire
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Marco8642/science/main/drivingempire", true))()
 elseif p==893973440 then --flee the facility
@@ -137,10 +139,10 @@ elseif p==6447798030 then --funky friday -> might make a good autoplay in a mont
     -- alt link (same script) loadstring(game:HttpGet("https://raw.githubusercontent.com/Zivixian/FunkyFriday/main/ProjectBishopUpdated.lua"))()
 elseif (p==6804602922 or g==2583564222) and e~=2 then --Boxing Beta!
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/boxingbeta.lua'))()
-elseif (p==3233893879 and g==1168263273) then --Bad Business (esp)
+elseif (p==3233893879 or g==1168263273) then --Bad Business (esp)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/bbesp.lua'))()
     loadstring(game:httpget("https://pastebin.com/raw/XZeiHhW2"))()
-elseif (p==14363263080 and g==848145103) then --Dungeon quest!
+elseif (p==14363263080 or g==848145103) then --Dungeon quest!
     loadstring(game:HttpGet('https://pastebin.com/raw/F5vSFHZt'))()
     sNotify("DONT use the walkspeed feature!")
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
@@ -158,14 +160,14 @@ sw1ndlernotify:CreatePromptNotif({
     TweenSpeed = 1,
     Title = "Benomat's Hub",
     Text = "Do you want to join the support discord server?",
-    Duration = 15,
+    Duration = 10,
     Callback = function(Value)
         if Value then getgenv().joini=true
         else getgenv().joini=false end
     end
     })
 c=0
-while getgenv().joini==nil and c<150 do
+while getgenv().joini==nil and c<100 do
     wait(.1)
     if getgenv().joini then 
         setclipboard('https://discord.gg/gUMYGXqPPw')
