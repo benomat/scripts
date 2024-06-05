@@ -16,7 +16,7 @@ print(" [V1.2] loading benomat's script hub with", getexecutorname())
 getgenv().joini=nil
 local p=game.PlaceId
 local g=game.GameId
-notify=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/notify'))().New
+notify=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/notify'))().New
 fuckdude = loadstring(game:HttpGet('https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua'))().Notify
 sw1ndlernotify = loadstring(game:HttpGet('https://github.com/benomat/scripts/blob/m/paste/sw1ndlernotify.lua?raw=true'))()
 function OLDnotify(t)
@@ -144,7 +144,12 @@ elseif (p==3233893879 or g==1168263273) then --Bad Business (esp)
     loadstring(game:HttpGet('https://pastebin.com/raw/XZeiHhW2'))()
 elseif (p==14363263080 or g==848145103) then --Dungeon quest!
     loadstring(game:HttpGet('https://pastebin.com/raw/F5vSFHZt'))()
-    sNotify("DONT use the walkspeed feature!")
+    sNotify("DONT use the walkspeed feature!",15)
+elseif (p==4639625707 or  g==1526814825) then --War Tycoon
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/defrizletov/war-tycoon/main/war.lua'))()
+elseif (p==8396586868 or  g==3213362013) then --AOPG
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Testing-A-0ne-Piece-Game-LeadMarkerAOPG-1595"))()
+    sNotify('Click the little crosshair and then "main"',15)
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua'))()

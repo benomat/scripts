@@ -20,10 +20,6 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/a')
 getgenv().emotes={"Curtsy", "twirl", "Sleep", "Heart Skip", "feels", "strut", "sliving", "faceframe"}
 loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/e'))()
 ```
-## Dahood
-```lua
-loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/lock'))()
-```
 
 ## Script Hub
 ```lua
