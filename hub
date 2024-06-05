@@ -12,7 +12,7 @@ local g=game.GameId
 setclipboard("p: "..p.." g:"..g..""..getexecutorname())
 ```
 ]]
-print(" [V1.1] loading benomat's script hub with", getexecutorname())
+print(" [V1.2] loading benomat's script hub with", getexecutorname())
 getgenv().joini=nil
 local p=game.PlaceId
 local g=game.GameId
