@@ -15,7 +15,7 @@ setclipboard("p: "..p.." g:"..g..""..getexecutorname())
 
 if getexecutorname():sub(1, 5) == "incog" then loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-MoreUNC-13110"))() end
 
-print(" [V1.2] loading benomat's script hub with", getexecutorname())
+print("[V1.2] loading benomat's script hub with", getexecutorname())
 getgenv().joini=nil
 local p=game.PlaceId
 local g=game.GameId
@@ -166,7 +166,7 @@ elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,247416853
     loadstring(game:HttpGet('https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua'))()
 else 
     sNotify("Game not supported :'(",8)
-    warn("unsupported game: "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." /// pId: "..p.." gId:"..g)
+    warn("unsupported game: "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." /// pId: "..p.." gId: "..g)
     supported=false
 end
 if supported then 
