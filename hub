@@ -1,8 +1,6 @@
 --[[
 ```lua
-local p=game.PlaceId
-local g=game.GameId
-setclipboard("elseif (p=="..p.." or  g=="..g..") then --"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
+setclipboard("elseif (p=="..game.GameId.." or  g=="..game.PlaceId..") then --"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
 ```
 ]]
 --[[
@@ -13,7 +11,7 @@ setclipboard("p: "..p.." g:"..g..""..getexecutorname())
 ```
 ]]
 
-if getexecutorname():sub(1, 5) == "incog" then loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-MoreUNC-13110"))() end
+if getexecutorname():sub(1, 5) == "incog" then loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-MoreUNC-13110'))() end
 
 print("[V1.2] loading benomat's script hub with", getexecutorname())
 getgenv().joini=nil
@@ -21,7 +19,7 @@ local p=game.PlaceId
 local g=game.GameId
 notify=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/notify'))().New
 fuckdude = loadstring(game:HttpGet('https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua'))().Notify
-sw1ndlernotify = loadstring(game:HttpGet('https://github.com/benomat/scripts/blob/m/paste/sw1ndlernotify.lua?raw=true'))()
+sw1ndlernotify = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/sw1ndlernotify.lua'))()
 function OLDnotify(t)
     game:GetService("StarterGui"):SetCore("SendNotification", {
 		Title = "Benomat's Hub";
@@ -63,6 +61,7 @@ if e==2 then warn("i hate incognito :(") end
 supported=false
 if g==111958650 then --arsenal
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LEGHUBarsenal'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Insertl/QuotasHub/main/BETAv1.3'))()
 elseif p==6872265039 and e~=2 then --bedwars
     fn("Benomat's Hub","Press RIGHT SHIFT to open the menu!",20)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua'))()
@@ -118,7 +117,7 @@ elseif g==1650291138 then --demonfall
 elseif p==4282985734 or p==11979315221 or g==1390601379 then --combat warriors
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/combatwarriors'))()
     if AskLoad("Would you like to load an autofarm script?") then  loadstring(game:HttpGet('https://pastebin.com/raw/pexrijZn'))() end
-    --loadstring(game:HttpGet('https://raw.githubusercontent.com/1f0yt/community/master/flare'))()
+    --loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/patchedFleeTheFacility"))()
 elseif p==3351674303 then --driving empire
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/drivingempire'))()
 elseif p==893973440 then --flee the facility
@@ -140,8 +139,8 @@ elseif p==698448212 then--RoBeats
 elseif p==6447798030 then --funky friday -> might make a good autoplay in a month or so
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ZoinkyPoinkie/FunkyFridayDevTools/main/Un-Obfuscated'))()
     -- alt link (same script) loadstring(game:HttpGet('https://raw.githubusercontent.com/Zivixian/FunkyFriday/main/ProjectBishopUpdated.lua'))()
-elseif (p==6804602922 or g==2583564222) and e~=2 then --Boxing Beta!
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/boxingbeta.lua'))()
+-- elseif (p==6804602922 or g==2583564222) and e~=2 then --Boxing Beta!
+--     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/boxingbeta.lua'))()
 elseif (p==3233893879 or g==1168263273) then --Bad Business (esp)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/bbesp.lua'))()
     loadstring(game:HttpGet('https://pastebin.com/raw/XZeiHhW2'))()
@@ -161,6 +160,10 @@ elseif (p==8260276694 or  g==3168615253) then --Ability Wars
     sNotify("Press the top bar for blatant mode or whatever!",40)
 elseif (p==9872472334 or  g==3647333358) then --Evade
     loadstring(game:HttpGet('https://raw.githubusercontent.com/PepesGH1/stuff/main/evade.lua'))()
+elseif (p==5700746583 or  g==16560655288) then --Pillar Chase 2
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/fbenable.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/wxrpq/ritual/main/loader'))()
+    --loadstring(game:HttpGet('https://raw.githubusercontent.com/wxrpq/ritual/main/scripts/pillarchase2.lua'))()
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua'))()
