@@ -172,10 +172,13 @@ elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,247416853
     notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua'))()
 else 
-    sNotify("Game not supported :'(",8)
-    warn("unsupported game: "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." /// pId: "..p.." gId: "..g)
-    supported=false
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/skihub.lua'))() --just in case
+    if loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/skihub.lua'))() then 
+        notify("Loaded ski hub. YIPPEEEEEEE!",9)
+        print("skihub on "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." /// pId: "..p.." gId:"..g)
+    else sNotify("Game not supported :'(",8)
+        warn("unsupported game: "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." /// pId: "..p.." gId: "..g)
+        supported=false
+    end
 end
 if supported then 
     print("Loaded on "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." /// pId: "..p.." gId:"..g)
