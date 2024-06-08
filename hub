@@ -58,7 +58,7 @@ function sNotify(t,d)
     end
 if getexecutorname():sub(1, 6) == "Solara" then e = 1 elseif getexecutorname():sub(1, 5) == "incog" then e = 2 else e = 0 end --executor identify
 if e==2 then warn("i hate incognito :(") end
-supported=false
+supported=true
 if g==111958650 then --arsenal
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LEGHUBarsenal'))()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Insertl/QuotasHub/main/BETAv1.3'))()
