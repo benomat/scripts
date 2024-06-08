@@ -81,7 +81,7 @@ elseif p==4924922222 then --brookhaven
     loadstring(game:HttpGet('https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script'))()
 elseif p==537413528 then --build a boat
     loadstring(game:HttpGet('https://raw.githubusercontent.com/juywvm/-Roblox-Projects-/main/babft'))()
-elseif g==1335695570 then --âš¡Ninja Legends
+elseif g==1335695570 then
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/njlg.lua'))()
 elseif p==301549746 then --counterblox
     loadstring(game:HttpGet('https://raw.githubusercontent.com/fliskScript/jaran.vip/main/free.lua'))()
