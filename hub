@@ -1,6 +1,6 @@
 --[[
 ```lua
-setclipboard("elseif (p=="..game.GameId.." or  g=="..game.PlaceId..") then --"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
+setclipboard("elseif (p=="..game.PlaceId.." or  g=="..game.GameId..") then --"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
 ```
 ]]
 --[[
@@ -81,11 +81,11 @@ elseif p==4924922222 then --brookhaven
     loadstring(game:HttpGet('https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script'))()
 elseif p==537413528 then --build a boat
     loadstring(game:HttpGet('https://raw.githubusercontent.com/juywvm/-Roblox-Projects-/main/babft'))()
-elseif g==3956818381 then
+elseif g==1335695570 then --âš¡Ninja Legends
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/njlg.lua'))()
 elseif p==301549746 then --counterblox
     loadstring(game:HttpGet('https://raw.githubusercontent.com/fliskScript/jaran.vip/main/free.lua'))()
-elseif p==2788229376 then
+elseif p==2788229376 then --dahood
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ImagineProUser/vortexdahood/main/vortex'))()
 elseif g==2440500124 then --DOORS
     loadstring(game:HttpGet('https://raw.githubusercontent.com/KINGHUB01/BlackKing/main/BlackKingMb'))()
@@ -162,11 +162,11 @@ elseif (p==8260276694 or  g==3168615253) then --Ability Wars
     sNotify("Press the top bar for blatant mode or whatever!",40)
 elseif (p==9872472334 or  g==3647333358) then --Evade
     loadstring(game:HttpGet('https://raw.githubusercontent.com/PepesGH1/stuff/main/evade.lua'))()
-elseif (p==5700746583 or  g==16560655288) then --Pillar Chase 2
+elseif (p==16560655288 or  g==5700746583) then --Pillar Chase 2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/fbenable.lua'))()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/wxrpq/ritual/main/loader'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/wxrpq/ritual/main/scripts/pillarchase2.lua'))()
-elseif (p==1202096104 or  g==3351674303) then --[UNDERGLOW] Driving Empire Car Racing
+elseif (p==3351674303 or  g==1202096104) then --[UNDERGLOW] Driving Empire Car Racing
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/drivingempire'))()
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
