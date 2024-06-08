@@ -175,6 +175,7 @@ else
     sNotify("Game not supported :'(",8)
     warn("unsupported game: "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." /// pId: "..p.." gId: "..g)
     supported=false
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/skihub.lua'))() --just in case
 end
 if supported then 
     print("Loaded on "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." /// pId: "..p.." gId:"..g)
