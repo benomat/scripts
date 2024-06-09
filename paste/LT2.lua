@@ -5139,7 +5139,7 @@ SaveSettings()
 
 
 --#region UI
-if true then NameT = "Luz | benomat" else NameT = "Luz Hub" end
+if true then NameT = "butter or wtv" else NameT = "Luz Hub" end
 
 local ui = library:new(NameT)
 
@@ -5228,13 +5228,7 @@ local Settingtab3 = Settingtab:section('Slot Names', true)
 
 
 --#region Home
-    local Label = Home1:Label("Leader/Maker of project Kissbox.")
-    local Label = Home1:Label("ALL of the developers that helped Luz Hub")
-    local Label = Home1:Label("Applebox, silentben8x, tip,")
-    local Label = Home1:Label("Made sorter/helped with Mod wood")
-    local Label = Home1:Label("billybob123")
-    local Label = Home1:Label("Beta testers Gamer,")
-    local Label = Home1:Label("MeZavy! Creating Luz Hub,")
+    local Label = Home1:Label("butter n luz hub and allat")
      
     Home2:Toggle('Glow', '', rgbthin, function(Value)
     

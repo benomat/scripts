@@ -73,7 +73,7 @@ elseif g==4777817887 then --bladeball
     loadstring(game:HttpGet('https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/autoparry.lua'))()
 elseif (p == 2753915549 or g==994732206) and e~=2 then --bloxfruits solara
     setclipboard("xk06nst6bgj8a")
-    fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",10)
+    fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/SkibidiSupremacy/Loader.xyz/main/Loader.Blurk%20ST%20%3A%20G'))() --doesnt seem to worki :(
 elseif (p == 2753915549 or g==994732206) and e==2 then --bloxfruits others
     if AskLoad("Sadly there's no good Blox Fruits script for your executor.\nDo you want to load a CHEST FARM script instead?") then loadstring(game:HttpGet('https://raw.githubusercontent.com/Yatsuraa/Yuri/main/AutoChest.lua'))() end
