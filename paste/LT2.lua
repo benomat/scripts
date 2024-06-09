@@ -4980,7 +4980,7 @@ end)
 
 
 local rgbthin = userinfo["rgbthin"] or false
-local keytoc = userinfo["keytoc"] or "Right Ctrl"
+local keytoc = userinfo["keytoc"] or "RightControl"
 local flykey = userinfo["flykey"] or "Q"
 local daystuff = userinfo["daystuff"] or false
 local nofogst = userinfo["nofogst"] or false
