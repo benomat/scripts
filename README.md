@@ -2,7 +2,7 @@ all scripts compatible with executors like solara or incognito
 
 # Scripts
 
-note: solara is not updated rn :'(
+Best scripts for solara! 
 
 ## Animation changer (bundles)
 ```lua
