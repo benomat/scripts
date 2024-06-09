@@ -127,9 +127,10 @@ elseif p==893973440 then --flee the facility
 elseif p==10449761463 then --strongest battlegrounds
     loadstring(game:HttpGet('https://raw.githubusercontent.com/idontknowwhattonamemyself/a/Lua/tsb'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/TSBUtils.lua'))() --this one might only work on solara or not at all
-elseif (p==606849621 or g==245662005) and e~=2 then --jailbreak solara
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Pxsta72/ProjectAuto/main/AutoRobV4Release'))()
+elseif (p==606849621 or g==245662005) then --jailbreak
+    loadstring(game:HttpGet("https://pastebin.com/raw/ghGgrmWR", true))()
     loadstring(game:HttpGet('https://farmhub.lol/AutoCrateFree.lua'))()
+    -- broken.. loadstring(game:HttpGet('https://raw.githubusercontent.com/Pxsta72/ProjectAuto/main/AutoRobV4Release'))()
 elseif p==8365905206 then--untitled tag game (UTG)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/UTG.lua'))()
 elseif p==9791603388 then--underground war 2.0
