@@ -99,7 +99,7 @@ local hrp = chr.HumanoidRootPart
 
 -- Libray settings
 getgenv().SecureMode = true
-local ArrayField =loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local ArrayField =loadstring(game:HttpGet('https://raw.githubusercontent.com/SiriusSoftwareLtd/Rayfield/main/source.lua'))()
 local Window = ArrayField:CreateWindow({
    Name = "H-Hub | "..game:GetService('MarketplaceService'):GetProductInfo(game.PlaceId).Name,
    LoadingTitle = "H-Hub",
