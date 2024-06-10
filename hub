@@ -124,6 +124,8 @@ elseif p==4282985734 or p==11979315221 or g==1390601379 then --combat warriors
 elseif p==3351674303 then --driving empire
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/drivingempire'))()
 elseif p==893973440 then --flee the facility
+    setclipboard("kx7CfkPcD3")
+    fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",15)
     loadstring(game:HttpGet('https://pastebin.com/raw/3uMsh1vn'))()
 elseif p==10449761463 then --strongest battlegrounds
     loadstring(game:HttpGet('https://raw.githubusercontent.com/idontknowwhattonamemyself/a/Lua/tsb'))()

@@ -5401,18 +5401,16 @@ local Settingtab3 = Settingtab:section('Slot Names', true)
           SaveSettings()
       end
     end)
-  
-    Player1:Toggle('Infinite Jump', 'infj', false, function(Value)
-    InfiniteJump(Value)
-    end)
-  
-  
     Flyingkey = flykey
   
     Player1:Keybind("Flight keybind", Enum.KeyCode[flykey], function(Value)
     flykey = Value
     Flyingkey = string.lower(Value)
     SaveSettings()
+    end)
+    
+    Player1:Toggle('Infinite Jump', 'infj', false, function(Value)
+    InfiniteJump(Value)
     end)
   
   
