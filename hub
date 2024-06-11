@@ -62,10 +62,10 @@ supported=true
 if g==111958650 then --arsenal
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LEGHUBarsenal'))()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Insertl/QuotasHub/main/BETAv1.3'))()
-elseif p==6872265039 and e~=2 then --bedwars
+elseif (p==6872265039 or g==2619619496) and e~=2 then --bedwars
     fn("Benomat's Hub","Press RIGHT SHIFT to open the menu!",20)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua'))()
-elseif p==6872265039 and e==2 then --bedwars
+elseif (p==6872265039 or g==2619619496) and e==2 then --bedwars
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ohmygodiloveketamine/aeolusv2/main/script'))()
 elseif p==1537690962 then --beeswarm simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/scriptpastebin/raw/main/29'))()
