@@ -60,8 +60,9 @@ if getexecutorname():sub(1, 6) == "Solara" then e = 1 elseif getexecutorname():s
 if e==2 then warn("i hate incognito :(") end
 supported=true
 if g==111958650 then --arsenal
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LEGHUBarsenal'))()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Insertl/QuotasHub/main/BETAv1.3'))()
+    loadstring(game:Httpget('https://raw.githubusercontent.com/wuhaz/arsenal/main/main.lua'))()
+    --loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LEGHUBarsenal'))()
+    --loadstring(game:HttpGet('https://raw.githubusercontent.com/Insertl/QuotasHub/main/BETAv1.3'))()
 elseif (p==6872265039 or g==2619619496) and e~=2 then --bedwars
     fn("Benomat's Hub","Press RIGHT SHIFT to open the menu!",20)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua'))()
