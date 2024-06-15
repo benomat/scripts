@@ -13,7 +13,7 @@ setclipboard("p: "..p.." g:"..g..""..getexecutorname())
 
 if getexecutorname():sub(1, 5) == "incog" then loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-MoreUNC-13110'))() end
 
-print("[V1.3] loading benomat's script hub with", getexecutorname())
+print("[V1.4] loading benomat's script hub with", getexecutorname())
 getgenv().joini=nil
 local p=game.PlaceId
 local g=game.GameId
