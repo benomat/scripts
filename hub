@@ -206,3 +206,12 @@ while getgenv().joini==nil and c<100 do
     end
     c+=1
 end
+
+
+--[[
+
+```lua
+loadstring(game:HttpGet('https://github.com/benomat/scripts/blob/m/hub/?raw=true'))()
+```
+
+]]
