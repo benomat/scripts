@@ -128,7 +128,7 @@ elseif (p==606849621 or g==245662005) then --jailbreak
     loadstring(game:HttpGet('https://pastebin.com/raw/ghGgrmWR'))()
     loadstring(game:HttpGet('https://farmhub.lol/AutoCrateFree.lua'))()
     -- broken.. loadstring(game:HttpGet('https://raw.githubusercontent.com/Pxsta72/ProjectAuto/main/AutoRobV4Release'))()
-elseif p==8365905206 then--untitled tag game (UTG)
+elseif (p==14044547200 or  g==4864117649) then --[recode] untitled tag game(UTG)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/UTG.lua'))()
 elseif p==9791603388 then--underground war 2.0
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/UndergroundWar'))()
