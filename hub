@@ -1,9 +1,4 @@
 --[[
-
-setclipboard("elseif (p=="..game.PlaceId.." or  g=="..game.GameId..") then --"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
-
-]]
---[[
 ```lua
 local p=game.PlaceId
 local g=game.GameId
@@ -173,6 +168,8 @@ elseif (p==3351674303 or  g==1202096104) then --[UNDERGLOW] Driving Empire Car R
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/drivingempire'))()
 elseif g==4871329703 then --Type soul
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/newtype/main/soul"))()
+elseif (p==9285238704 or  g==3476371299) then --Race Clicker
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/raceclicker.lua'))()
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua'))()
@@ -214,5 +211,19 @@ end
 ```lua
 loadstring(game:HttpGet('https://github.com/benomat/scripts/blob/m/hub/?raw=true'))()
 ```
+
+]]
+
+--[[
+
+```lua
+loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/hub'))()
+```
+
+]]
+
+--[[
+
+setclipboard("elseif (p=="..game.PlaceId.." or  g=="..game.GameId..") then --"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
 
 ]]
