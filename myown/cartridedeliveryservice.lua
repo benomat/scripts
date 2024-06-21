@@ -4,26 +4,10 @@ local window = Lib:CreateWindow({
    LoadingTitle = "Card Ride Delivery Service",
    LoadingSubtitle = "by benomat"})
 local tab = window:CreateTab("Main")
+local TPTab = window:CreateTab("Teleports")
 local MiscTab = window:CreateTab("Misc")
 
-
-
-
-local tween_s = game:GetService('TweenService')
-local tweeninfo = TweenInfo.new(1,Enum.EasingStyle.Linear)
-
-local lp = game.Players.LocalPlayer
-
-function bypass_teleport(v)
-    if lp.Character and 
-    lp.Character:FindFirstChild('HumanoidRootPart') then
-        local cf = CFrame.new(v)
-        local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
-        a:Play()
-    end
-end
-
-
+best_dropoff=CFrame.new(656.182739, 249.643875, 477.509216, 0.701624751, -0.00166311371, -0.712544799, -7.06547289e-05, 0.999997079, -0.00240361365, 0.712546706, 0.0017367797, 0.701622605)
 Players = cloneref(game:GetService("Players"))
 IYMouse = Players.LocalPlayer:GetMouse()
 FLYING = false
@@ -117,30 +101,28 @@ function sFLY(vfly)
 	end)
 	FLY()
 end
-local function gotoPackages()
-    -- Find all children of the Client_PackagePickups folder in the workspace
-    local packages = workspace.Client_PackagePickups:GetChildren()
-    
+local function getPackages(pressE)
+    counta=0
+    -- Get the local player
+    local player = game.Players.LocalPlayer
+    local playerPosition = player.Character.HumanoidRootPart.Position
+
+    -- Find all packages in workspace.PackageGivers
+    local packages = workspace.PackageGivers:GetChildren()
+
     -- Iterate through each package
     for _, package in pairs(packages) do
-        -- Check all children of each package
-        for _, child in pairs(package:GetChildren()) do
-            -- If the child's name is "root", teleport the local player there
-            if child.Name == "root" then
-                -- Assuming 'localplayer' is correctly defined and accessible
-                local player = game.Players.LocalPlayer
-                -- Teleport the player to the position of the "root" part
-                player.Character.HumanoidRootPart.CFrame = child.CFrame
-                wait(.03)
-                player.Character.HumanoidRootPart.CFrame = child.CFrame
-                wait(.03)
-                player.Character.HumanoidRootPart.CFrame = child.CFrame
-                wait(.03)
-            end
-        end
+        old_pos=package.Position
+        package.Position = playerPosition
+        counta+=1
+        if pressE and counta>=4 then keypress(Enum.KeyCode.E) end
+        wait()
+        package.Position=old_pos
     end
 end
-
+local function gotosell()
+    player.Character.HumanoidRootPart.CFrame = 69
+end
 tab:CreateToggle({
     Name="VFLY",
     Callback=function(v)
@@ -148,7 +130,7 @@ tab:CreateToggle({
         else FLYING=v
         end end})
 tab:CreateSlider({
-   Name = "Speed",
+   Name = "Fly Speed",
    Range = {1, 25},
    Increment = 1,
    Suffix = "",
@@ -157,12 +139,74 @@ tab:CreateSlider({
 tab:CreateButton({
     Name = "Collect all Packages",
     Callback = function()
-        gotoPackages()
+        getPackages()
     end
 })
+local function tp(loc)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = loc
+end
+local function tpn(...)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(...)
+end
+tab:CreateToggle({
+    Name = "Package farmmm $$$",
+    Callback = function(v)
+    _G.PACKAGEFARM=v
+    if v then 
+    tp(best_dropoff)
+    end
+    while _G.PACKAGEFARM do 
+        getPackages(true)
+        wait(4)
+    end
+    end
+})
+tab:CreateParagraph({Title="Information on Package Farm", Content="You gotta be in a cart to use.\nPackage farm breaks after a couple of uses, you gotta rejoin"})
 
 
-
+TPTab:CreateButton({
+    Name = "Spawn",
+    Callback = function()
+        tpn(34.463890075683594, 2.999873399734497, 38.47382736206055)
+    end
+})
+TPTab:CreateButton({
+    Name = "$13500 Dropoff",
+    Callback = function()
+        tp(best_dropoff)
+    end
+})
+TPTab:CreateButton({
+    Name = "Finish",
+    Callback = function()
+        tpn(990.26806640625, 10.590018272399902, 128.8693084716797)
+    end
+})
+TPTab:CreateButton({
+    Name = "RESET PROGRESS",
+    Callback = function()
+        tpn(-248.008, 140.579, 95.0521)
+    end
+})
+function getPlayerNames()
+playerNames = {}
+for _,i in pairs(game.Players:GetPlayers()) do
+    table.insert(playerNames, i.Name)
+end
+return playerNames
+end
+function erm(t)
+return t[1]
+end
+TPTab:CreateDropdown({
+    Name="Players",
+    Options=getPlayerNames(),
+    MultipleOptions=false,
+    CurrentOption = getPlayerNames()[1],
+    Callback=function(opt)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild(erm(opt)).Character.HumanoidRootPart.CFrame
+    end
+})
 MiscTab:CreateSlider({
    Name = "Speed",
    Range = {16, 500},
@@ -171,5 +215,6 @@ MiscTab:CreateSlider({
    CurrentValue = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed, 
    Callback = function(v) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v end})
 MiscTab:CreateButton({    Name = " Rejoin Server  ", Callback=function () loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end})
-MiscTab:CreateLabel("sexporn123")
+MiscTab:CreateLabel("JOIN!!!")
 MiscTab:CreateButton({Name="Copy discord invite",Callback=function()setclipboard("discord.gg/gUMYGXqPPw")end})
+MiscTab:CreateLabel("credits: @benoamt")
