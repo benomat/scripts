@@ -175,19 +175,20 @@ elseif (p==9285238704 or  g==3476371299) then --Race Clicker
 elseif (p==11454403177 or  g==4072288216) then --[NEW MAP] Cart Ride Delivery Service
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/cartridedeliveryservice.lua'))()
 ----FOR THE FOLLOWING THANKS TO .gg/YhHJ8V8scs -------------------------------------------------------------------------
-elseif false then --taxi boss
+elseif (p==7305309231 or  g==2851381018) then --Taxi Boss
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/Taxi%20Boss'))()
-elseif false then -- project slayer
+elseif (p==17387475546 or  g==2142948266) then --Project Slayer
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/projectslayer.lua'))()
-elseif false then -- fling things and people
+elseif (p==6961824067 or  g==2668101271) then --Fling Things and People
+    --if AskLoad("If the key thats copied to your clipboard right now doesnt work press YES on this.\nthen paste the link into your browser to bypass the linkvertise") then setclicpboard("https://bypass.city") end
     loadstring(game:HttpGet('https://raw.githubusercontent.com/BlizTBr/scripts/main/FTAP.lua'))()
-    setclipboard("vy5fBGS6nNUuJjgxWhCLpR")
+    setclipboard("JuniorFilhoDoBlizT")
     fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
-elseif false then -- wild west
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/FSOCIETY-WYLD/TWWLEAN/main/main.lua'))()
+-- elseif false then -- the wild west DOESNT WORK SO NUH UHH
+--     loadstring(game:HttpGet('https://raw.githubusercontent.com/FSOCIETY-WYLD/TWWLEAN/main/main.lua'))()
 elseif false then -- frontlines
     loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/5bebf0b1e173f4baff73449722204837.lua'))()
-elseif false then -- track n field
+elseif (p==16426795556 or  g==5661134200) then --Track & Field: Infinite
     loadstring(game:HttpGet('https://raw.githubusercontent.com/RETARDWAR3/retardware-main/main/Trackandfield.lua'))()
 ------------------------------------------------ELITE-SKIDDING--------------------------------------------------------------
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
