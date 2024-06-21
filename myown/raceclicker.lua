@@ -234,5 +234,5 @@ local Slider = tab3:CreateSlider({
    CurrentValue = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed, 
    Callback = function(v) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v end})
 tab3:CreateButton({    Name = " Rejoin Server  ", Callback=function () loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end})
-tab3:CreateLabel("sexporn123")
+tab3:CreateLabel("join n stuff")
 tab3:CreateButton({Name="Copy discord invite",Callback=function()setclipboard("discord.gg/gUMYGXqPPw")end})
