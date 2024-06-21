@@ -54,8 +54,8 @@ if getexecutorname():sub(1, 6) == "Solara" then e = 1 elseif getexecutorname():s
 if e==2 then warn("i hate incognito :(") end
 supported=true
 if g==111958650 then --arsenal
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b95e8fecdf824e41f4a030044b055add.lua"))()
-    --best silent aim: loadstring(game:HttpGet('https://raw.githubusercontent.com/wuhaz/arsenal/main/main.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/wuhaz/arsenal/main/main.lua'))()
+    if AskLoad("There's a script available which has kill all and other cool features. Kill all is very detected tho and will get you banned. Do you still wanna use this?") then  loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b95e8fecdf824e41f4a030044b055add.lua"))() end
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LEGHUBarsenal'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/Insertl/QuotasHub/main/BETAv1.3'))()
 elseif (p==6872265039 or g==2619619496) and e~=2 then --bedwars
@@ -164,7 +164,7 @@ elseif (p==16560655288 or  g==5700746583) then --Pillar Chase 2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/fbenable.lua'))()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/wxrpq/ritual/main/loader'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/wxrpq/ritual/main/scripts/pillarchase2.lua'))()
-elseif (p==3351674303 or  g==1202096104) then --[UNDERGLOW] Driving Empire Car Racing
+elseif (p==3351674303 or  g==1202096104) then --Driving Empire Car Racing
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/drivingempire'))()
 elseif g==4871329703 then --Type soul
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/newtype/main/soul"))()
