@@ -55,11 +55,11 @@ if e==2 then warn("i hate incognito :(") end
 supported=true
 if g==111958650 then --arsenal
     loadstring(game:HttpGet('https://raw.githubusercontent.com/wuhaz/arsenal/main/main.lua'))()
-    if AskLoad("There's a script available which has kill all and other cool features. Kill all is very detected tho and will get you banned. Do you still wanna use this?") then  loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b95e8fecdf824e41f4a030044b055add.lua"))() end
+    if AskLoad("There's a script available which has kill all and other cool features.\nKill all is very detected tho and will get you banned.\nDo you still wanna use it?") then  loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b95e8fecdf824e41f4a030044b055add.lua"))() end
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LEGHUBarsenal'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/Insertl/QuotasHub/main/BETAv1.3'))()
 elseif (p==6872265039 or g==2619619496) and e~=2 then --bedwars
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/FlamingDrey/Flame-X-v2/main/Flame%20X%20Bedwars%20V2"))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/FlamingDrey/Flame-X-v2/main/Flame%20X%20Bedwars%20V2'))()
     -- fn("Benomat's Hub","Press RIGHT SHIFT to open the menu!",20)
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua'))()
 elseif (p==6872265039 or g==2619619496) and e==2 then --bedwars
@@ -96,7 +96,7 @@ elseif p==13822889 then --lumbertycoon 2
 elseif (p==142823291 or g==66654135) then --Murder Mystery 2 mm2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/loader.lua'))()
 elseif (p==8737899170 or  g==3317771874) then --Pet Simulator 99! ðŸ’°
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua"))() 
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua'))() 
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/HGIOD/AquaFlowX/main/FlowX'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/idonthaveoneatm/lua/normal/games/PetSimulator99/SolaraVersion.lua'))()
 elseif (p==292439477 and g==113491250) then -- Phantom Forces PC
@@ -107,11 +107,11 @@ elseif (p==292439477 and g==113491250) then -- Phantom Forces PC
 --     loadstring(game:HttpGet('https://pastebin.com/raw/wMagw9Cn'))()
 elseif p==6403373529 then --slap battles
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Dusty1234567890/TestMain/main/SLAPBATTLESGUI5'))()
-    --loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles'))())()
+    --loadstring(game:HttpGet('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles'))()
 elseif p==15532962292 then --solsrng
     loadstring(game:HttpGet('https://pastefy.app/55pnwOy3/raw'))()
     setclipboard("vy5fBGS6nNUuJjgxWhCLpR")
-    fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",10)
+    fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
 elseif g==1650291138 then --demonfall
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/demonfall'))()
 elseif p==4282985734 or p==11979315221 or g==1390601379 then --combat warriors
@@ -169,11 +169,27 @@ elseif (p==16560655288 or  g==5700746583) then --Pillar Chase 2
 elseif (p==3351674303 or  g==1202096104) then --Driving Empire Car Racing
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/drivingempire'))()
 elseif g==4871329703 then --Type soul
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/newtype/main/soul"))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/LOLking123456/newtype/main/soul'))()
 elseif (p==9285238704 or  g==3476371299) then --Race Clicker
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/raceclicker.lua'))()
 elseif (p==11454403177 or  g==4072288216) then --[NEW MAP] Cart Ride Delivery Service
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/cartridedeliveryservice.lua'))()
+----FOR THE FOLLOWING THANKS TO .gg/YhHJ8V8scs -------------------------------------------------------------------------
+elseif false then --taxi boss
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/Taxi%20Boss'))()
+elseif false then -- project slayer
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/projectslayer.lua'))()
+elseif false then -- fling things and people
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/BlizTBr/scripts/main/FTAP.lua'))()
+    setclipboard("vy5fBGS6nNUuJjgxWhCLpR")
+    fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
+elseif false then -- wild west
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/FSOCIETY-WYLD/TWWLEAN/main/main.lua'))()
+elseif false then -- frontlines
+    loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/5bebf0b1e173f4baff73449722204837.lua'))()
+elseif false then -- track n field
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/RETARDWAR3/retardware-main/main/Trackandfield.lua'))()
+------------------------------------------------ELITE-SKIDDING--------------------------------------------------------------
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua'))()
