@@ -215,6 +215,6 @@ MiscTab:CreateSlider({
    CurrentValue = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed, 
    Callback = function(v) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v end})
 MiscTab:CreateButton({    Name = " Rejoin Server  ", Callback=function () loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end})
-MiscTab:CreateLabel("JOIN!!!")
+MiscTab:CreateLabel("credits: @benomat")
 MiscTab:CreateButton({Name="Copy discord invite",Callback=function()setclipboard("discord.gg/gUMYGXqPPw")end})
-MiscTab:CreateLabel("credits: @benoamt")
+MiscTab:CreateLabel("JOIN ^^^^^^^^ CLICK HERE DAWGGG ^^")
