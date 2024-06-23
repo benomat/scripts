@@ -7,7 +7,7 @@ setclipboard("p: "..p.." g:"..g..""..getexecutorname())
 ]]
 if getexecutorname():sub(1, 5) == "incog" then loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-MoreUNC-13110'))() end
 
-print("[V1.4] loading benomat's script hub with", getexecutorname())
+print("[V1.5] loading benomat's script hub with", getexecutorname())
 getgenv().joini=nil
 local p=game.PlaceId
 local g=game.GameId
@@ -86,9 +86,10 @@ elseif p==2788229376 then --dahood
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ImagineProUser/vortexdahood/main/vortex'))()
 elseif g==2440500124 then --DOORS
     loadstring(game:HttpGet('https://raw.githubusercontent.com/KINGHUB01/BlackKing/main/BlackKingMb'))()
-elseif p==16389395869 then --dustytrip
+elseif g==5650396773 then --dustytrip
     loadstring(game:HttpGet('https://raw.githubusercontent.com/artemy133563/Utilities/main/ADustyTrip'))()
 elseif p==3214114884 then --flagwars
+    sNotify("You can scroll through the tabs btw!")
     loadstring(game:HttpGet('https://raw.githubusercontent.com/frankblox/rbxscripts/main/0flagwarssss'))()
 elseif p==13822889 then --lumbertycoon 2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LT2.lua'))()
