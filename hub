@@ -144,8 +144,8 @@ elseif p==6447798030 then --funky friday -> might make a good autoplay in a mont
 -- elseif (p==6804602922 or g==2583564222) and e~=2 then --Boxing Beta!
 --     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/boxingbeta.lua'))()
 elseif (p==3233893879 or g==1168263273) then --Bad Business (esp)
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/bbesp.lua'))()
-    loadstring(game:HttpGet('https://pastebin.com/raw/XZeiHhW2'))()
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/151aa702c8c02d613b0928851ecdb40d.lua"))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/bbesp.lua'))() -- just esp
 elseif (p==14363263080 or g==848145103) then --Dungeon quest!
     loadstring(game:HttpGet('https://pastebin.com/raw/F5vSFHZt'))()
     sNotify("DONT use the walkspeed feature!",15)
