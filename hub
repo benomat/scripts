@@ -186,7 +186,7 @@ elseif (p==6961824067 or  g==2668101271) then --Fling Things and People
     fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
 -- elseif false then -- the wild west DOESNT WORK SO NUH UHH
 --     loadstring(game:HttpGet('https://raw.githubusercontent.com/FSOCIETY-WYLD/TWWLEAN/main/main.lua'))()
-elseif false then -- frontlines
+elseif (p==5938036553 or  g==2132866904) then --FRONTLINES
     loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/5bebf0b1e173f4baff73449722204837.lua'))()
 elseif (p==16426795556 or  g==5661134200) then --Track & Field: Infinite
     loadstring(game:HttpGet('https://raw.githubusercontent.com/RETARDWAR3/retardware-main/main/Trackandfield.lua'))()
