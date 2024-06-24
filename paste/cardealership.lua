@@ -100,9 +100,8 @@ end)
 
 ---------- Credits Page ----------
 kVars.labelCodedBy = pageCredits.AddLabel("Coded by : Keathunsar")
-kVars.labelCodedByLink = pageCredits.AddLabel("https://github.com/dady172172/Roblox-Cheats")
 kVars.labelGuiBy = pageCredits.AddLabel("Gui made by : FungBert")
-kVars.labelGuiByLink = pageCredits.AddLabel("v3rmillion.net/member.php?action=profile&uid=1078854")
+kVars.labelGuiBy = pageCredits.AddLabel("drive fixed by : benomat")
 
 ---------- Closing ----------
 kVars.ClosingConnect = game:GetService("CoreGui").ChildRemoved:Connect(function(child)
