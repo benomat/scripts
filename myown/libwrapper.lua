@@ -29,7 +29,15 @@ function LibWrapper:CreateWindow(name)
             return buttonWrapper
         end
         tabWrapper.AddButton = tabWrapper.CreateButton
-
+        function tabWrapper:CreateSection(name)
+            local Section = tab:CreateSection(name)
+            local sectionWrapper = {}
+            function sectionWrapper:Set(name)
+                Section:Set(name)
+            end
+            return sectionWrapper
+        end
+        tabWrapper.AddSection = tabWrapper.CreateSection
         function tabWrapper:CreateToggle(name, currentValue, callback)
             local Toggle = tab:CreateToggle({
                 Name = name,
