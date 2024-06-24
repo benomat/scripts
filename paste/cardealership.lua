@@ -43,7 +43,7 @@ kVars.toggleDrive = pageFarm.AddToggle("Drive", false, function(bool)
     if bool then
         fDrive()
     else
-        keyrelease(57) 
+        keyrelease(119) 
     end
 end)
 
@@ -69,7 +69,7 @@ function fDrive()
                 part.Parent = workspace
             end
             kVars.plrcar:SetPrimaryPartCFrame(CFrame.new(0, 65, 450))
-            keypress(57)
+            keypress(119)
             wait(5)
         end
     end)
