@@ -30,11 +30,10 @@ function LibWrapper:CreateWindow(name)
         end
         tabWrapper.AddButton = tabWrapper.CreateButton
 
-        function tabWrapper:CreateToggle(name, currentValue, flag, callback)
+        function tabWrapper:CreateToggle(name, currentValue, callback)
             local Toggle = tab:CreateToggle({
                 Name = name,
                 CurrentValue = currentValue,
-                Flag = flag,
                 Callback = callback
             })
             
@@ -46,11 +45,10 @@ function LibWrapper:CreateWindow(name)
         end
         tabWrapper.AddToggle = tabWrapper.CreateToggle
 
-        function tabWrapper:CreateColorPicker(name, color, flag, callback)
+        function tabWrapper:CreateColorPicker(name, color, callback)
             local ColorPicker = tab:CreateColorPicker({
                 Name = name,
                 Color = color,
-                Flag = flag,
                 Callback = callback
             })
             

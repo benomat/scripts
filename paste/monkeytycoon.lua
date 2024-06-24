@@ -13,7 +13,7 @@ repeat task.wait() until game:IsLoaded() if game.PlaceId ~= 11400511154 then lp:
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-    Name = "Monkey Tycoon",
+    Name = "Monkey Tycoon /// [>::<] ^(>.1)^",
     LoadingTitle = "Monkey tycoon",
     LoadingSubtitle = "by griffindoescooking",
     ConfigurationSaving = {
