@@ -60,14 +60,13 @@ function LibWrapper:CreateWindow(name)
         end
         tabWrapper.AddColorPicker = tabWrapper.CreateColorPicker
 
-        function tabWrapper:CreateSlider(name, range, increment, suffix, currentValue, flag, callback)
+        function tabWrapper:CreateSlider(name, range, increment, suffix, currentValue, callback)
             local Slider = tab:CreateSlider({
                 Name = name,
                 Range = range,
                 Increment = increment,
                 Suffix = suffix,
                 CurrentValue = currentValue,
-                Flag = flag,
                 Callback = callback
             })
             
@@ -90,13 +89,12 @@ function LibWrapper:CreateWindow(name)
         end
         tabWrapper.AddInput = tabWrapper.CreateInput
 
-        function tabWrapper:CreateDropdown(name, options, currentOption, multipleOptions, flag, callback)
+        function tabWrapper:CreateDropdown(name, options, currentOption, multipleOptions, callback)
             local Dropdown = tab:CreateDropdown({
                 Name = name,
                 Options = options,
                 CurrentOption = currentOption,
                 MultipleOptions = multipleOptions,
-                Flag = flag,
                 Callback = callback
             })
             
@@ -113,7 +111,6 @@ function LibWrapper:CreateWindow(name)
                 Name = name,
                 CurrentKeybind = currentKeybind,
                 HoldToInteract = holdToInteract,
-                Flag = flag,
                 Callback = callback
             })
             
