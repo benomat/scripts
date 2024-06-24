@@ -132,7 +132,6 @@ MISCTAB:CreateDropdown(
 
 MISCTAB:CreateSlider("Speed",{16, 500},1,"studs per second",game.Players.LocalPlayer.Character.Humanoid.WalkSpeed,function(v) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v end)
 MISCTAB:CreateButton("Rejoin Server", function () loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end)
-MISCTAB:CreateLabel("some funcs by griffindoescooking")
-MISCTAB:CreateLabel("everything else by benomat")
+MISCTAB:CreateLabel("by benomat")
 MISCTAB:CreateLabel("join n stuff")
 MISCTAB:CreateButton("Copy discord invite",function()setclipboard("discord.gg/gUMYGXqPPw")end)
