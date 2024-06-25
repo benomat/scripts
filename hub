@@ -55,13 +55,15 @@ if e==2 then warn("i hate incognito :(") end
 supported=true
 if g==111958650 then --arsenal
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LEGHUBarsenal'))()
-    if AskLoad("There's a script available which has kill all and other cool features.\nKill all is very detected tho and will get you banned.\nDo you still wanna use it?") then  loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b95e8fecdf824e41f4a030044b055add.lua"))() end
+    -- if AskLoad("There's a script available which has kill all and other cool features.\nKill all is very detected tho and will get you banned.\nDo you still wanna use it?") then  loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b95e8fecdf824e41f4a030044b055add.lua"))() end
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/wuhaz/arsenal/main/main.lua'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/Insertl/QuotasHub/main/BETAv1.3'))()
 elseif (p==10919241870 or  g==3938551440) then --Rarity Factory Tycoon
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/RarityFactoryTycoon.lua'))()
 elseif (p==654732683 or  g==274816972) then --Car Crushers 2 - Physics Simulation
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/CarCrushers2.lua'))()
+elseif (p==15535115259 or  g==5361859890) then --Launch Into Space Simulator
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/LaunchIntoSpaceSim.lua'))()
 elseif (p==6872265039 or g==2619619496) and e~=2 then --bedwars
     loadstring(game:HttpGet('https://raw.githubusercontent.com/FlamingDrey/Flame-X-v2/main/Flame%20X%20Bedwars%20V2'))()
     -- fn("Benomat's Hub","Press RIGHT SHIFT to open the menu!",20)
