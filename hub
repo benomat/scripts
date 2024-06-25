@@ -60,6 +60,8 @@ if g==111958650 then --arsenal
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/Insertl/QuotasHub/main/BETAv1.3'))()
 elseif (p==10919241870 or  g==3938551440) then --Rarity Factory Tycoon
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/RarityFactoryTycoon.lua'))()
+elseif (p==654732683 or  g==274816972) then --Car Crushers 2 - Physics Simulation
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/CarCrushers2.lua'))()
 elseif (p==6872265039 or g==2619619496) and e~=2 then --bedwars
     loadstring(game:HttpGet('https://raw.githubusercontent.com/FlamingDrey/Flame-X-v2/main/Flame%20X%20Bedwars%20V2'))()
     -- fn("Benomat's Hub","Press RIGHT SHIFT to open the menu!",20)
