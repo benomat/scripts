@@ -213,6 +213,8 @@ elseif (p==11400511154 or  g==4055984814) then --Monkey Tycoon
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/monkeytycoon.lua'))()
 elseif (p==8343259840 or  g==1494262959) then --Criminality (aimbot, esp)
 loadstring(game:HttpGet('https://raw.githubusercontent.com/ttwizz/Open-Aimbot/master/source.lua'))()
+elseif (p==9772878203 or  g==3620011279) then --[rebirth update] raise a floppa 2
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/raisefloppa.lua'))()
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua'))()
