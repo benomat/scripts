@@ -25,8 +25,22 @@ tab:CreateToggle("Loop Launch",false,function(state)
     if not state then game.Players.LocalPlayer.Character.Head:Destroy() end
     
 end)
-
-tab:CreateSection("Eggs")
+tab:CreateSection("Upgrades")
+tab:CreateToggle("Launcher upgrade 1 (Left)",false,function(state)
+    _G.Upgrade1=state
+    while _G.Upgrade1 do
+        firetouchinterest(LocalPlayer.Character.HumanoidRootPart,workspace.MAP:FindFirstChild("launchpad_"..LocalPlayer.Name).Upgrades.Launcher.current_level.Button,0)
+        wait(.03)
+    end
+end)
+tab:CreateToggle("Launcher upgrade 2 (Right)",false,function(state)
+    _G.Upgrade2=state
+    while _G.Upgrade2 do
+        firetouchinterest(LocalPlayer.Character.HumanoidRootPart,workspace.MAP:FindFirstChild("launchpad_"..LocalPlayer.Name).Upgrades.Launcher:FindFirstChild("1_level").Button,0)
+        wait(.03)
+    end
+end)
+tab:CreateSection("Eggs /// You still have to autoclick yourself")
 tab:CreateToggle("Auto Egg 1",false,function(state)
     _G.Egg1=state
     ermcount=0
@@ -63,7 +77,6 @@ tab:CreateToggle("Auto Egg 2",false,function(state)
     game.Players.LocalPlayer.Character.Head:Destroy()  
     
 end)
-tab:CreateLabel("You still have to autoclick yourself")
 function getPlayerNames()
     playerNames = {}
     for _,i in pairs(game.Players:GetPlayers()) do
@@ -74,7 +87,6 @@ end
 function erm(t)
     return t[1]
 end
-TPTab:CreateSection("Teleport just you")
 TPTab:CreateDropdown(
     "Players",
     getPlayerNames(),
