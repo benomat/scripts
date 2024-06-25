@@ -15,7 +15,7 @@ _G.AUTOFARMVEHICLE="Chevrolet_2"
 tab:CreateSection("Farm $$$")
 function selectVehicle(vehicle)
     _G.AUTOFARMVEHICLE=vehicle
-    selectedL:Set("Selected vehicle: ".._G.AUTOFARMVEHICLE)
+    -- selectedL:Set("Selected vehicle: ".._G.AUTOFARMVEHICLE)
 end
 tab:CreateToggle("Auto farm",false,function(state)
     _G.AutoFarm=state
