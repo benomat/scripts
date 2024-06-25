@@ -114,7 +114,7 @@ function LibWrapper:CreateWindow(name)
         end
         tabWrapper.AddDropdown = tabWrapper.CreateDropdown
 
-        function tabWrapper:CreateKeybind(name, currentKeybind, holdToInteract, flag, callback)
+        function tabWrapper:CreateKeybind(name, currentKeybind, holdToInteract, callback)
             local Keybind = tab:CreateKeybind({
                 Name = name,
                 CurrentKeybind = currentKeybind,
