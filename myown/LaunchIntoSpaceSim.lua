@@ -1,4 +1,4 @@
-window = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/libwrapper.lua'))():CreateWindow("i forgot the name")
+window = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/libwrapper.lua'))():CreateWindow("launch into space sim")
 tab=window:CreateTab("Main")
 TPTab=window:CreateTab("Teleports")
 MISCTAB=window:CreateTab("Misc")
@@ -10,13 +10,13 @@ tab:CreateToggle("Collect Stars (gotta be in the area)",false,function(state)
     _G.AutoCollect=state
     while _G.AutoCollect do
         for _,drop in ipairs(workspace.DROPS:GetChildren()) do
-            drop.BillboardGui.Enabled=false
+            drop.BillboardGui.Enabled=false 
             drop.Position = LocalPlayer.Character.HumanoidRootPart.Position
         end
         wait()
     end
 end)
-tab:CreateToggle("loop go into slingshot",false,function(state)
+tab:CreateToggle("Loop Launch",false,function(state)
     _G.AutoSling=state
     while _G.AutoSling do
         pcall(function()LocalPlayer.Character.HumanoidRootPart.Position=workspace.LAUNCHERS_RENDER:FindFirstChild(LocalPlayer.Name).Part.Position end)
@@ -25,6 +25,45 @@ tab:CreateToggle("loop go into slingshot",false,function(state)
     if not state then game.Players.LocalPlayer.Character.Head:Destroy() end
     
 end)
+
+tab:CreateSection("Eggs")
+tab:CreateToggle("Auto Egg 1",false,function(state)
+    _G.Egg1=state
+    ermcount=0
+    for _, i in pairs(workspace.DEBRIS:GetChildren()) do
+        if i.Name=="Part"  then
+            ermcount+=1
+            if ermcount==1 then
+            LocalPlayer.Character.HumanoidRootPart.Position=i.Position
+            break end end
+    end
+    while _G.Egg1 do
+        keypress(Enum.KeyCode.E)
+        --autoclick yourself :'( -- for i=0,25,1 do mousemoverel(5000,5000) mouse1click() wait() end
+        wait()
+    end
+    game.Players.LocalPlayer.Character.Head:Destroy() 
+    
+end)
+tab:CreateToggle("Auto Egg 2",false,function(state)
+    _G.Egg1=state
+    ermcount=0
+    for _, i in pairs(workspace.DEBRIS:GetChildren()) do
+        if i.Name=="Part"  then
+            ermcount+=1
+            if ermcount==2 then
+            LocalPlayer.Character.HumanoidRootPart.Position=i.Position
+            break end end
+    end
+    while _G.Egg1 do
+        keypress(Enum.KeyCode.E)
+        --autoclick yourself :'( -- for i=0,25,1 do mousemoverel(5000,5000) mouse1click() wait() end
+        wait()
+    end
+    game.Players.LocalPlayer.Character.Head:Destroy()  
+    
+end)
+tab:CreateLabel("You still have to autoclick yourself")
 function getPlayerNames()
     playerNames = {}
     for _,i in pairs(game.Players:GetPlayers()) do
