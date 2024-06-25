@@ -76,7 +76,7 @@ Tab:CreateToggle({
     Callback = function(value)
         config.uL = value
         while config.uL and task.wait() do
-            Remotes.BuySpeed:FireServer(1)
+            Remotes.BuySpeed:FireServer()
         end
     end
 })
@@ -132,7 +132,7 @@ local Slider = tab3:CreateSlider({
    Suffix = "studs per second",
    CurrentValue = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed, 
    Callback = function(v) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v end})
-tab3:CreateButton({    Name = " Rejoin Server  ", Callback=function () loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end})
+tab3:CreateButton({Name = "Rejoin Server ", Callback=function () loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end})
 tab3:CreateLabel("Credits!")
 tab3:CreateLabel("originally made by griffindoescooking")
 tab3:CreateLabel("fixed and stuff by benomat")

@@ -37,42 +37,43 @@ end)
 tab:CreateSection("Upgades >,<")
 function AutoBuy(fire,nameSearch)
     for _, button in pairs(myTycoon.Buttons:GetChildren()) do
+        wait()
         if string.find(button.Name, nameSearch) and button:FindFirstChild("Glow") then
             firetouchinterest(LocalPlayer.Character.HumanoidRootPart, button.Button, fire)
             wait(.05)
         end
     end
 end
-tab:CreateToggle("Auto buy droppers",false,function(state)
+b1=tab:CreateToggle("Auto buy droppers",false,function(state)
     searchTerm="Dropper"
     _G.AutoBDroppers=state
     if state then fire=0
     else fire=1 end
     while _G.AutoBDroppers do
         AutoBuy(fire,searchTerm)
-        wait(.3)
+        wait(.5)
     end
     -- if not state then AutoBuy(fire,searchTerm) end
 end)
-tab:CreateToggle("Auto buy next floor",false,function(state)
+b2=tab:CreateToggle("Auto buy next floor",false,function(state)
     searchTerm="Floor"
     _G.AutoBFloor=state
     if state then fire=0
     else fire=1 end
     while _G.AutoBFloor and task.wait() do
         AutoBuy(fire,searchTerm)
-        wait(.3)
+        wait(.5)
     end
     -- if not state then AutoBuy(fire,searchTerm) end
 end)
-tab:CreateToggle("Auto buy Process Speed",false,function(state)
+b3=tab:CreateToggle("Auto buy Process Speed",false,function(state)
     searchTerm="Process Speed"
     _G.AutoBPS=state
     if state then fire=0
     else fire=1 end
     while _G.AutoBPS do
         AutoBuy(fire,searchTerm)
-        wait(.3)
+        wait(.5)
     end
     -- if not state then AutoBuy(fire,searchTerm) end
 end)
@@ -95,17 +96,25 @@ end)
 
 
 
-
 mtab:CreateButton("Collect Airdrops",function()
     old_pos=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
     for _, airdrop in pairs(workspace.AirDrops:GetChildren()) do
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = airdrop.Crate.CFrame
         wait(.006)
         keypress(Enum.KeyCode.E)-- airdrop.Crate.ProximityPrompt:InputHoldBegin()
-        wait(3)
+        wait(2.5)
         keyrelease(Enum.KeyCode.E)-- airdrop.Crate.ProximityPrompt:InputHoldEnd()
     end
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=old_pos
+end)
+mtab:CreateToggle("Auto collect Gifts",false,function(state)
+    _G.AutoGifts=state
+    while _G.AutoGifts do 
+        for i=1,12,1 do 
+            game.ReplicatedStorage.Remotes.ClaimGift:FireServer(i)
+        end
+        wait(5)
+    end
 end)
 
 
