@@ -219,6 +219,8 @@ elseif (p==9772878203 or  g==3620011279) then --[rebirth update] raise a floppa 
 elseif (p==17450551531 or  g==5972059550) then --Gym League
     loadstring(game:HttpGet('https://raw.githubusercontent.com/AhmadV99/Script-Games/main/Gym%20League.lua'))()
     loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/bcb1262edfe7a95bc2b25f07e68639ff.lua'))()
+elseif (p==4483381587 or  g==1430993116) then --a literal baseplate. 
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/aliteralbaseplate.lua'))()
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua'))()
