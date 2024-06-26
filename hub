@@ -125,6 +125,7 @@ elseif g==1650291138 then --demonfall
 elseif p==4282985734 or p==11979315221 or g==1390601379 then --combat warriors
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/combatwarriors'))()
     if AskLoad("Would you like to load an autofarm script?") then  loadstring(game:HttpGet('https://pastebin.com/raw/pexrijZn'))() end
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/1d4db6a1b04aaeccf046f7c63fbad31a.lua"))()
     --loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/patchedFleeTheFacility"))()
 elseif p==3351674303 then --driving empire
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/drivingempire'))()
@@ -152,7 +153,7 @@ elseif p==6447798030 then --funky friday -> might make a good autoplay in a mont
 -- elseif (p==6804602922 or g==2583564222) and e~=2 then --Boxing Beta!
 --     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/boxingbeta.lua'))()
 elseif (p==3233893879 or g==1168263273) then --Bad Business (esp)
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/151aa702c8c02d613b0928851ecdb40d.lua"))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/bad%20business.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/bbesp.lua'))() -- just esp
 elseif (p==14363263080 or g==848145103) then --Dungeon quest!
     loadstring(game:HttpGet('https://pastebin.com/raw/F5vSFHZt'))()
