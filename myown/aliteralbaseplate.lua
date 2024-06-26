@@ -1,4 +1,4 @@
-window = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/libwrapper.lua'))():CreateWindow("baseplate")
+window = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/libwrapper.lua'))():CreateWindow("cute universal")
 tab=window:CreateTab("Main")
 TPTab=window:CreateTab("Teleports")
 MISCTAB=window:CreateTab("Misc")
@@ -31,9 +31,10 @@ emoteSelector=tab:CreateDropdown(
         loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/e'))()
 end)
 tab:CreateButton("Reset Emote Selector",function()emoteSelector:Set({})end)
-tab:CreateLabe("Press the PERIOD key . to use emotes")
+tab:CreateLabel("Press the PERIOD key . to use emotes")
 tab:CreateSection("uhhh")
 tab:CreateButton("Load Open Aimbot",function()loadstring(game:HttpGet('https://raw.githubusercontent.com/ttwizz/Open-Aimbot/master/source.lua'))()end)
+tab:CreateButton("Load Dex",function()loadstring(game:HttpGet('https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua'))()end)
 function getPlayerNames()
     playerNames = {}
     for _,i in pairs(game.Players:GetPlayers()) do
