@@ -77,10 +77,5 @@ return function(s)
     userInputService.InputBegan:Connect(onKeyPress)
     userInputService.InputEnded:Connect(onKeyRelease)
     runService.RenderStepped:Connect(onUpdate)
-    game.Players.LocalPlayer.CharacterAdded:Connect(function()
-        userInputService.InputBegan:Connect(onKeyPress)
-        userInputService.InputEnded:Connect(onKeyRelease)
-        runService.RenderStepped:Connect(onUpdate)
-    end)
     end
     end

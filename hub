@@ -101,7 +101,8 @@ elseif p==13822889 then --lumbertycoon 2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LT2.lua'))()
     sNotify("You can scroll on the left side btw!",120)
 elseif (p==142823291 or g==66654135) then --Murder Mystery 2 mm2
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/loader.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/mezzopera/OMEN-MM2/main/omenmm2'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/loader.lua'))()
 elseif (p==8737899170 or  g==3317771874) then --Pet Simulator 99
     loadstring(game:HttpGet('https://raw.githubusercontent.com/idonthaveoneatm/lua/normal/games/PetSimulator99/SolaraVersion.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua'))() 
@@ -212,7 +213,7 @@ elseif (p==1554960397 or  g==605887098) then -- Car Dealership Tycoon
 elseif (p==11400511154 or  g==4055984814) then --Monkey Tycoon
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/monkeytycoon.lua'))()
 elseif (p==8343259840 or  g==1494262959) then --Criminality (aimbot, esp)
-loadstring(game:HttpGet('https://raw.githubusercontent.com/ttwizz/Open-Aimbot/master/source.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ttwizz/Open-Aimbot/master/source.lua'))()
 elseif (p==9772878203 or  g==3620011279) then --[rebirth update] raise a floppa 2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/raisefloppa.lua'))()
 elseif (p==17450551531 or  g==5972059550) then --Gym League
@@ -248,7 +249,7 @@ while getgenv().joini==nil and c<100 do
     wait(.1)
     if getgenv().joini then 
         setclipboard('https://discord.gg/gUMYGXqPPw')
-        sNotify('Copied the invite to your clipboard, simply paste it into your browser or discord')
+        sNotify('Copied the invite to your clipboard!')
     end
     c+=1
 end
