@@ -66,7 +66,7 @@ local function tpn(...)
 end
 wsBoost=loadstring(game:HttpGet("https://raw.githubusercontent.com/benomat/scripts/m/myown/wsBoost.lua"))()
 MISCTAB:CreateSlider("Speed",{16, 300},1,"studs per second",game.Players.LocalPlayer.Character.Humanoid.WalkSpeed,function(v) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v end)
-MISCTAB:CreateSlider("undetected speed boost",{0, 50},1,"boost",0,function(v) _G.wsbran=false wait(.01) wsBoost(v/300) end)
+MISCTAB:CreateSlider("undetected speed boost",{0, 50},1,"boost",0,function(v) wsBoost(v/25) end)
 MISCTAB:CreateButton("Rejoin Server", function () loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end)
 MISCTAB:CreateLabel("by benomat")
 MISCTAB:CreateButton("Copy discord invite",function()setclipboard("discord.gg/gUMYGXqPPw")end)
