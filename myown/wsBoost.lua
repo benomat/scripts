@@ -2,6 +2,7 @@ return function(s)
     _G.teleportDistance = s
     
     if not _G.wsbran then
+    warn("yooo")
     _G.wsbran=true
     local player = game.Players.LocalPlayer
     local character = player.Character or player.CharacterAdded:Wait()
