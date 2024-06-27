@@ -72,6 +72,7 @@ elseif (p==6872265039 or g==2619619496) and e==2 then --bedwars
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ohmygodiloveketamine/aeolusv2/main/script'))()
 elseif p==1537690962 then --beeswarm simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/scriptpastebin/raw/main/29'))()
+    --loadstring(game:HttpGet('https://raw.githubusercontent.com/BaconBossScript/BeeSwarmSim/main/BeeSwarmSim'))()
 elseif g==4777817887 then --bladeball
     loadstring(game:HttpGet('https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/autoparry.lua'))()
 elseif (p==2753915549 or g==994732206) and e~=2 then --bloxfruits solara
@@ -121,7 +122,8 @@ elseif p==15532962292 then --solsrng
     setclipboard("vy5fBGS6nNUuJjgxWhCLpR")
     fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
 elseif g==1650291138 then --demonfall
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/demonfall'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/LabibKazi858/Scripts/main/DemonFall'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/demonfall'))()
 elseif p==4282985734 or p==11979315221 or g==1390601379 then --combat warriors
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/combatwarriors'))()
     if AskLoad("Would you like to load an autofarm script?") then  loadstring(game:HttpGet('https://pastebin.com/raw/pexrijZn'))() end
@@ -224,8 +226,10 @@ elseif (p==4483381587 or  g==1430993116) then --a literal baseplate.
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/aliteralbaseplate.lua'))()
 elseif (p==621129760 or  g==254394801) then --KAT
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua'))()
+elseif (p==4620170611 or  g==1318971886) then --Break In 1
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/submitted/breakin1.lua'))()
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
-    notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
+    -- notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua'))()
 else 
     if loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/skihub.lua'))() then 

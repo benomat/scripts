@@ -6,7 +6,7 @@ MISCTAB=window:CreateTab("Misc")
 
 function fun()
     for i=1,35 do
-        wait(0.5)
+        wait(0.8)
         game.Workspace.CarCollection:findFirstChild(game.Players.LocalPlayer.Name).Car:MoveTo(Vector3.new(0,950,0))
     end
 end
@@ -80,6 +80,9 @@ end)
 wsBoost=loadstring(game:HttpGet("https://raw.githubusercontent.com/benomat/scripts/m/myown/wsBoost.lua"))()
 MISCTAB:CreateSlider("Speed",{16, 300},1,"studs per second",game.Players.LocalPlayer.Character.Humanoid.WalkSpeed,function(v) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v end)
 MISCTAB:CreateSlider("CFrame Speed",{0, 50},1,"boost",0,function(v) wsBoost(v/25) end)
+fling=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/fling.lua'))()
+tab:CreateButton("Fling all",function()fling("All")end)
+tab:CreateInput("Fling Player","Name",true,function(player)fling(player)end)
 MISCTAB:CreateButton("Rejoin Server", function () loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end)
 MISCTAB:CreateLabel("by benomat")
 MISCTAB:CreateButton("Copy discord invite",function()setclipboard("discord.gg/gUMYGXqPPw")end)
