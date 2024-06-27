@@ -89,7 +89,7 @@ elseif g==1335695570 then
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/njlg.lua'))()
 elseif p==301549746 then --counterblox
     loadstring(game:HttpGet('https://raw.githubusercontent.com/fliskScript/jaran.vip/main/free.lua'))()
-elseif p==2788229376 then --dahood
+elseif g==1008451066 then --dahood
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ImagineProUser/vortexdahood/main/vortex'))()
 elseif (g==2440500124 or g==1) then --DOORS
     loadstring(game:HttpGet('https://raw.githubusercontent.com/KINGHUB01/BlackKing/main/BlackKingMb'))()
