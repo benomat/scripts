@@ -31,11 +31,6 @@ return function(yurrgurrt)
             end
         end
         local Message = function(_Title, _Text, Time)
-            game:GetService("StarterGui"):SetCore("SendNotification", {
-                Title = _Title,
-                Text = _Text,
-                Duration = Time
-            })
         end
         local SkidFling = function(TargetPlayer)
             local Character = Player.Character
@@ -173,10 +168,6 @@ return function(yurrgurrt)
                 return Message("Error Occurred", "Random error", 5)
             end
         end
-        if not Welcome then
-            Message("甩飞已开启成功", "猫脚本", 5)
-        end
-        getgenv().Welcome = true
         if Targets[1] then
             for _, x in next, Targets do
                 GetPlayer(x)
@@ -191,13 +182,9 @@ return function(yurrgurrt)
         end
         for _, x in next, Targets do
             if GetPlayer(x) and GetPlayer(x) ~= Player then
-                if GetPlayer(x).UserId ~= 1414978355 then
-                    local TPlayer = GetPlayer(x)
-                    if TPlayer then
-                        SkidFling(TPlayer)
-                    end
-                else
-                    Message("Error Occurred", "This user is whitelisted! (Owner)", 5)
+                local TPlayer = GetPlayer(x)
+                if TPlayer then
+                    SkidFling(TPlayer)
                 end
             elseif not GetPlayer(x) and not AllBool then
                 Message("Error Occurred", "Username Invalid", 5)
