@@ -138,8 +138,9 @@ elseif p==10449761463 then --strongest battlegrounds
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/TSBUtils.lua'))() --this one might only work on solara or not at all
 elseif (p==606849621 or g==245662005) then --jailbreak
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/skihub.lua'))() 
-    loadstring(game:HttpGet('https://pastebin.com/raw/ghGgrmWR'))()
-    loadstring(game:HttpGet('https://farmhub.lol/AutoCrateFree.lua'))()
+    -- loadstring(game:HttpGet('https://pastebin.com/raw/ghGgrmWR'))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/BlitzIsKing/UniversalFarm/main/Loader/Regular"))()
+    -- loadstring(game:HttpGet('https://farmhub.lol/AutoCrateFree.lua'))()
     -- broken.. loadstring(game:HttpGet('https://raw.githubusercontent.com/Pxsta72/ProjectAuto/main/AutoRobV4Release'))()
 elseif (p==14044547200 or  g==4864117649) then --[recode] untitled tag game(UTG)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/UTG.lua'))()
@@ -154,7 +155,7 @@ elseif p==6447798030 then --funky friday -> might make a good autoplay in a mont
     -- alt link (same script) loadstring(game:HttpGet('https://raw.githubusercontent.com/Zivixian/FunkyFriday/main/ProjectBishopUpdated.lua'))()
 -- elseif (p==6804602922 or g==2583564222) and e~=2 then --Boxing Beta!
 --     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/boxingbeta.lua'))()
-elseif (p==3233893879 or g==1168263273) then --Bad Business (esp)
+elseif (p==3233893879 or g==1168263273) then --Bad Business
     loadstring(game:HttpGet('https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/bad%20business.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/bbesp.lua'))() -- just esp
 elseif (p==14363263080 or g==848145103) then --Dungeon quest!
