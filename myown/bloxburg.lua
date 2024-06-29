@@ -95,7 +95,7 @@ tab:CreateKeybind("Hair Studio Farm","H",false,function()
     end
     function getOrder()
         for _,v in pairs(game.workspace._game.SpawnedCharacters:GetChildren()) do
-            if v.HumanoidRootPart.CFrame==CFrame.new(862.600037, 13.499999, 175.999786, -1, 0, 0, 0, 1, 0, 0, 0, -1) then
+            if v.Name=="StylezHairStudioCustomer" and v.HumanoidRootPart.CFrame==CFrame.new(862.600037, 13.499999, 175.999786, -1, 0, 0, 0, 1, 0, 0, 0, -1) then
                 return v.Order.Style.Value,v.Order.Color.Value
             end
         end
@@ -113,12 +113,12 @@ tab:CreateKeybind("Hair Studio Farm","H",false,function()
         cycleStyle()
         wait(.1)
         style,color=getOrder()
-    end
+        end
     submitHaircut()
-    wait(1)
-    repeat wait() until getOrder()
-end
-lp.CameraMode = Enum.CameraMode.Classic end)
+    repeat task.wait() until getOrder()
+    end
+    lp.CameraMode = Enum.CameraMode.Classic
+end)
 tab:CreateParagraph("How to use","1. Enter the job\n2. Go to the first workstation on the right\n3. Change the hair yourself once (just click it)\n4. Press the keybind (also press to disable)\nalso dont have any gui in the middle of your screen, that would block the clicks\n--- join the discord server in misc to request features to be added ---")
 tab:CreateParagraph("Solara info","If youre on solara and NOT wave you gotta use an autoclicker while farming because solaras mouse1click() function is really weird for some reason\nI would really appreciate if someone could tell me a better way to handle this")
     tab:CreateDropdown(

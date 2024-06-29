@@ -6,15 +6,21 @@ MISCTAB=window:CreateTab("Misc")
 local LocalPlayer = game.Players.LocalPlayer
 
 tab:CreateSection("Farm $$$")
-tab:CreateToggle("Collect Stars (gotta be in the area)",false,function(state)
+tab:CreateToggle("Collect Stars",false,function(state)
     _G.AutoCollect=state
-    while _G.AutoCollect do
-        for _,drop in ipairs(workspace.DROPS:GetChildren()) do
-            drop.BillboardGui.Enabled=false 
-            drop.Position = LocalPlayer.Character.HumanoidRootPart.Position
-        end
-        wait()
-    end
+    while _G.AutoCollect and task.wait() do
+		pcall(function()
+			for i, v in pairs(game:GetService("Workspace").DROPS:GetChildren()) do
+				local args = {
+					[1] = {
+						[1] = v.Name
+					}
+				}
+				game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.6.0"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("DropService"):WaitForChild("RE"):WaitForChild("PickupDrop"):FireServer(unpack(args))
+				task.wait()
+			end
+		end)
+	end
 end)
 tab:CreateToggle("Loop Launch",false,function(state)
     _G.AutoSling=state
