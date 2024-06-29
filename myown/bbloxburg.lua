@@ -42,7 +42,7 @@ tab:CreateKeybind("Hair Studio Farm","H",false,function()
         local forwardVector = cameraRotation.LookVector
         local rightVector = cameraRotation.RightVector
         local upVector = cameraRotation.UpVector
-        local newPos = cameraPosition + (forwardVector * 2) - (rightVector * 1.55) - (upVector * 1)
+        local newPos = cameraPosition + (forwardVector * 2) - (rightVector * 1.5) - (upVector * 1)
         local newCFrame = CFrame.new(newPos) * cameraRotation * CFrame.Angles(0, math.rad(270), 0)
         workstation.Mirror.CFrame = newCFrame
         wait()
@@ -58,7 +58,7 @@ tab:CreateKeybind("Hair Studio Farm","H",false,function()
         local forwardVector = cameraRotation.LookVector
         local rightVector = cameraRotation.RightVector
         local upVector = cameraRotation.UpVector
-        local newPos = cameraPosition + (forwardVector * 2) - (rightVector * 1.55) - (upVector * -.6)
+        local newPos = cameraPosition + (forwardVector * 2) - (rightVector * 1.5) - (upVector * -.6)
         local newCFrame = CFrame.new(newPos) * cameraRotation * CFrame.Angles(0, math.rad(270), 0)
         workstation.Mirror.CFrame = newCFrame
         wait()
@@ -119,7 +119,7 @@ tab:CreateKeybind("Hair Studio Farm","H",false,function()
     repeat wait() until getOrder()
 end
 lp.CameraMode = Enum.CameraMode.Classic end)
-tab:CreateParagraph("How to use","1. Enter the job\n2. Go to the first workstation on the right\n3. Change the hair yourself once (just click it)\n4. Press the keybind (also press to disable)\nalso dont have any gui in the middle of your screen, that would block the clicks\n--- join the discord server in misc to request features to be added ---")
+tab:CreateParagraph("How to use","1. Enter the job\n2. Go to the first workstation on the right\n3. Change the hair yourself once (just click it)\n4. Press the keybind (also press to disable)\n--- join the discord server in misc to request features to be added ---")
 tab:CreateDropdown(
     "Animation pack",
     {"Vampire", "Hero", "ZombieClassic", "Cowboy", "Patrol", "Bold", "ZombieFE", "Princess", "Popstar", "Sneaky", "Toy", "Knight", "Confident", "Ghost", "Elder", "Levitation", "Mage", "Astronaut", "Ninja", "Werewolf", "Cartoon", "Pirate"},
@@ -129,7 +129,6 @@ tab:CreateDropdown(
         getgenv().animchanger=erm(opt)
         loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/a'))()
 end)
-tab:CreateParagraph("Solara info","If youre on solara and NOT wave you gotta use an autoclicker while farming because solaras mouse1click() function is really weird for some reason\nI would really appreciate if someone could tell me a better way to handle this")
 
 tab:CreateSection("you dont need this")
 tab:CreateButton("Load Open Aimbot",function()loadstring(game:HttpGet('https://raw.githubusercontent.com/ttwizz/Open-Aimbot/master/source.lua'))()end)
@@ -137,7 +136,7 @@ tab:CreateButton("Load Dex",function()loadstring(game:HttpGet('https://raw.githu
 
 wsBoost=loadstring(game:HttpGet("https://raw.githubusercontent.com/benomat/scripts/m/myown/wsBoost.lua"))()
 MISCTAB:CreateSlider("CFrame Speed",{0, 30},1,"boost",0,function(v) wsBoost(v/25) end)
-MISCTAB:CreateButton("Rejoin Server", function() loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end)
+MISCTAB:CreateButton("Rejoin Server", function () loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end)
 MISCTAB:CreateLabel("by benomat")
 MISCTAB:CreateButton("Copy discord invite",function()setclipboard("discord.gg/gUMYGXqPPw")end)
 game.Players.LocalPlayer.CharacterAdded:Connect(function() _G.wsbran=false end)
