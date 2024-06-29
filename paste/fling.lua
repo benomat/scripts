@@ -34,6 +34,7 @@ return function(yurrgurrt)
         end
         local SkidFling = function(TargetPlayer)
             local Character = Player.Character
+            if Character then
             local Humanoid = Character and Character:FindFirstChildOfClass("Humanoid")
             local RootPart = Humanoid and Humanoid.RootPart
             local TCharacter = TargetPlayer.Character
@@ -57,7 +58,6 @@ return function(yurrgurrt)
             if Accessoy and Accessory:FindFirstChild("Handle") then
                 Handle = Accessory.Handle
             end
-            if Character and Humanoid and RootPart then
                 if RootPart.Velocity.Magnitude < 50 then
                     getgenv().OldPos = RootPart.CFrame
                 end
