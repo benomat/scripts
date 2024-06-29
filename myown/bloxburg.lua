@@ -136,7 +136,8 @@ tab:CreateButton("Load Open Aimbot",function()loadstring(game:HttpGet('https://r
 tab:CreateButton("Load Dex",function()loadstring(game:HttpGet('https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua'))()end)
 
 wsBoost=loadstring(game:HttpGet("https://raw.githubusercontent.com/benomat/scripts/m/myown/wsBoost.lua"))()
-MISCTAB:CreateSlider("CFrame Speed",{0, 30},1,"boost",0,function(v) wsBoost(v/25) end)
+MISCTAB:CreateSlider("CFrame Speed",{0, 20},1,"boost",0,function(v) wsBoost(v/40) end)
+MISCTAB:CreateLabel("^^ Kicks you if you walk long distances with high speed")
 MISCTAB:CreateButton("Rejoin Server", function() loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end)
 MISCTAB:CreateLabel("by benomat")
 MISCTAB:CreateButton("Copy discord invite",function()setclipboard("discord.gg/gUMYGXqPPw")end)
