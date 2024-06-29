@@ -53,6 +53,7 @@ b1=tab:CreateToggle("Auto buy droppers",false,function(state)
         AutoBuy(fire,searchTerm)
         wait(.5)
     end
+    print("end")
     -- if not state then AutoBuy(fire,searchTerm) end
 end)
 b2=tab:CreateToggle("Auto buy next floor",false,function(state)
@@ -64,6 +65,7 @@ b2=tab:CreateToggle("Auto buy next floor",false,function(state)
         AutoBuy(fire,searchTerm)
         wait(.5)
     end
+    print("end")
     -- if not state then AutoBuy(fire,searchTerm) end
 end)
 b3=tab:CreateToggle("Auto buy Process Speed",false,function(state)
@@ -75,6 +77,7 @@ b3=tab:CreateToggle("Auto buy Process Speed",false,function(state)
         AutoBuy(fire,searchTerm)
         wait(.5)
     end
+    print("end")
     -- if not state then AutoBuy(fire,searchTerm) end
 end)
 tab:CreateToggle("Auto Rebirth",false,function(state)
@@ -95,18 +98,7 @@ tab:CreateToggle("Auto Rebirth",false,function(state)
 end)
 
 
-
-mtab:CreateButton("Collect Airdrops",function()
-    old_pos=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-    for _, airdrop in pairs(workspace.AirDrops:GetChildren()) do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = airdrop.Crate.CFrame
-        wait(.006)
-        keypress(Enum.KeyCode.E)-- airdrop.Crate.ProximityPrompt:InputHoldBegin()
-        wait(2.5)
-        keyrelease(Enum.KeyCode.E)-- airdrop.Crate.ProximityPrompt:InputHoldEnd()
-    end
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=old_pos
-end)
+mtab:CreateSection("Get boosts")
 mtab:CreateToggle("Auto collect Gifts",false,function(state)
     _G.AutoGifts=state
     while _G.AutoGifts do 
@@ -116,8 +108,38 @@ mtab:CreateToggle("Auto collect Gifts",false,function(state)
         wait(5)
     end
 end)
-
-
+_G.ParkourReward="Money"
+mtab:CreateDropdown(
+    "Select Parkour Reward",
+    {"Money","Luck","ProcessSpeed"},
+    _G.ParkourReward,
+    false,
+    function(opt)
+        _G.ParkourReward = erm(opt) 
+end)
+mtab:CreateToggle("Farm Parkour Boosts",false,function(state)
+    _G.FarmParkour=state
+    while _G.FarmParkour do
+        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, game:GetService("Workspace").Obby.RewardButtons[_G.ParkourReward].Button, 0)
+        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, game:GetService("Workspace").Obby.RewardButtons[_G.ParkourReward].Button, 1)
+        wait(2)
+    end
+end)
+mtab:CreateSection("other")
+mtab:CreateButton("Collect Airdrops",function()
+    old_pos=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    for _, airdrop in pairs(workspace.AirDrops:GetChildren()) do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = airdrop.Crate.CFrame
+        wait(.1)
+        if fireproximityprompt then fireproximityprompt(airdrop.Crate.ProximityPrompt) wait(.05)
+        else
+            keypress(Enum.KeyCode.E)-- airdrop.Crate.ProximityPrompt:InputHoldBegin()
+            wait(2.5)
+            keyrelease(Enum.KeyCode.E)-- airdrop.Crate.ProximityPrompt:InputHoldEnd()
+        end
+    end
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=old_pos
+end)
 function getPlayerNames()
     playerNames = {}
     for _,i in pairs(game.Players:GetPlayers()) do
@@ -128,7 +150,6 @@ end
 function erm(t)
     return t[1]
 end
-
 MISCTAB:CreateDropdown(
     "Teleport to",
     getPlayerNames(),
