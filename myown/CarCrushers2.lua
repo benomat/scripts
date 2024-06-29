@@ -5,7 +5,7 @@ MISCTAB=window:CreateTab("Misc")
 
 
 function fun()
-        
+    for i=1,35 do
         wait(0.8)
         game.Workspace.CarCollection:findFirstChild(game.Players.LocalPlayer.Name).Car:MoveTo(Vector3.new(0,950,0))
     end
