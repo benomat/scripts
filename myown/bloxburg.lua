@@ -42,7 +42,7 @@ tab:CreateKeybind("Hair Studio Farm","H",false,function()
         local forwardVector = cameraRotation.LookVector
         local rightVector = cameraRotation.RightVector
         local upVector = cameraRotation.UpVector
-        local newPos = cameraPosition + (forwardVector * 2) - (rightVector * 1.55) - (upVector * 1)
+        local newPos = cameraPosition + (forwardVector * 2) - (rightVector * 1.6) - (upVector * 1)
         local newCFrame = CFrame.new(newPos) * cameraRotation * CFrame.Angles(0, math.rad(270), 0)
         workstation.Mirror.CFrame = newCFrame
         wait()
@@ -58,7 +58,7 @@ tab:CreateKeybind("Hair Studio Farm","H",false,function()
         local forwardVector = cameraRotation.LookVector
         local rightVector = cameraRotation.RightVector
         local upVector = cameraRotation.UpVector
-        local newPos = cameraPosition + (forwardVector * 2) - (rightVector * 1.55) - (upVector * -.6)
+        local newPos = cameraPosition + (forwardVector * 2) - (rightVector * 1.6) - (upVector * -.6)
         local newCFrame = CFrame.new(newPos) * cameraRotation * CFrame.Angles(0, math.rad(270), 0)
         workstation.Mirror.CFrame = newCFrame
         wait()
