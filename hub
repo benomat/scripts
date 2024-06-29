@@ -55,7 +55,7 @@ if e==2 then warn("i hate incognito :(") end
 supported=true
 if g==111958650 then --arsenal
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LEGHUBarsenal'))()
-    -- if AskLoad("There's a script available which has kill all and other cool features.\nKill all is very detected tho and will get you banned.\nDo you still wanna use it?") then  loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b95e8fecdf824e41f4a030044b055add.lua"))() end
+    -- if AskLoad("There's a script available which has kill all and other cool features.\nKill all is very detected tho and will get you banned.\nDo you still wanna use it?") then  loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/b95e8fecdf824e41f4a030044b055add.lua'))() end
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/wuhaz/arsenal/main/main.lua'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/Insertl/QuotasHub/main/BETAv1.3'))()
 elseif (p==10919241870 or  g==3938551440) then --Rarity Factory Tycoon
@@ -128,8 +128,8 @@ elseif g==1650291138 then --demonfall
 elseif p==4282985734 or p==11979315221 or g==1390601379 then --combat warriors
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/combatwarriors'))()
     if AskLoad("Would you like to load an autofarm script?") then  loadstring(game:HttpGet('https://pastebin.com/raw/pexrijZn'))() end
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/1d4db6a1b04aaeccf046f7c63fbad31a.lua"))()
-    --loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/patchedFleeTheFacility"))()
+    loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/1d4db6a1b04aaeccf046f7c63fbad31a.lua'))()
+    --loadstring(game:HttpGet('https://raw.githubusercontent.com/1f0yt/community/master/patchedFleeTheFacility'))()
 elseif p==3351674303 then --driving empire
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/drivingempire'))()
 elseif p==893973440 then --flee the facility
@@ -140,7 +140,7 @@ elseif p==10449761463 then --strongest battlegrounds
 elseif (p==606849621 or g==245662005) then --jailbreak
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/skihub.lua'))() 
     loadstring(game:HttpGet('https://pastebin.com/raw/ghGgrmWR'))()
-    -- loadstring(game:HttpGet("https://raw.githubusercontent.com/BlitzIsKing/UniversalFarm/main/Loader/Regular"))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/BlitzIsKing/UniversalFarm/main/Loader/Regular'))()
     -- loadstring(game:HttpGet('https://farmhub.lol/AutoCrateFree.lua'))()
     -- broken.. loadstring(game:HttpGet('https://raw.githubusercontent.com/Pxsta72/ProjectAuto/main/AutoRobV4Release'))()
 elseif (p==14044547200 or  g==4864117649) then --[recode] untitled tag game(UTG)
@@ -193,7 +193,7 @@ elseif (p==7305309231 or  g==2851381018) then --Taxi Boss
 elseif (p==17387475546 or  g==2142948266) then --Project Slayer
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/projectslayer.lua'))()
 elseif (p==6961824067 or  g==2668101271) then --Fling Things and People
-    --if AskLoad("If the key thats copied to your clipboard right now doesnt work press YES on this.\nthen paste the link into your browser to bypass the linkvertise") then setclicpboard("https://bypass.city") end
+    --if AskLoad("If the key thats copied to your clipboard right now doesnt work press YES on this.\nthen paste the link into your browser to bypass the linkvertise") then setclicpboard('https://bypass.city'it dd) end
     loadstring(game:HttpGet('https://raw.githubusercontent.com/BlizTBr/scripts/main/FTAP.lua'))()
     setclipboard("JuniorFilhoDoBlizT")
     fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
@@ -204,14 +204,14 @@ elseif (p==5938036553 or  g==2132866904) then --FRONTLINES
 elseif (p==16426795556 or  g==5661134200) then --Track & Field: Infinite
     loadstring(game:HttpGet('https://raw.githubusercontent.com/RETARDWAR3/retardware-main/main/Trackandfield.lua'))()
 elseif (p==189707 or  g==65241) then --Natural Disaster Survival
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/CHHub/main/CHHub.lua"))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/RobloxHackingProject/CHHub/main/CHHub.lua'))()
 elseif (p==9391468976 or  g==3508322461) then --Jujutsu Shenanigans
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/Jujutsu/main/Shenanigans"))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/LOLking123456/Jujutsu/main/Shenanigans'))()
 elseif (p==4566572536 or  g==1480782352) then --[ZENVO] Vehicle Legends
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Marco8642/science/main/Vehicle%20legends"))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/Vehicle%20legends'))()
 elseif (p==14386691987 or  g==4931927012) then --basketball legends
     _G.OBFHUBFREE = "2kmembersgang"
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/obfhub/free/main/basketmball"))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/obfhub/free/main/basketmball'))()
     ------------------------------------------------ELITE-SKIDDING--------------------------------------------------------------
 elseif (p==1554960397 or  g==605887098) then -- Car Dealership Tycoon
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/cardealership.lua'))()
@@ -232,6 +232,8 @@ elseif (p==4620170611 or  g==1318971886) then --Break In 1
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/submitted/breakin1.lua'))()
 elseif (p==185655149 or  g==88070565) then --Welcome to Bloxburg (I really recommend only using on wave if at all)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/bloxburg.lua'))()
+elseif (p==281489669 or  g==110988953) then --Wizard Tycoon - 2 Player
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/SlamminPig/rblxgames/main/Wizard%20Tycoon%20-%202%20Player/2pWizardTycoonGUI'))()
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     -- notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua'))()
