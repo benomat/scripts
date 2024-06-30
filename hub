@@ -85,7 +85,9 @@ elseif (p==2753915549 or g==994732206) and e==2 then --bloxfruits others
 elseif p==4924922222 then --brookhaven
     loadstring(game:HttpGet('https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script'))()
 elseif p==537413528 then --build a boat
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/juywvm/-Roblox-Projects-/main/babft'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/juywvm/-Roblox-Projects-/main/Build%20A%20Boat%20For%20Treasure/re_write'))()
+    --loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/ZeeroxHub/main/Loader.lua')() 
+    --loadstring(game:HttpGet('https://raw.githubusercontent.com/zachisfunny/Build-a-Boat-OP-Script/main/Script'))()
 elseif g==1335695570 then
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/njlg.lua'))()
 elseif p==301549746 then --counterblox
@@ -130,8 +132,9 @@ elseif p==4282985734 or p==11979315221 or g==1390601379 then --combat warriors
     if AskLoad("Would you like to load an autofarm script?") then  loadstring(game:HttpGet('https://pastebin.com/raw/pexrijZn'))() end
     loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/1d4db6a1b04aaeccf046f7c63fbad31a.lua'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/1f0yt/community/master/patchedFleeTheFacility'))()
-elseif p==3351674303 then --driving empire
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/drivingempire'))()
+elseif p==3351674303 then --driving empire Car Racing
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/drivingempire.lua'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/drivingempire'))()
 elseif p==893973440 then --flee the facility
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/fleethefacility.lua'))()
 elseif p==10449761463 then --strongest battlegrounds
@@ -179,8 +182,6 @@ elseif (p==16560655288 or  g==5700746583) then --Pillar Chase 2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/fbenable.lua'))()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/wxrpq/ritual/main/loader'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/wxrpq/ritual/main/scripts/pillarchase2.lua'))()
-elseif (p==3351674303 or  g==1202096104) then --Driving Empire Car Racing
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/drivingempire'))()
 elseif g==4871329703 then --Type soul
     loadstring(game:HttpGet('https://raw.githubusercontent.com/LOLking123456/newtype/main/soul'))()
 elseif (p==9285238704 or  g==3476371299) then --Race Clicker
@@ -325,3 +326,5 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/hub
 setclipboard("elseif (p=="..game.PlaceId.." or  g=="..game.GameId..") then --"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
 
 ]]
+
+"ZickZack"
