@@ -4,7 +4,6 @@ mtab=window:CreateTab("More")
 MISCTAB=window:CreateTab("Misc")
 
 
-repeat task.wait() until game:IsLoaded() if game.PlaceId ~= 10919241870 then game.Players.LocalPlayer:Kick("wrong game") end
 local LocalPlayer = game.Players.LocalPlayer
 local myTycoon = game.Workspace.Tycoons:FindFirstChild(tostring(LocalPlayer.Tycoon.Value))
 
@@ -35,50 +34,26 @@ tab:CreateToggle("Auto Deposit",false,function(state)
     depositButton.Transparency = 0
 end)
 tab:CreateSection("Upgades >,<")
-function AutoBuy(fire,nameSearch)
-    for _, button in pairs(myTycoon.Buttons:GetChildren()) do
-        wait()
-        if string.find(button.Name, nameSearch) and button:FindFirstChild("Glow") then
-            firetouchinterest(LocalPlayer.Character.HumanoidRootPart, button.Button, fire)
-            wait(.05)
+function fTouchUpgrades()
+    spawn(function()
+        while _G.boolTouchUpgrades do
+            wait()
+            for i,v in pairs(myTycoon.Buttons:GetChildren()) do
+                if v:FindFirstChild("Button") then
+                    if v.Button:FindFirstChild("TouchInterest") then
+                    
+                        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Button, 0)
+                        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Button, 1)
+                    end
+                end
+                
+            end
         end
-    end
+    end)
 end
-b1=tab:CreateToggle("Auto buy droppers",false,function(state)
-    searchTerm="Dropper"
-    _G.AutoBDroppers=state
-    if state then fire=0
-    else fire=1 end
-    while _G.AutoBDroppers do
-        AutoBuy(fire,searchTerm)
-        wait(.5)
-    end
-    print("end")
-    -- if not state then AutoBuy(fire,searchTerm) end
-end)
-b2=tab:CreateToggle("Auto buy next floor",false,function(state)
-    searchTerm="Floor"
-    _G.AutoBFloor=state
-    if state then fire=0
-    else fire=1 end
-    while _G.AutoBFloor and task.wait() do
-        AutoBuy(fire,searchTerm)
-        wait(.5)
-    end
-    print("end")
-    -- if not state then AutoBuy(fire,searchTerm) end
-end)
-b3=tab:CreateToggle("Auto buy Process Speed",false,function(state)
-    searchTerm="Process Speed"
-    _G.AutoBPS=state
-    if state then fire=0
-    else fire=1 end
-    while _G.AutoBPS do
-        AutoBuy(fire,searchTerm)
-        wait(.5)
-    end
-    print("end")
-    -- if not state then AutoBuy(fire,searchTerm) end
+tab:CreateToggle("Buy All",false,function(state)
+    _G.boolTouchUpgrades=state
+    fTouchUpgrades()
 end)
 tab:CreateToggle("Auto Rebirth",false,function(state)
     local rebirthButton = myTycoon:FindFirstChild("Rebirth", true).Button
@@ -95,6 +70,58 @@ tab:CreateToggle("Auto Rebirth",false,function(state)
     end
     rebirthButton.CanCollide = true
     rebirthButton.Transparency = 0
+end)
+tab:CreateSection("only use one of these or dont use at all")
+b1=tab:CreateToggle("Auto buy droppers",false,function(state)
+    searchTerm="Dropper"
+    _G.AutoBDroppers=state
+    if state then fire=0
+    else fire=1 end
+    while _G.AutoBDroppers do
+        for _, button in pairs(myTycoon.Buttons:GetChildren()) do
+            if string.find(button.Name, searchTerm) and button:FindFirstChild("Glow") then
+                firetouchinterest(LocalPlayer.Character.HumanoidRootPart, button.Button, 1)
+                firetouchinterest(LocalPlayer.Character.HumanoidRootPart, button.Button, 0)
+            end
+        end
+        wait(.5)
+    end
+    print("end")
+    -- if not state then AutoBuy(fire,searchTerm) end
+end)
+b2=tab:CreateToggle("Auto buy next floor",false,function(state)
+    searchTerm="Floor"
+    _G.AutoBFloor=state
+    if state then fire=0
+    else fire=1 end
+    while _G.AutoBFloor and task.wait() do
+            for _, button in pairs(myTycoon.Buttons:GetChildren()) do
+                if string.find(button.Name, searchTerm) and button:FindFirstChild("Glow") then
+                    firetouchinterest(LocalPlayer.Character.HumanoidRootPart, button.Button, 1)
+                    firetouchinterest(LocalPlayer.Character.HumanoidRootPart, button.Button, 0)
+                end
+            end
+        wait(.5)
+    end
+    print("end")
+    -- if not state then AutoBuy(fire,searchTerm) end
+end)
+b3=tab:CreateToggle("Auto buy Process Speed",false,function(state)
+    searchTerm="Process Speed"
+    _G.AutoBPS=state
+    if state then fire=0
+    else fire=1 end
+    while _G.AutoBPS do
+            for _, button in pairs(myTycoon.Buttons:GetChildren()) do
+                if string.find(button.Name, searchTerm) and button:FindFirstChild("Glow") then
+                    firetouchinterest(LocalPlayer.Character.HumanoidRootPart, button.Button, 1)
+                    firetouchinterest(LocalPlayer.Character.HumanoidRootPart, button.Button, 0)
+                end
+            end
+        wait(.5)
+    end
+    print("end")
+    -- if not state then AutoBuy(fire,searchTerm) end
 end)
 
 
@@ -127,11 +154,11 @@ mtab:CreateToggle("Farm Parkour Boosts",false,function(state)
 end)
 mtab:CreateSection("other")
 mtab:CreateButton("Collect Airdrops",function()
-    old_pos=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    local old_pos=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
     for _, airdrop in pairs(workspace.AirDrops:GetChildren()) do
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = airdrop.Crate.CFrame
-        wait(.1)
-        if fireproximityprompt then fireproximityprompt(airdrop.Crate.ProximityPrompt) wait(.05)
+        wait(.22)
+        if fireproximityprompt then fireproximityprompt(airdrop.Crate.ProximityPrompt) wait(.1)
         else
             keypress(Enum.KeyCode.E)-- airdrop.Crate.ProximityPrompt:InputHoldBegin()
             wait(2.5)
@@ -141,7 +168,7 @@ mtab:CreateButton("Collect Airdrops",function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=old_pos
 end)
 function getPlayerNames()
-    playerNames = {}
+    local playerNames = {}
     for _,i in pairs(game.Players:GetPlayers()) do
         table.insert(playerNames, i.Name)
     end
