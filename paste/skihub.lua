@@ -36,6 +36,7 @@ elseif game.PlaceId == 23578803 then
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/Yousuck780/Hotel-Elephant/main/Hotel%20Elephant"), true))()
 elseif game.PlaceId == 648362523 then
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/Yousuck780/Breaking-point/main/Breaking"), true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ColdStep2/Breaking-Point-Funny-Squid-Hax/main/Breaking%20Point%20Funny%20Squid%20Hax",true))();
 elseif game.PlaceId == 5118969548 then
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/Yousuck780/Spider/main/Spider"), true))()
 elseif game.PlaceId == 1240123653 then

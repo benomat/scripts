@@ -186,7 +186,7 @@ elseif (p==9285238704 or  g==3476371299) then --Race Clicker
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/raceclicker.lua'))()
 elseif (p==11454403177 or  g==4072288216) then --[NEW MAP] Cart Ride Delivery Service
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/cartridedeliveryservice.lua'))()
-----FOR THE FOLLOWING THANKS TO .gg/YhHJ8V8scs -------------------------------------------------------------------------
+----FOR THE FOLLOWING THANKS TO .gg/YhHJ8V8scs ----------------------------------------------------------------------------------------
 elseif (p==7305309231 or  g==2851381018) then --Taxi Boss
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/Taxi%20Boss'))()
 elseif (p==17387475546 or  g==2142948266) then --Project Slayer
@@ -211,7 +211,7 @@ elseif (p==4566572536 or  g==1480782352) then --[ZENVO] Vehicle Legends
 elseif (p==14386691987 or  g==4931927012) then --basketball legends
     _G.OBFHUBFREE = "2kmembersgang"
     loadstring(game:HttpGet('https://raw.githubusercontent.com/obfhub/free/main/basketmball'))()
-    ------------------------------------------------ELITE-SKIDDING--------------------------------------------------------------
+    ------------------------------------------------ELITE-SKIDDING-----------------------------------------------------------------------
 elseif (p==1554960397 or  g==605887098) then -- Car Dealership Tycoon
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/cardealership.lua'))()
 elseif (p==11400511154 or  g==4055984814) then --Monkey Tycoon
@@ -237,6 +237,34 @@ elseif (p==228181322 or  g==98839997) then -- Dinosaur Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/dinosim.lua'))()
 elseif (p==16819979927 or  g==5780359296) then --Jim's RNG
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/jimsrng.lua'))()
+elseif (p==17698425045 or  g==6061766680) then -- fight in a school
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/JayXSama/Fight-in-a-school/main/Solara'))()
+-----------------------------------------------THX-TO-DKHUB-------------------------------------------------------------------------------
+elseif (p==15744137588 or p==17556050821 or  g==5440820902) then -- +1 Blade Slayer
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Christian2703/BladeSlayer/main/Bladescript'))()
+elseif (p==16981421605 or  g==5827120940) then -- Reborn As Swordman
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Christian2703/RebornAsSwordman/main/RebornAsSwordman.lua'))()
+elseif (p==16436007861 or  g==5663507626) then --Warrior Simulator [BETA]
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Christian2703/WarriorSimulator/main/WarriorSimulator'))()
+elseif (p==17114605748 or  g==5864273770) then --[UPD 5] Anime Punching Simulator 2
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Christian2703/AnimePunchingSimulator2/main/AnimePunchingSimulator2.lua'))()
+elseif (p==16712648821 or  g==5744922424) then --[Clover] Anime Racing 2
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Christian2703/AnimeRacing2/main/AnimeRacing2.lua'))()
+elseif (p==14195873109 or  g==4912354124) then -- Slayer Corps 
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Christian2703/SlayerCorps/main/SlayerCorps'))()
+elseif (p==16741537517 or  g==5753785106) then --[UPD 0.5] Anime Heroes Simulator
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Christian2703/AnimeHeroesSimulator/main/AnimeHeroesSimulator'))()
+------------------------------------------------ELITE-SKIDDING-2.0-------------------------------------------------------------------------
+elseif (p==3101667897 or  g==1119466531) then --Legends Of Speed
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Legends%20Of%20Speed/Script.lua'))()
+elseif (p==7113341058 or  g==2162282815) then --Rush Point (ESP)
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/AtomGotIce/Scripts/main/RushPoint%20Chams'))()
+elseif (p==4580204640 or  g==1489026993) then --Survive the Killer!
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Kiroftt/Survive-The-Killer/main/Simple'))()
+elseif (p==335760407 or  g==124283622) then --TPS: Street Soccer
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/xfaz/newtps/main/kuchi'))()
+elseif (p==6741970382 or  g==2551702779) then --Zombie lab
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/xfaz/zombielab/main/kk'))()
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     -- notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua'))()
