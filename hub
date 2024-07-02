@@ -101,9 +101,9 @@ elseif (g==2440500124 or g==1) then --DOORS
     loadstring(game:HttpGet('https://raw.githubusercontent.com/KINGHUB01/BlackKing/main/BlackKingMb'))()
 elseif g==5650396773 then --dustytrip
     loadstring(game:HttpGet('https://raw.githubusercontent.com/artemy133563/Utilities/main/ADustyTrip'))()
-elseif p==3214114884 then --flagwars
-    sNotify("You can scroll through the tabs btw!")
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/frankblox/rbxscripts/main/0flagwarssss'))()
+-- elseif p==3214114884 then --flagwars
+--     sNotify("You can scroll through the tabs btw!")
+--     loadstring(game:HttpGet('https://raw.githubusercontent.com/frankblox/rbxscripts/main/0flagwarssss'))()
 elseif p==13822889 then --lumbertycoon 2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LT2.lua'))()
     sNotify("You can scroll on the left side btw!",120)
