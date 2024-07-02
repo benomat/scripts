@@ -261,8 +261,8 @@ elseif (p==3101667897 or  g==1119466531) then --Legends Of Speed
 elseif (p==7113341058 or  g==2162282815) then --Rush Point (ESP)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/AtomGotIce/Scripts/main/RushPoint%20Chams'))()
 elseif (p==4580204640 or  g==1489026993) then --Survive the Killer!
-    CharacterAdded:Wait()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Kiroftt/Survive-The-Killer/main/Simple'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/STKTurtle.lua'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/Kiroftt/Survive-The-Killer/main/Simple'))()
 elseif (p==335760407 or  g==124283622) then --TPS: Street Soccer
     loadstring(game:HttpGet('https://raw.githubusercontent.com/xfaz/newtps/main/kuchi'))()
 elseif (p==6741970382 or  g==2551702779) then --Zombie lab
@@ -301,8 +301,9 @@ while getgenv().joini==nil and c<100 do
     end
     c+=1
 end
-queue_on_teleport[[loadstring(game:HttpGet('https://whimper.xyz/cathub.lua'))()]]
 
+if not getgenv().kittyloaded then queue_on_teleport[[loadstring(game:HttpGet('https://whimper.xyz/cathub.lua'))()]] end
+getgenv().kittyloaded=true
 
 
 --[[
