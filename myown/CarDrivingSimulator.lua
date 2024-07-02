@@ -5,7 +5,7 @@
 
 window = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/libwrapper.lua'))():CreateWindow("Car Driving Simulator")
 tab=window:CreateTab("Main")
-othertab=window:CreateTab("other")
+othertab=window:CreateTab("Fun")
 MISCTAB=window:CreateTab("Misc")
 
 function erm(t)

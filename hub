@@ -1,3 +1,4 @@
+repeat task.wait() until game:IsLoaded()
 --[[
 ```lua
 local p=game.PlaceId
@@ -6,7 +7,6 @@ setclipboard("p: "..p.." g:"..g..""..getexecutorname())
 ```
 ]]
 if getexecutorname():sub(1, 5) == "incog" then loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-MoreUNC-13110'))() end
-repeat task.wait() until game:IsLoaded()
 print("[V1.6] loading benomat's script hub with", getexecutorname())
 getgenv().joini=nil
 local p=game.PlaceId
@@ -64,6 +64,8 @@ elseif (p==654732683 or  g==274816972) then --Car Crushers 2 - Physics Simulatio
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/CarCrushers2.lua'))()
 elseif (p==15535115259 or  g==5361859890) then --Launch Into Space Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/LaunchIntoSpaceSim.lua'))()
+elseif (p==1137431029 or  g==468158842) then --Car Driving Simulator
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/CarDrivingSimulator.lua'))()
 elseif (p==6872265039 or g==2619619496) and e~=2 then --bedwars
     loadstring(game:HttpGet('https://raw.githubusercontent.com/FlamingDrey/Flame-X-v2/main/Flame%20X%20Bedwars%20V2'))()
     -- fn("Benomat's Hub","Press RIGHT SHIFT to open the menu!",20)
@@ -189,7 +191,6 @@ elseif (p==9285238704 or  g==3476371299) then --Race Clicker
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/raceclicker.lua'))()
 elseif (p==11454403177 or  g==4072288216) then --[NEW MAP] Cart Ride Delivery Service
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/cartridedeliveryservice.lua'))()
-----FOR THE FOLLOWING THANKS TO .gg/YhHJ8V8scs ----------------------------------------------------------------------------------------
 elseif (p==7305309231 or  g==2851381018) then --Taxi Boss
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/Taxi%20Boss'))()
 elseif (p==17387475546 or  g==2142948266) then --Project Slayer
@@ -214,7 +215,6 @@ elseif (p==4566572536 or  g==1480782352) then --[ZENVO] Vehicle Legends
 elseif (p==14386691987 or  g==4931927012) then --basketball legends
     _G.OBFHUBFREE = "2kmembersgang"
     loadstring(game:HttpGet('https://raw.githubusercontent.com/obfhub/free/main/basketmball'))()
-    ------------------------------------------------ELITE-SKIDDING-----------------------------------------------------------------------
 elseif (p==1554960397 or  g==605887098) then -- Car Dealership Tycoon
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/cardealership.lua'))()
 elseif (p==11400511154 or  g==4055984814) then --Monkey Tycoon
@@ -242,7 +242,6 @@ elseif (p==16819979927 or  g==5780359296) then --Jim's RNG
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/jimsrng.lua'))()
 elseif (p==17698425045 or  g==6061766680) then -- fight in a school
     loadstring(game:HttpGet('https://raw.githubusercontent.com/JayXSama/Fight-in-a-school/main/Solara'))()
------------------------------------------------THX-TO-DKHUB-------------------------------------------------------------------------------
 elseif (p==15744137588 or p==17556050821 or  g==5440820902) then -- +1 Blade Slayer
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Christian2703/BladeSlayer/main/Bladescript'))()
 elseif (p==16981421605 or  g==5827120940) then -- Reborn As Swordman
@@ -257,7 +256,6 @@ elseif (p==14195873109 or  g==4912354124) then -- Slayer Corps
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Christian2703/SlayerCorps/main/SlayerCorps'))()
 elseif (p==16741537517 or  g==5753785106) then --[UPD 0.5] Anime Heroes Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Christian2703/AnimeHeroesSimulator/main/AnimeHeroesSimulator'))()
-------------------------------------------------ELITE-SKIDDING-2.0-------------------------------------------------------------------------
 elseif (p==3101667897 or  g==1119466531) then --Legends Of Speed
     loadstring(game:HttpGet('https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Legends%20Of%20Speed/Script.lua'))()
 elseif (p==7113341058 or  g==2162282815) then --Rush Point (ESP)

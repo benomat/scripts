@@ -32,7 +32,7 @@ tab:CreateToggle("Toggle Car Speed",false,function(state)
         wait(0.1)
     end    
 end)
-tab:CreateSlider("Car Speed",{0, 150},1,"",(getgenv().pluh/10),function(v) getgenv().pluh = (v/10) end)
+tab:CreateSlider("Car Speed",{0, 150},1,"",(getgenv().pluh*10),function(v) getgenv().pluh = (v/10) end)
 tab:CreateLabel("can break your car if you put it too high")
 tab:CreateSection("useless stuff!")
 tab:CreateDropdown(
