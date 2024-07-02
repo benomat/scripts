@@ -328,4 +328,3 @@ setclipboard("elseif (p=="..game.PlaceId.." or  g=="..game.GameId..") then --"..
 
 ]]
 
-"ZickZack"
