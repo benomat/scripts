@@ -58,7 +58,7 @@ tab:CreateToggle("Auto Egg 1",false,function(state)
             break end end
     end
     while _G.Egg1 do
-        keypress(Enum.KeyCode.E)
+        keypress(101)
         --autoclick yourself :'( -- for i=0,25,1 do mousemoverel(5000,5000) mouse1click() wait() end
         wait()
     end
@@ -76,7 +76,7 @@ tab:CreateToggle("Auto Egg 2",false,function(state)
             break end end
     end
     while _G.Egg1 do
-        keypress(Enum.KeyCode.E)
+        keypress(101)
         --autoclick yourself :'( -- for i=0,25,1 do mousemoverel(5000,5000) mouse1click() wait() end
         wait()
     end

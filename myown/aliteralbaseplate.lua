@@ -61,7 +61,7 @@ TPTab:CreateToggle("Loop TP to selected",false,function(state)
     _G.LoopTP=state
     while _G.LoopTP do
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild(_G.SelectedPlayer).Character.HumanoidRootPart.CFrame
-        wait()
+        task.wait()
     end
 end)
 local function tp(loc)
@@ -72,7 +72,7 @@ local function tpn(...)
 end
 wsBoost=loadstring(game:HttpGet("https://raw.githubusercontent.com/benomat/scripts/m/myown/wsBoost.lua"))()
 MISCTAB:CreateSlider("Speed",{16, 300},1,"studs per second",game.Players.LocalPlayer.Character.Humanoid.WalkSpeed,function(v) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v end)
-MISCTAB:CreateSlider("CFrame Speed",{0, 150},1,"boost",0,function(v) wsBoost(v/25) end)
+MISCTAB:CreateSlider("CFrame Speed",{0, 150},1,"boost",0,function(v) wsBoost(v/30) end)
 MISCTAB:CreateButton("Rejoin Server", function () loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end)
 MISCTAB:CreateLabel("by benomat")
 MISCTAB:CreateButton("Copy discord invite",function()setclipboard("discord.gg/gUMYGXqPPw")end)

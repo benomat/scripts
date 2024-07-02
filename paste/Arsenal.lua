@@ -8167,7 +8167,7 @@ Input = {} do
 				Enum.KeyCode.A,
 				Enum.KeyCode.S,
 				Enum.KeyCode.D,
-				Enum.KeyCode.E,
+				101,
 				Enum.KeyCode.Q,
 				Enum.KeyCode.Up,
 				Enum.KeyCode.Down

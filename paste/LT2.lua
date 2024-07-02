@@ -4835,7 +4835,7 @@ moveKeys = {
     [Enum.KeyCode.A] = Vector3.new(-1, 0, 0),
     [Enum.KeyCode.S] = Vector3.new(0, 0, 1),
     [Enum.KeyCode.W] = Vector3.new(0, 0, -1),
-    --[Enum.KeyCode.E] = Vector3.new(0,1,0),
+    --[101] = Vector3.new(0,1,0),
     --[Enum.KeyCode.Q] = Vector3.new(0,-1,0)
 }
 

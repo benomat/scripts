@@ -1,6 +1,6 @@
-local Lib = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/SiriusSoftwareLtd/Rayfield/main/source.lua"))()
 local window = Lib:CreateWindow({
-   Name = "Card Ride Delivery Service [>::<] ^(>.1)^",
+   Name = "Cart Ride Delivery Service [>::<] ^(>.1)^",
    LoadingTitle = "Card Ride Delivery Service",
    LoadingSubtitle = "by benomat"})
 local tab = window:CreateTab("Main")
@@ -115,7 +115,7 @@ local function getPackages(pressE)
         old_pos=package.Position
         package.Position = playerPosition
         counta+=1
-        if pressE and counta>=4 then keypress(Enum.KeyCode.E) end
+        if pressE and counta>=4 then keypress(101) end
         wait()
         package.Position=old_pos
     end

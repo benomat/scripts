@@ -48,7 +48,7 @@ local args = {
         },
         ["MarkerEffectEnabled"] = true,
         ["Keyboard"] = {
-            ["HoldDown"] = Enum.KeyCode.E,
+            ["HoldDown"] = 101,
             ["Melee"] = Enum.KeyCode.H,
             ["Switch"] = Enum.KeyCode.V,
             ["Inspect"] = Enum.KeyCode.F,
