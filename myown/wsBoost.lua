@@ -8,7 +8,6 @@ return function(s)
             game:GetService("RunService").Stepped:wait()
             if _G.cframespeed==0 then
                 _G.cframeran = false
-                print("YURR")
                 break
             end
         end

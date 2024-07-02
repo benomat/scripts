@@ -1,6 +1,6 @@
 local LibWrapper = {}
 
-local originalLib = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local originalLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/SiriusSoftwareLtd/Rayfield/main/source.lua'))()
 
 function LibWrapper:CreateWindow(name)
     local window = originalLib:CreateWindow({

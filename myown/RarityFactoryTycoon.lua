@@ -160,9 +160,9 @@ mtab:CreateButton("Collect Airdrops",function()
         wait(.22)
         if fireproximityprompt then fireproximityprompt(airdrop.Crate.ProximityPrompt) wait(.1)
         else
-            keypress(Enum.KeyCode.E)-- airdrop.Crate.ProximityPrompt:InputHoldBegin()
+            keypress(101)-- airdrop.Crate.ProximityPrompt:InputHoldBegin()
             wait(2.5)
-            keyrelease(Enum.KeyCode.E)-- airdrop.Crate.ProximityPrompt:InputHoldEnd()
+            keyrelease(101)-- airdrop.Crate.ProximityPrompt:InputHoldEnd()
         end
     end
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=old_pos
