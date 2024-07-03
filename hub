@@ -14,6 +14,16 @@ local g=game.GameId
 notify=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/notify'))().New
 fuckdude = loadstring(game:HttpGet('https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua'))().Notify
 sw1ndlernotify = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/sw1ndlernotify.lua'))()
+http_request = http_request or request or (http and http.request) or syn.request 
+function bypass_LV_refferer(url)
+    return http_request({
+        Url = url,
+        Method = "GET",
+        Headers = {
+            ["Referer"] = "https://linkvertise.com/"
+        }
+    }).Body
+end
 function OLDnotify(t)
     game:GetService("StarterGui"):SetCore("SendNotification", {
 		Title = "Benomat's Hub";
@@ -232,6 +242,10 @@ elseif (p==621129760 or  g==254394801) then --KAT
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua'))()
 elseif (p==4620170611 or  g==1318971886) then --Break In 1
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/submitted/breakin1.lua'))()
+elseif (p==13864661000 or  g==4807308814) then --Break In 2 (Story)
+    setclipboard(bypass_LV_refferer("https://rolling-aveline-applesauce12-07787e2a.koyeb.app/"))
+    fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/mr-suno/Starry/main/version/main.lua"))()
 elseif (p==185655149 or  g==88070565) then --Welcome to Bloxburg (I really recommend only using on wave if at all)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/bloxburg.lua'))()
 elseif (p==281489669 or  g==110988953) then --Wizard Tycoon - 2 Player
@@ -267,6 +281,10 @@ elseif (p==335760407 or  g==124283622) then --TPS: Street Soccer
     loadstring(game:HttpGet('https://raw.githubusercontent.com/xfaz/newtps/main/kuchi'))()
 elseif (p==6741970382 or  g==2551702779) then --Zombie lab
     loadstring(game:HttpGet('https://raw.githubusercontent.com/xfaz/zombielab/main/kk'))()
+elseif (p==277751860 or  g==110181652) then --Epic Minigames
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/SlamminPig/rblxgames/main/Epic%20Minigames/EpicMinigamesGUI'))()
+elseif (p==6884319169 or  g==2626227051) then --MIC UP ðŸ”Š
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/micup.lua'))()
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     -- notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua'))()

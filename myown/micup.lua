@@ -1,4 +1,4 @@
-window = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/libwrapper.lua'))():CreateWindow("cute universal")
+window = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/libwrapper.lua'))():CreateWindow("Mic Up")
 tab=window:CreateTab("Main")
 TPTab=window:CreateTab("Teleports")
 playertab=window:CreateTab("Players")
@@ -122,6 +122,12 @@ TPTab:CreateButton("Room 2 listen [on top]",function()
     tpn(6241.35986328125, 41.30427551269531, 76.17839050292969)
 end)
 TPTab:CreateLabel("Teleporting inside automatically makes the floor solid")
+TPTab:CreateSection("Other Teleports")
+TPTab:CreateButton("Top of Tower",function()tpn(59.98295974731445, 313.0125732421875, 225.32273864746094)end)
+TPTab:CreateButton("Slide",function()tpn(16.68634796142578, 225.0092315673828, 65.47396850585938)end)
+TPTab:CreateButton("Glass Platform",function()tpn(172.06375122070312, 61.18655014038086, -114.35980224609375)end)
+TPTab:CreateButton("Items / Donut Shop",function()tpn(-55.430057525634766, 4.6999969482421875, -62.683597564697266)end)
+
 funtab:CreateDropdown(
     "Animation pack",
     {"Vampire", "Hero", "ZombieClassic", "Cowboy", "Patrol", "Bold", "ZombieFE", "Princess", "Popstar", "Sneaky", "Toy", "Knight", "Confident", "Ghost", "Elder", "Levitation", "Mage", "Astronaut", "Ninja", "Werewolf", "Cartoon", "Pirate"},
@@ -141,7 +147,7 @@ emoteSelector=funtab:CreateDropdown(
         loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/e'))()
     end)
 funtab:CreateButton("Reset Emote Selector",function()emoteSelector:Set({})end)
-tab:CreateLabel("Press the PERIOD key . to use emotes")
+funtab:CreateLabel("Press the PERIOD key . to use emotes")
 MISCTAB:CreateSection("That's it sir!")
 MISCTAB:CreateButton("Rejoin Server", function () loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end)
 MISCTAB:CreateLabel("by benomat")
