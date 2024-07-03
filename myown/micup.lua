@@ -24,7 +24,11 @@ tab:CreateButton("Get Hand tool (pet people or wtv)",function()loadstring(game:H
 solidfloortoggle=tab:CreateToggle("Solid Private Room Floor",false,function(state)
     for _,v in pairs(game.Workspace:GetChildren()) do
         if v:FindFirstChild("houseInteriorCoffeeTable") then
-            v:GetChildren()[6].CanCollide=state
+            for _,idkwhattocallthis in pairs(v:GetChildren()) do
+                if idkwhattocallthis:FindFirstChild("Texture") then
+                    idkwhattocallthis.CanCollide=true
+                end
+            end
         end
     end
 end)
@@ -104,7 +108,11 @@ function scary()
     solidfloortoggle:Set(true)
     for _,v in pairs(game.Workspace:GetChildren()) do
         if v:FindFirstChild("houseInteriorCoffeeTable") then
-            v:GetChildren()[6].CanCollide=true
+            for _,idkwhattocallthis in pairs(v:GetChildren()) do
+                if idkwhattocallthis:FindFirstChild("Texture") then
+                    idkwhattocallthis.CanCollide=true
+                end
+            end
         end
     end
 end
@@ -190,9 +198,10 @@ Stalltab:CreateToggle("Steal/Clear all Stalls [Wave only]",false,function(state)
             for _,v in pairs(Workspace.Stalls:GetChildren()) do
                 if v.Player.Value then
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=v.ProxPart.CFrame
-                    wait(.1)
+                    wait(.13)
                     fireproximityprompt(v.ProxPart.ProximityPrompt)
                     wait(.23)
+                    game:GetService("Players").minipicklelover123.PlayerGui.StallLocal.StallFrame.Visible=false
                     if tostring(v.Player.Value)==game.Players.LocalPlayer.Name then
                         v.CloseStall:FireServer()
                     end
@@ -222,7 +231,7 @@ MISCTAB:CreateDropdown(
         getgenv().animchanger=erm(opt)
         loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/a'))()
 end)
-MISCTAB:CreateDropdown(
+emoteSelector=MISCTAB:CreateDropdown(
     "Emotes",
     {"Robot","Fancy Feet","Old Town Road Dance","Greatest","Side to Side","Hello","Jumping Cheer","Rodeo Dance","Drum Solo","Point2","Shy","Fishing","strut","Power Blast","Agree","Stadium","Top Rock","sliving","Dizzy","Monkey","High Wave","Louder","Get Out","Heart Skip","Twirl","Tree","Cha-Cha","Salute","Curtsy","Panini Dance","Baby Dance","Sneaky","Line Dance","Bodybuilder","Applaud","Jacks","Shrug","Quiet Waves","Zombie","Godlike","twirl","faceframe","feels","Hype Dance","Sad","Cha Cha","It Ain't My Fault","Hips Poppin'","Take Me Under","Superhero Reveal","Country Line Dance","Samba","Heisman Pose","Happy","Air Guitar","Around Town","Disagree","Shuffle","Rock Star","Jumping Wave","Idol","Floss Dance","Break Dance","Dolphin Dance","HOLIDAY Dance","Air Dance","Beckon","Swish","Rock On","Bored","Fashionable","Cower","Tilt","Tantrum","Dorky Dance","Confused","T","Drum Master","Sleep","Y","Keeping Time","Block Partier","Hero Landing","Fast Hands","Celebrate","Rock Guitar","Haha"},
     {},
