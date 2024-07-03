@@ -1,7 +1,7 @@
 local lp = game:getService("Players").LocalPlayer
 Tool = Instance.new("Tool")
 Tool.ToolTip = "Made by @benomat"
-Tool.Name = "Touch"
+Tool.Name = "Hand"
 Tool.CanBeDropped = false
 Tool.RequiresHandle = true
 Tool.GripForward = Vector3.new(0, 0, -1)
