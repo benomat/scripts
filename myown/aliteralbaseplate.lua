@@ -39,6 +39,7 @@ tab:CreateSection("uhhh")
 tab:CreateButton("Load Open Aimbot",function()loadstring(game:HttpGet('https://raw.githubusercontent.com/ttwizz/Open-Aimbot/master/source.lua'))()end)
 tab:CreateButton("Load Dex",function()loadstring(game:HttpGet('https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua'))()end)
 tab:CreateButton("Load Simple Spy",function()loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()end)
+tab:CreateButton("Respawn",function()game.Players.LocalPlayer.Character.Head:Destroy()end)
 function getPlayerNames()
     playerNames = {}
     for _,i in pairs(game.Players:GetPlayers()) do

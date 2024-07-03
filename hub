@@ -76,6 +76,8 @@ elseif (p==15535115259 or  g==5361859890) then --Launch Into Space Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/LaunchIntoSpaceSim.lua'))()
 elseif (p==1137431029 or  g==468158842) then --Car Driving Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/CarDrivingSimulator.lua'))()
+elseif (p==5171347293 or  g==1802741133) then -- Cabin Crew Simulator
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/CabinCrewSim.lua'))()
 elseif (p==6872265039 or g==2619619496) and e~=2 then --bedwars
     loadstring(game:HttpGet('https://raw.githubusercontent.com/FlamingDrey/Flame-X-v2/main/Flame%20X%20Bedwars%20V2'))()
     -- fn("Benomat's Hub","Press RIGHT SHIFT to open the menu!",20)
@@ -283,8 +285,10 @@ elseif (p==6741970382 or  g==2551702779) then --Zombie lab
     loadstring(game:HttpGet('https://raw.githubusercontent.com/xfaz/zombielab/main/kk'))()
 elseif (p==277751860 or  g==110181652) then --Epic Minigames
     loadstring(game:HttpGet('https://raw.githubusercontent.com/SlamminPig/rblxgames/main/Epic%20Minigames/EpicMinigamesGUI'))()
-elseif (p==6884319169 or  g==2626227051) then --MIC UP ðŸ”Š
+elseif (p==6884319169 or  g==2626227051) then --MIC UP
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/micup.lua'))()
+elseif (p==5602055394 or  g==1958807588) then --Hood Modded
+    loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/Rippeed/DaHoodinary/main/chariotsware'))()
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     -- notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua'))()
