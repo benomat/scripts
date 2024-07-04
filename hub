@@ -290,7 +290,7 @@ elseif (p==6884319169 or  g==2626227051) then --MIC UP
 elseif (p==5602055394 or  g==1958807588) then --Hood Modded
     loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/Rippeed/DaHoodinary/main/chariotsware'))()
 elseif (p==17250538604 or  g==5901631600) then --Tennis Simulator 
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/AppleScript001/Tennis-Simulator/main/README.md')()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/AppleScript001/Tennis-Simulator/main/README.md')())
 elseif g==4849157113 then -- operation siege
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/projectslayer.lua'))()
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
