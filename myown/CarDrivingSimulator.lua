@@ -28,7 +28,7 @@ tab:CreateToggle("Toggle Car Speed",false,function(state)
         wait(0.1)
     end    
 end)
-tab:CreateSlider("Car Speed",{0, 200},1,"",(getgenv().pluh*10),function(v) getgenv().pluh = (v/10) end)
+tab:CreateSlider("Car Speed",{0, 250},1,"",(getgenv().pluh*10),function(v) getgenv().pluh = (v/10) end)
 
 othertab:CreateSection("Skibidi?")
 fling=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/fling.lua'))()
