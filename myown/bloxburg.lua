@@ -121,19 +121,19 @@ tab:CreateKeybind("Hair Studio Farm","H",false,function()
 end)
 tab:CreateParagraph("How to use","1. Enter the job\n2. Go to the first workstation on the right\n3. Change the hair yourself once (just click it)\n4. Press the keybind (also press to disable)\nalso dont have any gui in the middle of your screen, that would block the clicks\n--- join the discord server in misc to request features to be added ---")
 tab:CreateParagraph("Solara info","If youre on solara and NOT wave you gotta use an autoclicker while farming because solaras mouse1click() function is really weird for some reason\nI would really appreciate if someone could tell me a better way to handle this")
-    tab:CreateDropdown(
-        "Animation pack",
-        {"Vampire", "Hero", "ZombieClassic", "Cowboy", "Patrol", "Bold", "ZombieFE", "Princess", "Popstar", "Sneaky", "Toy", "Knight", "Confident", "Ghost", "Elder", "Levitation", "Mage", "Astronaut", "Ninja", "Werewolf", "Cartoon", "Pirate"},
-        "Select",
-        false,
-        function(opt)
-            getgenv().animchanger=erm(opt)
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/a'))()
-    end)
+tab:CreateDropdown(
+    "Animation pack",
+    {"Vampire", "Hero", "ZombieClassic", "Cowboy", "Patrol", "Bold", "ZombieFE", "Princess", "Popstar", "Sneaky", "Toy", "Knight", "Confident", "Ghost", "Elder", "Levitation", "Mage", "Astronaut", "Ninja", "Werewolf", "Cartoon", "Pirate"},
+    "Select",
+    false,
+    function(opt)
+        getgenv().animchanger=erm(opt)
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/a'))()
+end)
 
-tab:CreateSection("you dont need this")
-tab:CreateButton("Load Open Aimbot",function()loadstring(game:HttpGet('https://raw.githubusercontent.com/ttwizz/Open-Aimbot/master/source.lua'))()end)
-tab:CreateButton("Load Dex",function()loadstring(game:HttpGet('https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua'))()end)
+-- tab:CreateSection("you dont need this")
+-- tab:CreateButton("Load Open Aimbot",function()loadstring(game:HttpGet('https://raw.githubusercontent.com/ttwizz/Open-Aimbot/master/source.lua'))()end)
+-- tab:CreateButton("Load Dex",function()loadstring(game:HttpGet('https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua'))()end)
 
 -- wsBoost=loadstring(game:HttpGet("https://raw.githubusercontent.com/benomat/scripts/m/myown/wsBoost.lua"))()
 -- MISCTAB:CreateSlider("CFrame Speed",{0, 12},1,"boost",0,function(v) wsBoost(v/40) end)

@@ -15,8 +15,8 @@ end
 tab:CreateSection("Speed | by me & term")
 if not getgenv().pluh then getgenv().pluh = 0 end
 tab:CreateToggle("Toggle Car Speed",false,function(state)
-    getgenv().niggers=state
-    while getgenv().niggers do
+    getgenv().nicepeople=state
+    while getgenv().nicepeople do
         task.wait()
         local car = game.Workspace[game.Players.LocalPlayer.Name.."'s Car"]
         local movedir = game.Players.LocalPlayer.Character.Humanoid.MoveDirection
