@@ -258,6 +258,7 @@ elseif (p==16819979927 or  g==5780359296) then --Jim's RNG
 elseif (p==17698425045 or  g==6061766680) then -- fight in a school
     loadstring(game:HttpGet('https://raw.githubusercontent.com/JayXSama/Fight-in-a-school/main/Solara'))()
 elseif (p==15744137588 or p==17556050821 or  g==5440820902) then -- +1 Blade Slayer
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/Bladescript.lua'))()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Christian2703/Main/main/Mainscript'))()
 elseif (p==16981421605 or  g==5827120940) then -- Reborn As Swordman
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Christian2703/Main/main/Mainscript'))()
