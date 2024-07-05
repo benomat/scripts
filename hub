@@ -291,7 +291,7 @@ elseif (p==6741970382 or  g==2551702779) then --Zombie lab
     loadstring(game:HttpGet('https://raw.githubusercontent.com/xfaz/zombielab/main/kk'))()
 elseif (p==277751860 or  g==110181652) then --Epic Minigames
     loadstring(game:HttpGet('https://raw.githubusercontent.com/SlamminPig/rblxgames/main/Epic%20Minigames/EpicMinigamesGUI'))()
-elseif (p==6884319169 or  g==2626227051) then --MIC UP
+elseif (p==6884319169 or  g==2626227051 or g==5365966699) then --MIC UP
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/micup.lua'))()
 elseif (p==5602055394 or  g==1958807588) then --Hood Modded
     loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/Rippeed/DaHoodinary/main/chariotsware'))()

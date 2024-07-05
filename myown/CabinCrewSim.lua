@@ -2,7 +2,6 @@ window = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scri
 tab=window:CreateTab("Main")
 MISCTAB=window:CreateTab("Misc")
 
---TODO: figure out how to get current flight 🙏
 tab:CreateSection("lets do stuff")
 RF=game:GetService("Players").LocalPlayer.Character.Client.Client.RemoteFunction
 RE=game:GetService("Players").LocalPlayer.Character.Client.Client.RemoteEvent
