@@ -1,1 +1,1 @@
-if game.GameId==4849157113 then print("gang") end
+setclipboard("elseif (p=="..game.PlaceId.." or  g=="..game.GameId..") then --"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
