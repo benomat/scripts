@@ -301,6 +301,8 @@ elseif g==4849157113 then -- operation siege
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/projectslayer.lua'))()
 elseif (p==171391948 or  g==81762198) then --[Sides] Vehicle Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/VehicleSim.lua'))()
+elseif (p==863266079 or  g==358276974) then --Apocalypse Rising 2
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/ar2.lua'))()
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     -- notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua'))()
