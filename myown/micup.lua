@@ -186,15 +186,15 @@ Stalltab:CreateToggle("Typewrite",false,function(state)
     end
 end)
 
-Stalltab:CreateSection("Claming and stuff") --[you can scroll btw]
+Stalltab:CreateSection("Claming and stuff [doesnt work on solara]") --[you can scroll btw]
 -- Stalltab:CreateToggle("Attempt to grab unclaimed stall",false,function()
     
 -- end)
-Stalltab:CreateToggle("Steal/Clear all Stalls [Wave only]",false,function(state)
+Stalltab:CreateToggle("Steal/Clear all Stalls",false,function(state)
     if pcall(function() fireproximityprompt(Workspace.Stalls.Stall1.ProxPart.ProximityPrompt) end) then
         for _,v in pairs(Workspace.Stalls:GetChildren()) do
             if tostring(v.Player.Value)==game.Players.LocalPlayer.Name then
-                v.Edit:FireServer(_G.EditStalltxt,_G.EditStallimg)
+                v.CloseStall:FireServer()
             end
         end
         wait(.2)
@@ -218,6 +218,31 @@ Stalltab:CreateToggle("Steal/Clear all Stalls [Wave only]",false,function(state)
             task.wait()
         end
     elseif state then
+        sw1ndlernotify:CreateDefaultNotif({
+            TweenSpeed = 1,
+            Title = "Error",
+            Text = "Your Executor doesnt support this",
+            Duration = 5
+           })
+    end
+end)
+Stalltab:CreateInput("Steal stall by number (1-5)","number",true,function(input)
+    if pcall(function() fireproximityprompt(Workspace.Stalls.Stall1.ProxPart.ProximityPrompt) end) then
+        local targetstall=Workspace.Stalls:GetChildren()[tonumber(input)]
+        for _,v in pairs(Workspace.Stalls:GetChildren()) do
+            if tostring(v.Player.Value)==game.Players.LocalPlayer.Name then
+                v.CloseStall:FireServer()
+            end
+        end
+        wait(.4)
+        local oldpos=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=targetstall.ProxPart.CFrame
+        wait(.13)
+        fireproximityprompt(targetstall.ProxPart.ProximityPrompt)
+        wait(.23)
+        game.Players.LocalPlayer.PlayerGui.StallLocal.StallFrame.Visible=false
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=oldpos
+    else
         sw1ndlernotify:CreateDefaultNotif({
             TweenSpeed = 1,
             Title = "Error",
