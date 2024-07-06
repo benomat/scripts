@@ -15,7 +15,7 @@ end
 tab:CreateSection("stuff1")
 wsBoost=loadstring(game:HttpGet("https://raw.githubusercontent.com/benomat/scripts/m/myown/wsBoost.lua"))()
 tab:CreateSlider("Speed",{16, 300},1,"studs per second",game.Players.LocalPlayer.Character.Humanoid.WalkSpeed,function(v) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v end)
-tab:CreateSlider("CFrame Speed",{0, 150},1,"boost",0,function(v) wsBoost(v/30) end)
+tab:CreateSlider("CFrame Speed",{0, 100},1,"boost",0,function(v) wsBoost(v/30) end)
 tab:CreateSection("stuff2")
 tab:CreateButton("Get Hand tool (pet people or wtv)",function()loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/handtool.lua'))()end)
 solidfloortoggle=tab:CreateToggle("Solid Private Room Floor",false,function(state)
@@ -261,6 +261,12 @@ Stalltab:CreateInput("Steal stall by number (1-5)","number",true,function(input)
             Text = "Your Executor doesnt support this",
             Duration = 5
            })
+    end
+end)
+Stalltab:CreateSection("Working for Solara")
+Stalltab:CreateButton("Steal stalls (you can walk up to a stall and get it)",function()
+    for _,stall in pairs(Workspace.Stalls:GetChildren()) do
+        stall.ProxPart.ProximityPrompt.Enabled=true
     end
 end)
 

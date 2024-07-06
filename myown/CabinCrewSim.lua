@@ -65,11 +65,11 @@ tab:CreateButton("Feed all (tell me if this dont work for one class)",function()
             for _, passenger in pairs(flight.clientFolder:GetChildren()[1].npcs:GetChildren()) do
                 for i=1,6 do 
                     RF:InvokeServer("GetItem","beverage",getgenv().SelectedClass,i)
-                    wait(.2)
+                    wait(.3)
                     RF:InvokeServer("GiveItem",passenger)
-                    wait(.2)
+                    wait(.3)
                     RF:InvokeServer("GetItem","food",getgenv().SelectedClass,i)
-                    wait(.2)
+                    wait(.3)
                     RF:InvokeServer("GiveItem",passenger)
                     wait(.15)
                 end
