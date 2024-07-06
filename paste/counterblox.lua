@@ -165,7 +165,7 @@ if true then
             CurrentValue = false,
             Flag = "Spinbot",
             Callback = function(Value)
-                _G.SpinBot = Value
+                 getgenv().SpinBot = Value
             end,
         })
 
@@ -177,7 +177,7 @@ if true then
             CurrentValue = 150,
             Flag = "FOVRadius", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
             Callback = function(Value)
-                _G.Speed = Value
+                 getgenv().Speed = Value
             end,
         })
     end
@@ -332,7 +332,7 @@ if true then
             CurrentValue = false,
             Flag = "RemoveScope",
             Callback = function(Value)
-                _G.RemoveScope = Value
+                 getgenv().RemoveScope = Value
             end,
         })
 
@@ -341,7 +341,7 @@ if true then
             CurrentValue = false,
             Flag = "RemoveFlash",
             Callback = function(Value)
-                _G.RemoveFlash = Value
+                 getgenv().RemoveFlash = Value
             end,
         })
 
@@ -350,7 +350,7 @@ if true then
             CurrentValue = false,
             Flag = "RemoveSmoke",
             Callback = function(Value)
-                _G.RemoveSmoke = Value
+                 getgenv().RemoveSmoke = Value
             end,
         })
 
@@ -359,7 +359,7 @@ if true then
             CurrentValue = false,
             Flag = "RemoveBlood",
             Callback = function(Value)
-                _G.RemoveBlood = Value
+                 getgenv().RemoveBlood = Value
             end,
         })
 
@@ -368,7 +368,7 @@ if true then
             CurrentValue = false,
             Flag = "RemoveBulletsHoles",
             Callback = function(Value)
-                _G.RemoveBulletsHoles = Value
+                 getgenv().RemoveBulletsHoles = Value
             end,
         })
 
@@ -378,7 +378,7 @@ if true then
             CurrentValue = false,
             Flag = "Bhop", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
             Callback = function(Value)
-                _G.Bhop = Value
+                 getgenv().Bhop = Value
             end,
         })
 
@@ -389,7 +389,7 @@ if true then
             CurrentValue = 100,
             Flag = "BhopSpeed", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
             Callback = function(Value)
-                _G.BhopSpeed = Value
+                 getgenv().BhopSpeed = Value
             end,
         })
 
@@ -399,7 +399,7 @@ if true then
             CurrentValue = false,
             Flag = "Fly", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
             Callback = function(Value)
-                _G.Fly = Value
+                 getgenv().Fly = Value
             end,
         })
     
@@ -408,7 +408,7 @@ if true then
             CurrentValue = false,
             Flag = "Noclip", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
             Callback = function(Value)
-                _G.Noclip = Value
+                 getgenv().Noclip = Value
             end,
         })
         
@@ -419,7 +419,7 @@ if true then
             CurrentValue = 16,
             Flag = "FlySpeed", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
             Callback = function(Value)
-                _G.FlySpeed = Value
+                 getgenv().FlySpeed = Value
             end,
         })
 
@@ -448,7 +448,7 @@ if true then
             CurrentValue = 80,
             Flag = "BhopSpeed", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
             Callback = function(Value)
-                _G.FieldOfView = Value
+                 getgenv().FieldOfView = Value
             end,
         })
 
@@ -458,7 +458,7 @@ if true then
             CurrentValue = false,
             Flag = "ThirdPerson",
             Callback = function(Value)
-                _G.ThirdPerson = Value
+                 getgenv().ThirdPerson = Value
             end,
         })
 
@@ -469,7 +469,7 @@ if true then
             CurrentValue = 10,
             Flag = "ThirdPersonDistance", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
             Callback = function(Value)
-                _G.ThirdPersonDistance = Value
+                 getgenv().ThirdPersonDistance = Value
             end,
         })
 
@@ -507,7 +507,7 @@ if true then
             CurrentValue = false,
             Flag = "ArmsChams",
             Callback = function(Value)
-                _G.ArmsChams = Value
+                 getgenv().ArmsChams = Value
             end,
         })
 
@@ -517,7 +517,7 @@ if true then
             CurrentValue = false,
             Flag = "GunsChams",
             Callback = function(Value)
-                _G.GunsChams = Value
+                 getgenv().GunsChams = Value
             end,
         })
 
@@ -526,7 +526,7 @@ if true then
             Color = Color3.fromRGB(200,200,200),
             Flag = "GunsChamsColor", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
             Callback = function(Value)
-                _G.ChamsColor = Value
+                 getgenv().ChamsColor = Value
             end
         })
     end
@@ -554,7 +554,7 @@ LocalPlayer.Status.Kills.Changed:Connect(function(Value)
 end)
 
 RunService.RenderStepped:Connect(function()
-    if _G.RemoveScope == true then
+    if  getgenv().RemoveScope == true then
         LocalPlayer.PlayerGui.GUI.Crosshairs.Scope.ImageTransparency = 1
         LocalPlayer.PlayerGui.GUI.Crosshairs.Scope.Scope.ImageTransparency = 1
         LocalPlayer.PlayerGui.GUI.Crosshairs.Scope.Scope.Size = UDim2.new(2,0,2,0)
@@ -581,7 +581,7 @@ RunService.RenderStepped:Connect(function()
 end)
 
 RunService.RenderStepped:Connect(function()
-    if _G.RemoveFlash == true then
+    if  getgenv().RemoveFlash == true then
         LocalPlayer.PlayerGui.Blnd.Enabled = false
     else
         LocalPlayer.PlayerGui.Blnd.Enabled = true
@@ -590,7 +590,7 @@ RunService.RenderStepped:Connect(function()
 end)
 
 RunService.RenderStepped:Connect(function()
-    if _G.RemoveBulletsHoles == true then
+    if  getgenv().RemoveBulletsHoles == true then
         for i,v in pairs(Debris:GetChildren()) do
             if v.Name == "Bullet" then
                 v:Remove()
@@ -601,7 +601,7 @@ RunService.RenderStepped:Connect(function()
 end)
 
 RunService.RenderStepped:Connect(function()
-    if _G.RemoveSmoke == true then
+    if  getgenv().RemoveSmoke == true then
         for i,v in pairs(RayIgnore.Smokes:GetChildren()) do
             if v.Name == "Smoke" then
                 v:Remove()
@@ -611,7 +611,7 @@ RunService.RenderStepped:Connect(function()
     task.wait()
 end)
 RunService.RenderStepped:Connect(function()
-    if _G.RemoveBlood == true then
+    if  getgenv().RemoveBlood == true then
         for i,v in pairs(Debris:GetChildren()) do
             if v.Name == "SurfaceGui" then
                 v:Remove()
@@ -622,7 +622,7 @@ RunService.RenderStepped:Connect(function()
 end)
 
 RunService.RenderStepped:Connect(function()
-    if _G.Noclip == true then
+    if  getgenv().Noclip == true then
         for _, Instance in pairs(LocalPlayer.Character:GetChildren()) do
             if Instance:IsA("BasePart") and Instance.CanCollide == true then
                 Instance.CanCollide = false
@@ -639,9 +639,9 @@ RunService.RenderStepped:Connect(function()
 end)
 
 RunService.RenderStepped:Connect(function()
-    if _G.Fly == true then
+    if  getgenv().Fly == true then
         if LocalPlayer.Character ~= nil then
-            local Speed = _G.FlySpeed or 16
+            local Speed =  getgenv().FlySpeed or 16
             local Velocity = Vector3.new(0, 1, 0)
     
             if UserInputService:IsKeyDown(Enum.KeyCode.W) then
@@ -665,10 +665,10 @@ RunService.RenderStepped:Connect(function()
 end)
 
 RunService.RenderStepped:Connect(function()
-    if _G.Bhop == true then
+    if  getgenv().Bhop == true then
         if LocalPlayer.Character ~= nil and UserInputService:IsKeyDown(Enum.KeyCode.Space) and LocalPlayer.PlayerGui.GUI.Main.GlobalChat.Visible == false then
             LocalPlayer.Character.Humanoid.Jump = true
-            local Speed = _G.BhopSpeed or 100
+            local Speed =  getgenv().BhopSpeed or 100
             local Dir = Camera.CFrame.LookVector * Vector3.new(1,0,1)
             local Move = Vector3.new()
 
@@ -712,9 +712,9 @@ end)
 
 RunService.RenderStepped:Connect(function()
     if LocalPlayer.Character ~= nil and LocalPlayer.Character.Humanoid.Health > 0 then
-        if _G.SpinBot then
+        if  getgenv().SpinBot then
             LocalPlayer.Character.Humanoid.AutoRotate = false
-            LocalPlayer.Character.HumanoidRootPart.CFrame = LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(_G.Speed or 50), 0)
+            LocalPlayer.Character.HumanoidRootPart.CFrame = LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad( getgenv().Speed or 50), 0)
         else
             LocalPlayer.Character.Humanoid.AutoRotate = true
         end
@@ -723,10 +723,10 @@ RunService.RenderStepped:Connect(function()
 end)
 
 RunService.RenderStepped:Connect(function()
-    if _G.ThirdPerson == true then
-        if LocalPlayer.CameraMinZoomDistance ~= _G.ThirdPersonDistance or 10 then
-            LocalPlayer.CameraMinZoomDistance = _G.ThirdPersonDistance or 10
-            LocalPlayer.CameraMaxZoomDistance = _G.ThirdPersonDistance or 10
+    if  getgenv().ThirdPerson == true then
+        if LocalPlayer.CameraMinZoomDistance ~=  getgenv().ThirdPersonDistance or 10 then
+            LocalPlayer.CameraMinZoomDistance =  getgenv().ThirdPersonDistance or 10
+            LocalPlayer.CameraMaxZoomDistance =  getgenv().ThirdPersonDistance or 10
             workspace.ThirdPerson.Value = true
         end
     else
@@ -740,18 +740,18 @@ RunService.RenderStepped:Connect(function()
 end)
 
 RunService.RenderStepped:Connect(function()
-    Camera.FieldOfView = _G.FieldOfView or 80
+    Camera.FieldOfView =  getgenv().FieldOfView or 80
     task.wait()
 end)
 
 
 RunService.RenderStepped:Connect(function()
-    if _G.GunsChams == true then
+    if  getgenv().GunsChams == true then
         for _, Stuff in ipairs(workspace.Camera:GetChildren()) do
             if Stuff:IsA("Model") and Stuff.Name == "Arms" then
                 for _, AnotherStuff in ipairs(Stuff:GetChildren()) do
                     if AnotherStuff:IsA("MeshPart") or AnotherStuff:IsA("BasePart") then
-                        AnotherStuff.Color = _G.ChamsColor or Color3.fromRGB(200,200,200)
+                        AnotherStuff.Color =  getgenv().ChamsColor or Color3.fromRGB(200,200,200)
                         AnotherStuff.Material = Enum.Material.ForceField
                     end
                 end
@@ -773,7 +773,7 @@ RunService.RenderStepped:Connect(function()
 end)
 
 RunService.RenderStepped:Connect(function()
-    if _G.ArmsChams == true then
+    if  getgenv().ArmsChams == true then
         for _, Stuff in ipairs(workspace.Camera:GetChildren()) do
             if Stuff:IsA("Model") and Stuff.Name == "Arms" then
                 for _, AnotherStuff in ipairs(Stuff:GetChildren()) do

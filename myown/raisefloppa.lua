@@ -7,8 +7,8 @@ local LocalPlayer = game.Players.LocalPlayer
 
 tab:CreateSection("Farm $$$")
 tab:CreateToggle("Auto Farm",false,function(state)
-    _G.farmi=state
-    while _G.farmi and wait() do
+     getgenv().farmi=state
+    while  getgenv().farmi and wait() do
         if workspace:FindFirstChild("Floppa") then pcall(function()fireclickdetector(workspace.Floppa)end) end
         for _, i in pairs(workspace:GetChildren()) do
             if i:isA("Part") and i:FindFirstChild("Floppa") then pcall(function()fireclickdetector(i.Floppa)end) end
@@ -50,4 +50,4 @@ MISCTAB:CreateSlider("CFrame Speed",{0, 50},1,"boost",0,function(v) wsBoost(v/25
 MISCTAB:CreateButton("Rejoin Server", function () loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end)
 MISCTAB:CreateLabel("by benomat")
 MISCTAB:CreateButton("Copy discord invite",function()setclipboard("discord.gg/gUMYGXqPPw")end)
-game.Players.LocalPlayer.CharacterAdded:Connect(function() _G.wsbran=false end)
+game.Players.LocalPlayer.CharacterAdded:Connect(function()  getgenv().wsbran=false end)

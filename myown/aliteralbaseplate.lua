@@ -7,9 +7,6 @@ local LocalPlayer = game.Players.LocalPlayer
 function erm(t)
     return t[1]
 end
-function erms(furry,sexporn)
-    return furry[sexporn]
-end
 
 tab:CreateSection("lets do stuff")
 fling=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/fling.lua'))()
@@ -47,21 +44,21 @@ function getPlayerNames()
     end 
     return playerNames
 end
-_G.SelectedPlayer=game.Players.LocalPlayer.Name
+ getgenv().SelectedPlayer=game.Players.LocalPlayer.Name
 playerselector=TPTab:CreateDropdown(
     "Players",
     getPlayerNames(),
-    _G.SelectedPlayer,
+     getgenv().SelectedPlayer,
     false,
     function(opt)
-    _G.SelectedPlayer=erm(opt)
+     getgenv().SelectedPlayer=erm(opt)
     end
 )
-TPTab:CreateButton("TP to selected",function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild(_G.SelectedPlayer).Character.HumanoidRootPart.CFrame end)
+TPTab:CreateButton("TP to selected",function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild( getgenv().SelectedPlayer).Character.HumanoidRootPart.CFrame end)
 TPTab:CreateToggle("Loop TP to selected",false,function(state)
-    _G.LoopTP=state
-    while _G.LoopTP do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild(_G.SelectedPlayer).Character.HumanoidRootPart.CFrame
+     getgenv().LoopTP=state
+    while  getgenv().LoopTP do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild( getgenv().SelectedPlayer).Character.HumanoidRootPart.CFrame
         task.wait()
     end
 end)

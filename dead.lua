@@ -9,8 +9,8 @@
 ]]
 
 -- shuts down the previous instance of SimpleSpy
-if _G.SimpleSpyExecuted and type(_G.SimpleSpyShutdown) == "function" then
-	print(pcall(_G.SimpleSpyShutdown))
+if  getgenv().SimpleSpyExecuted and type( getgenv().SimpleSpyShutdown) == "function" then
+	print(pcall( getgenv().SimpleSpyShutdown))
 end
 
 local Players = game:GetService("Players")
@@ -895,7 +895,7 @@ local remoteFunction = Instance.new("RemoteFunction")
 local originalEvent = remoteEvent.FireServer
 local originalFunction = remoteFunction.InvokeServer
 --- the maximum amount of remotes allowed in logs
-_G.SIMPLESPYCONFIG_MaxRemotes = 500
+ getgenv().SIMPLESPYCONFIG_MaxRemotes = 500
 --- how many spaces to indent
 local indent = 4
 --- used for task scheduler
@@ -1068,9 +1068,9 @@ function newSignal()
 	}
 end
 
---- Prevents remote spam from causing lag (clears logs after `_G.SIMPLESPYCONFIG_MaxRemotes` or 500 remotes)
+--- Prevents remote spam from causing lag (clears logs after ` getgenv().SIMPLESPYCONFIG_MaxRemotes` or 500 remotes)
 function clean()
-	local max = _G.SIMPLESPYCONFIG_MaxRemotes
+	local max =  getgenv().SIMPLESPYCONFIG_MaxRemotes
 	if not typeof(max) == "number" and math.floor(max) ~= max then
 		max = 500
 	end
@@ -1454,7 +1454,7 @@ function mouseEntered()
 	customCursor.Parent = SimpleSpy2
 	UserInputService.OverrideMouseIconBehavior = Enum.OverrideMouseIconBehavior.ForceHide
 	RunService:BindToRenderStep("SIMPLESPY_CURSOR", 1, function()
-		if mouseInGui and _G.SimpleSpyExecuted then
+		if mouseInGui and  getgenv().SimpleSpyExecuted then
 			local mouseLocation = UserInputService:GetMouseLocation() - Vector2.new(0, 36)
 			customCursor.Position = UDim2.fromOffset(
 				mouseLocation.X - customCursor.AbsoluteSize.X / 2,
@@ -2008,11 +2008,11 @@ function t2s(t, l, p, n, vtv, i, pt, path, tables, tI)
 	l = l + indent -- set indentation level
 	for k, v in pairs(t) do -- iterates over table
 		size = size + 1 -- changes size for max limit
-		if size > (_G.SimpleSpyMaxTableSize or 1000) then
+		if size > ( getgenv().SimpleSpyMaxTableSize or 1000) then
 			s = s
 				.. "\n"
 				.. string.rep(" ", l)
-				.. "-- MAXIMUM TABLE SIZE REACHED, CHANGE '_G.SimpleSpyMaxTableSize' TO ADJUST MAXIMUM SIZE "
+				.. "-- MAXIMUM TABLE SIZE REACHED, CHANGE ' getgenv().SimpleSpyMaxTableSize' TO ADJUST MAXIMUM SIZE "
 			break
 		end
 		if rawequal(k, t) then -- checks if the table being iterated over is being used as an index within itself (yay, lua)
@@ -2356,7 +2356,7 @@ function formatstr(s, indentation)
 		.. '"'
 		.. (
 			reachedMax
-				and " --[[ MAXIMUM STRING SIZE REACHED, CHANGE '_G.SimpleSpyMaxStringSize' TO ADJUST MAXIMUM SIZE ]]"
+				and " --[[ MAXIMUM STRING SIZE REACHED, CHANGE ' getgenv().SimpleSpyMaxStringSize' TO ADJUST MAXIMUM SIZE ]]"
 			or ""
 		)
 end
@@ -2718,7 +2718,7 @@ function toggleSpy()
 			original = original or function(...)
 				return oldNamecall(...)
 			end
-			_G.OriginalNamecall = original
+			 getgenv().OriginalNamecall = original
 		else
 			gm = gm or getrawmetatable(game)
 			original = original or function(...)
@@ -2780,11 +2780,11 @@ function shutdown()
 		gm.__namecall = original
 		setreadonly(gm, true)
 	end
-	_G.SimpleSpyExecuted = false
+	 getgenv().SimpleSpyExecuted = false
 end
 
 -- main
-if not _G.SimpleSpyExecuted then
+if not  getgenv().SimpleSpyExecuted then
 	local succeeded, err = pcall(function()
 		if not RunService:IsClient() then
 			error("SimpleSpy cannot run on the server!")
@@ -2814,7 +2814,7 @@ if not _G.SimpleSpyExecuted then
 					.. table.concat(missing, ", ")
 			)
 		end
-		_G.SimpleSpyShutdown = shutdown
+		 getgenv().SimpleSpyShutdown = shutdown
 		ContentProvider:PreloadAsync({
 			"rbxassetid://6065821980",
 			"rbxassetid://6065774948",
@@ -2862,7 +2862,7 @@ if not _G.SimpleSpyExecuted then
 		bringBackOnResize()
 		SimpleSpy2.Parent = --[[gethui and gethui() or]]
 			CoreGui
-		_G.SimpleSpyExecuted = true
+		 getgenv().SimpleSpyExecuted = true
 		if not Players.LocalPlayer then
 			Players:GetPropertyChangedSignal("LocalPlayer"):Wait()
 		end

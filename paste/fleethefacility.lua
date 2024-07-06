@@ -242,17 +242,17 @@ local Toggle = FarmingTab:CreateToggle({
    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
  --Toggles the infinite jump between on or off on every script run
-_G.infinjump = not _G.infinjump
+ getgenv().infinjump = not  getgenv().infinjump
  
-if _G.infinJumpStarted == nil then
+if  getgenv().infinJumpStarted == nil then
 	--Ensures this only runs once to save resources
-	_G.infinJumpStarted = true
+	 getgenv().infinJumpStarted = true
  
 	--The actual infinite jump
 	local plr = game:GetService('Players').LocalPlayer
 	local m = plr:GetMouse()
 	m.KeyDown:connect(function(k)
-		if _G.infinjump then
+		if  getgenv().infinjump then
 			if k:byte() == 32 then
 			humanoid = game:GetService'Players'.LocalPlayer.Character:FindFirstChildOfClass('Humanoid')
 			humanoid:ChangeState('Jumping')

@@ -41,14 +41,14 @@ tab:CreateButton("Close bins [let me know if this works]",function()
     end
 end)
 
-if not _G.SelectedClass then _G.SelectedClass="economy" end
+if not  getgenv().SelectedClass then  getgenv().SelectedClass="economy" end
 tab:CreateDropdown(
     "Class [names might be wrong]",
     {"economy","business","first"},
-    _G.SelectedClass,
+     getgenv().SelectedClass,
     false,
     function(opt)
-        _G.SelectedClass=opt
+         getgenv().SelectedClass=opt
 end)
 tab:CreateButton("Feed all (tell me if this dont work for one class)",function()
     RF=game:GetService("Players").LocalPlayer.Character.Client.Client.RemoteFunction
@@ -56,11 +56,11 @@ tab:CreateButton("Feed all (tell me if this dont work for one class)",function()
         if flight:FindFirstChild("clientFolder") then
             for _, passenger in pairs(flight.clientFolder:GetChildren()[1].npcs:GetChildren()) do
                 for i=1,6 do 
-                    RF:InvokeServer("GetItem","beverage",_G.SelectedClass,i)
+                    RF:InvokeServer("GetItem","beverage", getgenv().SelectedClass,i)
                     wait(.15)
                     RF:InvokeServer("GiveItem",passenger)
                     wait(.15)
-                    RF:InvokeServer("GetItem","food",_G.SelectedClass,i)
+                    RF:InvokeServer("GetItem","food", getgenv().SelectedClass,i)
                     wait(.15)
                     RF:InvokeServer("GiveItem",passenger)
                     wait(.15)

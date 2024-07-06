@@ -85,7 +85,7 @@ local CurrentCamera = workspace.CurrentCamera
 local worldToViewportPoint = CurrentCamera.worldToViewportPoint
  
  
-_G.TeamCheck = false -- Use True or False to toggle TeamCheck
+ getgenv().TeamCheck = false -- Use True or False to toggle TeamCheck
  
  
 for i,v in pairs(game.Players:GetChildren()) do
@@ -107,7 +107,7 @@ for i,v in pairs(game.Players:GetChildren()) do
                     Tracer.To = Vector2.new(Vector.X, Vector.Y)
  
  
-                    if _G.TeamCheck and v.TeamColor == lplr.TeamColor then
+                    if  getgenv().TeamCheck and v.TeamColor == lplr.TeamColor then
                         --//Teammates
                         Tracer.Visible = false
                     else
@@ -145,7 +145,7 @@ game.Players.PlayerAdded:Connect(function(v)
                     Tracer.To = Vector2.new(Vector.X, Vector.Y)
  
  
-                    if _G.TeamCheck and v.TeamColor == lplr.TeamColor then
+                    if  getgenv().TeamCheck and v.TeamColor == lplr.TeamColor then
                         --//Teammates
                         Tracer.Visible = false
                     else
@@ -264,7 +264,7 @@ Internal_UI:addButton("RADAR MODE",function()
 --- Drawing Player Radar
 --- Made by topit
  
-_G.RadarSettings = {
+ getgenv().RadarSettings = {
     --- Radar settings
     RADAR_LINES = true; -- Displays distance rings + cardinal lines 
     RADAR_LINE_DISTANCE = 50; -- The distance between each distance ring

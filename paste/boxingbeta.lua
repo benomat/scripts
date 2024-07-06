@@ -109,11 +109,11 @@ sound.SoundId = "rbxassetid://6098419898"
 sound.Looped = false
 sound:Play()
 local ow
-_G.go5 = true
+ getgenv().go5 = true
 ow = hookmetamethod(game,"__namecall",newcclosure(function(self,...)
     local m = getnamecallmethod()
     local args = {...}
-    if not checkcaller() and _G.go5 == true and m == "FireServer" then
+    if not checkcaller() and  getgenv().go5 == true and m == "FireServer" then
         if self.Name == "PlayerDodgeRemote" or self.Name == "PlayerStaminaRemote" then
             if args[1] == false or args[1] == true then
                 print(args[1])

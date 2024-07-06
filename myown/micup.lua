@@ -11,9 +11,6 @@ local LocalPlayer = game.Players.LocalPlayer
 function erm(t)
     return t[1]
 end
-function erms(furry,sexporn)
-    return furry[sexporn]
-end
 
 tab:CreateSection("stuff1")
 wsBoost=loadstring(game:HttpGet("https://raw.githubusercontent.com/benomat/scripts/m/myown/wsBoost.lua"))()
@@ -32,6 +29,23 @@ solidfloortoggle=tab:CreateToggle("Solid Private Room Floor",false,function(stat
         end
     end
 end)
+tab:CreateToggle("Break TicTacToe",false,function(state)
+     getgenv().breakTTT=state
+    while  getgenv().breakTTT do
+        for _, playingtable in pairs(workspace:GetChildren()) do
+            if playingtable.Name == "Tic Tac Toe" then
+                for _, field in pairs(playingtable:GetChildren()) do
+                    if field.Name:sub(1, 5) == "Detec" then
+                        fireclickdetector(field)
+                        task.wait()
+                    end
+                end
+            end
+        end
+        wait(.5)
+    end
+end)
+tab:CreateLabel("^^ Do NOT use this on WAVE for now ^^")
 local GetService = game.GetService
 local Services = {
     Workspace = GetService(game, "Workspace");
@@ -80,27 +94,24 @@ local GetPlayer = function(Name)
 end
 
 playertab:CreateInput("Select Player","Name",true,function(name)
-    _G.SelectedPlayer = GetPlayer(name)
+     getgenv().SelectedPlayer = GetPlayer(name)
 end)
 playertab:CreateToggle("View",false,function(state)
-    if state then Workspace.Camera.CameraSubject = _G.SelectedPlayer.Character
+    if state then Workspace.Camera.CameraSubject =  getgenv().SelectedPlayer.Character
 else Workspace.Camera.CameraSubject = Player.Character end
 end)
 playertab:CreateToggle("Listen to ",false,function(state)
-    if state then Services.SoundService:SetListener(Enum.ListenerType.ObjectPosition, _G.SelectedPlayer.Character.HumanoidRootPart)
+    if state then Services.SoundService:SetListener(Enum.ListenerType.ObjectPosition,  getgenv().SelectedPlayer.Character.HumanoidRootPart)
     else Services.SoundService:SetListener(Enum.ListenerType.Camera)end
 end)
-playertab:CreateButton("TP to selected",function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.SelectedPlayer.Character.HumanoidRootPart.CFrame end)
+playertab:CreateButton("TP to selected",function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  getgenv().SelectedPlayer.Character.HumanoidRootPart.CFrame end)
 playertab:CreateToggle("Loop TP to selected",false,function(state)
-    _G.LoopTP=state
-    while _G.LoopTP do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.SelectedPlayer.Character.HumanoidRootPart.CFrame
+     getgenv().LoopTP=state
+    while  getgenv().LoopTP do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  getgenv().SelectedPlayer.Character.HumanoidRootPart.CFrame
         task.wait()
     end
 end)
-local function tp(loc)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = loc
-end
 local function tpn(...)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(...)
 end
@@ -138,44 +149,44 @@ TPTab:CreateButton("Slide",function()tpn(16.68634796142578, 225.0092315673828, 6
 TPTab:CreateButton("Glass Platform",function()tpn(172.06375122070312, 61.18655014038086, -114.35980224609375)end)
 TPTab:CreateButton("Items / Donut Shop",function()tpn(-55.430057525634766, 4.6999969482421875, -62.683597564697266)end)
 
-_G.EditStalltxt="Script made by benomat"
-_G.EditStallimg="Empty"
+ getgenv().EditStalltxt="Script made by benomat"
+ getgenv().EditStallimg="Empty"
 Stalltab:CreateSection("Your own stall")
 Stalltab:CreateInput("Set Text","hi",false,function(txt)
-    _G.EditStalltxt=txt
+     getgenv().EditStalltxt=txt
 end)
 Stalltab:CreateInput("Set image (have this back!)","rblx image id",false,function(txt)
-    _G.EditStallimg=txt
+     getgenv().EditStallimg=txt
 end)
 Stalltab:CreateButton("confirm edit",function()
     for _,v in pairs(Workspace.Stalls:GetChildren()) do
         if tostring(v.Player.Value)==game.Players.LocalPlayer.Name then
-            v.Edit:FireServer(_G.EditStalltxt,_G.EditStallimg)
+            v.Edit:FireServer( getgenv().EditStalltxt, getgenv().EditStallimg)
         end
     end
 end)
 
 
 
-_G.Typewrite="hi;byee;Script made by benomat"
+ getgenv().Typewrite="hi;byee;Script made by benomat"
 Stalltab:CreateSection("Typewrite text")
 Stalltab:CreateInput("Text! Seperate with ;","hi;byee",false,function(txt)
-    _G.Typewrite=txt
+     getgenv().Typewrite=txt
 end)
 Stalltab:CreateToggle("Typewrite",false,function(state)
-    _G.TypewriteToggle=state
+     getgenv().TypewriteToggle=state
     if state then
         local messages = {}
-        for message in string.gmatch(_G.Typewrite, "([^;]+)") do
+        for message in string.gmatch( getgenv().Typewrite, "([^;]+)") do
             table.insert(messages, message)
         end
     end
-    while _G.TypewriteToggle do
+    while  getgenv().TypewriteToggle do
         for _,v in pairs(Workspace.Stalls:GetChildren()) do
             if tostring(v.Player.Value)==game.Players.LocalPlayer.Name then
-                for message in string.gmatch(_G.Typewrite, "([^;]+)") do
+                for message in string.gmatch( getgenv().Typewrite, "([^;]+)") do
                     for i = 1, #message do
-                        v.Edit:FireServer(message:sub(1, i),_G.EditStallimg)
+                        v.Edit:FireServer(message:sub(1, i), getgenv().EditStallimg)
                         wait(0.25) -- Adjust the delay to control typing speed
                     end
                     wait(.5)
@@ -197,14 +208,14 @@ Stalltab:CreateToggle("Steal/Clear all Stalls",false,function(state)
                 v.CloseStall:FireServer()
             end
         end
-        wait(.2)
-        _G.ThisIsTooOp=state
-        while _G.ThisIsTooOp do
+        wait(.05)
+         getgenv().ThisIsTooOp=state
+        while  getgenv().ThisIsTooOp do
             local oldpos=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
             for _,v in pairs(Workspace.Stalls:GetChildren()) do
                 if v.Player.Value then
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=v.ProxPart.CFrame
-                    wait(.13)
+                    wait(.23)
                     fireproximityprompt(v.ProxPart.ProximityPrompt)
                     wait(.23)
                     game.Players.LocalPlayer.PlayerGui.StallLocal.StallFrame.Visible=false
@@ -234,10 +245,10 @@ Stalltab:CreateInput("Steal stall by number (1-5)","number",true,function(input)
                 v.CloseStall:FireServer()
             end
         end
-        wait(.4)
+        wait(.05)
         local oldpos=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=targetstall.ProxPart.CFrame
-        wait(.13)
+        wait(.25)
         fireproximityprompt(targetstall.ProxPart.ProximityPrompt)
         wait(.23)
         game.Players.LocalPlayer.PlayerGui.StallLocal.StallFrame.Visible=false
@@ -251,7 +262,6 @@ Stalltab:CreateInput("Steal stall by number (1-5)","number",true,function(input)
            })
     end
 end)
-
 
 MISCTAB:CreateDropdown(
     "Animation pack",
