@@ -46,43 +46,43 @@ tab:CreateToggle("Launcher upgrade 2 (Right)",false,function(state)
         wait(.03)
     end
 end)
-tab:CreateSection("Eggs /// You still have to autoclick yourself")
-tab:CreateToggle("Auto Egg 1",false,function(state)
-    _G.Egg1=state
-    ermcount=0
-    for _, i in pairs(workspace.DEBRIS:GetChildren()) do
-        if i.Name=="Part"  then
-            ermcount+=1
-            if ermcount==1 then
-            LocalPlayer.Character.HumanoidRootPart.Position=i.Position
-            break end end
-    end
-    while _G.Egg1 do
-        keypress(101)
-        --autoclick yourself :'( -- for i=0,25,1 do mousemoverel(5000,5000) mouse1click() wait() end
-        wait()
-    end
-    game.Players.LocalPlayer.Character.Head:Destroy() 
+-- tab:CreateSection("Eggs /// You still have to autoclick yourself")
+-- tab:CreateToggle("Auto Egg 1",false,function(state)
+--     _G.Egg1=state
+--     ermcount=0
+--     for _, i in pairs(workspace.DEBRIS:GetChildren()) do
+--         if i.Name=="Part"  then
+--             ermcount+=1
+--             if ermcount==1 then
+--             LocalPlayer.Character.HumanoidRootPart.Position=i.Position
+--             break end end
+--     end
+--     while _G.Egg1 do
+--         keypress(101)
+--         --autoclick yourself :'( -- for i=0,25,1 do mousemoverel(5000,5000) mouse1click() wait() end
+--         wait()
+--     end
+--     game.Players.LocalPlayer.Character.Head:Destroy() 
     
-end)
-tab:CreateToggle("Auto Egg 2",false,function(state)
-    _G.Egg1=state
-    ermcount=0
-    for _, i in pairs(workspace.DEBRIS:GetChildren()) do
-        if i.Name=="Part"  then
-            ermcount+=1
-            if ermcount==2 then
-            LocalPlayer.Character.HumanoidRootPart.Position=i.Position
-            break end end
-    end
-    while _G.Egg1 do
-        keypress(101)
-        --autoclick yourself :'( -- for i=0,25,1 do mousemoverel(5000,5000) mouse1click() wait() end
-        wait()
-    end
-    game.Players.LocalPlayer.Character.Head:Destroy()  
+-- end)
+-- tab:CreateToggle("Auto Egg 2",false,function(state)
+--     _G.Egg1=state
+--     ermcount=0
+--     for _, i in pairs(workspace.DEBRIS:GetChildren()) do
+--         if i.Name=="Part"  then
+--             ermcount+=1
+--             if ermcount==2 then
+--             LocalPlayer.Character.HumanoidRootPart.Position=i.Position
+--             break end end
+--     end
+--     while _G.Egg1 do
+--         keypress(101)
+--         --autoclick yourself :'( -- for i=0,25,1 do mousemoverel(5000,5000) mouse1click() wait() end
+--         wait()
+--     end
+--     game.Players.LocalPlayer.Character.Head:Destroy()  
     
-end)
+-- end)
 function getPlayerNames()
     playerNames = {}
     for _,i in pairs(game.Players:GetPlayers()) do

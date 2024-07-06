@@ -1,8 +1,8 @@
 local Lib = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local window = Lib:CreateWindow({
-   Name = "Raceclickersex /// [>::<] ^(>.1)^",
+   Name = "Raceclicker /// [>::<] ^(>.1)^",
    LoadingTitle = "Raceclicker",
-   LoadingSubtitle = "by benomat"})
+   LoadingSubtitle = "by"})
 local tab = window:CreateTab("Hacks")
 local tab3 = window:CreateTab("Misc")
 
@@ -226,7 +226,7 @@ end})
 
 
 
-local Slider = tab3:CreateSlider({
+tab3:CreateSlider({
    Name = "Speed",
    Range = {16, 9999999},
    Increment = 4,
@@ -234,5 +234,6 @@ local Slider = tab3:CreateSlider({
    CurrentValue = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed, 
    Callback = function(v) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v end})
 tab3:CreateButton({    Name = " Rejoin Server  ", Callback=function () loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end})
-tab3:CreateLabel("join n stuff")
+tab3:CreateLabel("idk who made this tbh")
 tab3:CreateButton({Name="Copy discord invite",Callback=function()setclipboard("discord.gg/gUMYGXqPPw")end})
+tab3:CreateLabel("join n stuff")
