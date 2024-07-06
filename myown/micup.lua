@@ -191,7 +191,13 @@ Stalltab:CreateSection("Claming and stuff") --[you can scroll btw]
     
 -- end)
 Stalltab:CreateToggle("Steal/Clear all Stalls [Wave only]",false,function(state)
-    if fireproximityprompt then
+    if pcall(function() fireproximityprompt(Workspace.Stalls.Stall1.ProxPart.ProximityPrompt) end) then
+        for _,v in pairs(Workspace.Stalls:GetChildren()) do
+            if tostring(v.Player.Value)==game.Players.LocalPlayer.Name then
+                v.Edit:FireServer(_G.EditStalltxt,_G.EditStallimg)
+            end
+        end
+        wait(.2)
         _G.ThisIsTooOp=state
         while _G.ThisIsTooOp do
             local oldpos=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
@@ -201,7 +207,7 @@ Stalltab:CreateToggle("Steal/Clear all Stalls [Wave only]",false,function(state)
                     wait(.13)
                     fireproximityprompt(v.ProxPart.ProximityPrompt)
                     wait(.23)
-                    game:GetService("Players").minipicklelover123.PlayerGui.StallLocal.StallFrame.Visible=false
+                    game.Players.LocalPlayer.PlayerGui.StallLocal.StallFrame.Visible=false
                     if tostring(v.Player.Value)==game.Players.LocalPlayer.Name then
                         v.CloseStall:FireServer()
                     end
