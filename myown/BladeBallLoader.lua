@@ -19,8 +19,8 @@ tab:CreateSlider("CFrame Speed",{0, 150},1,"boost",0,function(v) wsBoost(v/30) e
 
 tab:CreateSection("Farm $$$ (Blatant)")
 tab:CreateToggle("Autofarm drops",false,function(state)
-     getgenv().ERMSIES = state
-    while  getgenv().ERMSIES do
+    getgenv().ERMSIES = state
+    while getgenv().ERMSIES do
         for _, v in game.Workspace.Map:GetChildren()[1]:GetChildren() do
             local old_pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
             if v.Name == "Drop" then

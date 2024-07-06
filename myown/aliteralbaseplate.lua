@@ -18,7 +18,7 @@ tab:CreateDropdown(
     "Select",
     false,
     function(opt)
-        getgenv().animchanger=erm(opt)
+       getgenv().animchanger=erm(opt)
         loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/a'))()
 end)
 emoteSelector=tab:CreateDropdown(
@@ -27,7 +27,7 @@ emoteSelector=tab:CreateDropdown(
     {},
     true,
     function(opt)
-        getgenv().emotes=opt
+       getgenv().emotes=opt
         loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/e'))()
 end)
 tab:CreateButton("Reset Emote Selector",function()emoteSelector:Set({})end)
@@ -48,17 +48,17 @@ end
 playerselector=TPTab:CreateDropdown(
     "Players",
     getPlayerNames(),
-     getgenv().SelectedPlayer,
+    getgenv().SelectedPlayer,
     false,
     function(opt)
-     getgenv().SelectedPlayer=erm(opt)
+    getgenv().SelectedPlayer=erm(opt)
     end
 )
-TPTab:CreateButton("TP to selected",function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild( getgenv().SelectedPlayer).Character.HumanoidRootPart.CFrame end)
+TPTab:CreateButton("TP to selected",function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild(getgenv().SelectedPlayer).Character.HumanoidRootPart.CFrame end)
 TPTab:CreateToggle("Loop TP to selected",false,function(state)
-     getgenv().LoopTP=state
-    while  getgenv().LoopTP do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild( getgenv().SelectedPlayer).Character.HumanoidRootPart.CFrame
+    getgenv().LoopTP=state
+    while getgenv().LoopTP do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild(getgenv().SelectedPlayer).Character.HumanoidRootPart.CFrame
         task.wait()
     end
 end)

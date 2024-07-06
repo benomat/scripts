@@ -9,6 +9,6 @@ else
     end)
     
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/emotes.lua',true))()
-    getgenv().emotesloaded='hi'
+   getgenv().emotesloaded='hi'
 end
 

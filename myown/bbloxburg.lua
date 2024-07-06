@@ -102,8 +102,8 @@ tab:CreateKeybind("Hair Studio Farm","H",false,function()
         return false,false
     end
     repeat wait() until getOrder()
-     getgenv().farmiiii=not  getgenv().farmiiii
-    while  getgenv().farmiiii do 
+    getgenv().farmiiii=not getgenv().farmiiii
+    while getgenv().farmiiii do 
         while color~=getHC() do
             cycleColor()
             wait(.1)
@@ -126,7 +126,7 @@ tab:CreateDropdown(
     "Select",
     false,
     function(opt)
-        getgenv().animchanger=erm(opt)
+       getgenv().animchanger=erm(opt)
         loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/a'))()
 end)
 
@@ -139,4 +139,4 @@ MISCTAB:CreateSlider("CFrame Speed",{0, 30},1,"boost",0,function(v) wsBoost(v/25
 MISCTAB:CreateButton("Rejoin Server", function () loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end)
 MISCTAB:CreateLabel("by benomat")
 MISCTAB:CreateButton("Copy discord invite",function()setclipboard("discord.gg/gUMYGXqPPw")end)
-game.Players.LocalPlayer.CharacterAdded:Connect(function()  getgenv().wsbran=false end)
+game.Players.LocalPlayer.CharacterAdded:Connect(function() getgenv().wsbran=false end)

@@ -12,18 +12,18 @@ if not getgenv().pluh then getgenv().pluh = 0 end
 tab:CreateToggle("Toggle Car Speed",false,function(state)
     for _,v in pairs(game.Workspace.Vehicles:GetChildren()) do
         if v:FindFirstChild("owner") and v.owner.Value==game.Players.LocalPlayer.Name then
-            getgenv().mycar=v
+           getgenv().mycar=v
         end
     end
-    getgenv().nicepeople=state
+   getgenv().nicepeople=state
     while getgenv().nicepeople do
         task.wait()
         local movedir = game.Players.LocalPlayer.Character.Humanoid.MoveDirection
         mathlock = getgenv().pluh * movedir
-        getgenv().mycar.PrimaryPart.Velocity = Vector3.new(getgenv().mycar.PrimaryPart.Velocity.X, getgenv().mycar.PrimaryPart.Velocity.Y, getgenv().mycar.PrimaryPart.Velocity.Z)
-        getgenv().mycar.PrimaryPart.Velocity = getgenv().mycar.PrimaryPart.Velocity + mathlock
-        getgenv().mycar.PrimaryPart.Velocity = Vector3.new(getgenv().mycar.PrimaryPart.Velocity.X, getgenv().mycar.PrimaryPart.Velocity.Y, getgenv().mycar.PrimaryPart.Velocity.Z)
-        getgenv().mycar.PrimaryPart.Velocity = Vector3.new(getgenv().mycar.PrimaryPart.Velocity.X,getgenv().mycar.PrimaryPart.Velocity.Y , getgenv().mycar.PrimaryPart.Velocity.Z)
+       getgenv().mycar.PrimaryPart.Velocity = Vector3.new(getgenv().mycar.PrimaryPart.Velocity.X,getgenv().mycar.PrimaryPart.Velocity.Y,getgenv().mycar.PrimaryPart.Velocity.Z)
+       getgenv().mycar.PrimaryPart.Velocity = getgenv().mycar.PrimaryPart.Velocity + mathlock
+       getgenv().mycar.PrimaryPart.Velocity = Vector3.new(getgenv().mycar.PrimaryPart.Velocity.X,getgenv().mycar.PrimaryPart.Velocity.Y,getgenv().mycar.PrimaryPart.Velocity.Z)
+       getgenv().mycar.PrimaryPart.Velocity = Vector3.new(getgenv().mycar.PrimaryPart.Velocity.X,getgenv().mycar.PrimaryPart.Velocity.Y ,getgenv().mycar.PrimaryPart.Velocity.Z)
         wait(0.1)
     end    
 end)
@@ -39,7 +39,7 @@ othertab:CreateDropdown(
     "Select",
     false,
     function(opt)
-        getgenv().animchanger=erm(opt)
+       getgenv().animchanger=erm(opt)
         loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/a'))()
 end)
 emoteSelector=othertab:CreateDropdown(
@@ -48,7 +48,7 @@ emoteSelector=othertab:CreateDropdown(
     {},
     true,
     function(opt)
-        getgenv().emotes=opt
+       getgenv().emotes=opt
         loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/e'))()
 end)
 othertab:CreateButton("Reset Emote Selector",function()emoteSelector:Set({})end)

@@ -9,7 +9,7 @@ local Tab1 = Window:Tab("Aimlocks",true)
 Tab1:Label("Aimlock")
 
 Tab1:Button("Main Aimlock",function(bool)
-    getgenv().AimPart = "HumanoidRootPart"
+   getgenv().AimPart = "HumanoidRootPart"
 	getgenv().AimlockKey = "e"
 	getgenv().AimRadius = 30
 	getgenv().ThirdPerson = true
@@ -191,7 +191,7 @@ Tab1:Button("Main Aimlock",function(bool)
 end)
 
 Tab1:Textbox("Aimlock Keybind","E",function(bool)
-    getgenv().AimlockKey = bool
+   getgenv().AimlockKey = bool
 end)
 
 Tab1:Textbox("AimLock Prediction","6",function(bool)
@@ -199,7 +199,7 @@ Tab1:Textbox("AimLock Prediction","6",function(bool)
 end)
 
 Tab1:Dropdown("AimPart",{"Head","HumanoidRootPart","UpperTorso","LowerTorso"},function(value)
-    getgenv().AimPart = value
+   getgenv().AimPart = value
 end)
 
 local Tab2 = Window:Tab("Silent Aim",false)
@@ -316,9 +316,9 @@ Tab3:Button("Tryhard Anims",function(bool)
 end)
 
 Tab3:Button("Headless Client Sided",function(bool)
-    getgenv().game.Players.LocalPlayer.Character.Head.Transparency = 1
-    getgenv().game.Players.LocalPlayer.Character.Head.face:Destroy()
-    getgenv().game.Players.LocalPlayer.Character.Head.face:Destroy()
+   getgenv().game.Players.LocalPlayer.Character.Head.Transparency = 1
+   getgenv().game.Players.LocalPlayer.Character.Head.face:Destroy()
+   getgenv().game.Players.LocalPlayer.Character.Head.face:Destroy()
 end)
 
 Tab3:Button("Korblox Client Sided",function(bool)
@@ -438,7 +438,7 @@ local clicker = false
 
 Tab4:Textbox("AntiLock (use -0.10 to -0.60)","Speed",function(a)
 		
-    getgenv().Multiplier = a
+   getgenv().Multiplier = a
 
 end, {
     ["clear"] = false,
@@ -466,47 +466,47 @@ local Tab5 = Window:Tab("Teleports",false)
 Tab5:Label("Teleports")
 
 Tab5:Button("Double Barrel",function(value)
-    getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1039.59985, 18.8513641, -256.449951, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+   getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1039.59985, 18.8513641, -256.449951, -1, 0, 0, 0, 1, 0, 0, 0, -1)
 end)
 
 Tab5:Button("Revolver",function(value)
-    getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-638.75, 18.8500004, -118.175011, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+   getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-638.75, 18.8500004, -118.175011, -1, 0, 0, 0, 1, 0, 0, 0, -1)
 end)
 
 Tab5:Button("Shotgun",function(value)
-    getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-578.623657, 5.47212696, -725.131531, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+   getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-578.623657, 5.47212696, -725.131531, 0, 0, 1, 0, 1, -0, -1, 0, 0)
 end)
 
 Tab5:Button("Tactical Shotgun",function(value)
-    getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(470.877533, 45.1272316, -620.630676, 0.999999821, 0.000604254019, -2.60802135e-08, -0.000604254019, 0.999999821, -8.63220048e-05, -2.60802135e-08, 8.63220048e-05, 1)
+   getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(470.877533, 45.1272316, -620.630676, 0.999999821, 0.000604254019, -2.60802135e-08, -0.000604254019, 0.999999821, -8.63220048e-05, -2.60802135e-08, 8.63220048e-05, 1)
 end)
 
 Tab5:Button("Smg",function(value)
-    getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-577.123413, 5.47666788, -718.031433, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+   getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-577.123413, 5.47666788, -718.031433, -1, 0, 0, 0, 1, 0, 0, 0, -1)
 end)
 
 Tab5:Button("RPG",function(value)
-    getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-794.814697, -42.5468521, -932.97998, 5.96046448e-08, 2.91038305e-11, 1, -0.000610388815, 0.999999821, 2.91038305e-11, -0.999999762, -0.000610388815, 5.96046448e-08)
+   getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-794.814697, -42.5468521, -932.97998, 5.96046448e-08, 2.91038305e-11, 1, -0.000610388815, 0.999999821, 2.91038305e-11, -0.999999762, -0.000610388815, 5.96046448e-08)
 end)
 
 Tab5:Button("Armor",function(value)
-    getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-607.978455, 7.44964886, -788.494263, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
+   getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-607.978455, 7.44964886, -788.494263, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
 end)
 
 Tab5:Button("PopCorn",function(value)
-    getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-995, 21.6998043, -153.100037, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+   getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-995, 21.6998043, -153.100037, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 end)
 
 Tab5:Button("Casino 1v1",function(value)
-    getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-962.72345, 21.2549973, -186.814987, -0.0274876002, 2.91178949e-05, 0.999621451, -5.5798846e-06, 1, -2.92823333e-05, -0.999621451, -6.38268148e-06, -0.0274876002)
+   getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-962.72345, 21.2549973, -186.814987, -0.0274876002, 2.91178949e-05, 0.999621451, -5.5798846e-06, 1, -2.92823333e-05, -0.999621451, -6.38268148e-06, -0.0274876002)
 end)
 
 Tab5:Button("Bank",function(value)
-    getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-402.123718, 21.75, -283.988617, 0.0159681588, -0.000121377925, -0.999872446, -2.60148026e-05, 1, -0.000121808866, 0.999872506, 2.79565484e-05, 0.0159681737)
+   getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-402.123718, 21.75, -283.988617, 0.0159681588, -0.000121377925, -0.999872446, -2.60148026e-05, 1, -0.000121808866, 0.999872506, 2.79565484e-05, 0.0159681737)
 end)
 
 Tab5:Button("Main Food",function(value)
-    getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-338.352173, 23.6826477, -297.2146, -0.0060598203, -1.03402984e-08, -0.999981582, -1.61653102e-09, 1, -1.03306892e-08, 0.999981582, 1.55389912e-09, -0.0060598203)
+   getgenv().game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-338.352173, 23.6826477, -297.2146, -0.0060598203, -1.03402984e-08, -0.999981582, -1.61653102e-09, 1, -1.03306892e-08, 0.999981582, 1.55389912e-09, -0.0060598203)
 end)
 
 local Tab6 = Window:Tab("Keybind",false)

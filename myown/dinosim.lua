@@ -7,4 +7,4 @@ tab:CreateSlider("CFrame Speed",{0, 150},1,"boost",0,function(v) wsBoost(v/25) e
 tab:CreateButton("Rejoin Server", function () loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end)
 tab:CreateLabel("by benomat")
 tab:CreateButton("Copy discord invite",function()setclipboard("discord.gg/gUMYGXqPPw")end)
-game.Players.LocalPlayer.CharacterAdded:Connect(function()  getgenv().wsbran=false end)
+game.Players.LocalPlayer.CharacterAdded:Connect(function() getgenv().wsbran=false end)

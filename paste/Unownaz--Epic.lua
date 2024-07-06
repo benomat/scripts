@@ -27,7 +27,7 @@ local ColorCorrectionEffect = Instance.new("ColorCorrectionEffect", Lighting); C
 -- 
 setfpscap(999)
 --
-getgenv().Lynx, getgenv().Visuals, getgenv().utility = 
+getgenv().Lynx,getgenv().Visuals,getgenv().utility = 
 {
 	["Connections"] = {},
 	["Account"] = {

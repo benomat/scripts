@@ -61,7 +61,7 @@ Page.Toggle({ -- toggles a script, on or off
 		--// Main
 		---------
 		 getgenv().Busy = value
-		while  getgenv().Busy do
+		while getgenv().Busy do
 			local bodyVelocity = Instance.new("BodyVelocity")
 			bodyVelocity.Velocity = Vector3.new(0, 0, 0)
 			bodyVelocity.Parent = client.Character.HumanoidRootPart
@@ -73,7 +73,7 @@ Page.Toggle({ -- toggles a script, on or off
 
 				client.Character.HumanoidRootPart.CFrame = stages["CaveStage"..i].DarknessPart.CFrame wait(0.1)
 
-				if not  getgenv().Busy then
+				if not getgenv().Busy then
 					client.Character.Humanoid.Health = 0
 					exit(0)
 				end
@@ -448,9 +448,9 @@ Page.Toggle({ -- toggles a script, on or off
 		 getgenv().RUN = value
 		spawn(function()
 			coroutine.wrap(function()
-				while  getgenv().RUN do wait()
+				while getgenv().RUN do wait()
 					coroutine.wrap(function()
-						while  getgenv().RUN do wait()
+						while getgenv().RUN do wait()
 							workspace.ItemBoughtFromShop:InvokeServer("Winter Chest",math.floor(game:GetService("Players").LocalPlayer.Data.Gold.Value / 100))
 						end
 					end)()

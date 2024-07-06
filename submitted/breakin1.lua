@@ -95,14 +95,14 @@ playerselector=TeleportTab:CreateDropdown({
     CurrentOption= getgenv().SelectedPlayer,
     MultipleOptions=false,
     Callback=function(opt)
-     getgenv().SelectedPlayer=erm(opt)
+    getgenv().SelectedPlayer=erm(opt)
     end
 })
-TeleportTab:CreateButton({Name="TP to selected",Callback=function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild( getgenv().SelectedPlayer).Character.HumanoidRootPart.CFrame end})
+TeleportTab:CreateButton({Name="TP to selected",Callback=function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild(getgenv().SelectedPlayer).Character.HumanoidRootPart.CFrame end})
 TeleportTab:CreateToggle({Name="Loop TP to selected",CurrentValue =false,Callback=function(state)
-     getgenv().LoopTP=state
-    while  getgenv().LoopTP do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild( getgenv().SelectedPlayer).Character.HumanoidRootPart.CFrame
+    getgenv().LoopTP=state
+    while getgenv().LoopTP do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild(getgenv().SelectedPlayer).Character.HumanoidRootPart.CFrame
         wait()
     end
 end})

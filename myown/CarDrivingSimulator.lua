@@ -15,7 +15,7 @@ end
 tab:CreateSection("Speed | by me & term")
 if not getgenv().pluh then getgenv().pluh = 0 end
 tab:CreateToggle("Toggle Car Speed",false,function(state)
-    getgenv().nicepeople=state
+   getgenv().nicepeople=state
     while getgenv().nicepeople do
         task.wait()
         local car = game.Workspace[game.Players.LocalPlayer.Name.."'s Car"]
@@ -40,7 +40,7 @@ othertab:CreateDropdown(
     "Select",
     false,
     function(opt)
-        getgenv().animchanger=erm(opt)
+       getgenv().animchanger=erm(opt)
         loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/a'))()
 end)
 emoteSelector=othertab:CreateDropdown(
@@ -49,7 +49,7 @@ emoteSelector=othertab:CreateDropdown(
     {},
     true,
     function(opt)
-        getgenv().emotes=opt
+       getgenv().emotes=opt
         loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/e'))()
 end)
 othertab:CreateButton("Reset Emote Selector",function()emoteSelector:Set({})end)

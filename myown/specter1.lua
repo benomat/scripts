@@ -12,13 +12,13 @@ tab:CreateButton("Enable Fullbright",function()loadstring(game:HttpGet('https://
 tab:CreateButton("Toggle all doors",function()
     for _,v in pairs(game.Workspace.House.Doors:GetChildren()) do
         game:GetService("ReplicatedStorage").Door:FireServer(v)
-        wait(.5)
+        wait(1)
     end
 end)
 tab:CreateButton("Complete Bone",function()
     game:GetService("ReplicatedStorage").ReportEvidence:FireServer(workspace.House.Bone)
 end)
-tab:CreateButton("Complete Bone",function()
+tab:CreateButton("Complete Waters",function()
     for _, water in pairs(workspace.House.Waters:GetChildren()) do
         game:GetService("ReplicatedStorage").ReportEvidence:FireServer(water)
         wait(.5)

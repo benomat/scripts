@@ -1,39 +1,44 @@
 window = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/libwrapper.lua'))():CreateWindow("Cabin Crew Sim")
-tab=window:CreateTab("Main")
+tab=window:CreateTab("Flight")
+optab=window:CreateTab("Money")
 MISCTAB=window:CreateTab("Misc")
 
 tab:CreateSection("lets do stuff")
-RF=game:GetService("Players").LocalPlayer.Character.Client.Client.RemoteFunction
-RE=game:GetService("Players").LocalPlayer.Character.Client.Client.RemoteEvent
-tab:CreateButton("Close bins [let me know if this works]",function()
+
+function getnumberofbins(state)
+    local count=0
     for _, flight in pairs(workspace.flights:GetChildren()) do
         if flight:FindFirstChild("clientFolder") then
             for _, bin in pairs(flight.clientFolder:GetChildren()[1].overhead_bins:GetChildren()) do
-                if ({bin:FindFirstChild(bin.Name).rotationRef.Value:GetComponents()})[4] ~= 1 then
-                    old_value=bin:FindFirstChild(bin.Name).rotationRef.Value
+                if bin.ProximityPrompt.Enabled==state then --alternative: ({bin:FindFirstChild(bin.Name).rotationRef.Value:GetComponents()})[4] == 1
+                    count+=1
+                end
+            end
+        end
+    end
+    return count
+end
+tab:CreateButton("Close bins [slow on solara]",function()
+    RE=game:GetService("Players").LocalPlayer.Character.Client.Client.RemoteEvent
+    local huhh=true
+    local cook=false
+    for _, flight in pairs(workspace.flights:GetChildren()) do
+        if flight:FindFirstChild("clientFolder") then
+            for _, bin in pairs(flight.clientFolder:GetChildren()[1].overhead_bins:GetChildren()) do
+                if bin.ProximityPrompt.Enabled==huhh then
+                    if not pcall(function() fireproximityprompt(bin.ProximityPrompt)end) then
+                        cook=true
+                        break
+                    end
+                end
+            end
+            if cook then
+                local lastcount=getnumberofbins(huhh)
+                for _, bin in pairs(flight.clientFolder:GetChildren()[1].overhead_bins:GetChildren()) do
                     RE:FireServer("prompt","Bins",tonumber(bin.Name:match("_(%d+)$")))
-                    wait(.8)
-                    if old_value==bin:FindFirstChild(bin.Name).rotationRef.Value then
-                        RE:FireServer("prompt","Bins",tonumber(bin.Name:match("_(%d+)$")))
-                        wait(.5)
-                        RE:FireServer("prompt","Bins",tonumber(bin.Name:match("_(%d+)$"))+2)
-                        wait(.8)
-                        if old_value==bin:FindFirstChild(bin.Name).rotationRef.Value then
-                            RE:FireServer("prompt","Bins",tonumber(bin.Name:match("_(%d+)$"))+2)
-                            wait(.5)
-                            RE:FireServer("prompt","Bins",2)
-                            wait(.8)
-                            if old_value==bin:FindFirstChild(bin.Name).rotationRef.Value then
-                                RE:FireServer("prompt","Bins",2)
-                                wait(.6)
-                                RE:FireServer("prompt","Bins",3)
-                                wait(.8)
-                                if old_value==bin:FindFirstChild(bin.Name).rotationRef.Value then
-                                    RE:FireServer("prompt","Bins",3)
-                                    wait(.6)
-                                end
-                            end
-                        end
+                    wait(.3)
+                    if getnumberofbins(huhh)>=lastcount then RE:FireServer("prompt","Bins",tonumber(bin.Name:match("_(%d+)$")));wait(.3)
+                    else lastcount=getnumberofbins(huhh) wait(.3)
                     end
                 end
             end
@@ -41,27 +46,30 @@ tab:CreateButton("Close bins [let me know if this works]",function()
     end
 end)
 
-if not  getgenv().SelectedClass then  getgenv().SelectedClass="economy" end
+if not getgenv().SelectedClass then getgenv().SelectedClass="economy" end
 tab:CreateDropdown(
     "Class [names might be wrong]",
     {"economy","business","first"},
-     getgenv().SelectedClass,
+    getgenv().SelectedClass,
     false,
     function(opt)
-         getgenv().SelectedClass=opt
+        getgenv().SelectedClass=opt
 end)
 tab:CreateButton("Feed all (tell me if this dont work for one class)",function()
-    RF=game:GetService("Players").LocalPlayer.Character.Client.Client.RemoteFunction
+    local RF=game:GetService("Players").LocalPlayer.Character.Client.Client.RemoteFunction
+
+    RF:InvokeServer("Cart",getgenv().SelectedClass,"food")
+
     for _, flight in pairs(workspace.flights:GetChildren()) do
         if flight:FindFirstChild("clientFolder") then
             for _, passenger in pairs(flight.clientFolder:GetChildren()[1].npcs:GetChildren()) do
                 for i=1,6 do 
-                    RF:InvokeServer("GetItem","beverage", getgenv().SelectedClass,i)
-                    wait(.15)
+                    RF:InvokeServer("GetItem","beverage",getgenv().SelectedClass,i)
+                    wait(.2)
                     RF:InvokeServer("GiveItem",passenger)
-                    wait(.15)
-                    RF:InvokeServer("GetItem","food", getgenv().SelectedClass,i)
-                    wait(.15)
+                    wait(.2)
+                    RF:InvokeServer("GetItem","food",getgenv().SelectedClass,i)
+                    wait(.2)
                     RF:InvokeServer("GiveItem",passenger)
                     wait(.15)
                 end
@@ -70,7 +78,9 @@ tab:CreateButton("Feed all (tell me if this dont work for one class)",function()
     end
 end)
 tab:CreateButton("Trash all",function()
+    RE=game:GetService("Players").LocalPlayer.Character.Client.Client.RemoteEvent
     game:GetService("Players").LocalPlayer.Character.Client.Client.RemoteFunction:InvokeServer("TrashBag")
+    for i=1,2 do
     for _, flight in pairs(workspace.flights:GetChildren()) do
         if flight:FindFirstChild("clientFolder") then
             for _, passenger in pairs(flight.clientFolder:GetChildren()[1].npcs:GetChildren()) do
@@ -83,22 +93,72 @@ tab:CreateButton("Trash all",function()
             end
         end
     end
+    end
     game:GetService("Players").LocalPlayer.Character.Client.Client.RemoteFunction:InvokeServer("TrashBag")
 end)
 tab:CreateButton("Fix all",function()
+    RE=game:GetService("Players").LocalPlayer.Character.Client.Client.RemoteEvent
     for _, flight in pairs(workspace.flights:GetChildren()) do
         if flight:FindFirstChild("clientFolder") then
             for _, passenger in pairs(flight.clientFolder:GetChildren()[1].npcs:GetChildren()) do
                     RE:FireServer("Fix","tray",passenger)
-                    wait(.15)
+                    wait(.03)
                     RE:FireServer("Fix","seat",passenger)
-                    wait(.15)
+                    wait(.03)
                     RE:FireServer("Fix","seatbelt",passenger)
-                    wait(.15)
+                    wait(.01)
             end
         end
     end
 end)
+tab:CreateButton("Open bins [slow on solara]",function()
+    RE=game:GetService("Players").LocalPlayer.Character.Client.Client.RemoteEvent
+    local huhh=false
+    local cook=false
+    for _, flight in pairs(workspace.flights:GetChildren()) do
+        if flight:FindFirstChild("clientFolder") then
+            for _, bin in pairs(flight.clientFolder:GetChildren()[1].overhead_bins:GetChildren()) do
+                if bin.ProximityPrompt.Enabled==huhh then
+                    if not pcall(function() fireproximityprompt(bin.ProximityPrompt)end) then
+                        cook=true
+                        break
+                    end
+                end
+            end
+            if cook then
+                local lastcount=getnumberofbins(huhh)
+                for _, bin in pairs(flight.clientFolder:GetChildren()[1].overhead_bins:GetChildren()) do
+                    RE:FireServer("prompt","Bins",tonumber(bin.Name:match("_(%d+)$")))
+                    wait(.3)
+                    if getnumberofbins(huhh)>=lastcount then RE:FireServer("prompt","Bins",tonumber(bin.Name:match("_(%d+)$")));wait(.3)
+                    else lastcount=getnumberofbins(huhh) wait(.3)
+                    end
+                end
+            end
+        end
+    end
+end)
+for _, gamepass in pairs(game.Players.LocalPlayer.data.purchases.gamepasses:GetChildren()) do
+    gamepass.Value=true
+end
+optab:CreateSection("Very cool (this is enabled by default)")
+optab:CreateToggle("Unlock all gamepasses",true,function(state)
+    for _, gamepass in pairs(game.Players.LocalPlayer.data.purchases.gamepasses:GetChildren()) do
+        gamepass.Value=state
+    end
+end)
+optab:CreateSection("more stuff")
+codes={"myles", "airport", "star", "customize", "decoration", "100m", "service", "boba", "galley", "badge", "jetway"}
+optab:CreateButton("Claim codes",function()
+    for _,code in pairs(codes) do
+        game:GetService("ReplicatedStorage").remotes.codes:InvokeServer(code)
+        wait(.15)
+    end
+end)
+optab:CreateInput("Set Money (this is just cosmetic)","number",false,function(c)
+    game.Players.LocalPlayer.data["player_data"].skybux.Value=tonumber(c)
+end)
+
 
 
 

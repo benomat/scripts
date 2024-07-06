@@ -30,8 +30,8 @@ solidfloortoggle=tab:CreateToggle("Solid Private Room Floor",false,function(stat
     end
 end)
 tab:CreateToggle("Break TicTacToe",false,function(state)
-     getgenv().breakTTT=state
-    while  getgenv().breakTTT do
+    getgenv().breakTTT=state
+    while getgenv().breakTTT do
         for _, playingtable in pairs(workspace:GetChildren()) do
             if playingtable.Name == "Tic Tac Toe" then
                 for _, field in pairs(playingtable:GetChildren()) do
@@ -94,21 +94,21 @@ local GetPlayer = function(Name)
 end
 
 playertab:CreateInput("Select Player","Name",true,function(name)
-     getgenv().SelectedPlayer = GetPlayer(name)
+    getgenv().SelectedPlayer = GetPlayer(name)
 end)
 playertab:CreateToggle("View",false,function(state)
-    if state then Workspace.Camera.CameraSubject =  getgenv().SelectedPlayer.Character
+    if state then Workspace.Camera.CameraSubject = getgenv().SelectedPlayer.Character
 else Workspace.Camera.CameraSubject = Player.Character end
 end)
 playertab:CreateToggle("Listen to ",false,function(state)
-    if state then Services.SoundService:SetListener(Enum.ListenerType.ObjectPosition,  getgenv().SelectedPlayer.Character.HumanoidRootPart)
+    if state then Services.SoundService:SetListener(Enum.ListenerType.ObjectPosition,getgenv().SelectedPlayer.Character.HumanoidRootPart)
     else Services.SoundService:SetListener(Enum.ListenerType.Camera)end
 end)
-playertab:CreateButton("TP to selected",function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  getgenv().SelectedPlayer.Character.HumanoidRootPart.CFrame end)
+playertab:CreateButton("TP to selected",function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = getgenv().SelectedPlayer.Character.HumanoidRootPart.CFrame end)
 playertab:CreateToggle("Loop TP to selected",false,function(state)
-     getgenv().LoopTP=state
-    while  getgenv().LoopTP do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  getgenv().SelectedPlayer.Character.HumanoidRootPart.CFrame
+    getgenv().LoopTP=state
+    while getgenv().LoopTP do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = getgenv().SelectedPlayer.Character.HumanoidRootPart.CFrame
         task.wait()
     end
 end)
@@ -153,40 +153,40 @@ TPTab:CreateButton("Items / Donut Shop",function()tpn(-55.430057525634766, 4.699
  getgenv().EditStallimg="Empty"
 Stalltab:CreateSection("Your own stall")
 Stalltab:CreateInput("Set Text","hi",false,function(txt)
-     getgenv().EditStalltxt=txt
+    getgenv().EditStalltxt=txt
 end)
 Stalltab:CreateInput("Set image (have this back!)","rblx image id",false,function(txt)
-     getgenv().EditStallimg=txt
+    getgenv().EditStallimg=txt
 end)
 Stalltab:CreateButton("confirm edit",function()
     for _,v in pairs(Workspace.Stalls:GetChildren()) do
         if tostring(v.Player.Value)==game.Players.LocalPlayer.Name then
-            v.Edit:FireServer( getgenv().EditStalltxt, getgenv().EditStallimg)
+            v.Edit:FireServer(getgenv().EditStalltxt,getgenv().EditStallimg)
         end
     end
 end)
 
 
 
- getgenv().Typewrite="hi;byee;Script made by benomat"
+getgenv().Typewrite="hii;^(>.1)^;script by benomat"
 Stalltab:CreateSection("Typewrite text")
 Stalltab:CreateInput("Text! Seperate with ;","hi;byee",false,function(txt)
-     getgenv().Typewrite=txt
+    getgenv().Typewrite=txt
 end)
 Stalltab:CreateToggle("Typewrite",false,function(state)
-     getgenv().TypewriteToggle=state
+    getgenv().TypewriteToggle=state
     if state then
         local messages = {}
-        for message in string.gmatch( getgenv().Typewrite, "([^;]+)") do
+        for message in string.gmatch(getgenv().Typewrite, "([^;]+)") do
             table.insert(messages, message)
         end
     end
-    while  getgenv().TypewriteToggle do
+    while getgenv().TypewriteToggle do
         for _,v in pairs(Workspace.Stalls:GetChildren()) do
             if tostring(v.Player.Value)==game.Players.LocalPlayer.Name then
-                for message in string.gmatch( getgenv().Typewrite, "([^;]+)") do
+                for message in string.gmatch(getgenv().Typewrite, "([^;]+)") do
                     for i = 1, #message do
-                        v.Edit:FireServer(message:sub(1, i), getgenv().EditStallimg)
+                        v.Edit:FireServer(message:sub(1, i),getgenv().EditStallimg)
                         wait(0.25) -- Adjust the delay to control typing speed
                     end
                     wait(.5)
@@ -209,8 +209,8 @@ Stalltab:CreateToggle("Steal/Clear all Stalls",false,function(state)
             end
         end
         wait(.05)
-         getgenv().ThisIsTooOp=state
-        while  getgenv().ThisIsTooOp do
+        getgenv().ThisIsTooOp=state
+        while getgenv().ThisIsTooOp do
             local oldpos=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
             for _,v in pairs(Workspace.Stalls:GetChildren()) do
                 if v.Player.Value then
@@ -237,9 +237,10 @@ Stalltab:CreateToggle("Steal/Clear all Stalls",false,function(state)
            })
     end
 end)
+stallorder={"3","2","1","5","4"}
 Stalltab:CreateInput("Steal stall by number (1-5)","number",true,function(input)
     if pcall(function() fireproximityprompt(Workspace.Stalls.Stall1.ProxPart.ProximityPrompt) end) then
-        local targetstall=Workspace.Stalls:GetChildren()[tonumber(input)]
+        local targetstall=Workspace.Stalls["Stall"..stallorder[tonumber(input)]]
         for _,v in pairs(Workspace.Stalls:GetChildren()) do
             if tostring(v.Player.Value)==game.Players.LocalPlayer.Name then
                 v.CloseStall:FireServer()
@@ -269,7 +270,7 @@ MISCTAB:CreateDropdown(
     "Select",
     false,
     function(opt)
-        getgenv().animchanger=erm(opt)
+       getgenv().animchanger=erm(opt)
         loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/a'))()
 end)
 emoteSelector=MISCTAB:CreateDropdown(
@@ -278,7 +279,7 @@ emoteSelector=MISCTAB:CreateDropdown(
     {},
     true,
     function(opt)
-        getgenv().emotes=opt
+       getgenv().emotes=opt
         loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/e'))()
     end)
 MISCTAB:CreateButton("Reset Emote Selector",function()emoteSelector:Set({})end)
