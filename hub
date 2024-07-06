@@ -199,7 +199,7 @@ elseif (p==16560655288 or  g==5700746583) then --Pillar Chase 2
 elseif g==4871329703 then --Type soul
     loadstring(game:HttpGet('https://raw.githubusercontent.com/LOLking123456/newtype/main/soul'))()
 elseif (p==9285238704 or  g==3476371299) then --Race Clicker
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/raceclicker.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/raceclicker.lua'))()
 elseif (p==11454403177 or  g==4072288216) then --[NEW MAP] Cart Ride Delivery Service
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/cartridedeliveryservice.lua'))()
 elseif (p==7305309231 or  g==2851381018) then --Taxi Boss
