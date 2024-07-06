@@ -151,11 +151,11 @@ end
 tab:CreateToggle({
     Name = "Package farmmm $$$",
     Callback = function(v)
-    _G.PACKAGEFARM=v
+     getgenv().PACKAGEFARM=v
     if v then 
     tp(best_dropoff)
     end
-    while _G.PACKAGEFARM do 
+    while  getgenv().PACKAGEFARM do 
         getPackages(true)
         wait(4)
     end

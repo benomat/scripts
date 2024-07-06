@@ -88,21 +88,21 @@ function getPlayerNames()
     end 
     return playerNames
 end
-_G.SelectedPlayer=game.Players.LocalPlayer.Name
+ getgenv().SelectedPlayer=game.Players.LocalPlayer.Name
 playerselector=TeleportTab:CreateDropdown({
     Name="Players",
     Options = getPlayerNames(),
-    CurrentOption=_G.SelectedPlayer,
+    CurrentOption= getgenv().SelectedPlayer,
     MultipleOptions=false,
     Callback=function(opt)
-    _G.SelectedPlayer=erm(opt)
+     getgenv().SelectedPlayer=erm(opt)
     end
 })
-TeleportTab:CreateButton({Name="TP to selected",Callback=function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild(_G.SelectedPlayer).Character.HumanoidRootPart.CFrame end})
+TeleportTab:CreateButton({Name="TP to selected",Callback=function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild( getgenv().SelectedPlayer).Character.HumanoidRootPart.CFrame end})
 TeleportTab:CreateToggle({Name="Loop TP to selected",CurrentValue =false,Callback=function(state)
-    _G.LoopTP=state
-    while _G.LoopTP do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild(_G.SelectedPlayer).Character.HumanoidRootPart.CFrame
+     getgenv().LoopTP=state
+    while  getgenv().LoopTP do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild( getgenv().SelectedPlayer).Character.HumanoidRootPart.CFrame
         wait()
     end
 end})

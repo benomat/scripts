@@ -1,8 +1,8 @@
-if not _G.FullBrightExecuted then
+if not  getgenv().FullBrightExecuted then
 
-	_G.FullBrightEnabled = false
+	 getgenv().FullBrightEnabled = false
 
-	_G.NormalLightingSettings = {
+	 getgenv().NormalLightingSettings = {
 		Brightness = game:GetService("Lighting").Brightness,
 		ClockTime = game:GetService("Lighting").ClockTime,
 		FogEnd = game:GetService("Lighting").FogEnd,
@@ -11,60 +11,60 @@ if not _G.FullBrightExecuted then
 	}
 
 	game:GetService("Lighting"):GetPropertyChangedSignal("Brightness"):Connect(function()
-		if game:GetService("Lighting").Brightness ~= 1 and game:GetService("Lighting").Brightness ~= _G.NormalLightingSettings.Brightness then
-			_G.NormalLightingSettings.Brightness = game:GetService("Lighting").Brightness
-			if not _G.FullBrightEnabled then
+		if game:GetService("Lighting").Brightness ~= 1 and game:GetService("Lighting").Brightness ~=  getgenv().NormalLightingSettings.Brightness then
+			 getgenv().NormalLightingSettings.Brightness = game:GetService("Lighting").Brightness
+			if not  getgenv().FullBrightEnabled then
 				repeat
 					wait()
-				until _G.FullBrightEnabled
+				until  getgenv().FullBrightEnabled
 			end
 			game:GetService("Lighting").Brightness = 1
 		end
 	end)
 
 	game:GetService("Lighting"):GetPropertyChangedSignal("ClockTime"):Connect(function()
-		if game:GetService("Lighting").ClockTime ~= 12 and game:GetService("Lighting").ClockTime ~= _G.NormalLightingSettings.ClockTime then
-			_G.NormalLightingSettings.ClockTime = game:GetService("Lighting").ClockTime
-			if not _G.FullBrightEnabled then
+		if game:GetService("Lighting").ClockTime ~= 12 and game:GetService("Lighting").ClockTime ~=  getgenv().NormalLightingSettings.ClockTime then
+			 getgenv().NormalLightingSettings.ClockTime = game:GetService("Lighting").ClockTime
+			if not  getgenv().FullBrightEnabled then
 				repeat
 					wait()
-				until _G.FullBrightEnabled
+				until  getgenv().FullBrightEnabled
 			end
 			game:GetService("Lighting").ClockTime = 12
 		end
 	end)
 
 	game:GetService("Lighting"):GetPropertyChangedSignal("FogEnd"):Connect(function()
-		if game:GetService("Lighting").FogEnd ~= 786543 and game:GetService("Lighting").FogEnd ~= _G.NormalLightingSettings.FogEnd then
-			_G.NormalLightingSettings.FogEnd = game:GetService("Lighting").FogEnd
-			if not _G.FullBrightEnabled then
+		if game:GetService("Lighting").FogEnd ~= 786543 and game:GetService("Lighting").FogEnd ~=  getgenv().NormalLightingSettings.FogEnd then
+			 getgenv().NormalLightingSettings.FogEnd = game:GetService("Lighting").FogEnd
+			if not  getgenv().FullBrightEnabled then
 				repeat
 					wait()
-				until _G.FullBrightEnabled
+				until  getgenv().FullBrightEnabled
 			end
 			game:GetService("Lighting").FogEnd = 786543
 		end
 	end)
 
 	game:GetService("Lighting"):GetPropertyChangedSignal("GlobalShadows"):Connect(function()
-		if game:GetService("Lighting").GlobalShadows ~= false and game:GetService("Lighting").GlobalShadows ~= _G.NormalLightingSettings.GlobalShadows then
-			_G.NormalLightingSettings.GlobalShadows = game:GetService("Lighting").GlobalShadows
-			if not _G.FullBrightEnabled then
+		if game:GetService("Lighting").GlobalShadows ~= false and game:GetService("Lighting").GlobalShadows ~=  getgenv().NormalLightingSettings.GlobalShadows then
+			 getgenv().NormalLightingSettings.GlobalShadows = game:GetService("Lighting").GlobalShadows
+			if not  getgenv().FullBrightEnabled then
 				repeat
 					wait()
-				until _G.FullBrightEnabled
+				until  getgenv().FullBrightEnabled
 			end
 			game:GetService("Lighting").GlobalShadows = false
 		end
 	end)
 
 	game:GetService("Lighting"):GetPropertyChangedSignal("Ambient"):Connect(function()
-		if game:GetService("Lighting").Ambient ~= Color3.fromRGB(178, 178, 178) and game:GetService("Lighting").Ambient ~= _G.NormalLightingSettings.Ambient then
-			_G.NormalLightingSettings.Ambient = game:GetService("Lighting").Ambient
-			if not _G.FullBrightEnabled then
+		if game:GetService("Lighting").Ambient ~= Color3.fromRGB(178, 178, 178) and game:GetService("Lighting").Ambient ~=  getgenv().NormalLightingSettings.Ambient then
+			 getgenv().NormalLightingSettings.Ambient = game:GetService("Lighting").Ambient
+			if not  getgenv().FullBrightEnabled then
 				repeat
 					wait()
-				until _G.FullBrightEnabled
+				until  getgenv().FullBrightEnabled
 			end
 			game:GetService("Lighting").Ambient = Color3.fromRGB(178, 178, 178)
 		end
@@ -80,15 +80,15 @@ if not _G.FullBrightExecuted then
 	spawn(function()
 		repeat
 			wait()
-		until _G.FullBrightEnabled
+		until  getgenv().FullBrightEnabled
 		while wait() do
-			if _G.FullBrightEnabled ~= LatestValue then
-				if not _G.FullBrightEnabled then
-					game:GetService("Lighting").Brightness = _G.NormalLightingSettings.Brightness
-					game:GetService("Lighting").ClockTime = _G.NormalLightingSettings.ClockTime
-					game:GetService("Lighting").FogEnd = _G.NormalLightingSettings.FogEnd
-					game:GetService("Lighting").GlobalShadows = _G.NormalLightingSettings.GlobalShadows
-					game:GetService("Lighting").Ambient = _G.NormalLightingSettings.Ambient
+			if  getgenv().FullBrightEnabled ~= LatestValue then
+				if not  getgenv().FullBrightEnabled then
+					game:GetService("Lighting").Brightness =  getgenv().NormalLightingSettings.Brightness
+					game:GetService("Lighting").ClockTime =  getgenv().NormalLightingSettings.ClockTime
+					game:GetService("Lighting").FogEnd =  getgenv().NormalLightingSettings.FogEnd
+					game:GetService("Lighting").GlobalShadows =  getgenv().NormalLightingSettings.GlobalShadows
+					game:GetService("Lighting").Ambient =  getgenv().NormalLightingSettings.Ambient
 				else
 					game:GetService("Lighting").Brightness = 1
 					game:GetService("Lighting").ClockTime = 12
@@ -102,5 +102,5 @@ if not _G.FullBrightExecuted then
 	end)
 end
 
-_G.FullBrightExecuted = true
-_G.FullBrightEnabled = not _G.FullBrightEnabled
+ getgenv().FullBrightExecuted = true
+ getgenv().FullBrightEnabled = not  getgenv().FullBrightEnabled

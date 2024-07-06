@@ -1,9 +1,9 @@
 return function(s)
-    _G.teleportDistance = s
+     getgenv().teleportDistance = s
     
-    if not _G.wsbran then
+    if not  getgenv().wsbran then
     warn("yooo")
-    _G.wsbran=true
+     getgenv().wsbran=true
     local player = game.Players.LocalPlayer
     local character = player.Character or player.CharacterAdded:Wait()
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -68,7 +68,7 @@ return function(s)
             moveVector = moveVector.Unit
             -- Flatten the movement vector to ignore vertical movement
             moveVector = Vector3.new(moveVector.X, 0, moveVector.Z).Unit
-            local newPosition = humanoidRootPart.Position + moveVector * _G.teleportDistance
+            local newPosition = humanoidRootPart.Position + moveVector *  getgenv().teleportDistance
             -- Preserve the character's current orientation
             humanoidRootPart.CFrame = CFrame.new(newPosition, newPosition + humanoidRootPart.CFrame.LookVector)
         end

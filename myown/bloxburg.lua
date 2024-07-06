@@ -102,8 +102,8 @@ tab:CreateKeybind("Hair Studio Farm","H",false,function()
         return false,false
     end
     repeat wait() until getOrder()
-    _G.farmiiii=not _G.farmiiii
-    while _G.farmiiii do 
+     getgenv().farmiiii=not  getgenv().farmiiii
+    while  getgenv().farmiiii do 
         while color~=getHC() do
             cycleColor()
             wait(.1)
@@ -141,4 +141,4 @@ end)
 MISCTAB:CreateButton("Rejoin Server", function() loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end)
 MISCTAB:CreateLabel("by benomat")
 MISCTAB:CreateButton("Copy discord invite",function()setclipboard("discord.gg/gUMYGXqPPw")end)
-game.Players.LocalPlayer.CharacterAdded:Connect(function() _G.wsbran=false end)
+game.Players.LocalPlayer.CharacterAdded:Connect(function()  getgenv().wsbran=false end)

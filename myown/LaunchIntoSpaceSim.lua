@@ -7,8 +7,8 @@ local LocalPlayer = game.Players.LocalPlayer
 
 tab:CreateSection("Farm $$$")
 tab:CreateToggle("Collect Stars",false,function(state)
-    _G.AutoCollect=state
-    while _G.AutoCollect and task.wait() do
+     getgenv().AutoCollect=state
+    while  getgenv().AutoCollect and task.wait() do
 		pcall(function()
 			for i, v in pairs(game:GetService("Workspace").DROPS:GetChildren()) do
 				local args = {
@@ -23,8 +23,8 @@ tab:CreateToggle("Collect Stars",false,function(state)
 	end
 end)
 tab:CreateToggle("Loop Launch",false,function(state)
-    _G.AutoSling=state
-    while _G.AutoSling do
+     getgenv().AutoSling=state
+    while  getgenv().AutoSling do
         pcall(function()LocalPlayer.Character.HumanoidRootPart.Position=workspace.LAUNCHERS_RENDER:FindFirstChild(LocalPlayer.Name).Part.Position end)
         wait(3)
     end
@@ -33,22 +33,22 @@ tab:CreateToggle("Loop Launch",false,function(state)
 end)
 tab:CreateSection("Upgrades")
 tab:CreateToggle("Launcher upgrade 1 (Left)",false,function(state)
-    _G.Upgrade1=state
-    while _G.Upgrade1 do
+     getgenv().Upgrade1=state
+    while  getgenv().Upgrade1 do
         firetouchinterest(LocalPlayer.Character.HumanoidRootPart,workspace.MAP:FindFirstChild("launchpad_"..LocalPlayer.Name).Upgrades.Launcher.current_level.Button,0)
         wait(.03)
     end
 end)
 tab:CreateToggle("Launcher upgrade 2 (Right)",false,function(state)
-    _G.Upgrade2=state
-    while _G.Upgrade2 do
+     getgenv().Upgrade2=state
+    while  getgenv().Upgrade2 do
         firetouchinterest(LocalPlayer.Character.HumanoidRootPart,workspace.MAP:FindFirstChild("launchpad_"..LocalPlayer.Name).Upgrades.Launcher:FindFirstChild("1_level").Button,0)
         wait(.03)
     end
 end)
 -- tab:CreateSection("Eggs /// You still have to autoclick yourself")
 -- tab:CreateToggle("Auto Egg 1",false,function(state)
---     _G.Egg1=state
+--      getgenv().Egg1=state
 --     ermcount=0
 --     for _, i in pairs(workspace.DEBRIS:GetChildren()) do
 --         if i.Name=="Part"  then
@@ -57,7 +57,7 @@ end)
 --             LocalPlayer.Character.HumanoidRootPart.Position=i.Position
 --             break end end
 --     end
---     while _G.Egg1 do
+--     while  getgenv().Egg1 do
 --         keypress(101)
 --         --autoclick yourself :'( -- for i=0,25,1 do mousemoverel(5000,5000) mouse1click() wait() end
 --         wait()
@@ -66,7 +66,7 @@ end)
     
 -- end)
 -- tab:CreateToggle("Auto Egg 2",false,function(state)
---     _G.Egg1=state
+--      getgenv().Egg1=state
 --     ermcount=0
 --     for _, i in pairs(workspace.DEBRIS:GetChildren()) do
 --         if i.Name=="Part"  then
@@ -75,7 +75,7 @@ end)
 --             LocalPlayer.Character.HumanoidRootPart.Position=i.Position
 --             break end end
 --     end
---     while _G.Egg1 do
+--     while  getgenv().Egg1 do
 --         keypress(101)
 --         --autoclick yourself :'( -- for i=0,25,1 do mousemoverel(5000,5000) mouse1click() wait() end
 --         wait()
@@ -114,4 +114,4 @@ MISCTAB:CreateSlider("CFrame Speed",{0, 50},1,"boost",0,function(v) wsBoost(v/25
 MISCTAB:CreateButton("Rejoin Server", function () loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end)
 MISCTAB:CreateLabel("by benomat")
 MISCTAB:CreateButton("Copy discord invite",function()setclipboard("discord.gg/gUMYGXqPPw")end)
-game.Players.LocalPlayer.CharacterAdded:Connect(function() _G.wsbran=false end)
+game.Players.LocalPlayer.CharacterAdded:Connect(function()  getgenv().wsbran=false end)

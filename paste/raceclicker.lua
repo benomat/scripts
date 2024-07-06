@@ -9,8 +9,8 @@ local tab3 = window:CreateTab("Misc")
 -- Auto Click
 Toggle = tab:CreateToggle({ Name="Auto Click",CurrentValue = false,Callback=function(bool) 
 if bool== true then
-_G.AutoClick = true
-while _G.AutoClick == true do
+ getgenv().AutoClick = true
+while  getgenv().AutoClick == true do
 game:GetService("ReplicatedStorage").Packages.Knit.Services.ClickService.RF.Click:InvokeServer()
 game:GetService("ReplicatedStorage").Packages.Knit.Services.ClickService.RF.Click:InvokeServer()
 game:GetService("ReplicatedStorage").Packages.Knit.Services.ClickService.RF.Click:InvokeServer()
@@ -25,8 +25,8 @@ end})
 Toggle = tab:CreateToggle({ Name="Auto Win",CurrentValue = false,Callback=function(win) 
 
 if win == true  then
-_G.wins = true
-while  _G.wins == true do
+ getgenv().wins = true
+while   getgenv().wins == true do
 local CFrameEnd = CFrame.new(-442415.71875, 2.9999988079071045, -70.02269744873047) -- Place your coords in here
 local Time = 1-- Time in seconds
 local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
@@ -35,7 +35,7 @@ tween.Completed:Wait()
 wait()
 end
 else
-_G.wins = false
+ getgenv().wins = false
 end
 end})
 
@@ -48,13 +48,13 @@ tab:CreateLabel("PETS")
 
 Toggle = tab:CreateToggle({ Name=" Auto Craft",CurrentValue = false,Callback=function(cra) 
 if cra == true then
-_G.craft = true 
-while _G.craft == true do
+ getgenv().craft = true 
+while  getgenv().craft == true do
 game:GetService("ReplicatedStorage").Packages.Knit.Services.PetsService.RF.CraftAll:InvokeServer()
 wait()
 end
 else
-_G.craft = false
+ getgenv().craft = false
 end
 end})
 
@@ -62,13 +62,13 @@ end})
 
 Toggle = tab:CreateToggle({ Name=" Auto Equip Best Pets",CurrentValue = false,Callback=function(eq) 
 if eq == true then
-_G.ez = true 
-while _G.ez == true do
+ getgenv().ez = true 
+while  getgenv().ez == true do
 game:GetService("ReplicatedStorage").Packages.Knit.Services.PetsService.RF.EquipBest:InvokeServer()
 wait()
 end
 else
-_G.ez = false
+ getgenv().ez = false
 end
 end})
 
@@ -81,8 +81,8 @@ end})
 
 Toggle = tab:CreateToggle({ Name="Auto Hatch - 5 WIN ",CurrentValue = false,Callback=function(one) 
 if one == true then
-_G.stne =true
-while _G.stne == true do
+ getgenv().stne =true
+while  getgenv().stne == true do
 local args = {
     [1] = "Starter01",
     [2] = "Auto",
@@ -93,15 +93,15 @@ game:GetService("ReplicatedStorage").Packages.Knit.Services.EggService.RF.Open:I
 wait()
 end
 else
-_G.stne = false
+ getgenv().stne = false
 end
 end})
 
 
 Toggle = tab:CreateToggle({ Name="Auto Hatch - 25 WIN ",CurrentValue = false,Callback=function(two) 
 if two  == true then
-_G.vv = true 
-while _G.vv == true do
+ getgenv().vv = true 
+while  getgenv().vv == true do
 local args = {
     [1] = "Starter02",
     [2] = "Auto",
@@ -112,7 +112,7 @@ game:GetService("ReplicatedStorage").Packages.Knit.Services.EggService.RF.Open:I
 wait()
 end
 else
-_G.vv = false
+ getgenv().vv = false
 end
 end})
 
@@ -120,8 +120,8 @@ end})
 
 Toggle = tab:CreateToggle({ Name="Auto Hatch - 175 WIN ",CurrentValue = false,Callback=function(three) 
 if three == true then
-_G.kk = true
-while _G.kk == true do
+ getgenv().kk = true
+while  getgenv().kk == true do
 local args = {
     [1] = "Starter03",
     [2] = "Auto",
@@ -133,15 +133,15 @@ game:GetService("ReplicatedStorage").Packages.Knit.Services.EggService.RF.Open:I
 wait()
 end
 else
-_G.kk= false
+ getgenv().kk= false
 end
 end})
 
 
 Toggle = tab:CreateToggle({ Name="Auto Hatch - 1k WIN ",CurrentValue = false,Callback=function(four) 
 if four== true then
-_G.bb = true 
-while _G.bb == true do
+ getgenv().bb = true 
+while  getgenv().bb == true do
 local args = {
     [1] = "Starter04",
     [2] = "Auto",
@@ -153,7 +153,7 @@ game:GetService("ReplicatedStorage").Packages.Knit.Services.EggService.RF.Open:I
 wait()
 end
 else
-_G.bb = false
+ getgenv().bb = false
 end
 end})
 
@@ -163,8 +163,8 @@ end})
 
 Toggle = tab:CreateToggle({ Name="Auto Hatch - 10k WIN ",CurrentValue = false,Callback=function(five) 
 if five == true then
-_G.xd = true 
-while _G.xd == true do
+ getgenv().xd = true 
+while  getgenv().xd == true do
 local args = {
     [1] = "Pro01",
     [2] = "Auto",
@@ -175,15 +175,15 @@ game:GetService("ReplicatedStorage").Packages.Knit.Services.EggService.RF.Open:I
 wait()
 end
 else
-_G.xd = false
+ getgenv().xd = false
 end
 end})
 
 
 Toggle = tab:CreateToggle({ Name="Auto Hatch - 75k WIN ",CurrentValue = false,Callback=function(six) 
 if six == true then
-_G.nah = true 
-while _G.nah == true do
+ getgenv().nah = true 
+while  getgenv().nah == true do
 local args = {
     [1] = "Pro02",
     [2] = "Auto",
@@ -195,7 +195,7 @@ game:GetService("ReplicatedStorage").Packages.Knit.Services.EggService.RF.Open:I
 wait()
 end
 else
-_G.nah = false
+ getgenv().nah = false
 end
 end})
 
@@ -203,8 +203,8 @@ end})
 
 Toggle = tab:CreateToggle({ Name="Auto Hatch - 225k WIN ",CurrentValue = false,Callback=function(sven) 
 if sven == true then
-_G.alr = true 
-while _G.alr == true do
+ getgenv().alr = true 
+while  getgenv().alr == true do
 local args = {
     [1] = "Pro03",
     [2] = "Auto",
@@ -216,7 +216,7 @@ game:GetService("ReplicatedStorage").Packages.Knit.Services.EggService.RF.Open:I
 wait()
 end
 else
-_G.alr = false
+ getgenv().alr = false
 end
 end})
 

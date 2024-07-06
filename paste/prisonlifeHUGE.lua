@@ -102,9 +102,9 @@ respawnmainon.Visible = true
 
 local blah = (game.Players.LocalPlayer.Name)
 
-_G.Looop = true
+ getgenv().Looop = true
 
-while _G.Looop == true do wait(0.1)
+while  getgenv().Looop == true do wait(0.1)
       if game:GetService("Workspace")[blah].Humanoid.Health == 0 then
 	   saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
         game:GetService("StarterGui"):SetCore("SendNotification", {
@@ -147,9 +147,9 @@ respawnmainoff.Visible = true
 
 local blah = (game.Players.LocalPlayer.Name)
 
-_G.Looop = false
+ getgenv().Looop = false
 
-while _G.Looop == true do wait(0.1)
+while  getgenv().Looop == true do wait(0.1)
       if game:GetService("Workspace")[blah].Humanoid.Health == 0 then
 	   saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
         game:GetService("StarterGui"):SetCore("SendNotification", {
@@ -199,9 +199,9 @@ local blah = (game.Players.LocalPlayer.Name)
 wait(0.1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(915.772583, 99.9900055, 2381.95752)
 
-_G.Looppp = true
+ getgenv().Looppp = true
 
-while _G.Looppp == true do wait(0.2)
+while  getgenv().Looppp == true do wait(0.2)
 	game:GetService("Workspace")[blah].Humanoid.Health = 0
 
       if game:GetService("Workspace")[blah].Humanoid.Health == 0 then
@@ -258,9 +258,9 @@ workspace.Remote.TeamEvent:FireServer("Bright blue")
 
 local blah = (game.Players.LocalPlayer.Name)
 
-_G.Looppp = false
+ getgenv().Looppp = false
 
-while _G.Looppp == true do wait(0.2)
+while  getgenv().Looppp == true do wait(0.2)
 	game:GetService("Workspace")[blah].Humanoid.Health = 0
 
       if game:GetService("Workspace")[blah].Humanoid.Health == 0 then
@@ -304,9 +304,9 @@ auramainon.Visible = true
 
 workspace.Remote.TeamEvent:FireServer("Bright orange")
 
-_G.Runningg = true
+ getgenv().Runningg = true
 
-while _G.Runningg == true do wait()
+while  getgenv().Runningg == true do wait()
 for i,v in pairs(game.Players:GetChildren()) do
 if v.Name ~= game.Players.LocalPlayer.Name then
 local tbl_main = 
@@ -339,9 +339,9 @@ auraon.MouseButton1Down:connect(function()
 auramainon.Visible = false
 auramainoff.Visible = true
 
-_G.Runningg = false
+ getgenv().Runningg = false
 
-while _G.Runningg == true do wait()
+while  getgenv().Runningg == true do wait()
 for i,v in pairs(game.Players:GetChildren()) do
 if v.Name ~= game.Players.LocalPlayer.Name then
 local tbl_main = 
@@ -441,7 +441,7 @@ workspace.Remote.TeamEvent:FireServer("Bright orange")
 
 LCS = game.Workspace["Criminals Spawn"].SpawnLocation
 	
-	_G.killAura = true
+	 getgenv().killAura = true
 	wait(0.1)
 	
 	Apart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
@@ -1108,11 +1108,11 @@ spammainoff.Visible = false
 spammainon.Visible = true
 
 	local loll = FindPlayer(spamtext.Text)
-_G.Spam = true
+ getgenv().Spam = true
 game:GetService("RunService").Heartbeat:Connect(function()
-if _G.Spam == true then
+if  getgenv().Spam == true then
 		if loll and loll.Character then
-while _G.Spam == true do wait()
+while  getgenv().Spam == true do wait()
 workspace.Remote.arrest:InvokeServer(loll.Character.Torso)
 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = loll.Character.HumanoidRootPart.CFrame
 		end
@@ -1142,11 +1142,11 @@ spammainon.Visible = false
 spammainoff.Visible = true
 
 	local loll = FindPlayer(spamtext.Text)
-_G.Spam = false
+ getgenv().Spam = false
 game:GetService("RunService").Heartbeat:Connect(function()
-if _G.Spam == true then
+if  getgenv().Spam == true then
 		if loll and loll.Character then
-while _G.Spam == true do wait()
+while  getgenv().Spam == true do wait()
 workspace.Remote.arrest:InvokeServer(loll.Character.Torso)
 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = loll.Character.HumanoidRootPart.CFrame
 		end
@@ -12978,7 +12978,7 @@ Apart.CFrame = CFrame.new(9e99, 9e99, 9e99)
 
 LCS = game.Workspace["Criminals Spawn"].SpawnLocation
 	
-	_G.killAura = true
+	 getgenv().killAura = true
 	wait(0.2)
 	
 	Apart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
@@ -13000,7 +13000,7 @@ LCS = game.Workspace["Criminals Spawn"].SpawnLocation
 		wait(2)
 		
 		      istptoplr = false
-		_G.killAura = false
+		 getgenv().killAura = false
 		
 		wait(0.04)
 		
