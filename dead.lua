@@ -9,8 +9,8 @@
 ]]
 
 -- shuts down the previous instance of SimpleSpy
-if  getgenv().SimpleSpyExecuted and type( getgenv().SimpleSpyShutdown) == "function" then
-	print(pcall( getgenv().SimpleSpyShutdown))
+if getgenv().SimpleSpyExecuted and type(getgenv().SimpleSpyShutdown) == "function" then
+	print(pcall(getgenv().SimpleSpyShutdown))
 end
 
 local Players = game:GetService("Players")
@@ -1070,7 +1070,7 @@ end
 
 --- Prevents remote spam from causing lag (clears logs after ` getgenv().SIMPLESPYCONFIG_MaxRemotes` or 500 remotes)
 function clean()
-	local max =  getgenv().SIMPLESPYCONFIG_MaxRemotes
+	local max = getgenv().SIMPLESPYCONFIG_MaxRemotes
 	if not typeof(max) == "number" and math.floor(max) ~= max then
 		max = 500
 	end
@@ -1454,7 +1454,7 @@ function mouseEntered()
 	customCursor.Parent = SimpleSpy2
 	UserInputService.OverrideMouseIconBehavior = Enum.OverrideMouseIconBehavior.ForceHide
 	RunService:BindToRenderStep("SIMPLESPY_CURSOR", 1, function()
-		if mouseInGui and  getgenv().SimpleSpyExecuted then
+		if mouseInGui and getgenv().SimpleSpyExecuted then
 			local mouseLocation = UserInputService:GetMouseLocation() - Vector2.new(0, 36)
 			customCursor.Position = UDim2.fromOffset(
 				mouseLocation.X - customCursor.AbsoluteSize.X / 2,
@@ -2008,7 +2008,7 @@ function t2s(t, l, p, n, vtv, i, pt, path, tables, tI)
 	l = l + indent -- set indentation level
 	for k, v in pairs(t) do -- iterates over table
 		size = size + 1 -- changes size for max limit
-		if size > ( getgenv().SimpleSpyMaxTableSize or 1000) then
+		if size > (getgenv().SimpleSpyMaxTableSize or 1000) then
 			s = s
 				.. "\n"
 				.. string.rep(" ", l)
@@ -2784,7 +2784,7 @@ function shutdown()
 end
 
 -- main
-if not  getgenv().SimpleSpyExecuted then
+if not getgenv().SimpleSpyExecuted then
 	local succeeded, err = pcall(function()
 		if not RunService:IsClient() then
 			error("SimpleSpy cannot run on the server!")

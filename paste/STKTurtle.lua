@@ -107,7 +107,7 @@ for i,v in pairs(game.Players:GetChildren()) do
                     Tracer.To = Vector2.new(Vector.X, Vector.Y)
  
  
-                    if  getgenv().TeamCheck and v.TeamColor == lplr.TeamColor then
+                    if getgenv().TeamCheck and v.TeamColor == lplr.TeamColor then
                         --//Teammates
                         Tracer.Visible = false
                     else
@@ -145,7 +145,7 @@ game.Players.PlayerAdded:Connect(function(v)
                     Tracer.To = Vector2.new(Vector.X, Vector.Y)
  
  
-                    if  getgenv().TeamCheck and v.TeamColor == lplr.TeamColor then
+                    if getgenv().TeamCheck and v.TeamColor == lplr.TeamColor then
                         --//Teammates
                         Tracer.Visible = false
                     else

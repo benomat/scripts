@@ -113,7 +113,7 @@ local ow
 ow = hookmetamethod(game,"__namecall",newcclosure(function(self,...)
     local m = getnamecallmethod()
     local args = {...}
-    if not checkcaller() and  getgenv().go5 == true and m == "FireServer" then
+    if not checkcaller() and getgenv().go5 == true and m == "FireServer" then
         if self.Name == "PlayerDodgeRemote" or self.Name == "PlayerStaminaRemote" then
             if args[1] == false or args[1] == true then
                 print(args[1])

@@ -15,7 +15,7 @@ carlist={'Chevrolet_2','Reliant','Peel','Toyota_1','Chevrolet_1','TukTuk','Morri
 tab:CreateSection("Speed | by me & term")
 if not getgenv().pluh then getgenv().pluh = 0 end
 tab:CreateToggle("Toggle Car Speed",false,function(state)
-    getgenv().nicepeople=state
+   getgenv().nicepeople=state
     while getgenv().nicepeople do
         task.wait()
         local car = game.Workspace.CarCollection:findFirstChild(game.Players.LocalPlayer.Name).Car
@@ -31,13 +31,13 @@ end)
 tab:CreateSlider("Car Speed",{0, 250},1,"",(getgenv().pluh*10),function(v) getgenv().pluh = (v/10) end)
 tab:CreateSection("Farm $$$")
 function selectVehicle(vehicle)
-     getgenv().AUTOFARMVEHICLE=vehicle
+    getgenv().AUTOFARMVEHICLE=vehicle
     -- selectedL:Set("Selected vehicle: ".. getgenv().AUTOFARMVEHICLE)
 end
 tab:CreateToggle("Auto farm",false,function(state)
-     getgenv().AutoFarm=state
-    while  getgenv().AutoFarm do
-        res,lol=pcall(function()game:GetService("ReplicatedStorage").rF.SpawnVehicle:InvokeServer( getgenv().AUTOFARMVEHICLE)end)
+    getgenv().AutoFarm=state
+    while getgenv().AutoFarm do
+        res,lol=pcall(function()game:GetService("ReplicatedStorage").rF.SpawnVehicle:InvokeServer(getgenv().AUTOFARMVEHICLE)end)
         if res then
             print("spawned ".. getgenv().AUTOFARMVEHICLE)
             fun() end
@@ -45,7 +45,7 @@ tab:CreateToggle("Auto farm",false,function(state)
     end
 end)
 tab:CreateLabel("Only select owned vehicles")
-tab:CreateDropdown("Select car from list",carlist, getgenv().AUTOFARMVEHICLE,false,function(txt)
+tab:CreateDropdown("Select car from list",carlist,getgenv().AUTOFARMVEHICLE,false,function(txt)
     selectVehicle(txt[1])
 end)
 -- tab:CreateSlider("Select car by id",{1, 395},1,"",1,function(id)

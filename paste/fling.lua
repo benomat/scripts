@@ -59,7 +59,7 @@ return function(yurrgurrt)
                 Handle = Accessory.Handle
             end
                 if RootPart.Velocity.Magnitude < 50 then
-                    getgenv().OldPos = RootPart.CFrame
+                   getgenv().OldPos = RootPart.CFrame
                 end
                 if THumanoid and THumanoid.Sit and not AllBool then
                     return Message("Error Occurred", "Targeting is sitting", 5) -- u can remove dis part if u want lol

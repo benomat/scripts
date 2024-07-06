@@ -104,7 +104,7 @@ local blah = (game.Players.LocalPlayer.Name)
 
  getgenv().Looop = true
 
-while  getgenv().Looop == true do wait(0.1)
+while getgenv().Looop == true do wait(0.1)
       if game:GetService("Workspace")[blah].Humanoid.Health == 0 then
 	   saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
         game:GetService("StarterGui"):SetCore("SendNotification", {
@@ -149,7 +149,7 @@ local blah = (game.Players.LocalPlayer.Name)
 
  getgenv().Looop = false
 
-while  getgenv().Looop == true do wait(0.1)
+while getgenv().Looop == true do wait(0.1)
       if game:GetService("Workspace")[blah].Humanoid.Health == 0 then
 	   saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
         game:GetService("StarterGui"):SetCore("SendNotification", {
@@ -201,7 +201,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(915.7725
 
  getgenv().Looppp = true
 
-while  getgenv().Looppp == true do wait(0.2)
+while getgenv().Looppp == true do wait(0.2)
 	game:GetService("Workspace")[blah].Humanoid.Health = 0
 
       if game:GetService("Workspace")[blah].Humanoid.Health == 0 then
@@ -260,7 +260,7 @@ local blah = (game.Players.LocalPlayer.Name)
 
  getgenv().Looppp = false
 
-while  getgenv().Looppp == true do wait(0.2)
+while getgenv().Looppp == true do wait(0.2)
 	game:GetService("Workspace")[blah].Humanoid.Health = 0
 
       if game:GetService("Workspace")[blah].Humanoid.Health == 0 then
@@ -306,7 +306,7 @@ workspace.Remote.TeamEvent:FireServer("Bright orange")
 
  getgenv().Runningg = true
 
-while  getgenv().Runningg == true do wait()
+while getgenv().Runningg == true do wait()
 for i,v in pairs(game.Players:GetChildren()) do
 if v.Name ~= game.Players.LocalPlayer.Name then
 local tbl_main = 
@@ -341,7 +341,7 @@ auramainoff.Visible = true
 
  getgenv().Runningg = false
 
-while  getgenv().Runningg == true do wait()
+while getgenv().Runningg == true do wait()
 for i,v in pairs(game.Players:GetChildren()) do
 if v.Name ~= game.Players.LocalPlayer.Name then
 local tbl_main = 
@@ -1110,9 +1110,9 @@ spammainon.Visible = true
 	local loll = FindPlayer(spamtext.Text)
  getgenv().Spam = true
 game:GetService("RunService").Heartbeat:Connect(function()
-if  getgenv().Spam == true then
+if getgenv().Spam == true then
 		if loll and loll.Character then
-while  getgenv().Spam == true do wait()
+while getgenv().Spam == true do wait()
 workspace.Remote.arrest:InvokeServer(loll.Character.Torso)
 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = loll.Character.HumanoidRootPart.CFrame
 		end
@@ -1144,9 +1144,9 @@ spammainoff.Visible = true
 	local loll = FindPlayer(spamtext.Text)
  getgenv().Spam = false
 game:GetService("RunService").Heartbeat:Connect(function()
-if  getgenv().Spam == true then
+if getgenv().Spam == true then
 		if loll and loll.Character then
-while  getgenv().Spam == true do wait()
+while getgenv().Spam == true do wait()
 workspace.Remote.arrest:InvokeServer(loll.Character.Torso)
 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = loll.Character.HumanoidRootPart.CFrame
 		end

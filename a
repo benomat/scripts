@@ -9,5 +9,5 @@ else
     end)
     
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/anim.lua',true))()
-    getgenv().animloaded='hi'
+   getgenv().animloaded='hi'
 end

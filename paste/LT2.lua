@@ -1749,7 +1749,7 @@ end
       end)
   end
 
-  getgenv().SetSwing = true
+ getgenv().SetSwing = true
   SetSwingCooldown()--]]
 --#endregion
 
@@ -2125,7 +2125,7 @@ getgenv().Infeaxerange = nil
 local plrname = game:GetService("Players").LocalPlayer.Name
 
 local function bringTree(treeClass, godmodeval)
-    getgenv().treestop = true
+   getgenv().treestop = true
     game.Players.LocalPlayer.Character.Humanoid.BreakJointsOnDeath = false
     local lp = game.Players.LocalPlayer
     local success, data = getBestAxe(treeClass)
@@ -2159,7 +2159,7 @@ local function bringTree(treeClass, godmodeval)
 
     treeListener(treeClass, function(tree)
         tree.PrimaryPart = tree:FindFirstChild("WoodSection")
-        getgenv().treeCut = true
+       getgenv().treeCut = true
 
 
         for i = 1, 60 do
@@ -2173,7 +2173,7 @@ local function bringTree(treeClass, godmodeval)
 
     task.spawn(function()
         if treeClass == "LoneCave" then
-            getgenv().doneend = false
+           getgenv().doneend = false
             repeat
                 if not getgenv().treestop then break end
                 tp(tree.trunk.CFrame)
@@ -2182,7 +2182,7 @@ local function bringTree(treeClass, godmodeval)
         else
             repeat
                 if not getgenv().treestop then break end
-                tp(tree.trunk.CFrame, getgenv().Infeaxerange)
+                tp(tree.trunk.CFrame,getgenv().Infeaxerange)
 
                 task.wait()
             until getgenv().treeCut
@@ -2200,8 +2200,8 @@ local function bringTree(treeClass, godmodeval)
             task.wait(1)
         end
 
-        getgenv().treeCut = false
-        getgenv().treestop = false
+       getgenv().treeCut = false
+       getgenv().treestop = false
 
         DropTools()
 
@@ -2230,18 +2230,18 @@ local function bringTree(treeClass, godmodeval)
     if treeClass == "LoneCave" then
         wait(1)
         tp(oldPosition)
-        getgenv().doneend = true
-        getgenv().treeCut = false
-        getgenv().treestop = false
+       getgenv().doneend = true
+       getgenv().treeCut = false
+       getgenv().treestop = false
     else
         if getgenv().Infeaxerange and not godmodeval then
-            getgenv().treeCut = false
+           getgenv().treeCut = false
 
             infhrp(true)
         else
             wait(1)
 
-            getgenv().treeCut = false
+           getgenv().treeCut = false
 
             tp(oldPosition)
         end
@@ -2264,15 +2264,15 @@ local TreeAdded = game:GetService("Workspace").LogModels.ChildAdded:Connect(func
                     game.ReplicatedStorage.Interaction.ClientIsDragging:FireServer(v)
                     v:SetPrimaryPartCFrame(OldPos)
                     task.wait()
-                    getgenv().EndTree = true
+                   getgenv().EndTree = true
                 end
                 TreeChopped = true
                 if Type == "LoneCave" then
-                    getgenv().treeCut = false
-                    getgenv().treestop = false
-                    getgenv().doneend = true
-                    getgenv().SetSwing = false
-                    getgenv().EndTree = true
+                   getgenv().treeCut = false
+                   getgenv().treestop = false
+                   getgenv().doneend = true
+                   getgenv().SetSwing = false
+                   getgenv().EndTree = true
                     if AxeAdded then
                         AxeAdded:Disconnect()
                     end
@@ -4263,7 +4263,7 @@ end
 
 function startnewdupe()
     while getgenv().SoldSignAutoFarm do
-        things(getgenv().bestnummfordupe, getgenv().Nameforsingdupe)
+        things(getgenv().bestnummfordupe,getgenv().Nameforsingdupe)
         repeat wait() until SelectPurchase.Visible
         local gui = SelectPurchase.Quit
         local width, height = gui.AbsoluteSize.X, gui.AbsoluteSize.Y
@@ -5265,7 +5265,7 @@ local Settingtab3 = Settingtab:section('Slot Names', true)
     
   
   --#region Player tab
-    getgenv().ison = true
+   getgenv().ison = true
   
     Nspeed = 16
   
@@ -5274,18 +5274,18 @@ local Settingtab3 = Settingtab:section('Slot Names', true)
     Player1:Slider('Walkspeed', 'WalspeedSlider', 16, 16, 250,false, function(Value)
     if getgenv().ison == true then
       Nspeed = Value
-      getgenv().Speed = Value
+     getgenv().Speed = Value
       Walkspeed()
     else
-      getgenv().SprintSpeed = getgenv().Speed
+     getgenv().SprintSpeed = getgenv().Speed
       Nspeed = Value
-      getgenv().Speed = Value
+     getgenv().Speed = Value
       Walkspeed()
     end
     end)
   
   
-    getgenv().SprintSpeed = SprintSpeednums
+   getgenv().SprintSpeed = SprintSpeednums
   
     SprintSpeedsets = Player1:Slider('SprintSpeed', 'SSpeed', SprintSpeednums, 16, 250,false, function(Value)
     SprintSpeednums = Value
@@ -5293,7 +5293,7 @@ local Settingtab3 = Settingtab:section('Slot Names', true)
     if getgenv().ison == false then
   
     else
-      getgenv().SprintSpeed = Value
+     getgenv().SprintSpeed = Value
     end
     end)
   
@@ -5312,10 +5312,10 @@ local Settingtab3 = Settingtab:section('Slot Names', true)
   
           if keycode == Enum.KeyCode.LeftShift then
             if not game:GetService("Players").LocalPlayer.PlayerGui.ItemDraggingGUI.CanRotate.Visible then
-              getgenv().Speed = getgenv().SprintSpeed
+             getgenv().Speed = getgenv().SprintSpeed
               Walkspeed()
             else
-              getgenv().Speed = 0
+             getgenv().Speed = 0
               Walkspeed()
             end
           end
@@ -5339,7 +5339,7 @@ local Settingtab3 = Settingtab:section('Slot Names', true)
   
           if keycode == Enum.KeyCode.LeftShift then
   
-            getgenv().Speed = Nspeed
+           getgenv().Speed = Nspeed
             Walkspeed()
           end
   
@@ -5380,13 +5380,13 @@ local Settingtab3 = Settingtab:section('Slot Names', true)
   
   
     Player1:Toggle('Sprint', '', true, function(Value)
-    getgenv().ison = Value
+   getgenv().ison = Value
     if not Value then
-      getgenv().SprintSpeed = Nspeed
+     getgenv().SprintSpeed = Nspeed
     end
   
     if Value then
-      getgenv().SprintSpeed = NSspeed
+     getgenv().SprintSpeed = NSspeed
     end
     end)
   
@@ -5665,7 +5665,7 @@ local Settingtab3 = Settingtab:section('Slot Names', true)
 
   
   AutoBuild3:Toggle('Lasso Wood tool', '', false, function(Value)
-      getgenv().isonlooze = Value
+     getgenv().isonlooze = Value
       lassoTpcheck()
   end)
  
@@ -5697,8 +5697,8 @@ local Settingtab3 = Settingtab:section('Slot Names', true)
 
 
   AutoBuild4:Toggle('Select tool', '', false, function(Value)
-      getgenv().GetBPs = Value
-      getgenv().isonlooze = Value
+     getgenv().GetBPs = Value
+     getgenv().isonlooze = Value
       lassoTpcheck()
   end)
 
@@ -5787,12 +5787,12 @@ local Settingtab3 = Settingtab:section('Slot Names', true)
   
   
   ItemTab1:Toggle('Lasso tool', '', false, function(Value)
-  getgenv().isonlooze = Value
+ getgenv().isonlooze = Value
   lassoTpcheck()
   end)
   
   ItemTab1:Toggle('Selection tool', '', false, function(Value)
-  getgenv().selectionv2 = Value
+ getgenv().selectionv2 = Value
   selectionv2(DropOwner)
   end)
   
@@ -5833,9 +5833,9 @@ local Settingtab3 = Settingtab:section('Slot Names', true)
   Countitems()
   end)
   
-  getgenv().whendonetp = true
+ getgenv().whendonetp = true
   ItemTab2:Toggle('Teleport to item when done', '', true, function(Value)
-  getgenv().whendonetp = Value
+ getgenv().whendonetp = Value
   end)
   
   dropdownIO = ItemTab2:Dropdown('Item Owner', "Select...", playerList, function(Value)
@@ -5891,10 +5891,10 @@ local Settingtab3 = Settingtab:section('Slot Names', true)
   
   
   
-  getgenv().sortsortcancel = false
+ getgenv().sortsortcancel = false
   
   Sortertab1:Button("Stop", function()
-  getgenv().sortsortcancel = true
+ getgenv().sortsortcancel = true
   end)
   
   sortTPspeed = 0.1
@@ -6206,16 +6206,16 @@ local Settingtab3 = Settingtab:section('Slot Names', true)
  
    --#region Sign Dupe
   dropdownMSD = Dupetab3:Dropdown('Main', "Select...", playerList, function(Value)
-  getgenv().Nameforsingdupe = Value
+ getgenv().Nameforsingdupe = Value
   end)
   
   Dupetab3:Slider('Best slot', '', 1, 1, 6,false, function(Value)
-  getgenv().bestnummfordupe = Value
+ getgenv().bestnummfordupe = Value
   end)
   
   
   Dupetab3:Toggle('Start', '', false, function(Value)
-  getgenv().SoldSignAutoFarm = Value
+ getgenv().SoldSignAutoFarm = Value
   startnewdupe()
   end)
   
@@ -6336,9 +6336,9 @@ local Settingtab3 = Settingtab:section('Slot Names', true)
   if getgenv().Infeaxerange then
      infhrp(true)
   end
-  getgenv().treestop = false
+ getgenv().treestop = false
   wait(5)
-  getgenv().treestop = true
+ getgenv().treestop = true
   end)
   
   --Woodtab1:Toggle('No axe cooldown', '', false, function(Value)

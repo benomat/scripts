@@ -33,7 +33,7 @@ end
 end))
 end
 end))
-if IY_LOADED and not  getgenv().IY_DEBUG == true then
+if IY_LOADED and not getgenv().IY_DEBUG == true then
 	-- error("Infinite Yield is already running!", 0)
 	return
 end
@@ -5003,7 +5003,7 @@ function execCmd(cmdStr,speaker,store)
 				if infTimes then
 					while lastBreakTime < cmdStartTime do
 						local success,err = pcall(cmd.FUNC,args, speaker)
-						if not success and  getgenv().IY_DEBUG then
+						if not success and getgenv().IY_DEBUG then
 							warn("Command Error:", cmdName, err)
 						end
 						wait(cmdDelay)
@@ -5014,7 +5014,7 @@ function execCmd(cmdStr,speaker,store)
 						local success,err = pcall(function()
 							cmd.FUNC(args, speaker)
 						end)
-						if not success and  getgenv().IY_DEBUG then
+						if not success and getgenv().IY_DEBUG then
 							warn("Command Error:", cmdName, err)
 						end
 						if cmdDelay ~= 0 then wait(cmdDelay) end
