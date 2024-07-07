@@ -156,7 +156,9 @@ Stalltab:CreateInput("Set Text","hi",false,function(txt)
     getgenv().EditStalltxt=txt
 end)
 Stalltab:CreateInput("Set image (have this back!)","rblx image id",false,function(txt)
-    getgenv().EditStallimg=txt
+    if txt=="" then getgenv().EditStallimg="Empty"
+    else getgenv().EditStallimg=txt
+    end
 end)
 Stalltab:CreateButton("confirm edit",function()
     for _,v in pairs(Workspace.Stalls:GetChildren()) do
@@ -196,11 +198,28 @@ Stalltab:CreateToggle("Typewrite",false,function(state)
         task.wait()
     end
 end)
-
-Stalltab:CreateSection("Claming and stuff [doesnt work on solara]") --[you can scroll btw]
--- Stalltab:CreateToggle("Attempt to grab unclaimed stall",false,function()
-    
--- end)
+if identifyexecutor()=="Solara" then
+    getgenv().fireproximityprompt=function(pp)
+        local oldpos=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local oldenabled=pp.Enabled
+        local oldhold=pp.HoldDuration
+        local oldrlos=pp.RequiresLineOfSight
+        pp.Enabled=true
+        pp.HoldDuration=0
+        pp.RequiresLineOfSight=false
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=pp.Parent.CFrame
+        wait(.2)
+        pp:InputHoldBegin()
+        task.wait()
+        pp:InputHoldEnd()
+        wait(.15)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=oldpos
+        pp.Enabled=pp.Enabled
+        pp.HoldDuration=pp.HoldDuration
+        pp.RequiresLineOfSight=pp.RequiresLineOfSight
+    end
+end
+Stalltab:CreateSection("Claming and stuff ") --[you can scroll btw]
 Stalltab:CreateToggle("Steal/Clear all Stalls",false,function(state)
     if pcall(function() fireproximityprompt(Workspace.Stalls.Stall1.ProxPart.ProximityPrompt) end) then
         for _,v in pairs(Workspace.Stalls:GetChildren()) do
@@ -214,7 +233,7 @@ Stalltab:CreateToggle("Steal/Clear all Stalls",false,function(state)
             local oldpos=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
             for _,v in pairs(Workspace.Stalls:GetChildren()) do
                 if v.Player.Value then
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=v.ProxPart.CFrame
+                    if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.ProxPart.Position).magnitude>=30 then distancethingyyes=true game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=v.ProxPart.CFrame end
                     wait(.23)
                     fireproximityprompt(v.ProxPart.ProximityPrompt)
                     wait(.23)
@@ -225,7 +244,8 @@ Stalltab:CreateToggle("Steal/Clear all Stalls",false,function(state)
                     wait(.23)
                 end
             end
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=oldpos
+            if distancethingyyes then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=oldpos end
+            distancethingyyes=false
             task.wait()
         end
     elseif state then
@@ -263,10 +283,16 @@ Stalltab:CreateInput("Steal stall by number (1-5)","number",true,function(input)
            })
     end
 end)
-Stalltab:CreateSection("Working for Solara")
+Stalltab:CreateSection("useless")
 Stalltab:CreateButton("Steal stalls (you can walk up to a stall and get it)",function()
     for _,stall in pairs(Workspace.Stalls:GetChildren()) do
         stall.ProxPart.ProximityPrompt.Enabled=true
+    end
+end)
+Stalltab:CreateToggle("Insant stall prompts",false,function(state)
+    if state then ugh=0 else ugh=.5 end
+    for _,stall in pairs(Workspace.Stalls:GetChildren()) do
+        stall.ProxPart.ProximityPrompt.HoldDuration=ugh
     end
 end)
 
