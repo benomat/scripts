@@ -403,7 +403,7 @@ end
 
 -- Library/Main script
 
-local quake = loadstring(game:HttpGet("https://raw.githubusercontent.com/idonthaveoneatm/Libraries/normal/quake/src"))()
+local quake = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/libnoq.lua'))()
 local main = quake:Window({
     Title = "Pet Simulator 99 | Solara",
     isMobile = UserInputService.TouchEnabled and not UserInputService.MouseEnabled
