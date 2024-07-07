@@ -123,7 +123,8 @@ elseif (p==142823291 or g==66654135) then --Murder Mystery 2 mm2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/mezzopera/OMEN-MM2/main/omenmm2'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/loader.lua'))()
 elseif (p==8737899170 or  g==3317771874) then --Pet Simulator 99
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/idonthaveoneatm/lua/normal/games/PetSimulator99/SolaraVersion.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/ps99noq.lua'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/idonthaveoneatm/lua/normal/games/PetSimulator99/SolaraVersion.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua'))() 
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/HGIOD/AquaFlowX/main/FlowX'))()
 elseif (p==292439477 and g==113491250) then -- Phantom Forces PC
