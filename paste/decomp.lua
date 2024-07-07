@@ -9,7 +9,7 @@ local DECOMPILER_TIMEOUT = ]] .. decomptimeout .. [[
     
 local READER_FLOAT_PRECISION = 7 -- up to 99
 local SHOW_INSTRUCTION_LINES = false
-local SHOW_REFERENCES = true
+local SHOW_REFERENCES = false
 local SHOW_OPERATION_NAMES = false
 local SHOW_MISC_OPERATIONS = false
 local LIST_USED_GLOBALS = false
