@@ -109,7 +109,8 @@ elseif g==1335695570 then
 elseif p==301549746 then --counterblox
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/counterblox.lua'))()
 elseif g==1008451066 then --dahood
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/ImagineProUser/vortexdahood/main/vortex'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/ImagineProUser/vortexdahood/main/vortex'))()
 elseif (g==2440500124 or g==1) then --DOORS
     loadstring(game:HttpGet('https://raw.githubusercontent.com/KINGHUB01/BlackKing/main/BlackKingMb'))()
 elseif g==5650396773 then --dustytrip
