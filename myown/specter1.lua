@@ -7,24 +7,37 @@ function erm(t)
     return t[1]
 end
 
-tab:CreateSection("lets do stuff")
+tab:CreateSection("Completion stuff")
 tab:CreateButton("Enable Fullbright",function()loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/fbenable.lua'))()end)
 tab:CreateButton("Toggle all doors",function()
-    for _,v in pairs(game.Workspace.House.Doors:GetChildren()) do
-        game:GetService("ReplicatedStorage").Door:FireServer(v)
-        wait(1)
+    local oldpos=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    for _,door in pairs(game.Workspace.House.Doors:GetChildren()) do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=door.Door.CFrame
+        wait(.2)
+        game:GetService("ReplicatedStorage").Door:FireServer(door)
+        wait(.2)
     end
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=oldpos
 end)
 tab:CreateButton("Complete Bone",function()
+    local oldpos=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=workspace.House.Bone.CFrame
+    wait(.3)
     game:GetService("ReplicatedStorage").ReportEvidence:FireServer(workspace.House.Bone)
+    wait(.2)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=oldpos
 end)
-tab:CreateButton("Complete Waters",function()
+tab:CreateButton("Complete Water",function()
+    local oldpos=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
     for _, water in pairs(workspace.House.Waters:GetChildren()) do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=water.CFrame
+        wait(.3)
         game:GetService("ReplicatedStorage").ReportEvidence:FireServer(water)
         wait(.5)
     end
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=oldpos
 end)
-tab:CreateButton("Find Room",function()
+tab:CreateButton("Find Room (Equip and enable emf before)",function()
     for _, room in pairs(game.Workspace.House.Rooms:GetChildren()) do
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=room.Hitbox.CFrame* CFrame.new(0, -3, 0)
         wait(.7)
@@ -94,14 +107,14 @@ tab:CreateButton("Find Room",function()
     end
 end)
 
-fling=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/fling.lua'))()
+-- fling=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/fling.lua'))()
 -- tab:CreateButton("Fling all",function()fling("All")end)
-tab:CreateSection("uhhh")
-tab:CreateButton("Load Dex",function()loadstring(game:HttpGet('https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua'))()end)
+-- tab:CreateSection("uhhh")
+-- tab:CreateButton("Load Dex",function()loadstring(game:HttpGet('https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua'))()end)
 -- tab:CreateButton("Load Simple Spy",function()loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()end)
 -- tab:CreateButton("Respawn",function()game.Players.LocalPlayer.Character.Head:Destroy()end)
 
-
+ghosttab:CreateSection("Ghost stuff")
 ghosttab:CreateButton("Ghost esp",function()
     local settings = {
         Color = Color3.fromRGB(255, 0, 0),

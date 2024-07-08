@@ -18,7 +18,7 @@ function getnumberofbins(state)
     end
     return count
 end
-tab:CreateButton("Close bins [slow on solara]",function()
+tab:CreateButton("Open/Close bins [slow on solara]",function()
     RE=game:GetService("Players").LocalPlayer.Character.Client.Client.RemoteEvent
     local huhh=true
     local cook=false
@@ -110,53 +110,6 @@ tab:CreateButton("Fix all",function()
             end
         end
     end
-end)
-tab:CreateButton("Open bins [slow on solara]",function()
-    RE=game:GetService("Players").LocalPlayer.Character.Client.Client.RemoteEvent
-    local huhh=false
-    local cook=false
-    for _, flight in pairs(workspace.flights:GetChildren()) do
-        if flight:FindFirstChild("clientFolder") then
-            for _, bin in pairs(flight.clientFolder:GetChildren()[1].overhead_bins:GetChildren()) do
-                if bin.ProximityPrompt.Enabled==huhh then
-                    if not pcall(function() fireproximityprompt(bin.ProximityPrompt)end) then
-                        cook=true
-                        break
-                    end
-                end
-            end
-            if cook then
-                local lastcount=getnumberofbins(huhh)
-                for _, bin in pairs(flight.clientFolder:GetChildren()[1].overhead_bins:GetChildren()) do
-                    RE:FireServer("prompt","Bins",tonumber(bin.Name:match("_(%d+)$")))
-                    wait(.3)
-                    if getnumberofbins(huhh)>=lastcount then RE:FireServer("prompt","Bins",tonumber(bin.Name:match("_(%d+)$")));wait(.3)
-                    else lastcount=getnumberofbins(huhh) wait(.3)
-                    end
-                end
-            end
-        end
-    end
-end)
-for _, gamepass in pairs(game.Players.LocalPlayer.data.purchases.gamepasses:GetChildren()) do
-    gamepass.Value=true
-end
-optab:CreateSection("Very cool (this is enabled by default)")
-optab:CreateToggle("Unlock all gamepasses",true,function(state)
-    for _, gamepass in pairs(game.Players.LocalPlayer.data.purchases.gamepasses:GetChildren()) do
-        gamepass.Value=state
-    end
-end)
-optab:CreateSection("more stuff")
-codes={"myles", "airport", "star", "customize", "decoration", "100m", "service", "boba", "galley", "badge", "jetway"}
-optab:CreateButton("Claim codes",function()
-    for _,code in pairs(codes) do
-        game:GetService("ReplicatedStorage").remotes.codes:InvokeServer(code)
-        wait(.15)
-    end
-end)
-optab:CreateInput("Set Money (this is just cosmetic)","number",false,function(c)
-    game.Players.LocalPlayer.data["player_data"].skybux.Value=tonumber(c)
 end)
 
 
