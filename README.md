@@ -1,7 +1,6 @@
 all scripts compatible with executors like solara or wave
-# Scripts
-
-Best scripts for solara! 
+# WOW you found the source code to all of my scripts
+### now make sure to not skid them :D
 
 ## Animation changer (bundles)
 ```lua

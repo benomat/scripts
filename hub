@@ -8,6 +8,7 @@ setclipboard("p: "..p.." g:"..g..""..getexecutorname())
 ]]
 if getexecutorname():sub(1, 5) == "incog" then loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-MoreUNC-13110'))() end
 print("[V1.6] loading benomat's script hub with", getexecutorname())
+if pcall(function() getfenv(4) end) then print("your not using the direct loadstring") end
 getgenv().joini=nil
 local p=game.PlaceId
 local g=game.GameId
@@ -130,7 +131,8 @@ elseif (p==8737899170 or  g==3317771874) then --Pet Simulator 99
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua'))() 
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/HGIOD/AquaFlowX/main/FlowX'))()
 elseif (p==292439477 and g==113491250) then -- Phantom Forces PC
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/homohack.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/OxygenClub/Random-LUAS/main/otterware-crack.lua'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/homohack.lua'))()
 -- elseif p==155615604 and e==1 then --prison life (solara only)
 --     loadstring(game:HttpGet('https://raw.githubusercontent.com/scam666/Prevail-X/main/src.lua'))()
 -- elseif p==155615604 and e~=1 then --prisn
