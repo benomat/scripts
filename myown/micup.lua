@@ -171,8 +171,8 @@ end)
 
 
 getgenv().Typewrite="hii;^(>.1)^;script by benomat"
-Stalltab:CreateSection("Typewrite text")
-Stalltab:CreateInput("Text! Seperate with ;","hi;byee",false,function(txt)
+-- Stalltab:CreateSection("Typewrite text")
+Stalltab:CreateInput("Typewrite text Seperate with ;","hi;byee",false,function(txt)
     getgenv().Typewrite=txt
 end)
 Stalltab:CreateToggle("Typewrite",false,function(state)
@@ -268,12 +268,12 @@ Stalltab:CreateInput("Steal stall by number (1-5)","number",true,function(input)
         end
         wait(.05)
         local oldpos=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=targetstall.ProxPart.CFrame
+        if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - targetstall.ProxPart.Position).magnitude>=30 then distancethingyyes=true game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=targetstall.ProxPart.CFrame end
         wait(.25)
         fireproximityprompt(targetstall.ProxPart.ProximityPrompt)
         wait(.23)
         game.Players.LocalPlayer.PlayerGui.StallLocal.StallFrame.Visible=false
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=oldpos
+        if distancethingyyes then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=oldpos end
     else
         sw1ndlernotify:CreateDefaultNotif({
             TweenSpeed = 1,
