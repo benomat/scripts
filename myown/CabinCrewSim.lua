@@ -58,7 +58,7 @@ end)
 tab:CreateButton("Feed all (tell me if this dont work for one class)",function()
     local RF=game:GetService("Players").LocalPlayer.Character.Client.Client.RemoteFunction
 
-    RF:InvokeServer("Cart",getgenv().SelectedClass,"food")
+    pcall(function()RF:InvokeServer("Cart",getgenv().SelectedClass,"food")end)
 
     for _, flight in pairs(workspace.flights:GetChildren()) do
         if flight:FindFirstChild("clientFolder") then
