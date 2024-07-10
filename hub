@@ -326,7 +326,8 @@ elseif g==4096039463 then -- Attack on Titan: Freedom War
     loadstring(game:HttpGet('https://raw.githubusercontent.com/PorkDevMode/AotFwPublic/main/Script.luau'))()
 elseif (p==15154513235 or  g==5223708703) then --Kamehameha Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/KamehamehaSimulator.lua'))()
-
+elseif (p==16037561679 or  g==5543899125) then --Head Soccer Simulator [UPD]
+loadstring(game:HttpGet('https://raw.githubusercontent.com/FrostLua/Scripts/main/HeadSoccerSimulator'))() 
 elseif table.find({192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     -- notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua'))()
