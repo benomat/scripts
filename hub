@@ -141,7 +141,8 @@ elseif p==6403373529 then --slap battles
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Dusty1234567890/TestMain/main/SLAPBATTLESGUI5'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles'))()
 elseif p==15532962292 then --solsrng
-    loadstring(game:HttpGet('https://pastefy.app/55pnwOy3/raw'))()
+    -- loadstring(game:HttpGet('https://pastefy.app/55pnwOy3/raw'))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ThacG/EruditeHub/main/Sol's%20RNG/V1.69"))()
     setclipboard("vy5fBGS6nNUuJjgxWhCLpR")
     fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
 elseif g==1650291138 then --demonfall
