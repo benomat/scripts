@@ -106,9 +106,11 @@ playertab:CreateToggle("Listen to ",false,function(state)
 end)
 playertab:CreateButton("TP to selected",function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = getgenv().SelectedPlayer.Character.HumanoidRootPart.CFrame end)
 playertab:CreateToggle("Loop TP to selected",false,function(state)
+    local zerovel=Vector3.new(0,0,0)
     getgenv().LoopTP=state
     while getgenv().LoopTP do
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = getgenv().SelectedPlayer.Character.HumanoidRootPart.CFrame
+        game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity=zerovel
         task.wait()
     end
 end)
