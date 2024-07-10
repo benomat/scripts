@@ -7,8 +7,8 @@ setclipboard("p: "..p.." g:"..g..""..getexecutorname())
 ```
 ]]
 if getexecutorname():sub(1, 5) == "incog" then loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-MoreUNC-13110'))() end
-print("[V1.6] loading benomat's script hub with", getexecutorname())
-if pcall(function() getfenv(5) end) then print("your not using the direct loadstring") end
+print("[V1.6] loading KITTY hub with", getexecutorname())
+if pcall(function() getfenv(6) end) then print("your not using the direct loadstring") end
 getgenv().joini=nil
 local p=game.PlaceId
 local g=game.GameId
@@ -27,12 +27,12 @@ function bypass_LV_refferer(url)
 end
 function OLDnotify(t)
     game:GetService("StarterGui"):SetCore("SendNotification", {
-		Title = "Benomat's Hub";
+		Title = "KITTY Hub";
 		Text = t})
 end
 local msgb = loadstring(game:HttpGet('https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua'))()
 function AskLoad(t)
-    msgb.Show({Position = UDim2.new(0.5,0,0.5,0), Text = "Benomat's Hub", Description = t, MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
+    msgb.Show({Position = UDim2.new(0.5,0,0.5,0), Text = "KITTY Hub", Description = t, MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
         if (res == "Yes") then
             return true
         else return false
@@ -45,7 +45,7 @@ end
 function sAsk(t,s)
     sw1ndlernotify:CreatePromptNotif({
         TweenSpeed = 1,
-        Title = "Benomat's Hub",
+        Title = "KITTY Hub",
         Text = t,
         Duration = d,
         Callback = function(Value)
@@ -56,7 +56,7 @@ function sAsk(t,s)
 function sNotify(t,d)
     sw1ndlernotify:CreateDefaultNotif({
         TweenSpeed = 1,
-        Title = "Benomat's Hub",
+        Title = "KITTY Hub",
         Text = t,
         Duration = d
        })
@@ -81,7 +81,7 @@ elseif (p==5171347293 or  g==1802741133) then -- Cabin Crew Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/CabinCrewSim.lua'))()
 elseif (p==6872265039 or g==2619619496) and e~=2 then --bedwars
     loadstring(game:HttpGet('https://raw.githubusercontent.com/FlamingDrey/Flame-X-v2/main/Flame%20X%20Bedwars%20V2'))()
-    -- fn("Benomat's Hub","Press RIGHT SHIFT to open the menu!",20)
+    -- fn("KITTY Hub","Press RIGHT SHIFT to open the menu!",20)
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua'))()
 elseif (p==6872265039 or g==2619619496) and e==2 then --bedwars
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ohmygodiloveketamine/aeolusv2/main/script'))()
@@ -319,6 +319,8 @@ elseif (p==3623096087 or  g==1268927906) then -- Muscle Legends
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/badmusclelegends.lua'))()
 elseif g==4096039463 then -- Attack on Titan: Freedom War
     loadstring(game:HttpGet('https://raw.githubusercontent.com/PorkDevMode/AotFwPublic/main/Script.luau'))()
+elseif (p==15154513235 or  g==5223708703) then --Kamehameha Simulator
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/KamehamehaSimulator.lua'))()
 elseif table.find({1962086868, 192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     -- notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua'))()
@@ -336,7 +338,7 @@ if supported then
 end
 sw1ndlernotify:CreatePromptNotif({
     TweenSpeed = 1,
-    Title = "Benomat's Hub",
+    Title = "KITTY Hub",
     Text = "Do you want to join the support discord server?",
     Duration = 10,
     Callback = function(Value)
