@@ -1,12 +1,12 @@
 repeat task.wait() until game:IsLoaded()
 
-local TextChatService = game:GetService("TextChatService")
-local Players = game:GetService("Players")
+-- local TextChatService = game:GetService("TextChatService")
+-- local Players = game:GetService("Players")
 
-if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
-    game:GetService("Players").LocalPlayer:Kick("This game uses ModernChatService which Vadrifts does not support.")
-    return
-end
+-- if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
+--     game:GetService("Players").LocalPlayer:Kick("This game uses ModernChatService which Vadrifts does not support.")
+--     return
+-- end
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/RelkzzRebranded/Bypassed---OBFUSCATED..../main/Adonis%20BYPASS.lua"))()
 wait(0.1)

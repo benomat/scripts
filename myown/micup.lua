@@ -49,9 +49,6 @@ tab:CreateToggle("Break TicTacToe",false,function(state)
     end
 end)
 tab:CreateLabel("^^ Do NOT use this on WAVE for now ^^")
-tab:CreateButton("Load chat bypass script",function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/chatbypass.lua'))()
-end)
 local GetService = game.GetService
 local Services = {
     Workspace = GetService(game, "Workspace");
