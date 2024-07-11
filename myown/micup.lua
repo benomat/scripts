@@ -17,6 +17,9 @@ wsBoost=loadstring(game:HttpGet("https://raw.githubusercontent.com/benomat/scrip
 tab:CreateSlider("Speed",{16, 300},1,"studs per second",game.Players.LocalPlayer.Character.Humanoid.WalkSpeed,function(v) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v end)
 tab:CreateSlider("CFrame Speed",{0, 100},1,"boost",0,function(v) wsBoost(v/30) end)
 tab:CreateSection("stuff2")
+tab:CreateButton("Turn invisible (press E)",function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/InvisibilityToggle.lua'))()
+end)
 tab:CreateButton("Get Hand tool (pet people or wtv)",function()loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/handtool.lua'))()end)
 solidfloortoggle=tab:CreateToggle("Solid Private Room Floor",false,function(state)
     for _,v in pairs(game.Workspace:GetChildren()) do
@@ -46,6 +49,9 @@ tab:CreateToggle("Break TicTacToe",false,function(state)
     end
 end)
 tab:CreateLabel("^^ Do NOT use this on WAVE for now ^^")
+tab:CreateButton("Load chat bypass script",function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/chatbypass.lua'))()
+end)
 local GetService = game.GetService
 local Services = {
     Workspace = GetService(game, "Workspace");

@@ -8,7 +8,7 @@ setclipboard("p: "..p.." g:"..g..""..getexecutorname())
 ]]
 if getexecutorname():sub(1, 5) == "incog" then loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-MoreUNC-13110'))() end
 print("[V1.6] loading KITTY hub with", getexecutorname())
-if pcall(function() getfenv(6) end) then print("youre not using the direct loadstring "..getthreadidentity()) end
+if pcall(function() getfenv(8) end) then print("youre not using the direct loadstring "..getthreadidentity()) end
 getgenv().joini=nil
 local p=game.PlaceId
 local g=game.GameId
@@ -73,6 +73,8 @@ elseif (p==10919241870 or  g==3938551440) then --Rarity Factory Tycoon
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/RarityFactoryTycoon.lua'))()
 elseif (p==654732683 or  g==274816972) then --Car Crushers 2 - Physics Simulation
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/CarCrushers2.lua'))()
+elseif (p==6884319169 or  g==2626227051 or g==5365966699) then --MIC UP
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/micup.lua'))()
 elseif (p==15535115259 or  g==5361859890) then --Launch Into Space Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/LaunchIntoSpaceSim.lua'))()
 elseif (p==1137431029 or  g==468158842) then --Car Driving Simulator
@@ -301,8 +303,6 @@ elseif (p==6741970382 or  g==2551702779) then --Zombie lab
     loadstring(game:HttpGet('https://raw.githubusercontent.com/xfaz/zombielab/main/kk'))()
 elseif (p==277751860 or  g==110181652) then --Epic Minigames
     loadstring(game:HttpGet('https://raw.githubusercontent.com/SlamminPig/rblxgames/main/Epic%20Minigames/EpicMinigamesGUI'))()
-elseif (p==6884319169 or  g==2626227051 or g==5365966699) then --MIC UP
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/micup.lua'))()
 elseif (p==5602055394 or  g==1958807588) then --Hood Modded
     loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/Rippeed/DaHoodinary/main/chariotsware'))()
 elseif (p==17250538604 or  g==5901631600) then --Tennis Simulator 
