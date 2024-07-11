@@ -253,7 +253,7 @@ elseif (p==13864661000 or  g==4807308814) then --Break In 2 (Story)
     setclipboard(bypass_LV_refferer("https://rolling-aveline-applesauce12-07787e2a.koyeb.app/"))
     fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/mr-suno/Starry/main/version/main.lua'))()
-elseif 1962086868 then --Tower of hell
+elseif p==1962086868 then --Tower of hell
     setclipboard(bypass_LV_refferer("https://rolling-aveline-applesauce12-07787e2a.koyeb.app/"))
     fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/mr-suno/Starry/main/version/main.lua'))()
