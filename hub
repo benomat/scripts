@@ -8,7 +8,7 @@ setclipboard("p: "..p.." g:"..g..""..getexecutorname())
 ]]
 if getexecutorname():sub(1, 5) == "incog" then loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-MoreUNC-13110'))() end
 print("[V1.6] loading KITTY hub with", getexecutorname())
-if pcall(function() getfenv(8) end) then print("youre not using the direct loadstring "..getthreadidentity()) end
+if pcall(function() getfenv(99) end) then print("youre not using the direct loadstring 99??!?!?"..getthreadidentity()) end
 getgenv().joini=nil
 local p=game.PlaceId
 local g=game.GameId
@@ -142,8 +142,9 @@ elseif p==6403373529 then --slap battles
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Dusty1234567890/TestMain/main/SLAPBATTLESGUI5'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles'))()
 elseif p==15532962292 then --solsrng
-    -- loadstring(game:HttpGet('https://pastefy.app/55pnwOy3/raw'))()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ThacG/EruditeHub/main/Sol's%20RNG/V1.69"))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/JonnyCheeser/rbw4/main/JonnyCheeseHub'))()
+    loadstring(game:HttpGet('https://pastefy.app/55pnwOy3/raw'))()
+    -- loadstring(game:HttpGet("https://raw.githubusercontent.com/ThacG/EruditeHub/main/Sol's%20RNG/V1.69"))()
     setclipboard("vy5fBGS6nNUuJjgxWhCLpR")
     fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
 elseif g==1650291138 then --demonfall
@@ -256,6 +257,7 @@ elseif (p==13864661000 or  g==4807308814) then --Break In 2 (Story)
     fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/mr-suno/Starry/main/version/main.lua'))()
 elseif p==1962086868 then --Tower of hell
+    -- not tested: loadstring(game:HttpGet('https://raw.githubusercontent.com/TheHanki/HawkHUB/main/Games/TowerOfHell.lua'))()
     setclipboard(bypass_LV_refferer("https://rolling-aveline-applesauce12-07787e2a.koyeb.app/"))
     fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/mr-suno/Starry/main/version/main.lua'))()
@@ -307,7 +309,7 @@ elseif (p==5602055394 or  g==1958807588) then --Hood Modded
     loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/Rippeed/DaHoodinary/main/chariotsware'))()
 elseif (p==17250538604 or  g==5901631600) then --Tennis Simulator 
     loadstring(game:HttpGet('https://raw.githubusercontent.com/AppleScript001/Tennis-Simulator/main/README.md')())
-elseif g==4849157113 then -- operation siege
+elseif (g==4849157113 or g==6035872082 or g==2585430167) then -- operation siegem, RIVALS, AIMBLOX
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/esp.lua'))()
 elseif (p==171391948 or  g==81762198) then --[Sides] Vehicle Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/VehicleSim.lua'))()
