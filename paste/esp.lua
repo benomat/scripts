@@ -126,11 +126,13 @@ function ESP:updateComponents(components, character, player)
             components.Tracer.To = Vector2.new(hrpPosition.X, hrpPosition.Y + height / 2)
             components.Tracer.Visible = true
 
-            -- Distance label properties
-            components.DistanceLabel.Text = string.format("[%dM]", distanceFromPlayer)
-            components.DistanceLabel.Position = Vector2.new(hrpPosition.X, hrpPosition.Y + height / 2 + 15)
-            components.DistanceLabel.Visible = true
 
+            --CHANGED
+            -- Distance label properties
+            -- components.DistanceLabel.Text = string.format("[%dM]", distanceFromPlayer)
+            -- components.DistanceLabel.Position = Vector2.new(hrpPosition.X, hrpPosition.Y + height / 2 + 15)
+            -- components.DistanceLabel.Visible = true
+            --CHANGED
             -- Name label properties
             components.NameLabel.Text = string.format("[%s]", player.Name)
             components.NameLabel.Position = Vector2.new(hrpPosition.X, hrpPosition.Y - height / 2 - 15)
@@ -150,15 +152,15 @@ function ESP:updateComponents(components, character, player)
             components.HealthBar.Health.Visible = true
 
             -- Item label properties
-            local backpack = player.Backpack
-local tool = backpack:FindFirstChildOfClass("Tool") or character:FindFirstChildOfClass("Tool")
-            if tool then
-                components.ItemLabel.Text = string.format("[Holding: %s]", tool.Name)
-            else
-                components.ItemLabel.Text = "[Holding: No tool]"
-            end
-            components.ItemLabel.Position = Vector2.new(hrpPosition.X, hrpPosition.Y + height / 2 + 35)
-            components.ItemLabel.Visible = true
+--             local backpack = player.Backpack
+-- local tool = backpack:FindFirstChildOfClass("Tool") or character:FindFirstChildOfClass("Tool")
+--             if tool then
+--                 components.ItemLabel.Text = string.format("[Holding: %s]", tool.Name)
+--             else
+--                 components.ItemLabel.Text = "[Holding: No tool]"
+--             end
+            -- components.ItemLabel.Position = Vector2.new(hrpPosition.X, hrpPosition.Y + height / 2 + 35)
+            -- components.ItemLabel.Visible = true
 
             -- Skeleton properties
             local connections = bodyConnections[humanoid.RigType.Name] or {}
