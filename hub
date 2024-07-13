@@ -7,8 +7,8 @@ setclipboard("p: "..p.." g:"..g..""..getexecutorname())
 ```
 ]]
 if getexecutorname():sub(1, 5) == "incog" then loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-MoreUNC-13110'))() end
-print("[V1.6] loading KITTY hub with", getexecutorname())
-if pcall(function() getfenv(99) end) then print("youre not using the direct loadstring 99??!?!?"..getthreadidentity()) end
+print("[V1.7] loading KITTY hub with", getexecutorname())
+if pcall(function() getfenv(10) end) then print("youre not using the direct loadstring 10"..getthreadidentity()) end
 getgenv().joini=nil
 local p=game.PlaceId
 local g=game.GameId
@@ -142,7 +142,7 @@ elseif p==6403373529 then --slap battles
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Dusty1234567890/TestMain/main/SLAPBATTLESGUI5'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles'))()
 elseif p==15532962292 then --solsrng
-loadstring(game:HttpGet('https://raw.githubusercontent.com/JonnyCheeser/rbw4/main/JonnyCheeseHub'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/JonnyCheeser/rbw4/main/JonnyCheeseHub'))()
     loadstring(game:HttpGet('https://pastefy.app/55pnwOy3/raw'))()
     -- loadstring(game:HttpGet("https://raw.githubusercontent.com/ThacG/EruditeHub/main/Sol's%20RNG/V1.69"))()
     setclipboard("vy5fBGS6nNUuJjgxWhCLpR")
@@ -331,8 +331,12 @@ elseif (p==16037561679 or  g==5543899125) then --Head Soccer Simulator [UPD]
     loadstring(game:HttpGet('https://raw.githubusercontent.com/FrostLua/Scripts/main/HeadSoccerSimulator'))() 
 elseif (p==18213102218 or  g==6174407103) then --[UPD] Titan Training Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/TitanTrainingSim.lua'))()
+elseif (p==11872917490 or  g==4201418016) then --Fabled Legacy!
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/keyrblxcrack.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/OhhMyGehlee/FL/main/Solara'))()
 elseif table.find({192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     -- notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/keyrblxcrack.lua'))()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua'))()
 else 
     if loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/skihub.lua'))() then 
