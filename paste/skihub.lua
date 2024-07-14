@@ -6,7 +6,7 @@ elseif game.PlaceId == 8689257920 then
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/Yousuck780/Life-in-prison/main/lfp"), true))()
 elseif game.PlaceId == 142823291 then
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/Yousuck780/mm2/main/mm2"), true))()
-elseif game.PlaceId == 632574862 then
+elseif game.GameId == 252475658 then
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/Yousuck780/eclipsis/main/eclipsis"), true))()
 elseif game.PlaceId == 8123652942 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Yousuck780/Legend-Piece/main/lgp", true))()
