@@ -8,7 +8,7 @@ setclipboard("p: "..p.." g:"..g..""..getexecutorname())
 ]]
 if getexecutorname():sub(1, 5) == "incog" then loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-MoreUNC-13110'))() end
 print("[V1.7] loading KITTY hub with", getexecutorname())
-if pcall(function() getfenv(10) end) then print("youre not using the direct loadstring 10"..getthreadidentity()) end
+if pcall(function() getfenv(13) end) then print("youre not using the direct loadstring 13") end
 local p=game.PlaceId
 local g=game.GameId
 if g==903807016 then loadstring(game:HttpGet('https://raw.githubusercontent.com/DepHubHolder/DepHub1/main/Loader1'))() return end -- ER:LC early load bc of detections 🖕
@@ -70,17 +70,17 @@ if g==111958650 then --arsenal
     -- if AskLoad("There's a script available which has kill all and other cool features.\nKill all is very detected tho and will get you banned.\nDo you still wanna use it?") then  loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/b95e8fecdf824e41f4a030044b055add.lua'))() end
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/wuhaz/arsenal/main/main.lua'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/Insertl/QuotasHub/main/BETAv1.3'))()
-elseif (p==10919241870 or  g==3938551440) then --Rarity Factory Tycoon
+elseif (p==10919241870 or g==3938551440) then --Rarity Factory Tycoon
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/RarityFactoryTycoon.lua'))()
-elseif (p==654732683 or  g==274816972) then --Car Crushers 2 - Physics Simulation
+elseif (p==654732683 or g==274816972) then --Car Crushers 2 - Physics Simulation
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/CarCrushers2.lua'))()
-elseif (p==6884319169 or  g==2626227051 or g==5365966699) then --MIC UP
+elseif (p==6884319169 or g==2626227051 or g==5365966699) then --MIC UP
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/micup.lua'))()
-elseif (p==15535115259 or  g==5361859890) then --Launch Into Space Simulator
+elseif (p==15535115259 or g==5361859890) then --Launch Into Space Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/LaunchIntoSpaceSim.lua'))()
-elseif (p==1137431029 or  g==468158842) then --Car Driving Simulator
+elseif (p==1137431029 or g==468158842) then --Car Driving Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/CarDrivingSimulator.lua'))()
-elseif (p==5171347293 or  g==1802741133) then -- Cabin Crew Simulator
+elseif (p==5171347293 or g==1802741133) then -- Cabin Crew Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/CabinCrewSim.lua'))()
 elseif (p==6872265039 or g==2619619496) and e~=2 then --bedwars
     loadstring(game:HttpGet('https://raw.githubusercontent.com/FlamingDrey/Flame-X-v2/main/Flame%20X%20Bedwars%20V2'))()
@@ -128,7 +128,7 @@ elseif p==13822889 then --lumbertycoon 2
 elseif (p==142823291 or g==66654135) then --Murder Mystery 2 mm2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/mezzopera/OMEN-MM2/main/omenmm2'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/loader.lua'))()
-elseif (p==8737899170 or  g==3317771874) then --Pet Simulator 99
+elseif (p==8737899170 or g==3317771874) then --Pet Simulator 99
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/ps99noq.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/idonthaveoneatm/lua/normal/games/PetSimulator99/SolaraVersion.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua'))() 
@@ -171,7 +171,7 @@ elseif (p==606849621 or g==245662005) then --jailbreak
     -- loadstring(game:HttpGet('https://pastebin.com/raw/ghGgrmWR'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/BlitzIsKing/UniversalFarm/main/Loader/Regular'))()
     -- broken.. loadstring(game:HttpGet('https://raw.githubusercontent.com/Pxsta72/ProjectAuto/main/AutoRobV4Release'))()
-elseif (p==14044547200 or  g==4864117649) then --[recode] untitled tag game(UTG)
+elseif (p==14044547200 or g==4864117649) then --[recode] untitled tag game(UTG)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/UTG.lua'))()
 elseif p==9791603388 then--underground war 2.0
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/UndergroundWar'))()
@@ -190,72 +190,75 @@ elseif (p==3233893879 or g==1168263273) then --Bad Business
 elseif (p==14363263080 or g==848145103) then --Dungeon quest!
     loadstring(game:HttpGet('https://pastebin.com/raw/F5vSFHZt'))()
     sNotify("DONT use the walkspeed feature!",15)
-elseif (p==4639625707 or  g==1526814825) then --War Tycoon
+elseif (p==4639625707 or g==1526814825) then --War Tycoon
     loadstring(game:HttpGet('https://raw.githubusercontent.com/defrizletov/war-tycoon/main/war.lua'))()
-elseif (p==8396586868 or  g==3213362013) then --AOPG
+elseif (p==8396586868 or g==3213362013) then --AOPG
     loadstring(game:HttpGet('https://rawscripts.net/raw/Testing-A-0ne-Piece-Game-LeadMarkerAOPG-1595'))()
     sNotify('Click the little crosshair and then "main"',15)
-elseif (p==2768379856 or  g==1000233041) then --3008 [2.73]
+elseif (p==2768379856 or g==1000233041) then --3008 [2.73]
     loadstring(game:HttpGet('https://raw.githubusercontent.com/chiepz/aslbnmnkhby7e/main/crqhryvjahdjwysrnegsf%5Csgd'))()
-elseif (p==8260276694 or  g==3168615253) then --Ability Wars
+elseif (p==8260276694 or g==3168615253) then --Ability Wars
     loadstring(game:HttpGet('https://paste.ee/r/Wo5Kj'))()
     sNotify("Script is kinda broken.")
     sNotify("Press the top bar for blatant mode or whatever!",40)
-elseif (p==9872472334 or  g==3647333358) then --Evade
+elseif (p==9872472334 or g==3647333358) then --Evade
     loadstring(game:HttpGet('https://raw.githubusercontent.com/PepesGH1/stuff/main/evade.lua'))()
-elseif (p==16560655288 or  g==5700746583) then --Pillar Chase 2
+elseif (p==16560655288 or g==5700746583) then --Pillar Chase 2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/fbenable.lua'))()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/pillarchase2.lua'))()
 elseif g==4871329703 then --Type soul
     loadstring(game:HttpGet('https://raw.githubusercontent.com/LOLking123456/newtype/main/soul'))()
-elseif (p==9285238704 or  g==3476371299) then --Race Clicker
+elseif (p==9285238704 or g==3476371299) then --Race Clicker
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/raceclicker.lua'))()
-elseif (p==11454403177 or  g==4072288216) then --[NEW MAP] Cart Ride Delivery Service
+elseif (p==11454403177 or g==4072288216) then --[NEW MAP] Cart Ride Delivery Service
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/cartridedeliveryservice.lua'))()
-elseif (p==7305309231 or  g==2851381018) then --Taxi Boss
+elseif (p==7305309231 or g==2851381018) then --Taxi Boss
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/Taxi%20Boss'))()
-elseif (p==17387475546 or  g==2142948266) then --Project Slayer
+elseif (p==17387475546 or g==2142948266) then --Project Slayer
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/projectslayer.lua'))()
-elseif (p==6961824067 or  g==2668101271) then --Fling Things and People
+elseif (p==6961824067 or g==2668101271) then --Fling Things and People
     --if AskLoad("If the key thats copied to your clipboard right now doesnt work press YES on this.\nthen paste the link into your browser to bypass the linkvertise") then setclicpboard('https://bypass.city'it dd) end
     loadstring(game:HttpGet('https://raw.githubusercontent.com/BlizTBr/scripts/main/FTAP.lua'))()
     setclipboard("JuniorFilhoDoBlizT")
     fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
 -- elseif false then -- the wild west DOESNT WORK SO NUH UHH
 --     loadstring(game:HttpGet('https://raw.githubusercontent.com/FSOCIETY-WYLD/TWWLEAN/main/main.lua'))()
-elseif (p==5938036553 or  g==2132866904) then --FRONTLINES
+elseif (p==5938036553 or g==2132866904) then --FRONTLINES
     loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/5bebf0b1e173f4baff73449722204837.lua'))()
-elseif (p==16426795556 or  g==5661134200) then --Track & Field: Infinite
+elseif (p==16426795556 or g==5661134200) then --Track & Field: Infinite
     loadstring(game:HttpGet('https://raw.githubusercontent.com/RETARDWAR3/retardware-main/main/Trackandfield.lua'))()
-elseif (p==189707 or  g==65241) then --Natural Disaster Survival
+elseif (p==189707 or g==65241) then --Natural Disaster Survival
     loadstring(game:HttpGet('https://raw.githubusercontent.com/RobloxHackingProject/CHHub/main/CHHub.lua'))()
-elseif (p==9391468976 or  g==3508322461) then --Jujutsu Shenanigans
+elseif (p==9391468976 or g==3508322461) then --Jujutsu Shenanigans
     loadstring(game:HttpGet('https://raw.githubusercontent.com/LOLking123456/Jujutsu/main/Shenanigans'))()
-elseif (p==4566572536 or  g==1480782352) then --[ZENVO] Vehicle Legends
+elseif (p==4566572536 or g==1480782352) then --[ZENVO] Vehicle Legends
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/Vehicle%20legends'))()
-elseif (p==14386691987 or  g==4931927012) then --basketball legends
+elseif (p==14386691987 or g==4931927012) then --basketball legends
     getgenv().config = {Time = 0.045, Size = 0.9} local UIS = game:GetService("UserInputService") local TweenService = game:GetService("TweenService") local Player = game:GetService("Players").LocalPlayer local Bar = Player.PlayerGui.Visual.Shooting.Bar UIS.InputBegan:Connect(function(input, gpe) if gpe then return end if input.KeyCode == Enum.KeyCode.E then if Player.Character:FindFirstChild("Basketball") then while UIS:IsKeyDown(Enum.KeyCode.E) do Bar:GetPropertyChangedSignal("Size"):Connect(function() if Bar.Size.Y.Scale > getgenv().config.Size then Bar:TweenSize(UDim2.new(1,0,1,0), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, getgenv().config.Time, true) task.wait() Bar.Size = UDim2.new(1,0,1,0) end end) task.wait() end end end end)
     AskLoad("Press E to auto green")
     -- getgenv().OBFHUBFREE = "2kmembersgang"
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/obfhub/free/main/basketmball'))()
-elseif (p==1554960397 or  g==605887098) then -- Car Dealership Tycoon
+elseif (p==1554960397 or g==605887098) then -- Car Dealership Tycoon
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/cardealership.lua'))()
-elseif (p==11400511154 or  g==4055984814) then --Monkey Tycoon
+elseif (p==11400511154 or g==4055984814) then --Monkey Tycoon
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/monkeytycoon.lua'))()
-elseif (p==8343259840 or  g==1494262959) then --Criminality (aimbot, esp)
+elseif (p==8343259840 or g==1494262959) then --Criminality (aimbot, esp)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ttwizz/Open-Aimbot/master/source.lua'))()
-elseif (p==9772878203 or  g==3620011279) then --[rebirth update] raise a floppa 2
+elseif (p==9772878203 or g==3620011279) then --[rebirth update] raise a floppa 2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/raisefloppa.lua'))()
-elseif (p==17450551531 or  g==5972059550) then --Gym League
+elseif (p==17450551531 or g==5972059550) then --Gym League
     loadstring(game:HttpGet('https://raw.githubusercontent.com/AhmadV99/Script-Games/main/Gym%20League.lua'))()
     loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/bcb1262edfe7a95bc2b25f07e68639ff.lua'))()
-elseif (p==4483381587 or  g==1430993116) then --a literal baseplate. 
+elseif (p==4483381587 or g==1430993116) then --a literal baseplate.
+    for i=1,99,1 do
+        if pcall(function()getfenv(i)end) then print(i) end
+    end
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/aliteralbaseplate.lua'))()
-elseif (p==621129760 or  g==254394801) then --KAT
+elseif (p==621129760 or g==254394801) then --KAT
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua'))()
-elseif (p==4620170611 or  g==1318971886) then --Break In 1
+elseif (p==4620170611 or g==1318971886) then --Break In 1
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/submitted/breakin1.lua'))()
-elseif (p==13864661000 or  g==4807308814) then --Break In 2 (Story)
+elseif (p==13864661000 or g==4807308814) then --Break In 2 (Story)
     setclipboard(bypass_LV_refferer("https://odd-dacey-applesauce12-ea43b018.koyeb.app/"))
     fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/mr-suno/Starry/main/version/main.lua'))()
@@ -264,79 +267,79 @@ elseif p==1962086868 then --Tower of hell
     setclipboard(bypass_LV_refferer("https://odd-dacey-applesauce12-ea43b018.koyeb.app/"))
     fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/mr-suno/Starry/main/version/main.lua'))()
-elseif (p==185655149 or  g==88070565) then --Welcome to Bloxburg (I really recommend only using on wave if at all)
+elseif (p==185655149 or g==88070565) then --Welcome to Bloxburg (I really recommend only using on wave if at all)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/bloxburg.lua'))()
-elseif (p==281489669 or  g==110988953) then --Wizard Tycoon - 2 Player
+elseif (p==281489669 or g==110988953) then --Wizard Tycoon - 2 Player
     loadstring(game:HttpGet('https://raw.githubusercontent.com/SlamminPig/rblxgames/main/Wizard%20Tycoon%20-%202%20Player/2pWizardTycoonGUI'))()
-elseif (p==228181322 or  g==98839997) then -- Dinosaur Simulator
+elseif (p==228181322 or g==98839997) then -- Dinosaur Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/dinosim.lua'))()
-elseif (p==16819979927 or  g==5780359296) then --Jim's RNG
+elseif (p==16819979927 or g==5780359296) then --Jim's RNG
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/jimsrng.lua'))()
-elseif (p==17698425045 or  g==6061766680) then -- fight in a school
+elseif (p==17698425045 or g==6061766680) then -- fight in a school
     loadstring(game:HttpGet('https://raw.githubusercontent.com/JayXSama/Fight-in-a-school/main/Solara'))()
-elseif (p==15744137588 or p==17556050821 or  g==5440820902) then -- +1 Blade Slayer
+elseif (p==15744137588 or p==17556050821 or g==5440820902) then -- +1 Blade Slayer
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/Bladescript.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/Christ'..'ian2703/Main/main/Mainscript'))()
-elseif (p==16981421605 or  g==5827120940) then -- Reborn As Swordman
+elseif (p==16981421605 or g==5827120940) then -- Reborn As Swordman
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/RebornAsSwordman.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/Christ'..'ian2703/Main/main/Mainscript'))()
-elseif (p==16436007861 or  g==5663507626) then --Warrior Simulator [BETA]
+elseif (p==16436007861 or g==5663507626) then --Warrior Simulator [BETA]
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/WarriorSimulator.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/Christ'..'ian2703/Main/main/Mainscript'))()
-elseif (p==17114605748 or  g==5864273770) then --[UPD 5] Anime Punching Simulator 2
+elseif (p==17114605748 or g==5864273770) then --[UPD 5] Anime Punching Simulator 2
         loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/AnimePunchingSimulator2.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/Christ'..'ian2703/Main/main/Mainscript'))()
-elseif (p==16712648821 or  g==5744922424) then --[Clover] Anime Racing 2
+elseif (p==16712648821 or g==5744922424) then --[Clover] Anime Racing 2
 loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/AnimeRacing2.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/Christ'..'ian2703/Main/main/Mainscript'))()
-elseif (p==14195873109 or  g==4912354124) then -- Slayer Corps 
+elseif (p==14195873109 or g==4912354124) then -- Slayer Corps 
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/SlayerCorps.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/Christ'..'ian2703/Main/main/Mainscript'))()
-elseif (p==16741537517 or  g==5753785106) then --[UPD 0.5] Anime Heroes Simulator
+elseif (p==16741537517 or g==5753785106) then --[UPD 0.5] Anime Heroes Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/AnimeHeroesSimulator.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/Christ'..'ian2703/Main/main/Mainscript'))()
-elseif (p==3101667897 or  g==1119466531) then --Legends Of Speed
+elseif (p==3101667897 or g==1119466531) then --Legends Of Speed
     loadstring(game:HttpGet('https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Legends%20Of%20Speed/Script.lua'))()
-elseif (p==7113341058 or  g==2162282815) then --Rush Point (ESP)
+elseif (p==7113341058 or g==2162282815) then --Rush Point (ESP)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/AtomGotIce/Scripts/main/RushPoint%20Chams'))()
-elseif (p==4580204640 or  g==1489026993) then --Survive the Killer!
+elseif (p==4580204640 or g==1489026993) then --Survive the Killer!
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/STKTurtle.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/Kiroftt/Survive-The-Killer/main/Simple'))()
-elseif (p==335760407 or  g==124283622) then --TPS: Street Soccer
+elseif (p==335760407 or g==124283622) then --TPS: Street Soccer
     loadstring(game:HttpGet('https://raw.githubusercontent.com/xfaz/newtps/main/kuchi'))()
-elseif (p==6741970382 or  g==2551702779) then --Zombie lab
+elseif (p==6741970382 or g==2551702779) then --Zombie lab
     loadstring(game:HttpGet('https://raw.githubusercontent.com/xfaz/zombielab/main/kk'))()
-elseif (p==277751860 or  g==110181652) then --Epic Minigames
+elseif (p==277751860 or g==110181652) then --Epic Minigames
     loadstring(game:HttpGet('https://raw.githubusercontent.com/SlamminPig/rblxgames/main/Epic%20Minigames/EpicMinigamesGUI'))()
-elseif (p==5602055394 or  g==1958807588) then --Hood Modded
+elseif (p==5602055394 or g==1958807588) then --Hood Modded
     loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/Rippeed/DaHoodinary/main/chariotsware'))()
-elseif (p==17250538604 or  g==5901631600) then --Tennis Simulator 
+elseif (p==17250538604 or g==5901631600) then --Tennis Simulator 
     loadstring(game:HttpGet('https://raw.githubusercontent.com/AppleScript001/Tennis-Simulator/main/README.md')())
 elseif g==4849157113 then --operations siege
     loadstring(game:HttpGet('https://raw.githubusercontent.com/idonthaveoneatm/lua/normal/games/OperationsSiege/src'))()
 elseif (g==6035872082 or g==2585430167) then -- RIVALS, AIMBLOX
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/esp.lua'))()
-elseif (p==171391948 or  g==81762198) then --[Sides] Vehicle Simulator
+elseif (p==171391948 or g==81762198) then --[Sides] Vehicle Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/VehicleSim.lua'))()
-elseif (p==863266079 or  g==358276974) then --Apocalypse Rising 2
+elseif (p==863266079 or g==358276974) then --Apocalypse Rising 2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/ar2.lua'))()
-elseif (p==5911084042 or  g==2118519605) then --Specter 1
+elseif (p==5911084042 or g==2118519605) then --Specter 1
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/specter1.lua'))()
-elseif (p==1730877806 or  g==648454481) then --[TRIOS] Grand Piece Online
+elseif (p==1730877806 or g==648454481) then --[TRIOS] Grand Piece Online
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/drownedGPO.lua'))()
-elseif (p==10912405603 or  g==3936365689) then --[GRIMOIRE GAUNTLET] Clover Retribution
+elseif (p==10912405603 or g==3936365689) then --[GRIMOIRE GAUNTLET] Clover Retribution
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/drownedClover.lua'))()
-elseif (p==3623096087 or  g==1268927906) then -- Muscle Legends
+elseif (p==3623096087 or g==1268927906) then -- Muscle Legends
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/badmusclelegends.lua'))()
 elseif g==4096039463 then -- Attack on Titan: Freedom War
     loadstring(game:HttpGet('https://raw.githubusercontent.com/PorkDevMode/AotFwPublic/main/Script.luau'))()
-elseif (p==15154513235 or  g==5223708703) then --Kamehameha Simulator
+elseif (p==15154513235 or g==5223708703) then --Kamehameha Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/KamehamehaSimulator.lua'))()
-elseif (p==16037561679 or  g==5543899125) then --Head Soccer Simulator [UPD]
+elseif (p==16037561679 or g==5543899125) then --Head Soccer Simulator [UPD]
     loadstring(game:HttpGet('https://raw.githubusercontent.com/FrostLua/Scripts/main/HeadSoccerSimulator'))() 
-elseif (p==18213102218 or  g==6174407103) then --[UPD] Titan Training Simulator
+elseif (p==18213102218 or g==6174407103) then --[UPD] Titan Training Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/TitanTrainingSim.lua'))()
-elseif (p==11872917490 or  g==4201418016) then --Fabled Legacy!
+elseif (p==11872917490 or g==4201418016) then --Fabled Legacy!
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/keyrblxcrack.lua'))()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/OhhMyGehlee/FL/main/Solara'))()
 elseif g==5370286620 or g==5327744466 or g==3057370181 or g==4810910714 then --Hoop Nation, Realistic Basketball, RB World 4, Highschool Hoops Demo
@@ -399,7 +402,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/hub
 
 --[[
 
-setclipboard("elseif (p=="..game.PlaceId.." or  g=="..game.GameId..") then --"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
+setclipboard("elseif (p=="..game.PlaceId.." or g=="..game.GameId..") then --"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
 
 ]]
 
