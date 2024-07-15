@@ -250,9 +250,6 @@ elseif (p==17450551531 or g==5972059550) then --Gym League
     loadstring(game:HttpGet('https://raw.githubusercontent.com/AhmadV99/Script-Games/main/Gym%20League.lua'))()
     loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/bcb1262edfe7a95bc2b25f07e68639ff.lua'))()
 elseif (p==4483381587 or g==1430993116) then --a literal baseplate.
-    for i=1,99,1 do
-        if pcall(function()getfenv(i)end) then print(i) end
-    end
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/aliteralbaseplate.lua'))()
 elseif (p==621129760 or g==254394801) then --KAT
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua'))()
@@ -260,12 +257,12 @@ elseif (p==4620170611 or g==1318971886) then --Break In 1
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/submitted/breakin1.lua'))()
 elseif (p==13864661000 or g==4807308814) then --Break In 2 (Story)
     setclipboard(bypass_LV_refferer("https://odd-dacey-applesauce12-ea43b018.koyeb.app/"))
-    fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/mr-suno/Starry/main/version/main.lua'))()
+    -- fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/mr-suno/Starry/main/version/main.lua'))()
 elseif p==1962086868 then --Tower of hell
     -- not tested: loadstring(game:HttpGet('https://raw.githubusercontent.com/TheHanki/HawkHUB/main/Games/TowerOfHell.lua'))()
-    setclipboard(bypass_LV_refferer("https://odd-dacey-applesauce12-ea43b018.koyeb.app/"))
-    fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
+    -- setclipboard(bypass_LV_refferer("https://odd-dacey-applesauce12-ea43b018.koyeb.app/"))
+    -- fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/mr-suno/Starry/main/version/main.lua'))()
 elseif (p==185655149 or g==88070565) then --Welcome to Bloxburg (I really recommend only using on wave if at all)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/bloxburg.lua'))()
