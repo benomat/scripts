@@ -106,7 +106,7 @@ tab:CreateButton("Find Room (Equip and enable emf before)",function()
         end -- emfs blabla
     end
 end)
-tab:CreateButton("Goto Van",function()game.Players.LocalPLayer.CFrame=workspace:WaitForChild("Van").PrimaryPart.CFrame end)
+tab:CreateButton("Goto Van",function()game.Players.LocalPLayer.Character.CFrame=workspace:WaitForChild("Van").PrimaryPart.CFrame end)
 -- fling=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/fling.lua'))()
 -- tab:CreateButton("Fling all",function()fling("All")end)
 -- tab:CreateSection("uhhh")
