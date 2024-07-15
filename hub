@@ -8,7 +8,7 @@ setclipboard("p: "..p.." g:"..g..""..getexecutorname())
 ]]
 if getexecutorname():sub(1, 5) == "incog" then loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-MoreUNC-13110'))() end
 print("[V1.7] loading KITTY hub with", getexecutorname())
-if pcall(function() getfenv(20) end) then warn("youre not using the direct loadstring") end
+if pcall(function() getfenv(20) end) then warn("youre not using the direct loadstring 😒😒💔\n$$$$$$$$$ check out https://whimper.xyz/kittysupports for the direct script (140 games!!)") end
 local p=game.PlaceId
 local g=game.GameId
 if g==903807016 then loadstring(game:HttpGet('https://raw.githubusercontent.com/DepHubHolder/DepHub1/main/Loader1'))() return end -- ER:LC early load bc of detections 🖕
@@ -256,13 +256,9 @@ elseif (p==621129760 or g==254394801) then --KAT
 elseif (p==4620170611 or g==1318971886) then --Break In 1
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/submitted/breakin1.lua'))()
 elseif (p==13864661000 or g==4807308814) then --Break In 2 (Story)
-    setclipboard(bypass_LV_refferer("https://odd-dacey-applesauce12-ea43b018.koyeb.app/"))
-    -- fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/mr-suno/Starry/main/version/main.lua'))()
 elseif p==1962086868 then --Tower of hell
     -- not tested: loadstring(game:HttpGet('https://raw.githubusercontent.com/TheHanki/HawkHUB/main/Games/TowerOfHell.lua'))()
-    -- setclipboard(bypass_LV_refferer("https://odd-dacey-applesauce12-ea43b018.koyeb.app/"))
-    -- fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/mr-suno/Starry/main/version/main.lua'))()
 elseif (p==185655149 or g==88070565) then --Welcome to Bloxburg (I really recommend only using on wave if at all)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/bloxburg.lua'))()
