@@ -257,9 +257,13 @@ elseif (p==621129760 or g==254394801) then --KAT
 elseif (p==4620170611 or g==1318971886) then --Break In 1
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/breakin1.lua'))()
 elseif (p==13864661000 or g==4807308814) then --Break In 2 (Story)
-    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/mr-suno/Starry/main/version/main.lua'))()
+    setclipboard(bypass_LV_refferer("https://odd-dacey-applesauce12-ea43b018.koyeb.app/"))
+    fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/mr-suno/Starry/main/version/main.lua'))()
 elseif p==1962086868 then --Tower of hell
     -- not tested: loadstring(game:HttpGet('https://raw.githubusercontent.com/TheHanki/HawkHUB/main/Games/TowerOfHell.lua'))()
+    setclipboard(bypass_LV_refferer("https://odd-dacey-applesauce12-ea43b018.koyeb.app/"))
+    fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/mr-suno/Starry/main/version/main.lua'))()
 elseif (p==185655149 or g==88070565) then --Welcome to Bloxburg (I really recommend only using on wave if at all)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/bloxburg.lua'))()
