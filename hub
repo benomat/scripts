@@ -306,6 +306,7 @@ elseif (p==277751860 or g==110181652) then --Epic Minigames
     loadstring(game:HttpGet('https://raw.githubusercontent.com/SlamminPig/rblxgames/main/Epic%20Minigames/EpicMinigamesGUI'))()
 elseif (p==5602055394 or g==1958807588) then --Hood Modded
     loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/Rippeed/DaHoodinary/main/chariotsware'))()
+    -- --untested: loadstring(game:HttpGet('https://raw.githubusercontent.com/nyulachan/nyula/main/nyuladhm'))()
 elseif (p==17250538604 or g==5901631600) then --Tennis Simulator 
     loadstring(game:HttpGet('https://raw.githubusercontent.com/AppleScript001/Tennis-Simulator/main/README.md')())
 elseif g==4849157113 then --operations siege
@@ -318,6 +319,8 @@ elseif (p==863266079 or g==358276974) then --Apocalypse Rising 2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/ar2.lua'))()
 elseif (p==5911084042 or g==2118519605) then --Specter 1
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/specter1.lua'))()
+elseif (p==14997476397 or g==3171190217) then --Specter 2
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/Specter2.lua'))()
 elseif (p==1730877806 or g==648454481) then --[TRIOS] Grand Piece Online
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/drownedGPO.lua'))()
 elseif (p==10912405603 or g==3936365689) then --[GRIMOIRE GAUNTLET] Clover Retribution
@@ -342,6 +345,10 @@ elseif (p==11729688377 or g==4154513353) then --Booga Booga [REBORN]
 elseif (g==4117341804 or g==3989768869 or g==3967853925 or g==4265715280 or g==873703865) then --zaphub madness: Steep Steps, The Survival Game, Every Second You Get +1 Jump Power, Impossible Ladder Climb Obby!, Westbound
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/keyrblxcrack.lua'))()
     loadstring(game:HttpGet('https://zaphub.xyz/ExecSolara'))()
+elseif (p==17601705136 or g==6026836726) then --Tycoon RNG
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MadbukScripts/Scripts/main/Obfuscated%20Tycoon%20RNG.lua'))()
+elseif (p==17639412521 or g==6040823996) then --RE: XL
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/NukeVsCity/Scripts2024/main/projxlrexl'))()
 elseif table.find({192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     -- notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/keyrblxcrack.lua'))()

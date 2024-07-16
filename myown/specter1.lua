@@ -108,7 +108,7 @@ tab:CreateButton("Find Room (Equip and enable emf before)",function()
 end)
 tab:CreateButton("Goto Van",function()
     local LPC=game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
-    LPC.CFrame=workspace:WaitForChild("Van").PrimaryPart.CFrame
+    LPC.HumanoidRootPart.CFrame=workspace:WaitForChild("Van").PrimaryPart.CFrame-Vector3.new(0, 4, 0)
 end)
 -- fling=loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/fling.lua'))()
 -- tab:CreateButton("Fling all",function()fling("All")end)
@@ -182,8 +182,10 @@ ghosttab:CreateButton("Ghost esp",function()
     end
     coroutine.wrap(ESP)()    
 end)
-ghosttab:CreateToggle("Ghost Visibility",false,function()
-    game.Workspace.GhostModel.HumanoidRootPart.Transparency=0
+ghosttab:CreateToggle("Ghost Visibility",false,function(state)
+    if state then
+        game.Workspace.GhostModel.HumanoidRootPart.Transparency=0
+    else game.Workspace.GhostModel.HumanoidRootPart.Transparency=1 end
 end)
 
 
@@ -193,6 +195,5 @@ end)
 wsBoost=loadstring(game:HttpGet("https://raw.githubusercontent.com/benomat/scripts/m/myown/wsBoost.lua"))()
 MISCTAB:CreateSlider("Speed",{6, 300},1,"studs per second",game.Players.LocalPlayer.Character.Humanoid.WalkSpeed,function(v) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v end)
 MISCTAB:CreateSlider("CFrame Speed",{0, 25},1,"boost",0,function(v) wsBoost(v/30) end)
-MISCTAB:CreateButton("Rejoin Server", function () loadstring(game:HttpGet('https://pastebin.com/raw/e8jN1Lvu'))() end)
 MISCTAB:CreateLabel("by benomat")
 MISCTAB:CreateButton("Copy discord invite",function()setclipboard("discord.gg/gUMYGXqPPw")end)
