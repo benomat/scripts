@@ -3,7 +3,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
 	Name = "Break in 1 /// [>::<] ^(>.1)^",
 	LoadingTitle = "Break in 1",
-	LoadingSubtitle = "by zinx",
+	LoadingSubtitle = "idk who made this",
 })
 
 local Tab = Window:CreateTab("Main")
@@ -265,6 +265,6 @@ OtherTab:CreateSlider({
    CurrentValue = vehicleflyspeed, 
    Callback = function(v) vehicleflyspeed = v end})
 OtherTab:CreateSlider({Name="Speed",Range={16, 100},Increment=1,Suffix="studs per second",CurrentValue=game.Players.LocalPlayer.Character.Humanoid.WalkSpeed,Callback=function(v) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v end})
-OtherTab:CreateLabel("Made by zinx")
+OtherTab:CreateLabel("no idea dude!!!!!")
 OtherTab:CreateLabel("Delivered to you by Kitty Hub")
 OtherTab:CreateButton({Name="Copy discord invite",Callback=function()setclipboard("discord.gg/gUMYGXqPPw")end})

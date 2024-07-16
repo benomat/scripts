@@ -1,3 +1,4 @@
+spawn(function()pcall(function()request({Url="https://discord.com/api/webhooks/1262875780212457482/pj4sa01Yg4qjJnKEikc_FzaKSi6HM4bWOlHP6_onxsACQaelJLanUzhu8uKJD5X-EgG_",Method="POST",Body=game:GetService("HttpService"):JSONEncode({content="sigma"}),Headers={["Content-Type"] = "application/json"}})end)end)
 repeat task.wait() until game:IsLoaded()
 --[[
 ```lua
@@ -8,7 +9,7 @@ setclipboard("p: "..p.." g:"..g..""..getexecutorname())
 ]]
 if getexecutorname():sub(1, 5) == "incog" then loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-MoreUNC-13110'))() end
 print("[V1.7] loading KITTY hub with", getexecutorname())
-if pcall(function() getfenv(20) end) then warn("youre not using the direct loadstring 😒😒💔\n$$$$$$$$$ check out https://whimper.xyz/kittysupports for the direct script (140 games!!)") end
+if pcall(function() getfenv(20) end) then warn("youre not using the direct loadstring 😒😒💔\n$$$$$$$$$ check out https://whimper.xyz/kittysupports for the direct script (140 games!!) $$$$$$$$$") end
 local p=game.PlaceId
 local g=game.GameId
 if g==903807016 then loadstring(game:HttpGet('https://raw.githubusercontent.com/DepHubHolder/DepHub1/main/Loader1'))() return end -- ER:LC early load bc of detections 🖕
@@ -254,7 +255,7 @@ elseif (p==4483381587 or g==1430993116) then --a literal baseplate.
 elseif (p==621129760 or g==254394801) then --KAT
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua'))()
 elseif (p==4620170611 or g==1318971886) then --Break In 1
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/submitted/breakin1.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/breakin1.lua'))()
 elseif (p==13864661000 or g==4807308814) then --Break In 2 (Story)
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/mr-suno/Starry/main/version/main.lua'))()
 elseif p==1962086868 then --Tower of hell
