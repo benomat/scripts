@@ -220,7 +220,7 @@ elseif (p==17387475546 or g==2142948266) then --Project Slayer
 elseif (p==6961824067 or g==2668101271) then --Fling Things and People
     --if AskLoad("If the key thats copied to your clipboard right now doesnt work press YES on this.\nthen paste the link into your browser to bypass the linkvertise") then setclicpboard('https://bypass.city'it dd) end
     loadstring(game:HttpGet('https://raw.githubusercontent.com/BlizTBr/scripts/main/FTAP.lua'))()
-    setclipboard("JuniorFilhoDoBlizT")
+    setclipboard(game:HttpGet("https://pastebin.com/raw/QB3YUCgD"))
     fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
 -- elseif false then -- the wild west DOESNT WORK SO NUH UHH
 --     loadstring(game:HttpGet('https://raw.githubusercontent.com/FSOCIETY-WYLD/TWWLEAN/main/main.lua'))()
