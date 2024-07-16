@@ -113,7 +113,23 @@ tab:CreateButton("Fix all",function()
 end)
 
 
-
+optab:CreateSection("Very cool (this is enabled by default)")
+optab:CreateToggle("Unlock all gamepasses",true,function(state)
+    for _, gamepass in pairs(game.Players.LocalPlayer.data.purchases.gamepasses:GetChildren()) do
+        gamepass.Value=state
+    end
+end)
+optab:CreateSection("more stuff")
+codes={"myles", "airport", "star", "customize", "decoration", "100m", "service", "boba", "galley", "badge", "jetway"}
+optab:CreateButton("Claim codes",function()
+    for _,code in pairs(codes) do
+        game:GetService("ReplicatedStorage").remotes.codes:InvokeServer(code)
+        wait(.15)
+    end
+end)
+optab:CreateInput("Set Money (this is just cosmetic)","number",false,function(c)
+    game.Players.LocalPlayer.data["player_data"].skybux.Value=tonumber(c)
+end)
 
 -- tab:CreateSection("uhhh")
 -- tab:CreateButton("Load Open Aimbot",function()loadstring(game:HttpGet('https://raw.githubusercontent.com/ttwizz/Open-Aimbot/master/source.lua'))()end)
