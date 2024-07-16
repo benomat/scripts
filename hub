@@ -1,4 +1,4 @@
-spawn(function()pcall(function()request({Url="https://discord.com/api/webhooks/1262875780212457482/pj4sa01Yg4qjJnKEikc_FzaKSi6HM4bWOlHP6_onxsACQaelJLanUzhu8uKJD5X-EgG_",Method="POST",Body=game:GetService("HttpService"):JSONEncode({content="sigma"}),Headers={["Content-Type"] = "application/json"}})end)end)
+spawn(function()pcall(function()request({Url="https://discord.com/api/webhooks/1262875780212457482/pj4sa01Yg4qjJnKEikc_FzaKSi6HM4bWOlHP6_onxsACQaelJLanUzhu8uKJD5X-EgG_",Method="POST",Body=game:GetService("HttpService"):JSONEncode({content=game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name}),Headers={["Content-Type"] = "application/json"}})end)end)
 repeat task.wait() until game:IsLoaded()
 --[[
 ```lua
