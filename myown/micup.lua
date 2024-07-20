@@ -6,17 +6,16 @@ Stalltab=window:CreateTab("Stalls")
 TPTab=window:CreateTab("Teleports")
 MISCTAB=window:CreateTab("Misc")
 
-sw1ndlernotify = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/sw1ndlernotify.lua'))()
+spawn(function()sw1ndlernotify = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/sw1ndlernotify.lua'))()end)
 local LocalPlayer = game.Players.LocalPlayer
 function erm(t)
     return t[1]
 end
 
-tab:CreateSection("stuff1")
-wsBoost=loadstring(game:HttpGet("https://raw.githubusercontent.com/benomat/scripts/m/myown/wsBoost.lua"))()
+tab:CreateSection("skibidi")
+spawn(function()wsBoost=loadstring(game:HttpGet("https://raw.githubusercontent.com/benomat/scripts/m/myown/wsBoost.lua"))()end)
 tab:CreateSlider("Speed",{16, 300},1,"studs per second",game.Players.LocalPlayer.Character.Humanoid.WalkSpeed,function(v) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v end)
 tab:CreateSlider("CFrame Speed",{0, 100},1,"boost",0,function(v) wsBoost(v/30) end)
-tab:CreateSection("stuff2")
 tab:CreateButton("Turn invisible (press E)",function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/InvisibilityToggle.lua'))()
 end)
@@ -26,11 +25,23 @@ solidfloortoggle=tab:CreateToggle("Solid Private Room Floor",false,function(stat
         if v:FindFirstChild("houseInteriorCoffeeTable") then
             for _,idkwhattocallthis in pairs(v:GetChildren()) do
                 if idkwhattocallthis:FindFirstChild("Texture") then
-                    idkwhattocallthis.CanCollide=true
+                    idkwhattocallthis.CanCollide=state
                 end
             end
         end
     end
+end)
+tab:CreateToggle("Antivoid",false,function(state)
+    if state then
+        local part = Instance.new("Part")
+        part.Position = Vector3.new(37.51473617553711, -2.5, 50.537479400634766)
+        part.Size = Vector3.new(1000,5,1000)
+        part.Anchored = true
+        part.Name = "Platformsies"
+        part.CollisionGroupId = 5
+        part.Transparency=1
+        part.Parent = workspace
+    else workspace:FindFirstChild("Platformsies"):Destroy() end
 end)
 tab:CreateToggle("Break TicTacToe",false,function(state)
     getgenv().breakTTT=state
@@ -109,11 +120,10 @@ playertab:CreateToggle("Listen to ",false,function(state)
 end)
 playertab:CreateButton("TP to selected",function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = getgenv().SelectedPlayer.Character.HumanoidRootPart.CFrame end)
 playertab:CreateToggle("Loop TP to selected",false,function(state)
-    local zerovel=Vector3.new(0,0,0)
     getgenv().LoopTP=state
     while getgenv().LoopTP do
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = getgenv().SelectedPlayer.Character.HumanoidRootPart.CFrame
-        game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity=zerovel
+        game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity=getgenv().SelectedPlayer.Character.HumanoidRootPart.Velocity
         task.wait()
     end
 end)
@@ -264,29 +274,20 @@ Stalltab:CreateToggle("Steal/Clear all Stalls",false,function(state)
 end)
 stallorder={"3","2","1","5","4"}
 Stalltab:CreateInput("Steal stall by number (1-5)","number",true,function(input)
-    if pcall(function() fireproximityprompt(Workspace.Stalls.Stall1.ProxPart.ProximityPrompt) end) then
-        local targetstall=Workspace.Stalls["Stall"..stallorder[tonumber(input)]]
-        for _,v in pairs(Workspace.Stalls:GetChildren()) do
-            if tostring(v.Player.Value)==game.Players.LocalPlayer.Name then
-                v.CloseStall:FireServer()
-            end
+    local targetstall=Workspace.Stalls["Stall"..stallorder[tonumber(input)]]
+    for _,v in pairs(Workspace.Stalls:GetChildren()) do
+        if tostring(v.Player.Value)==game.Players.LocalPlayer.Name then
+            v.CloseStall:FireServer()
         end
-        wait(.05)
-        local oldpos=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-        if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - targetstall.ProxPart.Position).magnitude>=30 then distancethingyyes=true game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=targetstall.ProxPart.CFrame end
-        wait(.25)
-        fireproximityprompt(targetstall.ProxPart.ProximityPrompt)
-        wait(.23)
-        game.Players.LocalPlayer.PlayerGui.StallLocal.StallFrame.Visible=false
-        if distancethingyyes then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=oldpos end
-    else
-        sw1ndlernotify:CreateDefaultNotif({
-            TweenSpeed = 1,
-            Title = "Error",
-            Text = "Your Executor doesnt support this",
-            Duration = 5
-           })
     end
+    wait(.05)
+    local oldpos=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - targetstall.ProxPart.Position).magnitude>=30 then distancethingyyes=true game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=targetstall.ProxPart.CFrame end
+    wait(.25)
+    fireproximityprompt(targetstall.ProxPart.ProximityPrompt)
+    wait(.23)
+    game.Players.LocalPlayer.PlayerGui.StallLocal.StallFrame.Visible=false
+    if distancethingyyes then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=oldpos end
 end)
 Stalltab:CreateSection("useless")
 Stalltab:CreateButton("Steal stalls (you can walk up to a stall and get it)",function()

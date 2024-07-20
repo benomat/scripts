@@ -2,20 +2,20 @@ repeat task.wait() until game:IsLoaded()
 
 local TextChatService = game:GetService("TextChatService")
 local Players = game:GetService("Players")
-
+print(1)
 if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
   function sendMsg(txt,ermm) game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(txt) end
 else
   function sendMsg(txt,ermm) game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(txt, ermm) end
 end
-
+print(2)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/RelkzzRebranded/Bypassed---OBFUSCATED..../main/Adonis%20BYPASS.lua"))()
 wait(0.1)
-
+print(3)
 for k, v in pairs(getgc(true)) do if pcall(function() return rawget(v, "indexInstance") end) and type(rawget(v, "indexInstance")) == "table" and (rawget(v, "indexInstance"))[1] == "kick" then v.tvk = {
             "kick", function() return game.Workspace:WaitForChild("") end } end end
 wait(0.1)
-
+print(4)
 local Namecall
 Namecall = hookmetamethod(game, '__namecall', function(self, ...)
    local Caller = tostring(getcallingscript())
@@ -28,13 +28,16 @@ Namecall = hookmetamethod(game, '__namecall', function(self, ...)
    return Namecall(self, ...)
 end)
 wait(0.1)
-
-loadstring(game:HttpGet('https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua'))()
-
+print(5)
+local thisonescript=request({Url='https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua'}).Body
+print(thisonescript)
+loadstring(thisonescript)()
+-- loadstring(request({Url='https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua'}).Body)()
+print(6)
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({ Name = "vadrifts.byp |  V1.3.9", HidePremium = false, SaveConfig = save, ConfigFolder =
 "OrionTest", ScriptIntro = enabled, IntroText = "V3rge's bypassing society" })
-
+print(7)
 local startTime = tick()
 
 local Tab = Window:MakeTab({
@@ -48,7 +51,7 @@ local Section = Tab:AddSection({
 })
 Tab:AddParagraph("Loading..", "Please wait")
 Tab:AddParagraph("Quick Tip!","If the script isn't loading, it could be due to your device or executor!")
-
+print(8)
 local function loadScript()
 
     local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
