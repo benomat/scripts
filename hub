@@ -324,7 +324,7 @@ elseif (p==5911084042 or g==2118519605) then --Specter 1
 elseif (p==14997476397 or g==3171190217) then --Specter 2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/Specter2.lua'))()
 elseif (p==1730877806 or g==648454481) then --[TRIOS] Grand Piece Online
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/drownedGPO.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/drownedhub.lua'))()
 elseif (p==10912405603 or g==3936365689) then --[GRIMOIRE GAUNTLET] Clover Retribution
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/drownedClover.lua'))()
 elseif (p==3623096087 or g==1268927906) then -- Muscle Legends
