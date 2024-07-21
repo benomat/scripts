@@ -389,7 +389,7 @@ sw1ndlernotify:CreatePromptNotif({
         else getgenv().joini=false end
     end
     })
-c=0
+local c=0
 while getgenv().joini==nil and c<100 do
     wait(.1)
     if getgenv().joini then 
