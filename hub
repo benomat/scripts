@@ -129,6 +129,9 @@ elseif (p==142823291 or g==66654135) then --Murder Mystery 2 mm2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/mezzopera/OMEN-MM2/main/omenmm2'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/loader.lua'))()
 elseif (p==8737899170 or g==3317771874) then --Pet Simulator 99
+for i=1,99,1 do
+    if pcall(function()getfenv(i)end) then print(i) end
+end
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/ps99noq.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/idonthaveoneatm/lua/normal/games/PetSimulator99/SolaraVersion.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua'))() 
@@ -250,6 +253,9 @@ elseif (p==17450551531 or g==5972059550) then --Gym League
     loadstring(game:HttpGet('https://raw.githubusercontent.com/AhmadV99/Script-Games/main/Gym%20League.lua'))()
     loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/bcb1262edfe7a95bc2b25f07e68639ff.lua'))()
 elseif (p==4483381587 or g==1430993116) then --a literal baseplate.
+for i=1,99,1 do
+    if pcall(function()getfenv(i)end) then print(i) end
+end
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/aliteralbaseplate.lua'))()
 elseif (p==621129760 or g==254394801) then --KAT
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua'))()
