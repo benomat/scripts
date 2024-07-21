@@ -1,4 +1,4 @@
-window = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/funwrapper'))():CreateWindow("Dino sim")
+window = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/libwrapper'))():CreateWindow("Dino sim")
 tab=window:CreateTab("Main")
 tab:CreateLabel("idk how this game works so I wont be making any custom funcs")
 wsBoost=loadstring(game:HttpGet("https://raw.githubusercontent.com/benomat/scripts/m/myown/wsBoost.lua"))()
