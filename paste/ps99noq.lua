@@ -172,7 +172,7 @@ loadConfig()
 -- Tables
 
 getgenv().coinQueue = {} -- needs to be global to clear it on reexecute
-local PS99Info = loadstring(game:HttpGet("https://raw.githubusercontent.com/idonthaveoneatm/lua/normal/games/PetSimulator99/table/"..Map.Name..".lua"))()
+local PS99Info = loadstring(game:HttpGet("https://raw.githubusercontent.com/benomat/scripts/m/paste/"..Map.Name..".lua"))()
 
 local worlds = PS99Info.Worlds
 local vendingMachines = PS99Info.VendingMachines
