@@ -1,4 +1,4 @@
-Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/SiriusSoftwareLtd/Rayfield/main/source.lua"))()
+local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/SiriusSoftwareLtd/Rayfield/main/source.lua"))()
 local window = Lib:CreateWindow({
    Name = "Cart Ride Delivery Service [>::<] ^(>.1)^",
    LoadingTitle = "Card Ride Delivery Service",
