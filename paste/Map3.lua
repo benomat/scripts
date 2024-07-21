@@ -100,6 +100,9 @@ return {
         "224 | Hacker Crystal Egg",
         "225 | Hacker Electric Egg",
         "226 | Hacker Secure Egg",
+        "229 | Established Egg",
+        "230 | Elegant Egg",
+        "231 | Luxe Egg"
     },
     Minigames = {},
     VendingMachines = {
