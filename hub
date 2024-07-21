@@ -237,10 +237,10 @@ elseif (p==9391468976 or g==3508322461) then --Jujutsu Shenanigans
 elseif (p==4566572536 or g==1480782352) then --[ZENVO] Vehicle Legends
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/Vehicle%20legends'))()
 elseif (p==14386691987 or g==4931927012) then --basketball legends
-    getgenv().config = {Time = 0.045, Size = 0.9} local UIS = game:GetService("UserInputService") local TweenService = game:GetService("TweenService") local Player = game:GetService("Players").LocalPlayer local Bar = Player.PlayerGui.Visual.Shooting.Bar UIS.InputBegan:Connect(function(input, gpe) if gpe then return end if input.KeyCode == Enum.KeyCode.E then if Player.Character:FindFirstChild("Basketball") then while UIS:IsKeyDown(Enum.KeyCode.E) do Bar:GetPropertyChangedSignal("Size"):Connect(function() if Bar.Size.Y.Scale > getgenv().config.Size then Bar:TweenSize(UDim2.new(1,0,1,0), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, getgenv().config.Time, true) task.wait() Bar.Size = UDim2.new(1,0,1,0) end end) task.wait() end end end end)
-    AskLoad("Press E to auto green")
-    -- getgenv().OBFHUBFREE = "omgfreekeyty"
-    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/obfhub/free/main/basketmball'))()
+    -- getgenv().config = {Time = 0.045, Size = 0.9} local UIS = game:GetService("UserInputService") local TweenService = game:GetService("TweenService") local Player = game:GetService("Players").LocalPlayer local Bar = Player.PlayerGui.Visual.Shooting.Bar UIS.InputBegan:Connect(function(input, gpe) if gpe then return end if input.KeyCode == Enum.KeyCode.E then if Player.Character:FindFirstChild("Basketball") then while UIS:IsKeyDown(Enum.KeyCode.E) do Bar:GetPropertyChangedSignal("Size"):Connect(function() if Bar.Size.Y.Scale > getgenv().config.Size then Bar:TweenSize(UDim2.new(1,0,1,0), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, getgenv().config.Time, true) task.wait() Bar.Size = UDim2.new(1,0,1,0) end end) task.wait() end end end end)
+    -- AskLoad("Press E to auto green")
+    _G.OBFHUBFREE = "2kmembersgang"
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/obfhub/free/main/basketmball"))()
 elseif (p==1554960397 or g==605887098) then -- Car Dealership Tycoon
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/cardealership.lua'))()
 elseif (p==11400511154 or g==4055984814) then --Monkey Tycoon
