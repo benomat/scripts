@@ -211,14 +211,14 @@ local function Fire(name, args)
     if Network:FindFirstChild(name) then
         Network[name]:FireServer(unpack(args))
     else
-        warn("theres no Network."..name)
+        -- warn("theres no Network."..name)
     end
 end
 local function Invoke(name, args)
     if Network:FindFirstChild(name) then
         Network[name]:InvokeServer(unpack(args))
     else
-        warn("theres no Network."..name)
+        -- warn("theres no Network."..name)
     end
 end
 local function XZDist(obj1, obj2)
