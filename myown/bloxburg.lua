@@ -103,7 +103,8 @@ tab:CreateKeybind("Hair Studio Farm","H",false,function()
     end
     repeat wait() until getOrder()
     getgenv().farmiiii=not getgenv().farmiiii
-    while getgenv().farmiiii do 
+    while getgenv().farmiiii do
+        pcall(function()
         while color~=getHC() do
             cycleColor()
             wait(.1)
@@ -116,6 +117,7 @@ tab:CreateKeybind("Hair Studio Farm","H",false,function()
         end
     submitHaircut()
     repeat task.wait() until getOrder()
+    end)
     end
     lp.CameraMode = Enum.CameraMode.Classic
 end)
