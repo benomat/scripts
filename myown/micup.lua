@@ -213,25 +213,28 @@ Stalltab:CreateToggle("Typewrite",false,function(state)
         task.wait()
     end
 end)
-if identifyexecutor()=="Solara" then
+if not fireproximityprompt then
     getgenv().fireproximityprompt=function(pp)
-        local oldpos=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
         local oldenabled=pp.Enabled
         local oldhold=pp.HoldDuration
         local oldrlos=pp.RequiresLineOfSight
+        local oldMaxActivationDistance=pp.MaxActivationDistance
+        local oldCameraCFrame = workspace.CurrentCamera.CFrame
+        pp.MaxActivationDistance=math.huge
         pp.Enabled=true
         pp.HoldDuration=0
         pp.RequiresLineOfSight=false
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=pp.Parent.CFrame
-        wait(.2)
+        workspace.CurrentCamera.CFrame = CFrame.new(workspace.CurrentCamera.CFrame.Position, pp.Parent.Position)
+        wait()
         pp:InputHoldBegin()
         task.wait()
         pp:InputHoldEnd()
-        wait(.15)
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=oldpos
+        task.wait()
         pp.Enabled=pp.Enabled
         pp.HoldDuration=pp.HoldDuration
         pp.RequiresLineOfSight=pp.RequiresLineOfSight
+        pp.MaxActivationDistance=oldMaxActivationDistance
+        workspace.CurrentCamera.CFrame=oldCameraCFrame
     end
 end
 Stalltab:CreateSection("Claming and stuff ") --[you can scroll btw]
