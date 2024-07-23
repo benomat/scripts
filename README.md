@@ -8,7 +8,7 @@ getgenv().animchanger= "Ninja"
 ------------------------------------------------------------
 
 -- Available Animations (cAsE sEnSiTivE): Vampire, Hero, ZombieClassic, Cowboy, Patrol, Bold, ZombieFE, Princess, Popstar, 
--- Sneaky, Toy, Knight, Confident, Ghost, Elder, Levitation, Mage, Astronaut, Ninja, Werewolf, Cartoon, Pirate
+-- Sneaky, Toy, Knight, Confident, Ghost, Elder, Levitation, Mage, Astronaut, Ninja, Werewolf, Cartoon, Pirate, Adidas
 
 ------------------------------------------------------------
 loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/a'))()

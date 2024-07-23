@@ -35,7 +35,7 @@ othertab:CreateButton("Fling all",function()fling("All")end)
 othertab:CreateInput("Fling Player","Name",true,function(player)fling(player)end)
 othertab:CreateDropdown(
     "Animation pack",
-    {"Vampire", "Hero", "ZombieClassic", "Cowboy", "Patrol", "Bold", "ZombieFE", "Princess", "Popstar", "Sneaky", "Toy", "Knight", "Confident", "Ghost", "Elder", "Levitation", "Mage", "Astronaut", "Ninja", "Werewolf", "Cartoon", "Pirate"},
+    {"Adidas","Vampire", "Hero", "ZombieClassic", "Cowboy", "Patrol", "Bold", "ZombieFE", "Princess", "Popstar", "Sneaky", "Toy", "Knight", "Confident", "Ghost", "Elder", "Levitation", "Mage", "Astronaut", "Ninja", "Werewolf", "Cartoon", "Pirate"},
     "Select",
     false,
     function(opt)
