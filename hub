@@ -318,7 +318,8 @@ elseif (p==17250538604 or g==5901631600) then --Tennis Simulator
 elseif g==4849157113 then --operations siege
     loadstring(game:HttpGet('https://raw.githubusercontent.com/idonthaveoneatm/lua/normal/games/OperationsSiege/src'))()
 elseif (g==6035872082) then --RIVALS
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/malfume/Drowned/main/Rival'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Filebrute-lua/Rivals/main/KittyKoolKlub'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/malfume/Drowned/main/Rival'))()
 elseif (g==2585430167) then -- AIMBLOX
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/esp.lua'))()
 elseif (p==171391948 or g==81762198) then --[Sides] Vehicle Simulator
