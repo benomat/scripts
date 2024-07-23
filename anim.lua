@@ -9,10 +9,7 @@ local function StopAnim()
     end
 end
 local walk
-local success, result = pcall(function()
-walk = Animate.walk.WalkAnim.AnimationId
-end)
-if not success then
+if not pcall(function()walk = Animate.walk.WalkAnim.AnimationId end) then
     walk = Animate.walk.walk.AnimationId
 end
 local scripts = {
@@ -212,6 +209,17 @@ end,
 	Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=16738337225"
 	Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=16738336650"
 	Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=16738333171"
+end,
+["Adidas"] = function()
+	Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=18537376492"
+	Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=18537371272"
+	walk = "http://www.roblox.com/asset/?id=18537392113"
+	Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=18537384940"
+	Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=18537380791"
+	Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=18537363391"
+	Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=18537367238"
+	Animate.swim.Swim.AnimationId= "http://www.roblox.com/asset/?id=18537389531"
+	Animate.swimidle.Swimidle.AnimationId= "http://www.roblox.com/asset/?id=18537387180"
 end
 }
 Animate.Disabled = true

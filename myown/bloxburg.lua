@@ -125,7 +125,7 @@ tab:CreateParagraph("How to use","1. Enter the job\n2. Go to the first workstati
 tab:CreateParagraph("Solara info","If youre on solara and NOT wave you gotta use an autoclicker while farming because solaras mouse1click() function is really weird for some reason\nI would really appreciate if someone could tell me a better way to handle this")
 tab:CreateDropdown(
     "Animation pack",
-    {"Vampire", "Hero", "ZombieClassic", "Cowboy", "Patrol", "Bold", "ZombieFE", "Princess", "Popstar", "Sneaky", "Toy", "Knight", "Confident", "Ghost", "Elder", "Levitation", "Mage", "Astronaut", "Ninja", "Werewolf", "Cartoon", "Pirate"},
+    {"Adidas","Vampire", "Hero", "ZombieClassic", "Cowboy", "Patrol", "Bold", "ZombieFE", "Princess", "Popstar", "Sneaky", "Toy", "Knight", "Confident", "Ghost", "Elder", "Levitation", "Mage", "Astronaut", "Ninja", "Werewolf", "Cartoon", "Pirate"},
     "Select",
     false,
     function(opt)
