@@ -213,7 +213,7 @@ Stalltab:CreateToggle("Typewrite",false,function(state)
         task.wait()
     end
 end)
-if not fireproximityprompt then
+if identifyexecutor()=="Solara" then
     getgenv().fireproximityprompt=function(pp)
         local oldenabled=pp.Enabled
         local oldhold=pp.HoldDuration
