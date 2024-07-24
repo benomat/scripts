@@ -208,8 +208,7 @@ elseif (p==9872472334 or g==3647333358) then --Evade
     loadstring(game:HttpGet('https://raw.githubusercontent.com/PepesGH1/stuff/main/evade.lua'))()
 elseif (p==16560655288 or g==5700746583) then --Pillar Chase 2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/fbenable.lua'))()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ritualrblx/ritual/main/scripts/pillarchase2.lua"))()
-    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/pillarchase2.lua'))() doesnt work anymore 
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/pillarchase2.lua'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/dqvh/dqvh/main/pillar%20chase%202.lua'))()
 elseif g==4871329703 then --Type soul
     loadstring(game:HttpGet('https://raw.githubusercontent.com/LOLking123456/newtype/main/soul'))()
