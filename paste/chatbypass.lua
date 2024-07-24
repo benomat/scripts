@@ -29,9 +29,11 @@ Namecall = hookmetamethod(game, '__namecall', function(self, ...)
 end)
 wait(0.1)
 print(5)
-local thisonescript=request({Url='https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua'}).Body
-print(thisonescript)
-loadstring(thisonescript)()
+local thisonescript=game:HttpGet('https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua')
+spawn(function()pcall(function()loadstring(thisonescript)end)end)
+if not pcall(loadstring(thisonescript)) then
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua'))()
+end
 -- loadstring(request({Url='https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua'}).Body)()
 print(6)
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
