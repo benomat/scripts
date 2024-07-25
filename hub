@@ -379,6 +379,8 @@ elseif g==2491559356 then --Cursed Tank Simulator
     if p==6608498361 then fn("KITTY HUB","Join a game sir",50)
     else loadstring(game:HttpGet('https://raw.githubusercontent.com/Filebrute-lua/CursedTankSim/main/KittyKoolKlub'))()
     end
+elseif (p==17534163435 or g==6002149925) then --Dungeon RNG
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/dungeonrng.lua'))()
 elseif (p==6598746935 or g==2485810873) then --Farm for Fun!
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Bac0nHck/Scripts/main/FarmforFun'))()
 elseif (p==8286149869 or g==3177453609) then --therapy
