@@ -154,8 +154,8 @@ elseif p==15532962292 then --solsrng
     setclipboard("vy5fBGS6nNUuJjgxWhCLpR")
     fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
 elseif g==1650291138 then --demonfall
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/LabibKazi858/Scripts/main/DemonFall'))()
-    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/malfume/Drowned/main/DemonfallPaid'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/LabibKazi858/Scripts/main/DemonFall'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/malfume/Drowned/main/DemonfallPaid'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/demonfall'))()
 elseif p==4282985734 or p==11979315221 or g==1390601379 then --combat warriors
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/combatwarriors'))()
