@@ -31,15 +31,16 @@ function OLDnotify(t)
 		Title = "KITTY Hub";
 		Text = t})
 end
-local msgb = loadstring(game:HttpGet('https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua'))()
-function AskLoad(t)
-    msgb.Show({Position = UDim2.new(0.5,0,0.5,0), Text = "KITTY Hub", Description = t, MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
-        if (res == "Yes") then
-            return true
-        else return false
-        end
-     end})
+local msgb = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/windowsmsg.lua'))()
+local function AskLoad(t,link)
+msgb.Show({Position = UDim2.new(0.5,0,0.5,0), Text = "KITTY Hub", Description = t, MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
+    if (res == "Yes") then
+        if link then spawn(function()loadstring(game:HttpGet(link))()end) end
+        return true
+    else return false
     end
+    end})
+end
 function fn(t,d,duration)
     fuckdude({Description = d;Title = t;Duration = duration;})
 end
@@ -137,7 +138,7 @@ end
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua'))() 
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/HGIOD/AquaFlowX/main/FlowX'))()
 elseif (p==292439477 and g==113491250) then -- Phantom Forces PC
-    if AskLoad("Scripts are likely to get you banned on PF rn\nDo you still wanna load?") then loadstring(game:HttpGet('https://raw.githubusercontent.com/dementiaenjoyer/homohack/3074cdecd9b2cfe1d73e7ead1876b7880cfae907/homohack.lua'))() end
+    AskLoad("Scripts are likely to get you banned on PF rn\nDo you still wanna load?",'https://raw.githubusercontent.com/dementiaenjoyer/homohack/3074cdecd9b2cfe1d73e7ead1876b7880cfae907/homohack.lua')
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/OxygenClub/Random-LUAS/main/otterware-crack.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/homohack.lua'))()
 elseif p==155615604 then --prison life
