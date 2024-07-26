@@ -311,8 +311,10 @@ MISCTAB:CreateDropdown(
     "Select",
     false,
     function(opt)
-       getgenv().animchanger=erm(opt)
+        spawn(function()
+        getgenv().animchanger=erm(opt)
         loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/a'))()
+        end)
 end)
 emoteSelector=MISCTAB:CreateDropdown(
     "Emotes",
