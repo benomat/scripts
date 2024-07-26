@@ -189,8 +189,8 @@ elseif p==2210085102 then--Naval Warfare
 elseif p==698448212 then--RoBeats
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/RoBeats.lua'))()
 elseif p==6447798030 then --funky friday -> might make a good autoplay in a month or so
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/ZoinkyPoinkie/FunkyFridayDevTools/main/Un-Obfuscated'))()
-    -- alt link (same script) loadstring(game:HttpGet('https://raw.githubusercontent.com/Zivixian/FunkyFriday/main/ProjectBishopUpdated.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/salmsalm123/supported/main/FunkyFridayFree'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/ZoinkyPoinkie/FunkyFridayDevTools/main/Un-Obfuscated'))()
 -- elseif (p==6804602922 or g==2583564222) and e~=2 then --Boxing Beta!
 --     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/boxingbeta.lua'))()
 elseif (p==3233893879 or g==1168263273) then --Bad Business
