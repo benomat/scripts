@@ -140,7 +140,7 @@ end
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/idonthaveoneatm/lua/normal/games/PetSimulator99/SolaraVersion.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua'))() 
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/HGIOD/AquaFlowX/main/FlowX'))()
-elseif (p==292439477 and g==113491250) then -- Phantom Forces PC
+elseif g==113491250 then -- Phantom Forces PC
     AskLoad("Scripts are likely to get you banned on PF rn\nDo you still wanna load?",'https://raw.githubusercontent.com/dementiaenjoyer/homohack/3074cdecd9b2cfe1d73e7ead1876b7880cfae907/homohack.lua')
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/OxygenClub/Random-LUAS/main/otterware-crack.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/homohack.lua'))()
