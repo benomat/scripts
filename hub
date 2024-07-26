@@ -98,6 +98,7 @@ elseif g==4777817887 then --bladeball
     -- keypress(290)
 elseif (p==2753915549 or g==994732206) and e~=2 then --bloxfruits solara
     fn("Hey you!", "You can scroll on the left btw",20)
+    --loadstring(game:HttpGet('https://roblox.relzscript.xyz/source/relzhub/script/game/BloxFruits.lua'))()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/matsune.lua'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/koonpeatch/PeatEX/master/BKHAX/BloxFruits'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/MAMAhub1/Mmahub/main/README.md'))() 
@@ -110,8 +111,10 @@ elseif p==537413528 then --build a boat
     --loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/ZeeroxHub/main/Loader.lua')() 
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/zachisfunny/Build-a-Boat-OP-Script/main/Script'))()
 elseif g==1335695570 then
+    --loadstring(game:HttpGet('https://roblox.relzscript.xyz/source/relzhub/script/game/NinjaLegends.lua'))()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/njlg.lua'))()
 elseif p==301549746 then --counterblox
+    --loadstring(game:HttpGet("https://raw.githubusercontent.com/Zypher32/zyn.cc/main/Protected_8206229512961191.txt"))()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/counterblox.lua'))()
 elseif g==1008451066 then --dahood
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded'))()
@@ -154,8 +157,8 @@ elseif p==15532962292 then --solsrng
     setclipboard("vy5fBGS6nNUuJjgxWhCLpR")
     fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
 elseif g==1650291138 then --demonfall
-    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/LabibKazi858/Scripts/main/DemonFall'))()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/malfume/Drowned/main/DemonfallPaid'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/LabibKazi858/Scripts/main/DemonFall'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/malfume/Drowned/main/DemonfallPaid'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/demonfall'))()
 elseif p==4282985734 or p==11979315221 or g==1390601379 then --combat warriors
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/combatwarriors'))()
@@ -265,6 +268,7 @@ elseif (p==621129760 or g==254394801) then --KAT
 elseif (p==4620170611 or g==1318971886) then --Break In 1
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/breakin1.lua'))()
     elseif (p==13864661000 or g==4807308814) then --Break In 2 (Story)
+    --loadstring(game:HttpGet('https://raw.githubusercontent.com/7hbl/break-in-2/main/break%20in%202'))()
     setclipboard(bypass_LV_refferer("https://odd-dacey-applesauce12-ea43b018.koyeb.app/"))
     fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/mr-suno/Starry/main/version/main.lua'))()
@@ -305,6 +309,7 @@ elseif (p==16741537517 or g==5753785106) then --[UPD 0.5] Anime Heroes Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/AnimeHeroesSimulator.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/Christ'..'ian2703/Main/main/Mainscript'))()
 elseif (p==3101667897 or g==1119466531) then --Legends Of Speed
+    --loadstring(game:HttpGet('https://roblox.relzscript.xyz/source/relzhub/script/game/LegendsOfSpeed.lua'))()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Legends%20Of%20Speed/Script.lua'))()
 elseif (p==7113341058 or g==2162282815) then --Rush Point (ESP)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/AtomGotIce/Scripts/main/RushPoint%20Chams'))()
@@ -385,6 +390,20 @@ elseif (p==6598746935 or g==2485810873) then --Farm for Fun!
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Bac0nHck/Scripts/main/FarmforFun'))()
 elseif (p==8286149869 or g==3177453609) then --therapy
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/therapy.lua'))()
+elseif (p==6068961298 or g==2201299735) then --Anime Impact
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/animeimpact.lua'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/keyrblxcrack.lua'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/LosHUB/L-HUBV3/main/L-HUBV3'))()
+elseif (p==16993380837 or g==5830247545) then --RNG Gods
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ImNotRox1/HyperHubV2/main/HyperHub%20-%20RNG%20Gods.txt'))()
+elseif (p==12411473842 or g==4367208330) then --Pressure
+    spawn(function()pcall(loadstring(game:HttpGet('https://raw.githubusercontent.com/ltseverydayyou/uuuuuuu/main/pressure%20god.lua')))end)
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/NukeVsCity/Scripts2024/main/pressure'))()
+elseif g==5091490171 then --Jailbird [SEASON 3]
+    if p == 14939963714 then
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Zypher32/zyn.cc/main/jailbirdrewirte'))()
+    else fn("KITTY HUB","Join a game sir",70)
+    end
 elseif table.find({192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     -- notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/keyrblxcrack.lua'))()
