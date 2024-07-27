@@ -1,6 +1,6 @@
 local message=[[add me, 25ms here on discord
 dm me to prevent yourself from fumbling like this @everyone
-or join https://discord.gg/h8mHMTf2bA]]
+or join https://discord.gg/YzrFeH5rFn]]
 
 local hooklinks={...}
 
