@@ -103,12 +103,14 @@ function LibWrapper:CreateWindow(name)
         tabWrapper.AddInput = tabWrapper.CreateInput
         tabWrapper.AddInput = tabWrapper.CreateInput
 
-        function tabWrapper:CreateDropdown(name, options, currentOption, callback)
+        function tabWrapper:CreateDropdown(name, options, weirdthing, callback)
+            if not weirdthing then local currentOption=options[1]
+            else currentOption=weirdthing
             local Dropdown = tab:CreateDropdown({
                 Name = name,
                 Options = options,
                 CurrentOption = currentOption,
-                MultipleOptions = false,
+                MultipleOptions = not weirdthing,
                 Callback = callback
             })
             
