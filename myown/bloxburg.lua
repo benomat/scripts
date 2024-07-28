@@ -4,6 +4,15 @@ MISCTAB=window:CreateTab("Misc")
 
 local LocalPlayer = game.Players.LocalPlayer
 
+
+--[[
+
+(game:GetService("VirtualUser")):CaptureController();
+(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+
+
+
+]]
 tab:CreateSection("FARM $$$")
 tab:CreateKeybind("Hair Studio Farm","H",false,function()
     kHC = {}

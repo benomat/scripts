@@ -48,14 +48,14 @@ end)
 
 if not getgenv().SelectedClass then getgenv().SelectedClass="economy" end
 tab:CreateDropdown(
-    "Class [names might be wrong]",
+    "Select Class for feed all",
     {"economy","business","first"},
     getgenv().SelectedClass,
     false,
     function(opt)
         getgenv().SelectedClass=opt
 end)
-tab:CreateButton("Feed all (tell me if this dont work for one class)",function()
+tab:CreateButton("Feed all (might not work)",function()
     local RF=game:GetService("Players").LocalPlayer.Character.Client.Client.RemoteFunction
 
     pcall(function()RF:InvokeServer("Cart",getgenv().SelectedClass,"food")end)
