@@ -147,7 +147,7 @@ elseif g==113491250 then -- Phantom Forces PC
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/OxygenClub/Random-LUAS/main/otterware-crack.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/homohack.lua'))()
 elseif p==155615604 then --prison life
-    oadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/scam666/Prevail-X/main/src.lua'))()
 elseif p==6403373529 then --slap battles
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Dusty1234567890/TestMain/main/SLAPBATTLESGUI5'))()
