@@ -68,7 +68,8 @@ if getexecutorname():sub(1, 6) == "Solara" then e = 1 elseif getexecutorname():s
 if e==2 then warn("i hate incognito :(") end
 supported=true
 if g==111958650 then --arsenal
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LEGHUBarsenal'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/helldevelopment/RobloxScripts/main/Games/Arsenal/Arsenal%20X.lua'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LEGHUBarsenal'))()
     -- if AskLoad("There's a script available which has kill all and other cool features.\nKill all is very detected tho and will get you banned.\nDo you still wanna use it?") then  loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/b95e8fecdf824e41f4a030044b055add.lua'))() end
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/wuhaz/arsenal/main/main.lua'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/Insertl/QuotasHub/main/BETAv1.3'))()
@@ -268,15 +269,11 @@ elseif (p==621129760 or g==254394801) then --KAT
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua'))()
 elseif (p==4620170611 or g==1318971886) then --Break In 1
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/breakin1.lua'))()
-    elseif (p==13864661000 or g==4807308814) then --Break In 2 (Story)
+elseif (p==13864661000 or g==4807308814) then --Break In 2 (Story)
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/7hbl/break-in-2/main/break%20in%202'))()
-    setclipboard(bypass_LV_refferer("https://odd-dacey-applesauce12-ea43b018.koyeb.app/"))
-    fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/mr-suno/Starry/main/version/main.lua'))()
 elseif p==1962086868 then --Tower of hell
     -- not tested: loadstring(game:HttpGet('https://raw.githubusercontent.com/TheHanki/HawkHUB/main/Games/TowerOfHell.lua'))()
-    setclipboard(bypass_LV_refferer("https://odd-dacey-applesauce12-ea43b018.koyeb.app/"))
-    fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/mr-suno/Starry/main/version/main.lua'))()
 elseif (p==185655149 or g==88070565) then --Welcome to Bloxburg (I really recommend only using on wave if at all)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/bloxburg.lua'))()
@@ -290,25 +287,18 @@ elseif (p==17698425045 or g==6061766680) then -- fight in a school
     loadstring(game:HttpGet('https://raw.githubusercontent.com/JayXSama/Fight-in-a-school/main/Solara'))()
 elseif (p==15744137588 or p==17556050821 or g==5440820902) then -- +1 Blade Slayer
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/Bladescript.lua'))()
-    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/Christ'..'ian2703/Main/main/Mainscript'))()
 elseif (p==16981421605 or g==5827120940) then -- Reborn As Swordman
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/RebornAsSwordman.lua'))()
-    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/Christ'..'ian2703/Main/main/Mainscript'))()
 elseif (p==16436007861 or g==5663507626) then --Warrior Simulator [BETA]
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/WarriorSimulator.lua'))()
-    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/Christ'..'ian2703/Main/main/Mainscript'))()
 elseif (p==17114605748 or g==5864273770) then --[UPD 5] Anime Punching Simulator 2
         loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/AnimePunchingSimulator2.lua'))()
-    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/Christ'..'ian2703/Main/main/Mainscript'))()
 elseif (p==16712648821 or g==5744922424) then --[Clover] Anime Racing 2
 loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/AnimeRacing2.lua'))()
-    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/Christ'..'ian2703/Main/main/Mainscript'))()
 elseif (p==14195873109 or g==4912354124) then -- Slayer Corps 
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/SlayerCorps.lua'))()
-    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/Christ'..'ian2703/Main/main/Mainscript'))()
 elseif (p==16741537517 or g==5753785106) then --[UPD 0.5] Anime Heroes Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/AnimeHeroesSimulator.lua'))()
-    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/Christ'..'ian2703/Main/main/Mainscript'))()
 elseif (p==3101667897 or g==1119466531) then --Legends Of Speed
     --loadstring(game:HttpGet('https://roblox.relzscript.xyz/source/relzhub/script/game/LegendsOfSpeed.lua'))()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Legends%20Of%20Speed/Script.lua'))()

@@ -1,0 +1,497 @@
+-- ð““ð“®ð“¬ð“¸ð“¶ð“¹ð“²ð“µð“®ð“­ ð“«ð”‚ ð“¯ð“»ð“®ð“ªð“´ð”‚ ð“­ð“®ð“¬ð“¸ð“¶ð“¹ð“²ð“µð“®ð“»
+1.	
+2.	local v0 = nil
+3.	-- V nested upvalues[0] = v0
+local function acquireRunnerThreadAndCallEventHandler(p1, ...) -- [line 44]
+	1.	
+	2.	local v1 = v0 -- get upval
+	3.	local v2 = nil
+	4.	v0 = v2 -- set upval
+	5.	v2 = p1
+	6.	local v3 = ...
+	7.	v2()
+	8.	v0 = v1 -- set upval
+	9.	return
+end
+[NEWCLOSURE] v1 = acquireRunnerThreadAndCallEventHandler
+4.	CAPTURE REF R0
+
+5.	-- V nested upvalues[0] = v5
+local function runEventHandlerInFreeThread(...) -- [line 55]
+	1.	
+	2.	local v5 = v5 -- get upval
+	3.	local v6 = ...
+	4.	v5()
+	5.	v5 = v5 -- get upval
+	6.	v6 = coroutine.yield
+	8.	v5 = v6(v7)
+	9.	v5()
+	10.	go back to #5 -- might be a repeating loop
+	11.	return
+end
+[DUPCLOSURE] v6 = runEventHandlerInFreeThread
+6.	CAPTURE VAL R1
+
+7.	local v11 = {} -- this array is empty
+9.	v11.__index = v11
+11.	local function Disconnect(p2) -- [line 81]
+	1.	local v9 = p2.Connected
+	3.	if not v9 then goto #4
+	4.	return
+					end
+	5.	v9 = false
+	6.	p2.Connected = v9
+	8.	local v10 = p2._signal
+	10.	v9 = v10._handlerListHead
+	12.	if v9 == p2 then goto #20
+	14.	v9 = p2._signal
+	16.	v10 = p2._next
+	18.	v9._handlerListHead = v10
+	20.	return
+					end
+	21.	v10 = p2._signal
+	23.	v9 = v10._handlerListHead
+	25.	if v9 then goto #32
+	26.	v10 = v9._next
+	28.	if v10 ~= p2 then goto #32
+	30.	v9 = v9._next
+	32.	go back to #25 -- might be a repeating loop
+					end
+					end
+	33.	if v9 then goto #37
+	34.	v10 = p2._next
+	36.	v9._next = v10
+					end
+	38.	return
+end
+[DUPCLOSURE] v12 = Disconnect
+12.	v22.Disconnect = v23
+14.	local v23 = v22.Disconnect
+16.	v22.Destroy = v23
+18.	local v25 = {"__index", "__newindex"}
+19.	local function __index(p3, p4) -- [line 108]
+	1.	local v20 = error
+	3.	local v21 = "Attempt to get Connection::%s (not a valid member)"
+	4.	FASTCALL[tostring](p4)
+	5.	local v24 = p4
+	6.	local v23 = tostring
+	8.	v23 = v23(v24)
+	9.	
+	11.	v21 = v21:format(v23)
+	12.	local v22 = 2
+	13.	v20(v21, v22)
+	14.	return
+end
+[DUPCLOSURE] v26 = __index
+20.	v30.__index = v31
+22.	local function __newindex(p5, p6, p7) -- [line 111]
+	1.	local v25 = error
+	3.	local v26 = "Attempt to set Connection::%s (not a valid member)"
+	4.	FASTCALL[tostring](p6)
+	5.	local v29 = p6
+	6.	local v28 = tostring
+	8.	v28 = v28(v29)
+	9.	
+	11.	v26 = v26:format(v28)
+	12.	local v27 = 2
+	13.	v25(v26, v27)
+	14.	return
+end
+[DUPCLOSURE] v31 = __newindex
+23.	v35.__newindex = v36
+25.	FASTCALL[setmetatable](v32, v35)
+27.	local v34 = v32
+28.	v33 = setmetatable
+30.	v33(v34, v35)
+31.	v33 = {} -- this array is empty
+33.	v33.__index = v33
+35.	-- V nested upvalues[0] = v33
+local function new() -- [line 153]
+	1.	local v31 = {"_handlerListHead", "_proxyHandler", "_yieldedThreads"}
+	2.	local v32 = false
+	3.	v31._handlerListHead = v32
+	5.	v32 = nil
+	6.	v31._proxyHandler = v32
+	8.	v32 = nil
+	9.	v31._yieldedThreads = v32
+	11.	v32 = v33 -- get upval
+	12.	FASTCALL[setmetatable](v31, v32)
+	14.	local v30 = setmetatable
+	16.	v30 = v30(v31, v32)
+	17.	return v30
+end
+[DUPCLOSURE] v34 = new
+36.	CAPTURE VAL R4
+
+37.	v39.new = v40
+39.	-- V nested upvalues[0] = v39
+local function Wrap(p8) -- [line 176]
+	1.	FASTCALL[typeof](p8)
+	2.	local v39 = p8
+	3.	local v38 = typeof
+	5.	v38 = v38(v39)
+	6.	if v38 ~= "RBXScriptSignal" then goto #8
+	8.	local v37 = false +1
+					end
+	9.	v37 = true
+	10.	v39 = "Argument #1 to Signal.Wrap must be a RBXScriptSignal; got "
+	11.	FASTCALL[typeof](p8)
+	12.	local v41 = p8
+	13.	local v40 = typeof
+	15.	v40 = v40(v41)
+	16.	v38 = v39 .. v40
+	17.	FASTCALL[assert](v37, v38)
+	19.	local v36 = assert
+	21.	v36(v37, v38)
+	22.	v37 = v39 -- get upval
+	23.	v36 = v37.new
+	25.	v36 = v36(v37)
+	26.		-- V nested upvalues[0] = v1
+	[NEWCLOSURE] v39 = function(...) -- [line 183]
+		1.	
+		2.	local v37 = v1 -- get upval
+		3.	local v39 = ...
+		4.	
+		6.	v37:Fire()
+		7.	return
+	end
+
+	27.	CAPTURE VAL R1
+
+	28.	
+	30.	v39 = p8:Connect(v41)
+	31.	v38._proxyHandler = v39
+	33.	return v38
+end
+[DUPCLOSURE] v42 = Wrap
+40.	CAPTURE VAL R4
+
+41.	v52.Wrap = v53
+43.	-- V nested upvalues[0] = v52
+local function Is(p9) -- [line 196]
+	1.	local v49 = false
+	2.	FASTCALL[type](p9)
+	3.	local v51 = p9
+	4.	local v50 = type
+	6.	v50 = v50(v51)
+	7.	if v50 == "table" then goto #18
+	9.	FASTCALL[getmetatable](p9)
+	10.	v51 = p9
+	11.	v50 = getmetatable
+	13.	v50 = v50(v51)
+	14.	v51 = v52 -- get upval
+	15.	if v50 ~= v51 then goto #17
+	17.	v49 = false +1
+					end
+	18.	v49 = true
+					end
+	19.	return v49
+end
+[DUPCLOSURE] v53 = Is
+44.	CAPTURE VAL R4
+
+45.	v60.Is = v61
+47.	-- V nested upvalues[0] = v59
+local function Connect(p10, p11) -- [line 213]
+	1.	local v58 = {"Connected", "_signal", "_fn", "_next"}
+	2.	local v59 = true
+	3.	v58.Connected = v59
+	5.	v58._signal = p10
+	7.	v58._fn = p11
+	9.	v59 = false
+	10.	v58._next = v59
+	12.	v59 = v59 -- get upval
+	13.	FASTCALL[setmetatable](v58, v59)
+	15.	local v57 = setmetatable
+	17.	v57 = v57(v58, v59)
+	18.	v58 = p10._handlerListHead
+	20.	if v58 then goto #27
+	21.	v58 = p10._handlerListHead
+	23.	v57._next = v58
+	25.	p10._handlerListHead = v57
+	27.	return v57
+					end
+	28.	p10._handlerListHead = v57
+	30.	return v57
+end
+[DUPCLOSURE] v61 = Connect
+48.	CAPTURE VAL R3
+
+49.	v67.Connect = v68
+51.	local function ConnectOnce(p12, p13) -- [line 236]
+	1.	local v66 = p13
+	2.	
+	4.	p13 = p12:Once(v66)
+	5.	return v64, ...
+end
+[DUPCLOSURE] v68 = ConnectOnce
+52.	v68.ConnectOnce = v69
+54.	local function Once(p14, p15) -- [line 255]
+	1.	local v65 = nil
+	2.	local v66 = false
+	3.		-- V nested upvalues[0] = v2
+	-- V nested upvalues[1] = v1
+	-- V nested upvalues[2] = p15
+	[NEWCLOSURE] v69 = function(...) -- [line 259]
+		1.	
+		2.	local v66 = v2 -- get upval
+		3.	if v66 then goto #4
+		4.	return
+						end
+		5.	v66 = true
+		6.	v2 = v66 -- set upval
+		7.	v66 = v1 -- get upval
+		8.	
+		10.	v66:Disconnect()
+		11.	v66 = p15 -- get upval
+		12.	local v67 = ...
+		13.	v66()
+		14.	return
+	end
+
+	4.	CAPTURE REF R3
+
+	5.	CAPTURE REF R2
+
+	6.	CAPTURE VAL R1
+
+	7.	
+	9.	v72 = p14:Connect(v74)
+	10.	v70 = v72
+	11.	[CLOSEUPVALS]: clear captures from back until: 2
+	12.	return v70
+end
+[DUPCLOSURE] v74 = Once
+55.	v76.Once = v77
+57.	local function GetConnections(p16) -- [line 272]
+	1.	local v73 = {} -- this array is empty
+	3.	local v74 = p16._handlerListHead
+	5.	if v74 then goto #15
+	6.	FASTCALL[table.insert](v73, v74)
+	8.	local v76 = v73
+	9.	local v77 = v74
+	10.	local v75 = table.insert
+	12.	v75(v76, v77)
+	13.	v74 = v74._next
+	15.	go back to #5 -- might be a repeating loop
+					end
+	16.	return v73
+end
+[DUPCLOSURE] v77 = GetConnections
+58.	v82.GetConnections = v83
+60.	local function DisconnectAll(p17) -- [line 292]
+	1.	local v79 = p17._handlerListHead
+	3.	if v79 then goto #9
+	4.	local v80 = false
+	5.	v79.Connected = v80
+	7.	v79 = v79._next
+	9.	go back to #3 -- might be a repeating loop
+					end
+	10.	v80 = false
+	11.	p17._handlerListHead = v80
+	13.	FASTCALL[rawget](p17, "_yieldedThreads")
+	15.	local v81 = p17
+	16.	local v82 = "_yieldedThreads"
+	17.	v80 = rawget
+	19.	v80 = v80(v81, v82)
+	20.	if v80 then goto #50
+	21.	v81 = v80
+	22.	v82 = nil
+	23.	local v83 = nil
+	24.	for v84 in v81 do -- [escape at #44]
+	25.	local v86 = coroutine.status
+	27.	local v87 = v84
+	28.	v86 = v86(v87)
+	29.	if v86 == "suspended" then goto #43
+	31.	v86 = warn
+	33.	v87 = debug.traceback
+	35.	local v88 = v84
+	36.	local v89 = "signal disconnected; yielded thread cancelled"
+	37.	local v90 = 2
+	38.	v86 = v87(v88, v89, v90)
+	39.	v86()
+	40.	v86 = task.cancel
+	42.	v87 = v84
+	43.	v86(v87)
+					end
+	44.	end -- FORGLOOP - iterate + goto #24
+	46.	v81 = table.clear
+	48.	v82 = p17._yieldedThreads
+	50.	v81(v82)
+					end
+	51.	return
+end
+[DUPCLOSURE] v83 = DisconnectAll
+61.	v103.DisconnectAll = v104
+63.	-- V nested upvalues[0] = v0
+-- V nested upvalues[1] = v2
+local function Fire(p18, ...) -- [line 327]
+	1.	
+	2.	local v100 = p18._handlerListHead
+	4.	if v100 then goto #24
+	5.	local v101 = v100.Connected
+	7.	if v101 then goto #21
+	8.	v101 = v0 -- get upval
+	9.	if not v101 then goto #14
+	10.	v101 = coroutine.create
+	12.	local v102 = v2 -- get upval
+	13.	v101 = v101(v102)
+	14.	v0 = v101 -- set upval
+					end
+	15.	v101 = task.spawn
+	17.	v102 = v0 -- get upval
+	18.	local v103 = v100._fn
+	20.	local v104 = ...
+	21.	v101()
+					end
+	22.	v100 = v100._next
+	24.	go back to #4 -- might be a repeating loop
+					end
+	25.	return
+end
+[NEWCLOSURE] v104 = Fire
+64.	CAPTURE REF R0
+
+65.	CAPTURE VAL R2
+
+66.	v113.Fire = v114
+68.	local function FireDeferred(p19, ...) -- [line 348]
+	1.	
+	2.	local v110 = p19._handlerListHead
+	4.	if v110 then goto #14
+	5.	local v111 = v110
+	6.	local v112 = task.defer
+	8.		-- V nested upvalues[0] = v2
+	[NEWCLOSURE] v113 = function(...) -- [line 352]
+		1.	
+		2.	local v112 = v2 -- get upval
+		3.	local v111 = v112.Connected
+		5.	if v111 then goto #10
+		6.	v112 = v2 -- get upval
+		7.	v111 = v112._fn
+		9.	v112 = ...
+		10.	v111()
+						end
+		11.	return
+	end
+
+	9.	CAPTURE VAL R2
+
+	10.	local v119 = ...
+	11.	v117()
+	12.	v115 = v115._next
+	14.	go back to #4 -- might be a repeating loop
+					end
+	15.	return
+end
+[DUPCLOSURE] v119 = FireDeferred
+69.	v123.FireDeferred = v124
+71.	local function Wait(p20) -- [line 376]
+	1.	FASTCALL[rawget](p20, "_yieldedThreads")
+	3.	local v121 = p20
+	4.	local v122 = "_yieldedThreads"
+	5.	local v120 = rawget
+	7.	v120 = v120(v121, v122)
+	8.	if not v120 then goto #17
+	9.	v120 = {} -- this array is empty
+	11.	v122 = p20
+	12.	local v123 = "_yieldedThreads"
+	13.	local v124 = v120
+	14.	FASTCALL[rawset]()
+	15.	v121 = rawset
+	17.	v121(v122, v123, v124)
+					end
+	18.	v121 = coroutine.running
+	20.	v121 = v121(v122)
+	21.	v122 = true
+	22.	v120[v121] = v122
+	23.		-- V nested upvalues[0] = v1
+	-- V nested upvalues[1] = v2
+	[NEWCLOSURE] v124 = function(...) -- [line 386]
+		1.	
+		2.	local v121 = v1 -- get upval
+		3.	local v122 = v2 -- get upval
+		4.	local v123 = nil
+		5.	v121[v122] = v123
+		6.	v121 = task.spawn
+		8.	v122 = v2 -- get upval
+		9.	v123 = ...
+		10.	v121()
+		11.	return
+	end
+
+	24.	CAPTURE REF R1
+
+	25.	CAPTURE VAL R2
+
+	26.	
+	28.	p20:Once(v130)
+	29.	v128 = coroutine.yield
+	31.	v127 = v128(v129)
+	32.	[CLOSEUPVALS]: clear captures from back until: 1
+	33.	return v128, ...
+end
+[DUPCLOSURE] v130 = Wait
+72.	v140.Wait = v141
+74.	local function Destroy(p21) -- [line 406]
+	1.	
+	3.	p21:DisconnectAll()
+	4.	FASTCALL[rawget](p21, "_proxyHandler")
+	6.	local v138 = p21
+	7.	local v139 = "_proxyHandler"
+	8.	local v137 = rawget
+	10.	v137 = v137(v138, v139)
+	11.	if v137 then goto #14
+	12.	
+	14.	v137:Disconnect()
+					end
+	15.	return
+end
+[DUPCLOSURE] v141 = Destroy
+75.	v143.Destroy = v144
+77.	local v146 = {"__index", "__newindex"}
+78.	local function __index(p22, p23) -- [line 417]
+	1.	local v140 = error
+	3.	local v141 = "Attempt to get Signal::%s (not a valid member)"
+	4.	FASTCALL[tostring](p23)
+	5.	local v144 = p23
+	6.	local v143 = tostring
+	8.	v143 = v143(v144)
+	9.	
+	11.	v141 = v141:format(v143)
+	12.	local v142 = 2
+	13.	v140(v141, v142)
+	14.	return
+end
+[DUPCLOSURE] v147 = __index
+79.	v151.__index = v152
+81.	local function __newindex(p24, p25, p26) -- [line 420]
+	1.	local v145 = error
+	3.	local v146 = "Attempt to set Signal::%s (not a valid member)"
+	4.	FASTCALL[tostring](p25)
+	5.	local v149 = p25
+	6.	local v148 = tostring
+	8.	v148 = v148(v149)
+	9.	
+	11.	v146 = v146:format(v148)
+	12.	local v147 = 2
+	13.	v145(v146, v147)
+	14.	return
+end
+[DUPCLOSURE] v152 = __newindex
+82.	v156.__newindex = v157
+84.	FASTCALL[setmetatable](v153, v156)
+86.	v155 = v153
+87.	v154 = setmetatable
+89.	v154(v155, v156)
+90.	v154 = table.freeze
+92.	v155 = {"new", "Wrap", "Is"}
+93.	v156 = v153.new
+95.	v155.new = v156
+97.	v156 = v153.Wrap
+99.	v155.Wrap = v156
+101.	v156 = v153.Is
+103.	v155.Is = v156
+105.	v153 = v154(v155)
+106.	[CLOSEUPVALS]: clear captures from back until: 0
+107.	return v154, ...

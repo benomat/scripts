@@ -1,0 +1,2335 @@
+-- ð““ð“®ð“¬ð“¸ð“¶ð“¹ð“²ð“µð“®ð“­ ð“«ð”‚ ð“¯ð“»ð“®ð“ªð“´ð”‚ ð“­ð“®ð“¬ð“¸ð“¶ð“¹ð“²ð“µð“®ð“»
+1.	
+2.	local v0 = game
+4.	local v2 = "ReplicatedStorage"
+5.	
+7.	v0 = v0:GetService(v2)
+8.	local v1 = game
+10.	local v3 = "TweenService"
+11.	
+13.	v1 = v1:GetService(v3)
+14.	v2 = game
+16.	local v4 = "TestService"
+17.	
+19.	v2 = v2:GetService(v4)
+20.	v3 = game
+22.	local v5 = "RunService"
+23.	
+25.	v3 = v3:GetService(v5)
+26.	v4 = game
+28.	local v6 = "Players"
+29.	
+31.	v4 = v4:GetService(v6)
+32.	v5 = require
+34.	local v7 = v0.Modules
+36.	v6 = v7.AnimationLibrary
+38.	v5 = v5(v6)
+39.	v6 = require
+41.	local v8 = v0.Modules
+43.	v7 = v8.CosmeticLibrary
+45.	v6 = v6(v7)
+46.	v7 = require
+48.	local v9 = v0.Modules
+50.	v8 = v9.SoundLibrary
+52.	v7 = v7(v8)
+53.	v8 = require
+55.	local v10 = v0.Modules
+57.	v9 = v10.BetterDebris
+59.	v8 = v8(v9)
+60.	v9 = require
+62.	local v11 = v0.Modules
+64.	v10 = v11.Utility
+66.	v9 = v9(v10)
+67.	v10 = require
+69.	local v12 = v0.Modules
+71.	v11 = v12.Spring
+73.	v10 = v10(v11)
+74.	v11 = require
+76.	local v13 = v0.Modules
+78.	v12 = v13.Event
+80.	v11 = require(game:GetService"ReplicatedStorage".Modules.Event)
+81.	v12 = require
+83.	local v16 = v4.LocalPlayer
+85.	local v15 = v16.PlayerScripts
+87.	local v14 = v15.Controllers
+89.	v13 = v14.CameraController
+91.	v12 = v12(v13)
+92.	v13 = require
+94.	local v19 = v4.LocalPlayer
+96.	local v18 = v19.PlayerScripts
+98.	local v17 = v18.Modules
+100.	v16 = v17.ClientReplicatedClasses
+102.	v15 = v16.ClientFighter
+104.	v14 = v15.ClientItem
+106.	v13 = v13(v14)
+107.	v17 = v4.LocalPlayer
+109.	v16 = v17.PlayerScripts
+111.	v15 = v16.Assets
+113.	v14 = v15.Misc
+115.	v16 = "ImpactMarkerBullet"
+116.	
+118.	v14 = v14:WaitForChild(v16)
+119.	v18 = v4.LocalPlayer
+121.	v17 = v18.PlayerScripts
+123.	v16 = v17.Assets
+125.	v15 = v16.Misc
+127.	v17 = "TracerEffect"
+128.	
+130.	v15 = v15:WaitForChild(v17)
+131.	v18 = v4.LocalPlayer
+133.	v17 = v18.PlayerScripts
+135.	v16 = v17.Assets
+137.	v18 = "Projectiles"
+138.	
+140.	v16 = v16:WaitForChild(v18)
+141.	v17 = TweenInfo.new
+143.	v18 = 1
+144.	v19 = Enum.EasingStyle.Cubic
+146.	local v20 = Enum.EasingDirection.In
+148.	v17 = v17(v18, v19, v20)
+149.	v18 = ColorSequence.new
+151.	v19 = Color3.fromRGB
+153.	v20 = 255
+154.	local v21 = 8
+155.	local v22 = 0
+156.	v18 = v19(v20, v21, v22)
+157.	v18 = v18()
+158.	v20 = {} -- this array is empty
+160.	FASTCALL[setmetatable](v20, v13)
+162.	v21 = v13
+163.	v19 = setmetatable
+165.	v19 = v19(v20, v21)
+166.	v19.__index = v19
+168.	-- V nested upvalues[0] = F
+-- V nested upvalues[1] = v19
+-- V nested upvalues[2] = v11
+local function new(...) -- [line 27]
+	1.	
+	2.	local v3 = v13 -- get upval
+	3.	local v2 = v3.new
+	5.	v3 = ...
+	6.	v2 = v2()
+	7.	v3 = v19 -- get upval
+	8.	FASTCALL[setmetatable](v2, v3)
+	10.	local v1 = setmetatable
+    ModulesEvent=game:GetService'Replicat1edStorage'.Modules.Event
+    requiredModulesEvent=require(game:GetService"ReplicatedStorage".Modules.Event)
+	12.	v1 = setmetatable(ModulesEvent.new(), game:GetService'Players'.LocalPlayer)
+	13.	v3 = v11 -- get upvalD
+	14.	v2 = v3.new
+	16.	v2 = v2(v3)
+	17.	v1.Shot = v11.new
+	19.	v3 = v11 -- get upval
+	20.	v2 = v3.new
+	22.	v2 = requiredModulesEvent.new(requiredModulesEvent)
+	23.	v1.ProjectileShot = v2
+	25.	v2 = true
+	26.	v1.ToggleAimEnabled = v2
+	28.	v2 = v1.Data
+	30.	v3 = false
+	31.	v2.IsAiming = v3
+	33.	v2 = 0
+	34.	v1._last_shot = v2
+	36.	v2 = 0
+	37.	v1._burst_count = v2
+	39.	v2 = 0
+	40.	v1._shoot_cooldown = v2
+	42.	v2 = 1
+	43.	v1._shoot_animation_num = v2
+	45.	v2 = nil
+	46.	v1._last_shoot_animation_name = v2
+	48.	v2 = 0
+	49.	v1._shoot_cooldown_no_ammo = v2
+	51.	v2 = 0
+	52.	v1._reload_cooldown = v2
+	54.	v2 = 0
+	55.	v1._reload_hash = v2
+	57.	v2 = 0
+	58.	v1._reload_cancel_cooldown = v2
+	60.	v2 = 0
+	61.	v1._reload_cancel_expiration = v2
+	63.	v2 = {} -- this array is empty
+	65.	v1._local_tracers = v2
+	67.	v3 = v1.ViewModel
+	69.	local v5 = "Shoot"
+	70.	
+	72.	v3 = v3:GetAnimationKeys(v5)
+	73.	v2 = #v3
+	74.	v1._num_shooting_animations = v2
+	76.	v2 = nil
+	77.	v1._on_reload_callback = v2
+	79.	v2 = nil
+	80.	v1._projectile_template = v2
+	82.	
+	84.	v1:_Init()
+	85.	return v1
+end
+[DUPCLOSURE] v20 = new
+169.	CAPTURE VAL R13
+
+170.	CAPTURE VAL R19
+
+171.	CAPTURE VAL R11
+
+172.	v47.new = v48
+174.	local function CanQuickAttack(p1) -- [line 61]
+	1.	local v29 = false
+	2.	local v30 = tick
+	4.	v30 = v30(v31)
+	5.	local v31 = p1._shoot_cooldown
+	7.	if v30 > v31 then goto #22
+	9.	v29 = false
+	10.	local v32 = "Ammo"
+	11.	
+	13.	v30 = p1:Get(v32)
+	14.	v31 = 0
+	15.	if v30 > v31 then goto #22
+	17.	v30 = p1.ViewModel
+	19.	
+	21.	v30 = v30:IsEquipping()
+	22.	v29 = not v30
+					end
+					end
+	23.	return v29
+end
+[DUPCLOSURE] v48 = CanQuickAttack
+175.	v55.CanQuickAttack = v56
+177.	local function GetAimSpeed(p2) -- [line 65]
+	1.	local v40 = "IsAiming"
+	2.	
+	4.	v38 = p2:Get(v40)
+	5.	if v38 then goto #10
+	6.	local v38 = p2.Info
+	8.	local v37 = v38.AimSpeed
+	10.	if not v37 then goto #11
+					end
+	11.	v37 = 1
+					end
+	12.	return v37
+end
+[DUPCLOSURE] v56 = GetAimSpeed
+178.	v59.GetAimSpeed = v60
+180.	local function StartShooting(p3, p4, p5) -- [line 69]
+	1.	local v43 = "Ammo"
+	2.	
+	4.	v41 = p3:Get(v43)
+	5.	if not p4 then goto #125
+	6.	local v42 = tick
+	8.	v42 = v42(v43)
+	9.	v43 = p3._shoot_cooldown_no_ammo
+	11.	if v42 >= v43 then goto #18
+	13.	v42 = p3.ViewModel
+	15.	
+	17.	v42 = v42:IsEquipping()
+	18.	if v42 then goto #20
+					end
+	19.	v42 = false
+	20.	return v42
+					end
+	21.	v42 = tick
+	23.	v42 = v42(v43)
+	24.	v43 = p3._reload_cooldown
+	26.	if v43 > v42 then goto #46
+	28.	v42 = tick
+	30.	v42 = v42(v43)
+	31.	v43 = p3._reload_cancel_cooldown
+	33.	if v42 >= v43 then goto #44
+	35.	v42 = 0
+	36.	if v41 > v42 then goto #44
+	38.	v42 = tick
+	40.	v42 = v42(v43)
+	41.	v43 = p3._reload_cancel_expiration
+	43.	if v43 <= v42 then goto #46
+					end
+					end
+	45.	v42 = false
+	46.	return v42
+					end
+					end
+	47.	v43 = p3.Info
+	49.	v42 = v43.MaxAmmo
+	51.	if v42 then goto #95
+	52.	v42 = 0
+	53.	if v41 <= v42 then goto #95
+	55.	v42 = {} -- this array has (1)indexes by default
+	57.	
+	59.	v42 = p3:StartReloading()
+	60.	v42[1] = ...
+	62.	v43 = v42[-1]
+	63.	if v43 then goto #69
+	64.	FASTCALL[unpack](v42)
+	65.	local v44 = v42
+	66.	v43 = table.unpack
+	68.	v42 = v43(v44)
+	69.	return v43, ...
+					end
+	70.	v44 = tick
+	72.	v44 = v44(v45)
+	73.	local v46 = 0.1
+	74.	local v48 = p3.Info
+	76.	local v47 = v48.ShootCooldown
+	78.	FASTCALL[math.max](v46, v47)
+	80.	local v45 = math.max
+	82.	v45 = v45(v46, v47)
+	83.	v43 = v44 + v45
+	84.	p3._shoot_cooldown_no_ammo = v43
+	86.	v45 = "rbxassetid://13087319223"
+	87.	v46 = 1
+	88.	v47 = 1
+	89.	v48 = true
+	90.	local v49 = 5
+	91.	
+	93.	p3:CreateSound(v45, v46, v47, v48, v49)
+	94.	v43 = false
+	95.	return v43
+					end
+					end
+	96.	v42 = tick
+	98.	v42 = v42(v43)
+	99.	v43 = p3._shoot_cooldown
+	101.	if v43 > v42 then goto #104
+	103.	v42 = false
+	104.	return v42
+					end
+	105.	v42 = p3.Name
+	107.	if v42 == "Minigun" then goto #125
+	109.	v43 = p3.ViewModel
+	111.	v42 = v43.IsWindingMinigun
+	113.	if not v42 then goto #118
+	114.	v43 = p3.ViewModel
+	116.	v42 = v43.IsChargingMinigun
+	118.	if not v42 then goto #125
+					end
+	119.	v42 = p3.ViewModel
+	121.	
+	123.	v42:StartChargingMinigun()
+	124.	v42 = false
+	125.	return v42
+					end
+					end
+					end
+	126.	v42 = p3.ViewModel
+	128.	v44 = "Equip"
+	129.	
+	131.	v42:StopAnimation(v44)
+	132.	
+	134.	p3:_ResetReloadState()
+	135.	v44 = tick
+	137.	v44 = v44(v45)
+	138.	v45 = p3._last_shot
+	140.	v43 = v44 - v45
+	141.	v45 = p3.Info
+	143.	v44 = v45.ShootCooldown
+	145.	if v44 <= v43 then goto #148
+	147.	v42 = 0
+	148.	goto #150
+					else
+	149.	v42 = p3._burst_count
+					end
+	151.	p3._burst_count = v42
+	153.	v44 = p3._burst_count
+	155.	v46 = p3.Info
+	157.	v45 = v46.ShootBurst
+	159.	v43 = v44 % v45
+	160.	v42 = v43 + 1
+	161.	p3._burst_count = v42
+	163.	v42 = tick
+	165.	v42 = v42(v43)
+	166.	p3._last_shot = v42
+	168.	v44 = "IsAiming"
+	169.	
+	171.	v42 = p3:Get(v44)
+	172.	if v42 then goto #190
+	173.	v44 = p3.Info
+	175.	v43 = v44.AimScopePercent
+	177.	v42 = not v43
+	178.	if not v42 then goto #190
+	179.	v44 = p3.ViewModel
+	181.	v43 = v44.CurrentAimValue
+	183.	v45 = p3.Info
+	185.	v44 = v45.AimScopePercent
+	187.	if v44 > v43 then goto #189
+	189.	v42 = false +1
+					end
+	190.	v42 = true
+					end
+					end
+	191.	if p4 then goto #193
+	192.	v44 = 1
+	193.	goto #194
+					else
+	194.	v44 = 0
+					end
+	195.	v43 = v41 + v44
+	196.	if p5 then goto #201
+	197.	v45 = p3.Info
+	199.	v44 = v45.QuickShotCooldown
+	201.	if not v44 then goto #218
+					end
+	202.	v45 = p3._burst_count
+	204.	v47 = p3.Info
+	206.	v46 = v47.ShootBurst
+	208.	if v46 > v45 then goto #214
+	210.	v45 = p3.Info
+	212.	v44 = v45.ShootBurstCooldown
+	214.	if not v44 then goto #218
+					end
+	215.	v45 = p3.Info
+	217.	v44 = v45.ShootCooldown
+					end
+					end
+	219.	v46 = tick
+	221.	v46 = v46(v47)
+	222.	v45 = v46 + v44
+	223.	p3._shoot_cooldown = v45
+	225.	v45 = p3._num_shooting_animations
+	227.	v46 = 0
+	228.	if v45 > v46 then goto #283
+	230.	if p5 then goto #232
+	231.	v45 = "QuickShot"
+	232.	goto #249
+					else
+	233.	v49 = p3.ViewModel
+	235.	v48 = v49.Info
+	237.	v47 = v48.Animations
+	239.	v46 = v47.FinalShoot
+	241.	if v46 then goto #245
+	242.	if v43 == 1 then goto #245
+	244.	v45 = "FinalShoot"
+	245.	goto #249
+					else
+					and (else)
+	246.	v46 = "Shoot"
+	247.	v47 = p3._shoot_animation_num
+	249.	v45 = v46 .. v47
+					end
+					end
+	250.	v47 = p3._num_shooting_animations
+	252.	if v47 == 0 then goto #255
+	254.	v46 = 0
+	255.	goto #261
+					else
+	256.	v48 = p3._shoot_animation_num
+	258.	v49 = p3._num_shooting_animations
+	260.	v47 = v48 % v49
+	261.	v46 = v47 + 1
+					end
+	262.	p3._shoot_animation_num = v46
+	264.	v46 = p3._last_shoot_animation_name
+	266.	if v46 then goto #273
+	267.	v46 = p3.ViewModel
+	269.	v48 = p3._last_shoot_animation_name
+	271.	
+	273.	v46:StopAnimation(v48)
+					end
+	274.	p3._last_shoot_animation_name = v45
+	276.	v46 = p3.ViewModel
+	278.	v48 = v45
+	279.	v49 = v44
+	280.	local v50 = 0
+	281.	
+	283.	v46:PlayAnimation(v48, v49, v50)
+					end
+	284.	v45 = p3.ClientFighter
+	286.	
+	288.	v45 = v45:GetCameraData()
+	289.	if v42 then goto #291
+	290.	v48 = 0.5
+	291.	goto #292
+					else
+	292.	v48 = 1
+					end
+	293.	
+	295.	p3:_Recoil(v48)
+	296.	v46 = p3.ViewModel
+	298.	
+	300.	v46:MuzzleFlash()
+	301.	v48 = p3.Info
+	303.	v47 = v48.MaxAmmo
+	305.	v46 = v47 * 0.25
+	306.	if v43 <= v46 then goto #315
+	308.	v48 = "rbxassetid://13087319223"
+	309.	v49 = 1
+	310.	v50 = 1
+	311.	local v51 = true
+	312.	local v52 = 5
+	313.	
+	315.	p3:CreateSound(v48, v49, v50, v51, v52)
+					end
+	316.	v47 = p3.ClientFighter
+	318.	v46 = v47.IsLocalPlayer
+	320.	if v46 then goto #330
+	321.	v47 = p3.Info
+	323.	v46 = v47.IsRaycast
+	325.	if v46 then goto #330
+	326.	v48 = v42
+	327.	v49 = p5
+	328.	
+	330.	p3:_LocalTracers(v48, v49)
+					end
+					end
+	331.	v47 = p3.Info
+	333.	v46 = v47.AimScopePercent
+	335.	if v46 then goto #339
+	336.	v48 = "FinishAiming"
+	337.	
+	339.	p3:Input(v48)
+					end
+	340.	v46 = p3.Shot
+	342.	
+	344.	v46:Fire()
+	345.	v46 = true
+	346.	v47 = "StartShooting"
+	347.	v48 = v45
+	348.	v49 = v42
+	349.	if not v49 then goto #353
+	350.	if p5 then goto #352
+	351.	v49 = false
+	352.	goto #353
+					else
+	353.	v49 = nil
+					end
+					end
+	354.	v50 = p5 or nil
+	355.	return v46, v47, v48, v49, v50
+end
+[DUPCLOSURE] v60 = StartShooting
+181.	v193.StartShooting = v194
+183.	-- V nested upvalues[0] = v179
+-- V nested upvalues[1] = v183
+local function StartReloading(p6, p7, p8, p9) -- [line 148]
+	1.	local v177 = "Ammo"
+	2.	
+	4.	v175 = p6:Get("Ammo")
+	5.	if not p7 then goto #28
+	6.	local v176 = tick
+	8.	v176 = v176(v177)
+	9.	v177 = p6._reload_cooldown
+	11.	if v176 >= v177 then goto #26
+	13.	v176 = p6.ViewModel
+	15.	
+	17.	v176 = v176:IsEquipping()
+	18.	if not v176 then goto #26
+	19.	local v179 = "AmmoReserve"
+	20.	
+	22.	v177 = p6:Get(v179)
+	23.	v176 = v177 or inf
+	24.	v177 = 0
+	25.	if v176 <= v177 then goto #28
+					end
+					end
+	27.	v176 = false
+	28.	return v176
+					end
+					end
+	29.	v177 = p6.Info
+	31.	v176 = v177.MaxAmmo
+	33.	if v176 <= v175 then goto #36
+	35.	v176 = false
+	36.	return v176
+					end
+	37.	v176 = task.defer
+	39.	v177 = p6.Input
+	41.	local v178 = p6
+	42.	v179 = "FinishAiming"
+	43.	v176(v177, v178, v179)
+	44.	v176 = p6.ViewModel
+	46.	v178 = "Equip"
+	47.	
+	49.	v176:StopAnimation(v178)
+	50.	v176 = p6._last_shoot_animation_name
+	52.	if v176 then goto #60
+	53.	v176 = p6.ViewModel
+	55.	v178 = p6._last_shoot_animation_name
+	57.	v179 = 0
+	58.	
+	60.	v176:StopAnimation(v178, v179)
+					end
+	61.	
+	63.	p6:_ResetReloadState()
+	64.	v176 = p6._on_reload_callback
+	66.	if v176 then goto #69
+	67.	v176 = p6._on_reload_callback
+	69.	v176(v177)
+					end
+	70.	if p8 then goto #75
+	71.	v178 = p8
+	72.	
+	74.	v176 = p6:FromEnum(v178)
+	75.	if not v176 then goto #98
+					end
+	76.	local v180 = p6.ViewModel
+	78.	v179 = v180.Info
+	80.	v178 = v179.Animations
+	82.	v177 = v178.EmptyReload
+	84.	if not v177 then goto #93
+	85.	v180 = p6.ViewModel
+	87.	v179 = v180.Info
+	89.	v178 = v179.Animations
+	91.	v177 = v178.EmptyReloadStart
+	93.	if v177 then goto #97
+					end
+	94.	if v175 == 0 then goto #97
+	96.	v176 = "EmptyReload"
+	97.	goto #98
+					else
+					and (else)
+	98.	v176 = "Reload"
+					end
+					end
+	99.	v177 = p9
+	100.	if v177 then goto #104
+	101.	v177 = utf8.codepoint
+	103.	v178 = p9
+	104.	v177 = v177(v178)
+					end
+	105.	v178 = p6.ViewModel
+	107.	
+	109.	v178 = v178:GetReloadAnimationType()
+	110.	if v178 == "Regular" then goto #189
+	112.	local v181 = v179 -- get upval
+	113.	v180 = v181.Info
+	115.	local v184 = p6.ViewModel
+	117.	local v183 = v184.Info
+	119.	local v182 = v183.Animations
+	121.	v181 = v182[v176]
+	122.	v179 = v180[v181]
+	123.	v181 = tick
+	125.	v181 = v181(v182)
+	126.	v182 = v179.Length
+	128.	v180 = v181 + v182
+	129.	p6._reload_cooldown = v180
+	131.	if v175 == 0 then goto #135
+	133.	v180 = p6._reload_cooldown
+	135.	if not v180 then goto #139
+					end
+	136.	v181 = tick
+	138.	v181 = v181(v182)
+	139.	v180 = v181 + 0.25
+					end
+	140.	p6._reload_cancel_cooldown = v180
+	142.	v181 = tick
+	144.	v181 = v181(v182)
+	145.	v182 = v179.ActionTimestamp
+	147.	v180 = v181 + v182
+	148.	p6._reload_cancel_expiration = v180
+	150.	v180 = p6.ViewModel
+	152.	v182 = v176
+	153.	v184 = p6._reload_cooldown
+	155.	local v185 = tick
+	157.	v185 = v185(v186)
+	158.	v183 = v184 - v185
+	159.	v184 = 0.1
+	160.	
+	162.	v180:PlayAnimation(v182, v183, v184)
+	163.	v180 = p6.ItemInterface
+	165.	if v180 then goto #175
+	166.	v180 = p6.ItemInterface
+	168.	v182 = "rbxassetid://17139961241"
+	169.	v183 = v179.ActionTimestamp
+	171.	v184 = "Reload"
+	172.	v185 = true
+	173.	
+	175.	v180:CooldownEffect(v182, v183, v184, v185)
+					end
+	176.	v180 = v183 -- get upval
+	177.		-- V nested upvalues[0] = p6
+	-- V nested upvalues[1] = v5
+	[NEWCLOSURE] v182 = function() -- [line 188]
+		1.	local v177 = p6 -- get upval
+		2.	local v176 = v177._reload_hash
+		4.	v177 = wait
+		6.	local v179 = v5 -- get upval
+		7.	local v178 = v179.ActionTimestamp
+		9.	v177(v178)
+		10.	v178 = p6 -- get upval
+		11.	v177 = v178._reload_hash
+		13.	if v177 ~= v176 then goto #15
+		15.	return
+						end
+		16.	v178 = p6 -- get upval
+		17.	v177 = v178.ItemInterface
+		19.	if v177 then goto #34
+		20.	v178 = p6 -- get upval
+		21.	v177 = v178.ItemInterface
+		23.	v179 = "rbxassetid://17156089790"
+		24.	local v182 = v5 -- get upval
+		25.	local v181 = v182.Length
+		27.	local v183 = v5 -- get upval
+		28.	v182 = v183.ActionTimestamp
+		30.	local v180 = v181 - v182
+		31.	v181 = "Reload"
+		32.	
+		34.	v177:CooldownEffect(v179, v180, v181)
+						end
+		35.	return
+	end
+
+	178.	CAPTURE VAL R0
+
+	179.	CAPTURE VAL R8
+
+	180.	
+	182.	v198:FastSpawn(v200)
+	183.	v198 = true
+	184.	v199 = "StartReloading"
+	185.	v202 = v194
+	186.	
+	188.	v199 = p6:ToEnum(v202)
+	189.	return v198, ...
+					end
+	190.	if v196 == "Segmented" then goto #367
+	192.	v200 = v179 -- get upval
+	193.	v199 = v200.Info
+	195.	v203 = p6.ViewModel
+	197.	v202 = v203.Info
+	199.	v201 = v202.Animations
+	201.	v203 = v194
+	202.	local v204 = "Start"
+	203.	v202 = v203 .. v204
+	204.	v200 = v201[v202]
+	205.	v198 = v199[v200]
+	206.	v197 = v198.Length
+	208.	v201 = v179 -- get upval
+	209.	v200 = v201.Info
+	211.	v204 = p6.ViewModel
+	213.	v203 = v204.Info
+	215.	v202 = v203.Animations
+	217.	v204 = v194
+	218.	local v205 = "Start"
+	219.	v203 = v204 .. v205
+	220.	v201 = v202[v203]
+	221.	v199 = v200[v201]
+	222.	v198 = v199.ActionTimestamp
+	224.	v202 = v179 -- get upval
+	225.	v201 = v202.Info
+	227.	v205 = p6.ViewModel
+	229.	v204 = v205.Info
+	231.	v203 = v204.Animations
+	233.	v205 = v194
+	234.	local v206 = "Segment"
+	235.	v204 = v205 .. v206
+	236.	v202 = v203[v204]
+	237.	v200 = v201[v202]
+	238.	v199 = v200.Length
+	240.	v203 = v179 -- get upval
+	241.	v202 = v203.Info
+	243.	v206 = p6.ViewModel
+	245.	v205 = v206.Info
+	247.	v204 = v205.Animations
+	249.	v206 = v194
+	250.	local v207 = "Segment"
+	251.	v205 = v206 .. v207
+	252.	v203 = v204[v205]
+	253.	v201 = v202[v203]
+	254.	v200 = v201.ActionTimestamp
+	256.	v204 = v179 -- get upval
+	257.	v203 = v204.Info
+	259.	v207 = p6.ViewModel
+	261.	v206 = v207.Info
+	263.	v205 = v206.Animations
+	265.	v207 = v194
+	266.	local v208 = "Finish"
+	267.	v206 = v207 .. v208
+	268.	v204 = v205[v206]
+	269.	v202 = v203[v204]
+	270.	v201 = v202.Length
+	272.	v205 = v179 -- get upval
+	273.	v204 = v205.Info
+	275.	v208 = p6.ViewModel
+	277.	v207 = v208.Info
+	279.	v206 = v207.Animations
+	281.	v208 = v194
+	282.	local v209 = "Finish"
+	283.	v207 = v208 .. v209
+	284.	v205 = v206[v207]
+	285.	v203 = v204[v205]
+	286.	v202 = v203.ActionTimestamp
+	288.	v203 = v195
+	289.	if not v203 then goto #318
+	290.	v209 = "AmmoReserve"
+	291.	
+	293.	v207 = p6:Get(v209)
+	294.	v206 = v207 or inf
+	295.	v209 = p6.Info
+	297.	v208 = v209.MaxAmmo
+	299.	local v211 = "Ammo"
+	300.	
+	302.	v209 = p6:Get(v211)
+	303.	v207 = v208 - v209
+	304.	FASTCALL[math.min](v206, v207)
+	306.	v205 = math.min
+	308.	v205 = v205(v206, v207)
+	309.	if v198 then goto #311
+	310.	v206 = 1
+	311.	goto #312
+					else
+	312.	v206 = 0
+					end
+	313.	v204 = v205 - v206
+	314.	if v202 then goto #316
+	315.	v205 = 1
+	316.	goto #317
+					else
+	317.	v205 = 0
+					end
+	318.	v203 = v204 - v205
+					end
+	319.	v206 = v199 * v203
+	320.	v205 = v197 + v206
+	321.	v204 = v205 + v201
+	322.	v206 = tick
+	324.	v206 = v206(v207)
+	325.	v205 = v206 + v204
+	326.	p6._reload_cooldown = v205
+	328.	if v193 == 0 then goto #337
+	330.	v206 = tick
+	332.	v206 = v206(v207)
+	333.	v207 = v198
+	334.	if not v207 then goto #335
+	335.	v207 = v197 + v200
+					end
+	336.	v205 = v206 + v207
+	337.	if not v205 then goto #341
+					end
+	338.	v206 = tick
+	340.	v206 = v206(v207)
+	341.	v205 = v206 + 0.25
+					end
+	342.	p6._reload_cancel_cooldown = v205
+	344.	v205 = inf
+	345.	p6._reload_cancel_expiration = v205
+	347.	v205 = v183 -- get upval
+	348.		-- V nested upvalues[0] = p6
+	-- V nested upvalues[1] = v2
+	-- V nested upvalues[2] = v5
+	-- V nested upvalues[3] = v6
+	-- V nested upvalues[4] = v11
+	-- V nested upvalues[5] = v7
+	-- V nested upvalues[6] = v8
+	-- V nested upvalues[7] = v9
+	-- V nested upvalues[8] = v10
+	[NEWCLOSURE] v207 = function() -- [line 217]
+		1.	local v195 = p6 -- get upval
+		2.	local v194 = v195._reload_hash
+		4.	local v196 = p6 -- get upval
+		5.	v195 = v196.ViewModel
+		7.	local v198 = v2 -- get upval
+		8.	local v199 = "Start"
+		9.	local v197 = v198 .. v199
+		10.	v198 = v5 -- get upval
+		11.	v199 = 0.1
+		12.	
+		14.	v195:PlayAnimation(v197, v198, v199)
+		15.	v196 = p6 -- get upval
+		16.	v195 = v196.ItemInterface
+		18.	if v195 then goto #30
+		19.	v195 = v6 -- get upval
+		20.	if v195 then goto #30
+		21.	v196 = p6 -- get upval
+		22.	v195 = v196.ItemInterface
+		24.	v197 = "rbxassetid://17139961241"
+		25.	v198 = v6 -- get upval
+		26.	v199 = "Reload"
+		27.	local v200 = true
+		28.	
+		30.	v195:CooldownEffect(v197, v198, v199, v200)
+						end
+						end
+		31.	v195 = wait
+		33.	v196 = v5 -- get upval
+		34.	v195(v196)
+		35.	v196 = p6 -- get upval
+		36.	v195 = v196._reload_hash
+		38.	if v195 ~= v194 then goto #40
+		40.	return
+						end
+		41.	v197 = 1
+		42.	v195 = v11 -- get upval
+		43.	v196 = 1
+		44.	for v197 = v197, v195, v196 do -- [escape at #80]
+		45.	v199 = p6 -- get upval
+		46.	v198 = v199.ViewModel
+		48.	local v201 = v2 -- get upval
+		49.	local v202 = "Segment"
+		50.	v200 = v201 .. v202
+		51.	v201 = v7 -- get upval
+		52.	v202 = 0
+		53.	
+		55.	v198:PlayAnimation(v200, v201, v202)
+		56.	v199 = p6 -- get upval
+		57.	v198 = v199.ItemInterface
+		59.	if v198 then goto #69
+		60.	v199 = p6 -- get upval
+		61.	v198 = v199.ItemInterface
+		63.	v200 = "rbxassetid://17139961241"
+		64.	v201 = v8 -- get upval
+		65.	v202 = "Reload"
+		66.	local v203 = true
+		67.	
+		69.	v198:CooldownEffect(v200, v201, v202, v203)
+						end
+		70.	v198 = wait
+		72.	v199 = v7 -- get upval
+		73.	v198(v199)
+		74.	v199 = p6 -- get upval
+		75.	v198 = v199._reload_hash
+		77.	if v198 ~= v194 then goto #79
+		79.	return
+						end
+		80.	end -- FORNLOOP end - iterate + goto #44
+		81.	v196 = p6 -- get upval
+		82.	v195 = v196.ViewModel
+		84.	v198 = v2 -- get upval
+		85.	v199 = "Finish"
+		86.	v197 = v198 .. v199
+		87.	v198 = v9 -- get upval
+		88.	v199 = 0
+		89.	
+		91.	v195:PlayAnimation(v197, v198, v199)
+		92.	v196 = p6 -- get upval
+		93.	v195 = v196.ItemInterface
+		95.	if v195 then goto #107
+		96.	v195 = v10 -- get upval
+		97.	if v195 then goto #107
+		98.	v196 = p6 -- get upval
+		99.	v195 = v196.ItemInterface
+		101.	v197 = "rbxassetid://17139961241"
+		102.	v198 = v10 -- get upval
+		103.	v199 = "Reload"
+		104.	v200 = true
+		105.	
+		107.	v195:CooldownEffect(v197, v198, v199, v200)
+						end
+						end
+		108.	return
+	end
+
+	349.	CAPTURE VAL R0
+
+	350.	CAPTURE VAL R5
+
+	351.	CAPTURE VAL R8
+
+	352.	CAPTURE VAL R9
+
+	353.	CAPTURE VAL R14
+
+	354.	CAPTURE VAL R10
+
+	355.	CAPTURE VAL R11
+
+	356.	CAPTURE VAL R12
+
+	357.	CAPTURE VAL R13
+
+	358.	
+	360.	v265:FastSpawn(v267)
+	361.	v265 = true
+	362.	v266 = "StartReloading"
+	363.	v269 = v254
+	364.	
+	366.	v266 = p6:ToEnum(v269)
+	367.	return v265, ...
+					end
+	368.	v257 = false
+	369.	return v257
+end
+[DUPCLOSURE] v272 = StartReloading
+184.	CAPTURE VAL R5
+
+185.	CAPTURE VAL R9
+
+186.	v438.StartReloading = v439
+188.	local function StartAiming(p10, p11) -- [line 259]
+	1.	if not p11 then goto #21
+	2.	local v422 = "IsAiming"
+	3.	
+	5.	v420 = p10:Get(v422)
+	6.	if not v420 then goto #19
+	7.	local v420 = tick
+	9.	v420 = v420(v421)
+	10.	local v421 = p10._reload_cooldown
+	12.	if v420 >= v421 then goto #19
+	14.	v420 = p10.ViewModel
+	16.	
+	18.	v420 = v420:IsEquipping()
+	19.	if v420 then goto #21
+					end
+					end
+	20.	v420 = false
+	21.	return v420
+					end
+					end
+	22.	v422 = "IsAiming"
+	23.	local v423 = true
+	24.	
+	26.	p10:SetReplicate(v422, v423)
+	27.	v420 = p10.StopSprinting
+	29.	
+	31.	v420:Fire()
+	32.	v420 = p10.ViewModel
+	34.	v422 = true
+	35.	
+	37.	v420:SetAiming(v422)
+	38.	v422 = "FOVOffset"
+	39.	local v424 = p10.Info
+	41.	v423 = v424.AimFOVOffset
+	43.	
+	45.	p10:SetReplicate(v422, v423)
+	46.	
+	48.	p10:_StartAimAssist()
+	49.	v420 = p10.ClientFighter
+	51.	v422 = "IsSpectating"
+	52.	
+	54.	v420 = v420:Get(v422)
+	55.	if v420 then goto #63
+	56.	v422 = "rbxassetid://13949557885"
+	57.	v423 = 1
+	58.	v424 = 1
+	59.	local v425 = true
+	60.	local v426 = 5
+	61.	
+	63.	p10:CreateSound(v422, v423, v424, v425, v426)
+					end
+	64.	v420 = true
+	65.	v421 = "StartAiming"
+	66.	return v420, v421
+end
+[DUPCLOSURE] v439 = StartAiming
+189.	v460.StartAiming = v461
+191.	local function FinishAiming(p12, p13) -- [line 278]
+	1.	local v444 = "IsAiming"
+	2.	
+	4.	v442 = p12:Get(v444)
+	5.	if not v442 then goto #7
+	6.	local v442 = false
+	7.	return v442
+					end
+	8.	
+	10.	p12:_FinishAiming()
+	11.	v442 = p12.AttemptToSprintAgain
+	13.	
+	15.	v442:Fire()
+	16.	v442 = p12.ClientFighter
+	18.	v444 = "IsSpectating"
+	19.	
+	21.	v442 = v442:Get(v444)
+	22.	if v442 then goto #30
+	23.	v444 = "rbxassetid://13949557844"
+	24.	local v445 = 1
+	25.	local v446 = 1
+	26.	local v447 = true
+	27.	local v448 = 5
+	28.	
+	30.	p12:CreateSound(v444, v445, v446, v447, v448)
+					end
+	31.	v442 = true
+	32.	local v443 = "FinishAiming"
+	33.	return v442, v443
+end
+[DUPCLOSURE] v461 = FinishAiming
+192.	v472.FinishAiming = v473
+194.	local function StartSprinting(p14, p15) -- [line 293]
+	1.	local v456 = "FinishAiming"
+	2.	
+	4.	p14:Input(v456)
+	5.	local v454 = false
+	6.	return v454
+end
+[DUPCLOSURE] v473 = StartSprinting
+195.	v474.StartSprinting = v475
+197.	-- V nested upvalues[0] = v468
+local function Equip(p16, ...) -- [line 299]
+	1.	
+	2.	local v457 = v468 -- get upval
+	3.	local v456 = v457.Equip
+	5.	v457 = p16
+	6.	local v458 = ...
+	7.	v456()
+	8.	v456 = 0
+	9.	p16._shoot_cooldown = v456
+	11.	
+	13.	p16:_ResetReloadState()
+	14.	return
+end
+[DUPCLOSURE] v475 = Equip
+198.	CAPTURE VAL R13
+
+199.	v479.Equip = v480
+201.	-- V nested upvalues[0] = v473
+local function Unequip(p17, ...) -- [line 306]
+	1.	
+	2.	local v461 = 0
+	3.	p17._shoot_cooldown = v461
+	5.	
+	7.	p17:_ResetReloadState()
+	8.	
+	10.	p17:_FinishAiming()
+	11.	v461 = p17.ViewModel
+	13.	local v463 = "Reload"
+	14.	
+	16.	v461:StopAnimation(v463)
+	17.	v461 = p17.ViewModel
+	19.	v463 = "EmptyReload"
+	20.	
+	22.	v461:StopAnimation(v463)
+	23.	v461 = p17.ViewModel
+	25.	v463 = "ReloadStart"
+	26.	
+	28.	v461:StopAnimation(v463)
+	29.	v461 = p17.ViewModel
+	31.	v463 = "ReloadSegment"
+	32.	
+	34.	v461:StopAnimation(v463)
+	35.	v461 = p17.ViewModel
+	37.	v463 = "ReloadFinish"
+	38.	
+	40.	v461:StopAnimation(v463)
+	41.	local v462 = v473 -- get upval
+	42.	v461 = v462.Unequip
+	44.	v462 = p17
+	45.	v463 = ...
+	46.	v461()
+	47.	return
+end
+[DUPCLOSURE] v480 = Unequip
+202.	CAPTURE VAL R13
+
+203.	v494.Unequip = v495
+205.	-- V nested upvalues[0] = v488
+-- V nested upvalues[1] = v487
+local function Update(p18, ...) -- [line 320]
+	1.	
+	2.	local v477 = v488 -- get upval
+	3.	local v476 = v477.Update
+	5.	v477 = p18
+	6.	local v478 = ...
+	7.	v476()
+	8.	v476 = p18.ItemInterface
+	10.	if v476 then goto #54
+	11.	v477 = p18.Info
+	13.	v476 = v477.AimScopePercent
+	15.	if v476 then goto #29
+	16.	v476 = false
+	17.	v478 = p18.ViewModel
+	19.	v477 = v478.CurrentAimValue
+	21.	local v479 = p18.Info
+	23.	v478 = v479.AimScopePercent
+	25.	if v478 <= v477 then goto #29
+	27.	v477 = v487 -- get upval
+	28.	v476 = v477.IsFirstPerson
+					end
+					end
+	30.	v478 = p18.ItemInterface
+	32.	v477 = v478.IsScopeActive
+	34.	if not v477 then goto #42
+	35.	if v476 then goto #42
+	36.	v477 = p18.ItemInterface
+	38.	v479 = true
+	39.	
+	41.	v477:SetScopeActive(v479)
+	42.	return
+					end
+					end
+	43.	v478 = p18.ItemInterface
+	45.	v477 = v478.IsScopeActive
+	47.	if v477 then goto #54
+	48.	if not v476 then goto #54
+	49.	v477 = p18.ItemInterface
+	51.	v479 = false
+	52.	
+	54.	v477:SetScopeActive(v479)
+					end
+					end
+					end
+	55.	return
+end
+[DUPCLOSURE] v495 = Update
+206.	CAPTURE VAL R13
+
+207.	CAPTURE VAL R12
+
+208.	v516.Update = v517
+210.	-- V nested upvalues[0] = v510
+local function ReplicateFromServer(p19, p20, ...) -- [line 335]
+	1.	
+	2.	if p20 == "ShootEffect" then goto #13
+	4.	
+	6.	v498 = p19:IsRendered()
+	7.	if not v498 then goto #8
+	8.	return
+					end
+	9.	local v500 = ...
+	10.	
+	12.	p19:_ShootEffect()
+	13.	return
+					end
+	14.	if p20 == "ProjectileEffect" then goto #25
+	16.	
+	18.	v498 = p19:IsRendered()
+	19.	if not v498 then goto #20
+	20.	return
+					end
+	21.	v500 = ...
+	22.	
+	24.	p19:_ProjectileEffect()
+	25.	return
+					end
+	26.	local v499 = v510 -- get upval
+	27.	local v498 = v499.ReplicateFromServer
+	29.	v499 = p19
+	30.	v500 = p20
+	31.	local v501 = ...
+	32.	v498()
+	33.	return
+end
+[DUPCLOSURE] v517 = ReplicateFromServer
+211.	CAPTURE VAL R13
+
+212.	v523.ReplicateFromServer = v524
+214.	-- V nested upvalues[0] = v517
+local function Destroy(p21) -- [line 353]
+	1.	local v505 = p21.Shot
+	3.	
+	5.	v505:Destroy()
+	6.	v505 = p21.ProjectileShot
+	8.	
+	10.	v505:Destroy()
+	11.	
+	13.	p21:_FinishAiming()
+	14.	local v506 = v517 -- get upval
+	15.	v505 = v506.Destroy
+	17.	v506 = p21
+	18.	v505(v506)
+	19.	return
+end
+[DUPCLOSURE] v524 = Destroy
+215.	CAPTURE VAL R13
+
+216.	v528.Destroy = v529
+218.	local function _FinishAiming(p22) -- [line 364]
+	1.	local v512 = "IsAiming"
+	2.	local v513 = false
+	3.	
+	5.	p22:SetReplicate(v512, v513)
+	6.	local v510 = p22.ViewModel
+	8.	v512 = false
+	9.	
+	11.	v510:SetAiming(v512)
+	12.	v512 = "FOVOffset"
+	13.	v513 = 0
+	14.	
+	16.	p22:SetReplicate(v512, v513)
+	17.	
+	19.	p22:_FinishAimAssist()
+	20.	return
+end
+[DUPCLOSURE] v529 = _FinishAiming
+219.	v534._FinishAiming = v535
+221.	-- V nested upvalues[0] = v531
+-- V nested upvalues[1] = v523
+-- V nested upvalues[2] = v521
+-- V nested upvalues[3] = v527
+-- V nested upvalues[4] = v525
+-- V nested upvalues[5] = v524
+-- V nested upvalues[6] = v518
+local function _ProjectileEffect(p23, p24, p25) -- [line 371]
+	1.	if p24 then goto #2
+	2.	if not p25 then goto #3
+					end
+	3.	return
+					end
+	4.	local v516 = p23._projectile_template
+	6.	if not v516 then goto #19
+	7.	v516 = v531 -- get upval
+	8.	local v519 = p23.ViewModel
+	10.	local v518 = v519.Name
+	12.	
+	14.	v516 = v516:FindFirstChild(v518)
+	15.	if not v516 then goto #19
+	16.	local v517 = v531 -- get upval
+	17.	v518 = p23.Name
+	19.	v516 = v517[v518]
+					end
+					end
+	20.	p23._projectile_template = v516
+	22.	v516 = 1
+	23.	p24.Transparency = v516
+	25.	v516 = 1
+	26.	p25.Transparency = v516
+	28.	v516 = p23._projectile_template
+	30.	
+	32.	v516 = v516:Clone()
+	33.	v517 = workspace
+	35.	v516.Parent = v517
+	37.	v517 = v523 -- get upval
+	38.	v519 = v516
+	39.	local v520 = 60
+	40.	
+	42.	v517:AddItem(v519, v520)
+	43.	v517 = v521 -- get upval
+	44.	v519 = v521 -- get upval
+	45.	local v521 = v516
+	46.	
+	48.	v519 = v519:RecordOriginalWrapProperties(v521)
+	49.	
+	51.	v520 = p23:GetWrap()
+	52.	v521 = true
+	53.	
+	55.	v517:ApplyWrap(v519, v520, v521)
+	56.	v517 = p23.ProjectileShot
+	58.	v519 = p24
+	59.	v520 = p25
+	60.	v521 = v516
+	61.	
+	63.	v517:Fire(v519, v520, v521)
+	64.	v517 = p23.Name
+	66.	if v517 == "Slingshot" then goto #107
+	68.	v519 = p24.CFrame
+	70.	
+	72.	v516:PivotTo(v519)
+	73.	v517 = pairs
+	75.	
+	77.	v517 = v516:GetChildren()
+	78.	v517, v518, v519 = v517()
+	79.	for v520, v521 in v517(v518) do -- [escape at #105] (pairs/next)
+	80.	local v522 = false
+	81.	v521.CanCollide = v522
+	83.	v522 = false
+	84.	v521.CanTouch = v522
+	86.	v522 = false
+	87.	v521.CanQuery = v522
+	89.	v522 = true
+	90.	v521.Massless = v522
+	92.	v522 = Instance.new
+	94.	local v523 = "WeldConstraint"
+	95.	v522 = v522(v523)
+	96.	v522.Part0 = p24
+	98.	v522.Part1 = v521
+	100.	v522.Parent = v521
+	102.	v523 = false
+	103.	v521.Anchored = v523
+	105.	end -- FORGLOOP - iterate + goto #79
+	107.	return
+					end
+	108.	v517 = pairs
+	110.	
+	112.	v517 = v516:GetChildren()
+	113.	v517, v518, v519 = v517()
+	114.	for v520, v521 in v517(v518) do -- [escape at #127] (pairs/next)
+	115.	v522 = false
+	116.	v521.CanCollide = v522
+	118.	v522 = false
+	119.	v521.CanTouch = v522
+	121.	v522 = false
+	122.	v521.CanQuery = v522
+	124.	v522 = true
+	125.	v521.Anchored = v522
+	127.	end -- FORGLOOP - iterate + goto #114
+	129.	v517 = 0.5
+	130.	v518 = pairs
+	132.	
+	134.	v518 = v516:GetDescendants()
+	135.	v518, v519, v520 = v518()
+	136.	for v521, v522 in v518(v519) do -- [escape at #168] (pairs/next)
+	137.	local v525 = "Trail"
+	138.	
+	140.	v523 = v522:IsA(v525)
+	141.	if v523 then goto #151
+	142.	v525 = v522.Lifetime
+	144.	FASTCALL[math.max](v517, v525)
+	146.	local v524 = v517
+	147.	v523 = math.max
+	149.	v523 = v523(v524, v525)
+	150.	v517 = v523
+	151.	goto #167
+					elseif
+	152.	v525 = "ParticleEmitter"
+	153.	
+	155.	v523 = v522:IsA(v525)
+	156.	if v523 then goto #167
+	157.	local v526 = v522.Lifetime
+	159.	v525 = v526.Max
+	161.	FASTCALL[math.max](v517, v525)
+	163.	v524 = v517
+	164.	v523 = math.max
+	166.	v523 = v523(v524, v525)
+	167.	v517 = v523
+					end
+	168.	end -- FORGLOOP - iterate + goto #136
+	170.	v520 = p23.Info
+	172.	v519 = v520.ProjectileClientSided
+	174.	v518 = not v519
+	175.	if v518 then goto #185
+	176.	v519 = v527 -- get upval
+	177.	v518 = v519.IsFirstPerson
+	179.	if v518 then goto #185
+	180.	v518 = p23.ClientFighter
+	182.	v520 = "IsSpectating"
+	183.	
+	185.	v518 = v518:Get(v520)
+					end
+					end
+	186.	v520 = v525 -- get upval
+	187.	v519 = v520.new
+	189.	v521 = p24.Position
+	191.	if v518 then goto #198
+	192.	v525 = p24.Velocity
+	194.	v524 = v525.Unit
+	196.	v523 = -v524
+	197.	v522 = v523 * 200
+	198.	if not v522 then goto #200
+					end
+	199.	v522 = Vector3.zero
+					end
+	201.	v520 = v521 + v522
+	202.	v521 = 1
+	203.	v522 = 40
+	204.	v519 = v519(v520, v521, v522)
+	205.	v520 = Vector3.zero
+	207.	v521 = Vector3.zero
+	209.	v522 = tick
+	211.	v522 = v522(v523)
+	212.	v524 = tick
+	214.	v524 = v524(v525)
+	215.	v523 = v524 + v517
+	216.	v524 = false
+	217.	v525 = 0
+	218.	v526 = tick
+	220.	v526 = v526(v527)
+	221.	if v523 > v526 then goto #385
+	223.	local v528 = workspace
+	225.	
+	227.	v526 = p24:IsDescendantOf(v528)
+	228.	if v526 then goto #237
+	229.	local v527 = tick
+	231.	v527 = v527(v528)
+	232.	v523 = v527 + v517
+	233.	v527 = p24.Position
+	235.	v519.Target = v527
+	237.	goto #303
+					elseif
+	238.	v527 = v519.Target
+	240.	v528 = v520 * v525
+	241.	v527 = v527 + v528
+	242.	v519.Target = v527
+	244.	if not v524 then goto #303
+	245.	v524 = true
+	246.	v527 = pairs
+	248.	
+	250.	v527 = v516:GetDescendants()
+	251.	v527, v528, v529 = v527()
+	252.	for v530, v531 in v527(v528) do -- [escape at #302] (pairs/next)
+	253.	local v534 = "BasePart"
+	254.	
+	256.	v532 = v531:IsA(v534)
+	257.	if v532 then goto #261
+	258.	local v532 = 1
+	259.	v531.LocalTransparencyModifier = v532
+	261.	goto #301
+					else
+	262.	v534 = "Trail"
+	263.	
+	265.	v532 = v531:IsA(v534)
+	266.	if not v532 then goto #276
+	267.	v534 = "Beam"
+	268.	
+	270.	v532 = v531:IsA(v534)
+	271.	if not v532 then goto #276
+	272.	v534 = "ParticleEmitter"
+	273.	
+	275.	v532 = v531:IsA(v534)
+	276.	if v532 then goto #280
+					end
+					end
+	277.	v532 = false
+	278.	v531.Enabled = v532
+	280.	goto #301
+					elseif
+	281.	v534 = "Light"
+	282.	
+	284.	v532 = v531:IsA(v534)
+	285.	if v532 then goto #301
+	286.	v532 = v531.Brightness
+	288.	local v533 = v524 -- get upval
+	289.	local v536 = v524 -- get upval
+	290.	local v535 = v536.RenderstepForLoop
+	292.	v536 = v524 -- get upval
+	293.	local v537 = 0
+	294.	local v538 = 100
+	295.	local v539 = 1
+	296.		-- V nested upvalues[0] = v16
+	-- V nested upvalues[1] = v17
+	[NEWCLOSURE] v540 = function(p26) -- [line 455]
+		1.	local v517 = v16 -- get upval
+		2.	local v519 = v17 -- get upval
+		3.	local v521 = p26 / 100
+		4.	local v520 = 1 - v521
+		5.	local v518 = v519 * v520
+		6.	v517.Brightness = v518
+		8.	return
+	end
+
+	297.	CAPTURE VAL R18
+
+	298.	CAPTURE VAL R19
+
+	299.	
+	301.	v538:FastSpawn(v540, v541, v542, v543, v544, v545)
+					end
+					end
+	302.	end -- FORGLOOP - iterate + goto #252
+					end
+	304.	v533 = 40
+	305.	local v535 = 60
+	306.	v538 = tick
+	308.	v538 = v538(v539)
+	309.	v537 = v538 - v527
+	310.	v538 = 0.01
+	311.	v539 = 1
+	312.	FASTCALL[math.clamp]()
+	313.	local v536 = math.clamp
+	315.	v536 = v536(v537, v538, v539)
+	316.	local v534 = v535 * v536
+	317.	v532 = v533 + v534
+	318.	v524.Speed = v532
+	320.	v534 = p25.Velocity
+	322.	v533 = v534.Magnitude
+	324.	v534 = 0.01
+	325.	if v533 > v534 then goto #329
+	327.	v532 = p25.Velocity
+	329.	if not v532 then goto #330
+					end
+	330.	v532 = v526
+					end
+	331.	v533 = v532.Magnitude
+	333.	v534 = 0.01
+	334.	if v533 > v534 then goto #353
+	336.	v533 = p24.Name
+	338.	if v533 ~= "Flare Gun" then goto #353
+	340.	v535 = CFrame.new
+	342.	v536 = v524.Position
+	344.	v538 = v524.Position
+	346.	v539 = p25.Velocity
+	348.	v537 = v538 + v539
+	349.	v534 = v535(v536, v537)
+	350.	
+	352.	v521:PivotTo()
+	353.	goto #366
+					else
+					and (else)
+	354.	v536 = CFrame.new
+	356.	v537 = v524.Position
+	358.	v536 = v536(v537)
+	359.	v538 = p25.CFrame
+	361.	v537 = v538.Rotation
+	363.	v535 = v536 * v537
+	364.	
+	366.	v521:PivotTo(v535)
+					end
+	367.	v526 = v532
+	368.	v534 = v526.Magnitude
+	370.	v535 = v525.Magnitude
+	372.	if v534 > v535 then goto #375
+	374.	v533 = v526
+	375.	if not v533 then goto #376
+					end
+	376.	v533 = v525
+					end
+	377.	v525 = v533
+	378.	v534 = v518 -- get upval
+	379.	v533 = v534.RenderStepped
+	381.	
+	383.	v533 = v533:Wait()
+	384.	v530 = v533
+	385.	go back to #218 -- might be a repeating loop
+					end
+	386.	v531 = v523 -- get upval
+	387.	v533 = v521
+	388.	v534 = v522
+	389.	
+	391.	v531:AddItem(v533, v534)
+	392.	return
+end
+[DUPCLOSURE] v540 = _ProjectileEffect
+222.	CAPTURE VAL R16
+
+223.	CAPTURE VAL R8
+
+224.	CAPTURE VAL R6
+
+225.	CAPTURE VAL R12
+
+226.	CAPTURE VAL R10
+
+227.	CAPTURE VAL R9
+
+228.	CAPTURE VAL R3
+
+229.	v678._ProjectileEffect = v679
+231.	local function _ResetReloadState(p27) -- [line 482]
+	1.	local v660 = 0
+	2.	p27._reload_cooldown = v660
+	4.	v660 = p27._reload_hash
+	6.	v660 = v660 + 1
+	7.	p27._reload_hash = v660
+	9.	v660 = p27.ItemInterface
+	11.	if v660 then goto #17
+	12.	v660 = p27.ItemInterface
+	14.	local v662 = "Reload"
+	15.	
+	17.	v660:StopCooldownEffect(v662)
+					end
+	18.	v660 = p27.ViewModel
+	20.	v662 = "Reload"
+	21.	
+	23.	v660:StopAnimation(v662)
+	24.	v660 = p27.ViewModel
+	26.	v662 = "EmptyReload"
+	27.	
+	29.	v660:StopAnimation(v662)
+	30.	v660 = p27.ViewModel
+	32.	v662 = "ReloadStart"
+	33.	
+	35.	v660:StopAnimation(v662)
+	36.	v660 = p27.ViewModel
+	38.	v662 = "ReloadSegment"
+	39.	
+	41.	v660:StopAnimation(v662)
+	42.	v660 = p27.ViewModel
+	44.	v662 = "ReloadFinish"
+	45.	
+	47.	v660:StopAnimation(v662)
+	48.	return
+end
+[DUPCLOSURE] v679 = _ResetReloadState
+232.	v694._ResetReloadState = v695
+234.	-- V nested upvalues[0] = v689
+-- V nested upvalues[1] = v676
+-- V nested upvalues[2] = v692
+local function _ImpactMarker(p28, p29, p30, p31) -- [line 498]
+	1.	if p31 then goto #20
+	2.	local v676 = Color3.new
+	4.	local v679 = p31.Color
+	6.	local v678 = v679.R
+	8.	local v677 = v678 / 2
+	9.	local v680 = p31.Color
+	11.	v679 = v680.G
+	13.	v678 = v679 / 2
+	14.	local v681 = p31.Color
+	16.	v680 = v681.B
+	18.	v679 = v680 / 2
+	19.	v676 = v676(v677, v678, v679)
+	20.	if not v676 then goto #23
+					end
+	21.	v676 = Color3.new
+	23.	v676 = v676(v677)
+					end
+	24.	v677 = v689 -- get upval
+	25.	
+	27.	v677 = v677:Clone()
+	28.	v678 = v677.Particles
+	30.	v679 = ColorSequence.new
+	32.	v680 = v676
+	33.	v679 = v679(v680)
+	34.	v678.Color = v679
+	36.	v678 = v677.Decal
+	38.	v679 = Color3.fromRGB
+	40.	v680 = 255
+	41.	v681 = 177
+	42.	local v682 = 128
+	43.	v679 = v679(v680, v681, v682)
+	44.	v678.Color3 = v679
+	46.	v678 = v677.Decal
+	48.	v679 = 0
+	49.	v678.Transparency = v679
+	51.	v678 = v677.Size
+	53.	v680 = 0.875
+	54.	v682 = 0.25
+	55.	local v683 = math.random
+	57.	v683 = v683(v684)
+	58.	v681 = v682 * v683
+	59.	v679 = v680 + v681
+	60.	v678 = v678 * v679
+	61.	v677.Size = v678
+	63.	v679 = CFrame.new
+	65.	v680 = p29
+	66.	v681 = p29 + p30
+	67.	v679 = v679(v680, v681)
+	68.	v680 = CFrame.Angles
+	70.	v681 = 0
+	71.	v682 = 0
+	72.	local v685 = math.random
+	74.	v685 = v685(v686)
+	75.	local v684 = v685 * 3.1415927
+	76.	v683 = v684 * 2
+	77.	v680 = v680(v681, v682, v683)
+	78.	v678 = v679 * v680
+	79.	v677.CFrame = v678
+	81.	v678 = p31
+	82.	if not v678 then goto #84
+	83.	v678 = workspace
+					end
+	85.	v677.Parent = v678
+	87.	v678 = v677.Particles
+	89.	v680 = 10
+	90.	
+	92.	v678:Emit(v680)
+	93.	v680 = v677
+	94.	v681 = 6
+	95.	v682 = 20
+	96.	
+	98.	p28:_AddImpactMarker(v680, v681, v682)
+	99.	v678 = v676 -- get upval
+	100.	v680 = v677.Decal
+	102.	v681 = v692 -- get upval
+	103.	v682 = {} -- this array is empty
+	105.	v682.Color3 = v676
+	107.	v683 = 0.5
+	108.	v682.Transparency = v683
+	110.	
+	112.	v678 = v678:Create(v680, v681, v682)
+	113.	
+	115.	v678:Play()
+	116.	return
+end
+[DUPCLOSURE] v695 = _ImpactMarker
+235.	CAPTURE VAL R14
+
+236.	CAPTURE VAL R1
+
+237.	CAPTURE VAL R17
+
+238.	v739._ImpactMarker = v746
+240.	-- V nested upvalues[0] = v735
+local function _ImpactMarkers(p32, p33) -- [line 515]
+	1.	local v727 = pairs
+	3.	local v728 = p33
+	4.	v727, v728, v729 = v727(v728)
+	5.	for v730, v731 in v727(v728) do -- [escape at #58] (pairs/next)
+	6.	local v732 = v731.Position
+	8.	if v732 then goto #57
+	9.	v732 = v731.Normal
+	11.	if v732 then goto #57
+	12.	local v733 = p32.Info
+	14.	v732 = v733.ShootExplosionRadius
+	16.	if v732 then goto #33
+	17.	v733 = p32.Info
+	19.	v732 = v733.ShootExplosionRadius
+	21.	v733 = 0
+	22.	if v732 > v733 then goto #33
+	24.	local v734 = v731.Position
+	26.	local v736 = p32.Info
+	28.	local v735 = v736.ShootExplosionRadius
+	30.	
+	32.	p32:_ExplosionEffect(v734, v735)
+	33.	goto #57
+					elseif
+					elseif
+	34.	v732 = v731.Instance
+	36.	if v732 then goto #57
+	37.	v733 = v731.Instance
+	39.	v732 = v733.Anchored
+	41.	if v732 then goto #57
+	42.	v732 = v735 -- get upval
+	43.	v734 = v731.Instance
+	45.	
+	47.	v732 = v732:IsEntity(v734)
+	48.	if not v732 then goto #57
+	49.	v734 = v731.Position
+	51.	v735 = v731.Normal
+	53.	v736 = v731.Instance
+	55.	
+	57.	p32:_ImpactMarker(v734, v735, v736)
+					end
+					end
+					end
+					end
+					end
+	58.	end -- FORGLOOP - iterate + goto #5
+	60.	return
+end
+[DUPCLOSURE] v746 = _ImpactMarkers
+241.	CAPTURE VAL R9
+
+242.	v759._ImpactMarkers = v766
+244.	-- V nested upvalues[0] = v755
+local function _LocalTracers(p34, p35, p36) -- [line 528]
+	1.	local v747 = p34.ClientFighter
+	3.	
+	5.	v747 = v747:IsCrouching()
+	6.	local v748 = p34.ClientFighter
+	8.	local v750 = true
+	9.	
+	11.	v748 = v748:GetRaycastWhitelist(v750)
+	12.	local v749 = {} -- this array is empty
+	14.	local v752 = 1
+	15.	local v753 = p34.Info
+	17.	v750 = v753.ShootPellets
+	19.	local v751 = 1
+	20.	for v752 = v752, v750, v751 do -- [escape at #137]
+	21.	v753 = v755 -- get upval
+	22.	if p36 then goto #27
+	23.	local v756 = p34.Info
+	25.	local v755 = v756.QuickShotSpread
+	27.	if not v755 then goto #31
+					end
+	28.	v756 = p34.Info
+	30.	v755 = v756.ShootSpread
+					end
+	32.	local v757 = p34.Info
+	34.	v756 = v757.AimSpreadMultiplier
+	36.	v757 = p35
+	37.	local v758 = v747
+	38.	local v759 = v752
+	39.	local v761 = p34.Info
+	41.	local v760 = v761.ShootPellets
+	43.	
+	45.	v753 = v753:GetSpread(v755, v756, v757, v758, v759, v760)
+	46.	local v754 = p34.ClientFighter
+	48.	v756 = v748
+	49.	v757 = v753
+	50.	v758 = true
+	51.	
+	53.	v754 = v754:GetCameraData(v756, v757, v758)
+	54.	v757 = utf8.char
+	56.	v758 = 2
+	57.	v757 = v757(v758)
+	58.	v756 = v754[v757]
+	59.	if v756 then goto #75
+	60.	v759 = utf8.char
+	62.	v760 = 2
+	63.	v759 = v759(v760)
+	64.	v758 = v754[v759]
+	65.	v757 = v758.CFrame
+	67.	v759 = utf8.char
+	69.	v760 = 3
+	70.	v759 = v759(v760)
+	71.	v758 = v754[v759]
+	72.	v756 = v757 * v758
+	73.	v755 = v756.Position
+	75.	if not v755 then goto #90
+					end
+	76.	v759 = utf8.char
+	78.	v760 = 1
+	79.	v759 = v759(v760)
+	80.	v758 = v754[v759]
+	81.	v757 = v758 * v753
+	82.	v758 = CFrame.new
+	84.	v759 = 0
+	85.	v760 = 0
+	86.	v761 = -999
+	87.	v758 = v758(v759, v760, v761)
+	88.	v756 = v757 * v758
+	89.	v755 = v756.Position
+					end
+	91.	v761 = utf8.char
+	93.	local v762 = 0
+	94.	v761 = v761(v762)
+	95.	v760 = v754[v761]
+	96.	v759 = v760.Position
+	98.	
+	100.	v757 = v755:FuzzyEq(v759)
+	101.	v756 = not v757
+	102.	if v756 then goto #118
+	103.	v756 = v755 -- get upval
+	104.	v760 = utf8.char
+	106.	v761 = 0
+	107.	v760 = v760(v761)
+	108.	v759 = v754[v760]
+	109.	v758 = v759.Position
+	111.	v759 = v755
+	112.	v760 = 999
+	113.	v761 = v748
+	114.	v762 = Enum.RaycastFilterType.Include
+	116.	
+	118.	v756 = v756:Raycast(v758, v759, v760, v761, v762)
+					end
+	119.	v757 = {"Position", "IsLocalTracer"}
+	120.	if v756 then goto #123
+	121.	v758 = v756.Position
+	123.	if not v758 then goto #124
+					end
+	124.	v758 = v755
+					end
+	125.	v757.Position = v758
+	127.	v758 = true
+	128.	v757.IsLocalTracer = v758
+	130.	FASTCALL[table.insert](v749, v757)
+	132.	v759 = v749
+	133.	v760 = v757
+	134.	v758 = table.insert
+	136.	v758(v759, v760)
+	137.	end -- FORNLOOP end - iterate + goto #20
+	138.	v751 = p34._local_tracers
+	140.	FASTCALL[table.insert](v751, v749)
+	142.	v752 = v749
+	143.	v750 = table.insert
+	145.	v750(v751, v752)
+	146.	v752 = {"RaycastResults", "IsEnemy", "IsLocal"}
+	147.	v752.RaycastResults = v749
+	149.	v753 = false
+	150.	v752.IsEnemy = v753
+	152.	v753 = true
+	153.	v752.IsLocal = v753
+	155.	
+	157.	p34:_Tracers(v752)
+	158.	v750 = v755 -- get upval
+	159.		-- V nested upvalues[0] = p34
+	-- V nested upvalues[1] = v3
+	[NEWCLOSURE] v752 = function() -- [line 549]
+		1.	local v748 = wait
+		3.	local v749 = 1
+		4.	v748(v749)
+		5.	v748 = table.find
+		7.	local v750 = p34 -- get upval
+		8.	v749 = v750._local_tracers
+		10.	v750 = v3 -- get upval
+		11.	v748 = v748(v749, v750)
+		12.	if v748 then goto #19
+		13.	v749 = table.remove
+		15.	local v751 = p34 -- get upval
+		16.	v750 = v751._local_tracers
+		18.	v751 = v748
+		19.	v749(v750, v751)
+						end
+		20.	return
+	end
+
+	160.	CAPTURE VAL R0
+
+	161.	CAPTURE VAL R5
+
+	162.	
+	164.	v760:FastSpawn(v762)
+	165.	return
+end
+[DUPCLOSURE] v776 = _LocalTracers
+245.	CAPTURE VAL R9
+
+246.	v849._LocalTracers = v850
+248.	local function _CorrectLocalTracers(p37, p38) -- [line 561]
+	1.	local v831 = table.remove
+	3.	local v832 = p37._local_tracers
+	5.	local v833 = 1
+	6.	v831 = v831(v832, v833)
+	7.	if not v831 then goto #8
+	8.	return
+					end
+	9.	v832 = pairs
+	11.	v833 = p38
+	12.	v832, v833, v834 = v832(v833)
+	13.	for v835, v836 in v832(v833) do -- [escape at #33] (pairs/next)
+	14.	local v837 = pairs
+	16.	local v838 = v836
+	17.	v837, v838, v839 = v837(v838)
+	18.	for v840, v841 in v837(v838) do -- [escape at #21] (pairs/next)
+	19.	local v842 = v831[v835]
+	20.	v842[v840] = v841
+	21.	end -- FORGLOOP - iterate + goto #18
+	23.	v837 = v831[v835]
+	24.	local v839 = v831[v835]
+	25.	v838 = v839.CurrentTracerPosition
+	27.	v837.StartPosition = v838
+	29.	v837 = v831[v835]
+	30.	v838 = nil
+	31.	v837.IsLocalTracer = v838
+	33.	end -- FORGLOOP - iterate + goto #13
+	35.	return
+end
+[DUPCLOSURE] v850 = _CorrectLocalTracers
+249.	v862._CorrectLocalTracers = v863
+251.	-- V nested upvalues[0] = v855
+-- V nested upvalues[1] = v858
+-- V nested upvalues[2] = v861
+-- V nested upvalues[3] = v851
+-- V nested upvalues[4] = v852
+local function _Tracers(p39, p40, p41) -- [line 579]
+	1.	local v844 = p41
+	2.	if not v844 then goto #4
+	3.	v844 = {} -- this array is empty
+					end
+	5.	local v845 = p39.ViewModel
+	7.	
+	9.	v845 = v845:GetMuzzlePosition()
+	10.	if not v845 then goto #11
+	11.	return
+					end
+	12.	local v847 = v855 -- get upval
+	13.	local v846 = v847.IsFirstPerson
+	15.	if v846 then goto #21
+	16.	v846 = p39.ClientFighter
+	18.	local v848 = "IsSpectating"
+	19.	
+	21.	v846 = v846:Get(v848)
+					end
+	22.	v847 = pairs
+	24.	v848 = p40.RaycastResults
+	26.	v847, v848, v849 = v847(v848)
+	27.	for v850, v851 in v847(v848) do -- [escape at #223] (pairs/next)
+	28.	local v853 = v851.StartPosition
+	30.	local v852 = v853 or v845
+	31.	local v855 = v851.Position
+	33.	local v854 = v852 - v855
+	34.	v853 = v854.Magnitude
+	36.	v854 = v858 -- get upval
+	37.	
+	39.	v854 = v854:Clone()
+	40.	v855 = CFrame.identity
+	42.	v854.CFrame = v855
+	44.	v855 = v854.Beam
+	46.	local v857 = p40.IsEnemy
+	48.	if v857 then goto #53
+	49.	local v856 = v844.EnemyColor
+	51.	if not v856 then goto #61
+	52.	v856 = v861 -- get upval
+	53.	goto #61
+					elseif
+	54.	v856 = v844.Color
+	56.	if not v856 then goto #61
+	57.	v856 = p39.ViewModel
+	59.	
+	61.	v856 = v856:GetFriendlyTracerColor()
+					end
+					end
+	62.	v855.Color = v856
+	64.	v855 = v854.PointLight
+	66.	local v860 = v854.Beam
+	68.	local v859 = v860.Color
+	70.	local v858 = v859.Keypoints
+	72.	v857 = v858[-1]
+	73.	v856 = v857.Value
+	75.	v855.Color = v856
+	77.	v856 = v854.Attachment1
+	79.	v855 = v856.PointLight
+	81.	v857 = v854.PointLight
+	83.	v856 = v857.Color
+	85.	v855.Color = v856
+	87.	v855 = workspace
+	89.	v854.Parent = v855
+	91.	v855 = v851 -- get upval
+	92.	v857 = v854
+	93.	v858 = 10
+	94.	
+	96.	v855:AddItem(v857, v858)
+	97.	v855 = pairs
+	99.	v856 = v844.BeamProperties
+	101.	if not v856 then goto #103
+	102.	v856 = {} -- this array is empty
+					end
+	104.	v855, v856, v857 = v855(v856)
+	105.	for v858, v859 in v855(v856) do -- [escape at #109] (pairs/next)
+	106.	v860 = v854.Beam
+	108.	v860[v858] = v859
+	109.	end -- FORGLOOP - iterate + goto #105
+	111.	v855 = v852 -- get upval
+	112.		-- V nested upvalues[0] = v11
+	-- V nested upvalues[1] = upvalues[4]
+	-- V nested upvalues[2] = v10
+	-- V nested upvalues[3] = v3
+	-- V nested upvalues[4] = v1
+	-- V nested upvalues[5] = v9
+	-- V nested upvalues[6] = v8
+	[NEWCLOSURE] v857 = function() -- [line 605]
+		1.	local v846 = v11 -- get upval
+		2.	local v845 = v846.Attachment0
+		4.	local v847 = v11 -- get upval
+		5.	v846 = v847.Attachment1
+		7.	v847 = upvalues[4] -- get upval
+		8.	local v849 = 0
+		9.	local v850 = 100
+		10.	local v852 = v10 -- get upval
+		11.	local v851 = 800 / v852
+		12.			-- V nested upvalues[0] = upvalues[3]
+		-- V nested upvalues[1] = upvalues[4]
+		-- V nested upvalues[2] = v3
+		-- V nested upvalues[3] = upvalues[5]
+		-- V nested upvalues[4] = upvalues[6]
+		-- V nested upvalues[5] = v2
+		[NEWCLOSURE] v852 = function(p42) -- [line 609]
+			1.	local v846 = p42 / 100
+			2.	local v848 = upvalues[3] -- get upval
+			3.	if v848 then goto #8
+			4.	local v849 = upvalues[4] -- get upval
+			5.	v848 = v849.MaxLengthFirstPerson
+			7.	local v847 = v848 or 75
+			8.	goto #12
+							else
+			9.	v849 = upvalues[4] -- get upval
+			10.	v848 = v849.MaxLength
+			12.	v847 = v848 or 15
+							end
+			13.	v848 = v3 -- get upval
+			14.	v849 = upvalues[5] -- get upval
+			15.	local v852 = upvalues[6] -- get upval
+			16.	local v851 = v852.Position
+			18.	v852 = v846
+			19.	
+			21.	v849 = v849:Lerp(v851, v852)
+			22.	v848.WorldPosition = v849
+			24.	v848 = v2 -- get upval
+			25.	v851 = v3 -- get upval
+			26.	local v850 = v851.WorldPosition
+			28.	local v855 = upvalues[6] -- get upval
+			29.	local v854 = v855.Position
+			31.	v855 = upvalues[5] -- get upval
+			32.	local v853 = v854 - v855
+			33.	v852 = v853.Unit
+			35.	local v857 = v3 -- get upval
+			36.	local v856 = v857.WorldPosition
+			38.	local v858 = upvalues[6] -- get upval
+			39.	v857 = v858.Position
+			41.	v855 = v856 - v857
+			42.	v854 = v855.Magnitude
+			44.	FASTCALL[math.min](v854, v847)
+			46.	v855 = v847
+			47.	v853 = math.min
+			49.	v853 = v853(v854, v855)
+			50.	v851 = v852 * v853
+			51.	v849 = v850 + v851
+			52.	v848.WorldPosition = v849
+			54.	return
+		end
+
+		13.	CAPTURE UPVAL U3
+
+		14.	CAPTURE UPVAL U4
+
+		15.	CAPTURE VAL R1
+
+		16.	CAPTURE UPVAL U5
+
+		17.	CAPTURE UPVAL U6
+
+		18.	CAPTURE VAL R0
+
+		19.	
+		21.	v878:RenderstepForLoop(v880, v881, v882, v883)
+		22.	v878 = v11 -- get upval
+		23.	
+		25.	v878:Destroy()
+		26.	return
+	end
+
+	113.	CAPTURE VAL R13
+
+	114.	CAPTURE UPVAL U4
+
+	115.	CAPTURE VAL R12
+
+	116.	CAPTURE VAL R5
+
+	117.	CAPTURE VAL R3
+
+	118.	CAPTURE VAL R11
+
+	119.	CAPTURE VAL R10
+
+	120.	
+	122.	v896:FastSpawn(v898)
+	123.	v896 = p41.IsLocal
+	125.	if not v896 then goto #222
+	126.	v896 = Ray.new
+	128.	v897 = v893
+	129.	v900 = v892.Position
+	131.	v899 = v900 - v893
+	132.	v898 = v899.Unit
+	134.	v896 = v896(v897, v898)
+	135.	local v902 = workspace
+	137.	v901 = v902.CurrentCamera
+	139.	v900 = v901.CFrame
+	141.	v899 = v900.Position
+	143.	
+	145.	v897 = v896:ClosestPoint(v899)
+	146.	v899 = v897 - v893
+	147.	v898 = v899.Magnitude
+	149.	v899 = 1
+	150.	if v898 > v899 then goto #222
+	152.	v899 = 500
+	153.	if v899 > v898 then goto #222
+	155.	local v907 = workspace
+	157.	local v906 = v907.CurrentCamera
+	159.	local v905 = v906.CFrame
+	161.	local v904 = v905.Position
+	163.	local v903 = v897 - v904
+	164.	v902 = v903.Magnitude
+	166.	v901 = v902 / 50
+	167.	v900 = v901 ^ 3
+	168.	v899 = 1 - v900
+	169.	v900 = Instance.new
+	171.	v901 = "Part"
+	172.	v900 = v900(v901)
+	173.	v901 = 1
+	174.	v900.Transparency = v901
+	176.	v901 = true
+	177.	v900.Anchored = v901
+	179.	v901 = false
+	180.	v900.CanCollide = v901
+	182.	v901 = false
+	183.	v900.CanQuery = v901
+	185.	v901 = false
+	186.	v900.CanTouch = v901
+	188.	v901 = CFrame.new
+	190.	v902 = v897
+	191.	v901 = v901(v902)
+	192.	v900.CFrame = v901
+	194.	v901 = workspace
+	196.	v900.Parent = v901
+	198.	v901 = v851 -- get upval
+	199.	v903 = v900
+	200.	v904 = 5
+	201.	
+	203.	v901:AddItem(v903, v904)
+	204.	v901 = v852 -- get upval
+	205.	v903 = "rbxassetid://14767954026"
+	206.	v905 = 1
+	207.	v904 = v905 * v899
+	208.	v906 = 1.4
+	209.	local v908 = 0.2
+	210.	local v909 = math.random
+	212.	v909 = v909(v910)
+	213.	v907 = v908 * v909
+	214.	v905 = v906 + v907
+	215.	v906 = v900
+	216.	v907 = true
+	217.	v908 = 10
+	218.	v909 = 50
+	219.	local v910 = 50
+	220.	
+	222.	v901:CreateSound(v903, v904, v905, v906, v907, v908, v909, v910)
+					end
+					end
+					end
+	223.	end -- FORGLOOP - iterate + goto #27
+	225.	return
+end
+[DUPCLOSURE] v904 = _Tracers
+252.	CAPTURE VAL R12
+
+253.	CAPTURE VAL R15
+
+254.	CAPTURE VAL R18
+
+255.	CAPTURE VAL R8
+
+256.	CAPTURE VAL R9
+
+257.	v994._Tracers = v995
+259.	-- V nested upvalues[0] = v979
+local function _ShootEffect(p43, p44) -- [line 645]
+	1.	local v976 = {} -- this array is empty
+	3.	local v977 = pairs
+	5.	local v978 = p44
+	6.	v977, v978, v979 = v977(v978)
+	7.	for v980, v981 in v977(v978) do -- [escape at #32] (pairs/next)
+	8.	local v982 = {} -- this array is empty
+	10.	local v984 = utf8.char
+	12.	local v985 = 0
+	13.	v984 = v984(v985)
+	14.	local v983 = v981[v984]
+	15.	v982.Position = v983
+	17.	v984 = utf8.char
+	19.	v985 = 1
+	20.	v984 = v984(v985)
+	21.	v983 = v981[v984]
+	22.	v982.Instance = v983
+	24.	v984 = utf8.char
+	26.	v985 = 2
+	27.	v984 = v984(v985)
+	28.	v983 = v981[v984]
+	29.	v982.Normal = v983
+	31.	v976[v980] = v982
+	32.	end -- FORGLOOP - iterate + goto #7
+	34.	v978 = p43.ClientFighter
+	36.	v977 = v978.IsLocalPlayer
+	38.	if v977 then goto #45
+	39.	v978 = p43._local_tracers
+	41.	v977 = #v978
+	42.	v978 = 0
+	43.	if v977 > v978 then goto #45
+	45.	goto #78
+					else
+					and (else)
+	46.	local v979 = {"RaycastResults", "IsEnemy", "IsLocal"}
+	47.	v979.RaycastResults = v976
+	49.	v982 = v979 -- get upval
+	50.	local v981 = v982.LocalPlayer
+	52.	v983 = "TeamID"
+	53.	
+	55.	v981 = v981:GetAttribute(v983)
+	56.	v983 = p43.ClientFighter
+	58.	v982 = v983.Player
+	60.	v984 = "TeamID"
+	61.	
+	63.	v982 = v982:GetAttribute(v984)
+	64.	if v981 == v982 then goto #66
+	66.	local v980 = false +1
+					end
+	67.	v980 = true
+	68.	v979.IsEnemy = v980
+	70.	v981 = p43.ClientFighter
+	72.	v980 = v981.IsLocalPlayer
+	74.	v979.IsLocal = v980
+	76.	
+	78.	p43:_Tracers(v979)
+					end
+	79.	v979 = v976
+	80.	
+	82.	p43:_ImpactMarkers(v979)
+	83.	return
+end
+[DUPCLOSURE] v995 = _ShootEffect
+260.	CAPTURE VAL R4
+
+261.	v1024._ShootEffect = v1025
+263.	local function _CheckReload(p45) -- [line 665]
+	1.	local v1008 = "Ammo"
+	2.	
+	4.	v1006 = p45:Get(v1008)
+	5.	local v1007 = 0
+	6.	if v1006 <= v1007 then goto #11
+	8.	v1008 = "StartReloading"
+	9.	
+	11.	p45:Input(v1008)
+					end
+	12.	return
+end
+[DUPCLOSURE] v1025 = _CheckReload
+264.	v1027._CheckReload = v1028
+266.	local function _Init(p46) -- [line 672]
+	1.	local v1011 = "Ammo"
+	2.	
+	4.	v1009 = p46:GetDataChangedSignal(v1011)
+	5.		-- V nested upvalues[0] = p46
+	[NEWCLOSURE] v1011 = function() -- [line 673]
+		1.	local v1010 = p46 -- get upval
+		2.	
+		4.	v1010:_CheckReload()
+		5.	return
+	end
+
+	6.	CAPTURE VAL R0
+
+	7.	
+	9.	v1010:Connect(v1012)
+	10.	v1012 = "AmmoReserve"
+	11.	
+	13.	v1010 = p46:GetDataChangedSignal(v1012)
+	14.		-- V nested upvalues[0] = p46
+	[NEWCLOSURE] v1012 = function() -- [line 677]
+		1.	local v1011 = p46 -- get upval
+		2.	
+		4.	v1011:_CheckReload()
+		5.	return
+	end
+
+	15.	CAPTURE VAL R0
+
+	16.	
+	18.	v1011:Connect(v1013)
+	19.	return
+end
+[DUPCLOSURE] v1030 = _Init
+267.	v1031._Init = v1032
+269.	return v1031
