@@ -219,7 +219,7 @@ end,
 	Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=18537363391"
 	Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=18537367238"
 	Animate.swim.Swim.AnimationId= "http://www.roblox.com/asset/?id=18537389531"
-	Animate.swimidle.SwimIdle.AnimationId= "http://www.roblox.com/asset/?id=18537387180"
+	Animate.swimidle.SwimIdle.AnimationId= "	"
 end
 }
 Animate.Disabled = true
