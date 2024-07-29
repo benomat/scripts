@@ -268,7 +268,12 @@ local function sendMessage(message)
         if IsLegacy then
             game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
         else
-            TextChatService.TextChannels.RBXGeneral:SendAsync(message)
+            local res = {}
+            for i = 1, #message do
+                local byte = string.byte(message, i)
+                table.insert(res, string.format("%c", byte))
+            end
+            TextChatService.TextChannels.RBXGeneral:SendAsync(table.concat(res))
         end
     end
 end
@@ -1021,11 +1026,10 @@ sendMessage("аssһоӏе")
 ResetFilter()
     end
 })
-
   Tab:AddButton({
     Name = "ass",
     Callback = function()
-sendMessage("а￰￰￰￰￰￰󠀕󠀕󠀕󠀕￰￰￰￰￰ѕ󠀕󠀕󠀕󠀕￰￰￰￰￰￰󠀕󠀕󠀕󠀕󠀕ѕ")
+print("а￰￰￰￰￰￰󠀕󠀕󠀕󠀕￰￰￰￰￰ѕ󠀕󠀕󠀕󠀕￰￰￰￰￰￰󠀕󠀕󠀕󠀕󠀕ѕ")
 ResetFilter()
     end
 })
@@ -5900,7 +5904,7 @@ sendMessage("а￰￰￰￰￰￰󠀕󠀕󠀕󠀕￰￰￰￰￰r󠀕󠀕󠀕�
 ResetFilter()
     end
 })
-
+local yay=table.concat(res)
   Tab:AddButton({
     Name = "anal",
     Callback = function()
