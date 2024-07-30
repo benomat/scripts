@@ -92,8 +92,9 @@ elseif (p==6872265039 or g==2619619496) and e~=2 then --bedwars
 elseif (p==6872265039 or g==2619619496) and e==2 then --bedwars
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ohmygodiloveketamine/aeolusv2/main/script'))()
 elseif p==1537690962 then --beeswarm simulator
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/scriptpastebin/raw/main/29'))()
-    --loadstring(game:HttpGet('https://raw.githubusercontent.com/BaconBossScript/BeeSwarmSim/main/BeeSwarmSim'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/scriptpastebin/raw/main/29'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/keyrblxcrack.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/BaconBossScript/BeeSwarmSim/main/BeeSwarmSim'))()
 elseif g==4777817887 then --bladeball
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/BladeBallLoader.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/autoparry.lua'))()
@@ -402,6 +403,9 @@ elseif (p==4623386862 or g==1516533665) then --Piggy
 elseif (p==18337464872 or g==6216468795) then --Weak Legacy 2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/keyrblxcrack.lua'))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/OhhMyGehlee/W2/main/SW"))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/weaklegacy2.lua'))()
+elseif (p==16447934574 or g==5666473198) then -- Touch Football
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/touchfootball.lua'))()
 elseif table.find({192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     -- notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/keyrblxcrack.lua'))()
