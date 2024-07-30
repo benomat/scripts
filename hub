@@ -64,6 +64,7 @@ function sNotify(t,d)
         Duration = d
        })
     end
+local function keyrblx() loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/keyrblxcrack.lua'))() end
 if getexecutorname():sub(1, 6) == "Solara" then e = 1 elseif getexecutorname():sub(1, 5) == "incog" then e = 2 else e = 0 end --executor identify
 if e==2 then warn("i hate incognito :(") end
 supported=true
@@ -93,7 +94,7 @@ elseif (p==6872265039 or g==2619619496) and e==2 then --bedwars
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ohmygodiloveketamine/aeolusv2/main/script'))()
 elseif p==1537690962 then --beeswarm simulator
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/scriptpastebin/raw/main/29'))()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/keyrblxcrack.lua'))()
+    keyrblx()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/BaconBossScript/BeeSwarmSim/main/BeeSwarmSim'))()
 elseif g==4777817887 then --bladeball
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/BladeBallLoader.lua'))()
@@ -117,7 +118,7 @@ elseif g==1335695570 then
     --loadstring(game:HttpGet('https://roblox.relzscript.xyz/source/relzhub/script/game/NinjaLegends.lua'))()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/njlg.lua'))()
 elseif p==301549746 then --counterblox
-    --loadstring(game:HttpGet("https://raw.githubusercontent.com/Zypher32/zyn.cc/main/Protected_8206229512961191.txt"))()
+    --loadstring(game:HttpGet('https://raw.githubusercontent.com/Zypher32/zyn.cc/main/Protected_8206229512961191.txt'))()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/counterblox.lua'))()
 elseif g==1008451066 then --dahood
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded'))()
@@ -148,7 +149,7 @@ elseif g==113491250 then -- Phantom Forces PC
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/OxygenClub/Random-LUAS/main/otterware-crack.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/homohack.lua'))()
 elseif p==155615604 then --prison life
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/scam666/Prevail-X/main/src.lua'))()
 elseif p==6403373529 then --slap battles
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Dusty1234567890/TestMain/main/SLAPBATTLESGUI5'))()
@@ -187,7 +188,8 @@ elseif (p==14044547200 or g==4864117649) then --[recode] untitled tag game(UTG)
 elseif p==9791603388 then--underground war 2.0
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/UndergroundWar'))()
 elseif p==2210085102 then--Naval Warfare
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/NavalWarfare.lua'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/NavalWarfare.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/navalwarfarec.lua'))()
 elseif p==698448212 then--RoBeats
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/RoBeats.lua'))()
 elseif p==6447798030 then --funky friday -> might make a good autoplay in a month or so
@@ -249,7 +251,7 @@ elseif (p==14386691987 or g==4931927012) then --basketball legends
     -- getgenv().config = {Time = 0.045, Size = 0.9} local UIS = game:GetService("UserInputService") local TweenService = game:GetService("TweenService") local Player = game:GetService("Players").LocalPlayer local Bar = Player.PlayerGui.Visual.Shooting.Bar UIS.InputBegan:Connect(function(input, gpe) if gpe then return end if input.KeyCode == Enum.KeyCode.E then if Player.Character:FindFirstChild("Basketball") then while UIS:IsKeyDown(Enum.KeyCode.E) do Bar:GetPropertyChangedSignal("Size"):Connect(function() if Bar.Size.Y.Scale > getgenv().config.Size then Bar:TweenSize(UDim2.new(1,0,1,0), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, getgenv().config.Time, true) task.wait() Bar.Size = UDim2.new(1,0,1,0) end end) task.wait() end end end end)
     -- AskLoad("Press E to auto green")
     _G.OBFHUBFREE = "2kmembersgang"
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/obfhub/free/main/basketmball"))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/obfhub/free/main/basketmball'))()
 elseif (p==1554960397 or g==605887098) then -- Car Dealership Tycoon
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/cardealership.lua'))()
 elseif (p==11400511154 or g==4055984814) then --Monkey Tycoon
@@ -350,7 +352,7 @@ elseif (p==16037561679 or g==5543899125) then --Head Soccer Simulator [UPD]
 elseif (p==18213102218 or g==6174407103) then --[UPD] Titan Training Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/TitanTrainingSim.lua'))()
 elseif (p==11872917490 or g==4201418016) then --Fabled Legacy!
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/keyrblxcrack.lua'))()
+    keyrblx()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/OhhMyGehlee/FL/main/Solara'))()
 elseif g==5370286620 or g==5327744466 or g==3057370181 or g==4810910714 then --Hoop Nation, Realistic Basketball, RB World 4, Highschool Hoops Demo
     loadstring(game:HttpGet('https://raw.githubusercontent.com/DepHubHolder/DepHub1/main/Loader1'))()
@@ -358,7 +360,7 @@ elseif (p==11729688377 or g==4154513353) then --Booga Booga [REBORN]
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ForlornWindow46/Roblox-Scripts/main/BBReborn'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/Texchy/Nilhub/main/NilhubFree.lua'))()
 elseif (g==4117341804 or g==3989768869 or g==3967853925 or g==4265715280 or g==873703865) then --zaphub madness: Steep Steps, The Survival Game, Every Second You Get +1 Jump Power, Impossible Ladder Climb Obby!, Westbound
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/keyrblxcrack.lua'))()
+    keyrblx()
     loadstring(game:HttpGet('https://zaphub.xyz/ExecSolara'))()
 elseif (p==17601705136 or g==6026836726) then --Tycoon RNG
     loadstring(game:HttpGet('https://raw.githubusercontent.com/MadbukScripts/Scripts/main/Obfuscated%20Tycoon%20RNG.lua'))()
@@ -369,7 +371,7 @@ elseif (p==13643807539 or g==3734304510) then --South Bronx: The Trenches
     fn("Copied key to clipboard", "Just click into the text field and press ctrl+v",20)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/4drzy/fqfqfqfqffdsewfds/main/hhfdewfds'))()
 elseif (p==8204899140 or g==3150475059) then --Football Fusion 2
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/bb2ce6c8f95b42ecec9c45399081758b.lua"))()
+    loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/bb2ce6c8f95b42ecec9c45399081758b.lua'))()
 elseif (p==14819490378 or g==4093155512) then --Sword Burst 3
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Filebrute-lua/SWB3/main/KittyKoolKlub'))()
 elseif g==2491559356 then --Cursed Tank Simulator
@@ -384,7 +386,7 @@ elseif (p==8286149869 or g==3177453609) then --therapy
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/therapy.lua'))()
 elseif (p==6068961298 or g==2201299735) then --Anime Impact
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/animeimpact.lua'))()
-    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/keyrblxcrack.lua'))()
+    -- keyrblx()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/LosHUB/L-HUBV3/main/L-HUBV3'))()
 elseif (p==16993380837 or g==5830247545) then --RNG Gods
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ImNotRox1/HyperHubV2/main/HyperHub%20-%20RNG%20Gods.txt'))()
@@ -401,14 +403,19 @@ elseif (p==6549794549 or g==2459091562) then --[SEASON 3] RH2 The Journey - BETA
 elseif (p==4623386862 or g==1516533665) then --Piggy
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/piggyItems.lua'))()
 elseif (p==18337464872 or g==6216468795) then --Weak Legacy 2
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/keyrblxcrack.lua'))()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/OhhMyGehlee/W2/main/SW"))()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/weaklegacy2.lua'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/malfume/Drowned/main/Weakleg'))()
+    keyrblx()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/OhhMyGehlee/W2/main/SW'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/weaklegacy2.lua'))()
 elseif (p==16447934574 or g==5666473198) then -- Touch Football
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/touchfootball.lua'))()
+elseif (p==14206055326 or g==4915354625) then --Rogue Ninja
+    fn("KITTY Hub","Script will load once you spawn",60)
+    game:GetService("Players").LocalPlayer.CharacterAdded:Wait()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/malfume/Drowned/main/RogueNinja'))()
 elseif table.find({192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     -- notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/keyrblxcrack.lua'))()
+    keyrblx()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/tippy2235/Unownaz--Epic/main/SolaraHub.lua'))()
 else 
     if loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/skihub.lua'))() then 
