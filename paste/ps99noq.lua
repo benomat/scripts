@@ -65,7 +65,6 @@ local missingFunctions = checkFunctions()
 if missingFunctions ~= "" then
     return output("Missing: "..missingFunctions, "error")
 end
-
 -- Variables
 
 local LocalPlayer = game.Players.LocalPlayer
