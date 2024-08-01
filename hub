@@ -262,7 +262,7 @@ elseif (p==9772878203 or g==3620011279) then --[rebirth update] raise a floppa 2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/raisefloppa.lua'))()
 elseif (p==17450551531 or g==5972059550) then --Gym League
     loadstring(game:HttpGet('https://raw.githubusercontent.com/AhmadV99/Script-Games/main/Gym%20League.lua'))()
-    loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/bcb1262edfe7a95bc2b25f07e68639ff.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/cracklua/cracks/m/NurkHubGL'))()
 elseif (p==4483381587 or g==1430993116) then --a literal baseplate.
 for i=1,99,1 do
     if pcall(function()getfenv(i)end) then print(i) end

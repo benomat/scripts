@@ -25,3 +25,4 @@ for _, link in hooklinks do
     wait(3)
     deletewh(link)
 end
+ 

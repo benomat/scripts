@@ -258,23 +258,10 @@ local function checkForTag(message)
 end
 
 local function sendMessage(message)
-    if checkForTag(message) then
-        OrionLib:MakeNotification({
-            Name = "Tag Detection",
-            Content = "This bypass might be patched! Try clicking 'Fix Bypasses' and try again!",
-            Duration = 5
-        })
+    if IsLegacy then
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
     else
-        if IsLegacy then
-            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
-        else
-            local res = {}
-            for i = 1, #message do
-                local byte = string.byte(message, i)
-                table.insert(res, string.format("%c", byte))
-            end
-            TextChatService.TextChannels.RBXGeneral:SendAsync(table.concat(res))
-        end
+        TextChatService.TextChannels.RBXGeneral:SendAsync(message)
     end
 end
 
