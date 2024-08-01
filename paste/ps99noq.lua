@@ -89,7 +89,7 @@ local Breakables = Things.Breakables
 local function getMap()
     local rValue
     for _,map in ipairs(Workspace:GetChildren()) do
-        if map.Name:find("Map") then
+        if map.Name:find("Map") and not map.Name:find(" Map") then
             rValue = map
             break
         end
