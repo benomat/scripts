@@ -28,11 +28,12 @@ function decrypt(hex, key)
     return xorCrypt(fromHex(hex), key)
 end
 
-local key = "benomat is daddy"
+local key = "test"
 local originalText = 'return "hi","user","roblox"'
 
-local encryptedText = encrypt(originalText, key)
-print("Encrypted (hex):", encryptedText)
+local encryptedText = game:HttpGet("https://raw.githubusercontent.com/benomat/scripts/m/auth.txt")
 
 local decryptedText = decrypt(encryptedText, key)
-print("Decrypted:", decryptedText)
+
+if decryptedText:find(tostring(game:GetService("Players").LocalPlayer.UserId)) then print("authenticated")
+else warn("not authenticated") end
