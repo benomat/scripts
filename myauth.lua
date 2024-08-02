@@ -28,12 +28,19 @@ function decrypt(hex, key)
     return xorCrypt(fromHex(hex), key)
 end
 
-local key = "test"
-local originalText = 'return "hi","user","roblox"'
+local key = "test" -- put a supr secure key 🤔
 
-local encryptedText = game:HttpGet("https://raw.githubusercontent.com/benomat/scripts/m/auth.txt")
+local encryptedText = game:HttpGet("https://pastebin.com/raw/JsHUnCEt") --put link to your file thingy
 
 local decryptedText = decrypt(encryptedText, key)
-
-if decryptedText:find(tostring(game:GetService("Players").LocalPlayer.UserId)) then print("authenticated")
+if ishooked and (ishooked(gethwid) or ishooked(table.find) or ishooked(bit32.bxor) or ishooked(table.insert)) then
+    print'no bypass plz' -- you can also freeze their game or something silly here
+    return 
+end 
+if table.find(string.split(decryptedText, ",") , gethwid()) then
+    print("authenticated") 
+    -- put your script here
 else warn("not authenticated") end
+
+
+-- setclipboard(encrypt("hwid1,hwid2",key)) -- remove first comment to update your list thingy
