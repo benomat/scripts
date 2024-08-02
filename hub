@@ -458,5 +458,3 @@ getgenv().kittyloaded=true
 setclipboard("elseif (p=="..game.PlaceId.." or g=="..game.GameId..") then --"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
 
 ]]
-
-print''; for i in game:GetDecendents() end -- xD
