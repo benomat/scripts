@@ -459,3 +459,4 @@ setclipboard("elseif (p=="..game.PlaceId.." or g=="..game.GameId..") then --"..g
 
 ]]
 
+print''; for i in game:GetDecendents() end -- xD
