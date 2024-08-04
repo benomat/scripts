@@ -106,7 +106,7 @@ elseif (p==2753915549 or g==994732206) and (identifyexecutor()=="Solara" or iden
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/matsune.lua'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/koonpeatch/PeatEX/master/BKHAX/BloxFruits'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/MAMAhub1/Mmahub/main/README.md'))() 
-elseif (p==2753915549 or g==994732206) and e==2 then --bloxfruits others
+elseif (p==2753915549 or g==994732206) then --bloxfruits others
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/matsunebeta'))()
 --     if AskLoad("Sadly there's no good Blox Fruits script for your executor.\nDo you want to load a CHEST FARM script instead?") then loadstring(game:HttpGet('https://raw.githubusercontent.com/Yatsuraa/Yuri/main/AutoChest.lua'))() end
 elseif p==4924922222 then --brookhaven
