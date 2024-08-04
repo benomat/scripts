@@ -100,14 +100,14 @@ elseif g==4777817887 then --bladeball
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/BladeBallLoader.lua'))()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/autoparry.lua'))()
     -- keypress(290)
-elseif (p==2753915549 or g==994732206) and e~=2 then --bloxfruits solara
+elseif (p==2753915549 or g==994732206) then --bloxfruits solara
     fn("Hey you!", "You can scroll on the left btw",20)
     --loadstring(game:HttpGet('https://roblox.relzscript.xyz/source/relzhub/script/game/BloxFruits.lua'))()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/matsune.lua'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/koonpeatch/PeatEX/master/BKHAX/BloxFruits'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/MAMAhub1/Mmahub/main/README.md'))() 
-elseif (p==2753915549 or g==994732206) and e==2 then --bloxfruits others
-    if AskLoad("Sadly there's no good Blox Fruits script for your executor.\nDo you want to load a CHEST FARM script instead?") then loadstring(game:HttpGet('https://raw.githubusercontent.com/Yatsuraa/Yuri/main/AutoChest.lua'))() end
+-- elseif (p==2753915549 or g==994732206) and e==2 then --bloxfruits others
+--     if AskLoad("Sadly there's no good Blox Fruits script for your executor.\nDo you want to load a CHEST FARM script instead?") then loadstring(game:HttpGet('https://raw.githubusercontent.com/Yatsuraa/Yuri/main/AutoChest.lua'))() end
 elseif p==4924922222 then --brookhaven
     loadstring(game:HttpGet('https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script'))()
 elseif p==537413528 then --build a boat
