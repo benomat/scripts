@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Msunehub/None/main/Notificationbeta.lua"))()
+-- loadstring(game:HttpGet("https://raw.githubusercontent.com/Msunehub/None/main/Notificationbeta.lua"))()
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --- Bảng Thông Báo Update
 repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
