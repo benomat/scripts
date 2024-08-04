@@ -32,12 +32,12 @@ local key = "test" -- put a supr secure key 🤔
 
 local encryptedText = game:HttpGet("https://pastebin.com/raw/JsHUnCEt") --put link to your file thingy
 
-local decryptedText = decrypt(encryptedText, key)
+local hwids = decrypt(encryptedText, key)
 if ishooked and (ishooked(gethwid) or ishooked(table.find) or ishooked(bit32.bxor) or ishooked(table.insert)) then
     print'no bypass plz' -- you can also freeze their game or something silly here
     return 
 end 
-if table.find(string.split(decryptedText, ",") , gethwid()) then
+if table.find(string.split(hwids, ",") , gethwid()) then
     print("authenticated") 
     -- put your script here
 else warn("not authenticated") end
