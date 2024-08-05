@@ -35,7 +35,7 @@ tab:CreateToggle("Antivoid",false,function(state)
     if state then
         local part = Instance.new("Part")
         part.Position = Vector3.new(37.51473617553711, -2.5, 50.537479400634766)
-        part.Size = Vector3.new(1000,5,1000)
+        part.Size = Vector3.new(10000,99,10000)
         part.Anchored = true
         part.Name = "Platformsies"
         part.CollisionGroupId = 5
