@@ -414,6 +414,15 @@ elseif (p==14206055326 or g==4915354625) then --Rogue Ninja
     fn("KITTY Hub","Script will load once you spawn",60)
     game:GetService("Players").LocalPlayer.CharacterAdded:Wait()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/malfume/Drowned/main/RogueNinja'))()
+elseif (p==14206055326) then --Pass the bomb
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ocfi/Pass-The-Bomb-Ocfi-Script/main/Bomb'))()
+elseif (p==17487086188) then --Void Fishing
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/VoidFishing'))()
+elseif (p==15014439457) then --Demon Slayer RPG
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/cracklua/cracks/m/ToraDSR.lua'))()
+elseif (p==13379208636) then --AOTR / Attack on Titan Revolution
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/cracklua/cracks/m/SxHub'))()
+---------------------------------------------------------------------------------------------------------------------
 elseif table.find({192800,9285238704,3527629287,9865958871,2474168535,12996550309}, p) or table.find({-1,-2}, g) then --tower of hell, work at a pizza place, race clicker, BIG paintball classic, BIG paintball 2, westbound, RunStar sim
     -- notify("relying on .gg/solarahub its  a good script hub! Check it out",15)
     keyrblx()

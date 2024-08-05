@@ -1,0 +1,473 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "SCRIPTED", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local RemoteEvent = ReplicatedStorage:WaitForChild("RemoteEvent")
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local virtualUser = game:GetService("VirtualUser")
+
+local itemNames = {"LicoricePickle", "DeviledTomato", "DivinePumpkin", "VoidApple"}
+local boostOptions = {"1", "2", "3", "4", "5", "10", "14", "18", "22"}
+local rockCandyBoost = "RockCandy"
+local troves = {"GildedTrove", "AncientTrove", "LargeTrove", "SmallTrove", "TrashTrove"}
+
+local autoCollectFruits = false
+local autoCatchFish = false
+local autoBuyBuff = {}
+local autoBuyRockCandy = false
+local savedPosition = nil
+local buyingBoosts = false
+local antiAfk = false
+local autoBuyAllBoosts = false
+local autoOpenAllTroves = false
+local autoOpenSpecificTroves = {
+    ["GildedTrove"] = false,
+    ["AncientTrove"] = false,
+    ["LargeTrove"] = false,
+    ["SmallTrove"] = false,
+    ["TrashTrove"] = false
+}
+
+local rodNames = {
+    Bamboo = "Bamboo Rod",
+    Crystal = "Crystalline Rod",
+    Cursed = "Cursed Rod",
+    Diamond = "Diamond Rod",
+    Divine = "Divine Rod",
+    Galaxy = "Galaxy Rod",
+    Glass = "Glass Rod",
+    Golden = "Golden Rod",
+    Magnetic = "Magnetic Rod",
+    Omnivorous = "Omnivorous Rod",
+    Spunchrod = "Sponge Rod",
+    Starter = "Starter Rod",
+    Toy = "Toy Rod",
+    Void = "Abyssal Rod"
+}
+
+
+local function fish()
+    while autoCatchFish do
+        wait(0.05)
+        local args = {"Fish"}
+        RemoteEvent:FireServer(unpack(args))
+    end
+end
+
+local function buyBoost(boostItem)
+    local args = {
+        [1] = "BuyBoost",
+        [2] = boostItem
+    }
+    RemoteEvent:FireServer(unpack(args))
+end
+
+local function buyAllBoosts()
+    while buyingBoosts do
+        for _, boostItem in ipairs(boostOptions) do
+            if autoBuyBuff[boostItem] then
+                buyBoost(boostItem)
+            end
+        end
+        wait(10)
+    end
+end
+
+local function instantBuyAllBoostsHandler()
+    while autoBuyAllBoosts do
+        for _, boostItem in ipairs(boostOptions) do
+            buyBoost(boostItem)
+        end
+        wait(10)
+    end
+end
+
+local function buyRockCandyHandler()
+    while autoBuyRockCandy do
+        buyBoost(rockCandyBoost)
+        wait(240)
+    end
+end
+
+local function collectItem(model)
+    for _, object in ipairs(model:GetDescendants()) do
+        if object:IsA("ProximityPrompt") then
+            fireproximityprompt(object)
+        end
+    end
+end
+
+local function teleportPlayerToItem(item)
+    local primaryPart = item.PrimaryPart or item:FindFirstChild("HumanoidRootPart") or item:FindFirstChildWhichIsA("BasePart")
+    if primaryPart then
+        humanoid.PlatformStand = true
+        character:SetPrimaryPartCFrame(primaryPart.CFrame)
+
+        wait(0.2)
+        collectItem(item)
+        wait(0.3)
+
+        if savedPosition then
+            character:SetPrimaryPartCFrame(savedPosition)
+        end
+
+        humanoid.PlatformStand = false
+    end
+end
+
+local function teleportToNearestItem()
+    local closestItem = nil
+    local closestDistance = math.huge
+
+    for _, object in ipairs(game.Workspace:GetChildren()) do
+        if table.find(itemNames, object.Name) and object:IsA("Model") then
+            local body = object:FindFirstChild("Body")
+            if body then
+                local proximityPrompt = body:FindFirstChild("ProximityPrompt")
+                if proximityPrompt then
+                    local primaryPart = object.PrimaryPart or object:FindFirstChild("HumanoidRootPart") or object:FindFirstChildWhichIsA("BasePart")
+                    if primaryPart then
+                        local distance = (character.HumanoidRootPart.Position - primaryPart.Position).magnitude
+                        if distance < closestDistance then
+                            closestDistance = distance
+                            closestItem = object
+                        end
+                    end
+                end
+            end
+        end
+    end
+
+    if closestItem then
+        teleportPlayerToItem(closestItem)
+    end
+end
+
+local function autoCollectFruitsHandler()
+    while autoCollectFruits do
+        teleportToNearestItem()
+        wait(61)
+    end
+end
+
+local function onItemAdded(item)
+    if item:IsA("Model") and table.find(itemNames, item.Name) then
+        if autoCollectFruits then
+            teleportToNearestItem()
+        end
+    end
+end
+
+game.Workspace.ChildAdded:Connect(onItemAdded)
+
+local function openTroves()
+    while autoOpenAllTroves do
+        local orderedTroves = {"GildedTrove", "AncientTrove", "LargeTrove", "SmallTrove", "TrashTrove"}
+        for _, troveName in ipairs(orderedTroves) do
+            local args = {
+                [1] = "OpenTrove",
+                [2] = troveName,
+                [3] = "None"
+            }
+            RemoteEvent:FireServer(unpack(args))
+            wait(0.5)
+        end
+    end
+end
+
+local function openSpecificTroves()
+    while true do
+        for troveName, shouldOpen in pairs(autoOpenSpecificTroves) do
+            if shouldOpen then
+                local args = {
+                    [1] = "OpenTrove",
+                    [2] = troveName,
+                    [3] = "None"
+                }
+                RemoteEvent:FireServer(unpack(args))
+                wait(0.5)
+            end
+        end
+        wait(0.5)
+    end
+end
+
+local function onTroveAdded(trove)
+    if trove:IsA("Model") and table.find(troves, trove.Name) and autoOpenAllTroves then
+        local args = {
+            [1] = "OpenTrove",
+            [2] = trove.Name,
+            [3] = "None"
+        }
+        RemoteEvent:FireServer(unpack(args))
+    end
+end
+
+game.Workspace.ChildAdded:Connect(onTroveAdded)
+
+local function antiAfkHandler()
+    while antiAfk do
+        virtualUser:CaptureController()
+        virtualUser:ClickButton2(Vector2.new())
+        wait(60)
+    end
+end
+
+local function upgradeRodEfficiency()
+    while autoUpgradeEfficiency do
+        local args = {
+            [1] = "UpgradeRod",
+            [2] = selectedRod,
+            [3] = 2 -- Efficiency
+        }
+        RemoteEvent:FireServer(unpack(args))
+        wait(3)
+    end
+end
+
+local function upgradeRodLuck()
+    while autoUpgradeLuck do
+        local args = {
+            [1] = "UpgradeRod",
+            [2] = selectedRod,
+            [3] = 1 -- Luck
+        }
+        RemoteEvent:FireServer(unpack(args))
+        wait(3)
+    end
+end
+
+local function upgradeStorage()
+    while autoUpgradeStorage do
+        local args = {
+            [1] = "UpgradeBackpack"
+        }
+        RemoteEvent:FireServer(unpack(args))
+        wait(3)
+    end
+end
+
+
+local Tab = Window:MakeTab({
+    Name = "Auto Farm",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab:AddToggle({
+    Name = "Auto Collect Nearest Fruits and Return",
+    Default = false,
+    Callback = function(Value)
+        autoCollectFruits = Value
+        if autoCollectFruits then
+            savedPosition = character.HumanoidRootPart.CFrame
+            spawn(autoCollectFruitsHandler)
+        else
+            savedPosition = nil
+        end
+    end
+})
+
+Tab:AddToggle({
+    Name = "Auto Catch Fish",
+    Default = false,
+    Callback = function(Value)
+        autoCatchFish = Value
+        if autoCatchFish then
+            spawn(fish)
+        end
+    end
+})
+
+
+local BoostTab = Window:MakeTab({
+    Name = "Boosts",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+BoostTab:AddToggle({
+    Name = "Buy All Boosts (Voidapple NOT Included)",
+    Default = false,
+    Callback = function(Value)
+        autoBuyAllBoosts = Value
+        if autoBuyAllBoosts then
+            spawn(instantBuyAllBoostsHandler)
+        end
+    end
+})
+
+local boostNames = {
+    ["5"] = "Taco ($250)",
+    ["1"] = "Burger ($1000)",
+    ["2"] = "Chips ($1000)",
+    ["4"] = "Pizza Slice ($1000)",
+    ["3"] = "Energy Bar ($2000)",
+    ["10"] = "2x Luck ($120,000)",
+    ["18"] = "2x Efficiency ($120,000)",
+    ["14"] = "3x Luck ($240,000)",
+    ["22"] = "3x Efficiency ($240,000)"
+}
+
+for boost, name in pairs(boostNames) do
+    BoostTab:AddToggle({
+        Name = name,
+        Default = false,
+        Callback = function(Value)
+            autoBuyBuff[boost] = Value
+            if Value then
+                if not buyingBoosts then
+                    buyingBoosts = true
+                    spawn(buyAllBoosts)
+                end
+            else
+                local anyBoostsEnabled = false
+                for _, isEnabled in pairs(autoBuyBuff) do
+                    if isEnabled then
+                        anyBoostsEnabled = true
+                        break
+                    end
+                end
+                if not anyBoostsEnabled then
+                    buyingBoosts = false
+                end
+            end
+        end
+    })
+end
+
+BoostTab:AddToggle({
+    Name = "Voidapple Rock Candy ($25,000,000)",
+    Default = false,
+    Callback = function(Value)
+        autoBuyRockCandy = Value
+        if autoBuyRockCandy then
+            spawn(buyRockCandyHandler)
+        end
+    end
+})
+
+local TrovesTab = Window:MakeTab({
+    Name = "Auto Open Troves",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local troveNames = {
+    ["GildedTrove"] = "Gilded Trove",
+    ["AncientTrove"] = "Ancient Trove",
+    ["LargeTrove"] = "Large Trove",
+    ["SmallTrove"] = "Small Trove",
+    ["TrashTrove"] = "Junk"
+}
+
+TrovesTab:AddToggle({
+    Name = "Open All Troves",
+    Default = false,
+    Callback = function(Value)
+        autoOpenAllTroves = Value
+        if autoOpenAllTroves then
+            spawn(openTroves)
+        end
+    end
+})
+
+for trove, name in pairs(troveNames) do
+    TrovesTab:AddToggle({
+        Name = name,
+        Default = false,
+        Callback = function(Value)
+            autoOpenSpecificTroves[trove] = Value
+        end
+    })
+end
+
+spawn(openSpecificTroves)
+
+local UpgradeRodTab = Window:MakeTab({
+    Name = "Upgrades",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local rodOptions = {}
+for key, value in pairs(rodNames) do
+    table.insert(rodOptions, value)
+end
+
+UpgradeRodTab:AddDropdown({
+    Name = "Select Rod",
+    Default = rodNames["Starter"],
+    Options = rodOptions,
+    Callback = function(Value)
+        for key, name in pairs(rodNames) do
+            if name == Value then
+                selectedRod = key
+                break
+            end
+        end
+    end
+})
+
+UpgradeRodTab:AddToggle({
+    Name = "Auto Upgrade Efficiency",
+    Default = false,
+    Callback = function(Value)
+        autoUpgradeEfficiency = Value
+        if autoUpgradeEfficiency then
+            spawn(upgradeRodEfficiency)
+        end
+    end
+})
+
+UpgradeRodTab:AddToggle({
+    Name = "Auto Upgrade Luck",
+    Default = false,
+    Callback = function(Value)
+        autoUpgradeLuck = Value
+        if autoUpgradeLuck then
+            spawn(upgradeRodLuck)
+        end
+    end
+})
+
+UpgradeRodTab:AddToggle({
+    Name = "Auto Upgrade Storage",
+    Default = false,
+    Callback = function(Value)
+        autoUpgradeStorage = Value
+        if autoUpgradeStorage then
+            spawn(upgradeStorage)
+        end
+    end
+})
+
+local AntiAfkTab = Window:MakeTab({
+    Name = "Anti Afk",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+AntiAfkTab:AddToggle({
+    Name = "Anti Afk",
+    Default = false,
+    Callback = function(Value)
+        antiAfk = Value
+        if antiAfk then
+            spawn(antiAfkHandler)
+        end
+    end
+})
+
+local CreditsTab = Window:MakeTab({
+    Name = "Credits",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+CreditsTab:AddLabel("Made By: Scripted")
+CreditsTab:AddLabel("Discord: T9Twg3vYyY")
+
+OrionLib:Init()
