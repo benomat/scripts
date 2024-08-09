@@ -215,6 +215,7 @@ Stalltab:CreateToggle("Typewrite",false,function(state)
         task.wait()
     end
 end)
+spawn(function()
 if not fireproximityprompt or identifyexecutor()=="Solara" then
     getgenv().fireproximityprompt=function(pp)
         local oldenabled=pp.Enabled
@@ -226,7 +227,7 @@ if not fireproximityprompt or identifyexecutor()=="Solara" then
         pp.Enabled=true
         pp.HoldDuration=0
         pp.RequiresLineOfSight=false
-        workspace.CurrentCamera.CFrame = CFrame.new(workspace.CurrentCamera.CFrame.Position, pp.Parent.Position)
+        pcall(function()workspace.CurrentCamera.CFrame = CFrame.new(workspace.CurrentCamera.CFrame.Position, pp.Parent.Position)end)
         wait()
         pp:InputHoldBegin()
         task.wait()
@@ -239,6 +240,7 @@ if not fireproximityprompt or identifyexecutor()=="Solara" then
         workspace.CurrentCamera.CFrame=oldCameraCFrame
     end
 end
+end)
 Stalltab:CreateSection("Claming and stuff ") --[you can scroll btw]
 Stalltab:CreateToggle("Steal/Clear all Stalls",false,function(state)
     if pcall(function() fireproximityprompt(Workspace.Stalls.Stall1.ProxPart.ProximityPrompt) end) then
