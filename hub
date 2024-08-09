@@ -118,7 +118,7 @@ elseif p==537413528 then --build a boat
 elseif g==1335695570 then
     --loadstring(game:HttpGet('https://roblox.relzscript.xyz/source/relzhub/script/game/NinjaLegends.lua'))()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/njlg.lua'))()
-elseif p==301549746 then --counterblox
+elseif g==115797356 then --counterblox
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/Zypher32/zyn.cc/main/Protected_8206229512961191.txt'))()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/counterblox.lua'))()
 elseif g==1008451066 then --dahood
