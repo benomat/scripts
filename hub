@@ -418,7 +418,7 @@ elseif (p==14206055326) then --Pass the bomb
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ocfi/Pass-The-Bomb-Ocfi-Script/main/Bomb'))()
 elseif (p==17487086188) then --Void Fishing
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/VoidFishing'))()
-elseif (p==15014439457) then --Demon Slayer RPG
+elseif (p==17167990958) then -- Rock Fruit
     loadstring(game:HttpGet('https://raw.githubusercontent.com/cracklua/cracks/m/ToraDSR.lua'))()
 elseif (p==13379208636) then --AOTR / Attack on Titan Revolution
     loadstring(game:HttpGet('https://raw.githubusercontent.com/cracklua/cracks/m/SxHub'))()
