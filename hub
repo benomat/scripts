@@ -460,7 +460,7 @@ while getgenv().joini==nil and c<100 do
     c+=1
 end
 
-if not getgenv().kittyloaded then queue_on_teleport[[loadstring(game:HttpGet('https://whimper.xyz/cathub.lua'))()]] end
+if not getgenv().kittyloaded and identifyexecutor~= "Solara" then queue_on_teleport[[loadstring(game:HttpGet('https://whimper.xyz/cathub.lua'))()]] end
 getgenv().kittyloaded=true
 
 --[[
