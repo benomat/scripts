@@ -87,10 +87,10 @@ end
 local key = "test" -- put a supr secure key 🤔
 local encryptedText = game:HttpGet("https://pastebin.com/raw/jMTKJAfR") --put link to your file thingy
 local hwids = decrypt(encryptedText, key)   
-if ishooked and (ishooked(gethwid) or ishooked(ipairs) or ishooked(string.char)) then
-    print'most basic anti bypass 😸' -- you can also freeze their game or something silly here
-    return 
-end 
+-- if ishooked and (ishooked(gethwid) or ishooked(ipairs) or ishooked(string.char)) then
+--     print'most basic anti bypass 😸' -- you can also freeze their game or something silly here
+--     return 
+-- end 
 if tablefind(stringsplit(hwids, ",") , gethwid()) then
     print("authenticated") 
     -- put your script here
