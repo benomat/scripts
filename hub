@@ -82,8 +82,8 @@ if g==111958650 then --arsenal
     -- if AskLoad("There's a script available which has kill all and other cool features.\nKill all is very detected tho and will get you banned.\nDo you still wanna use it?") then  loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/b95e8fecdf824e41f4a030044b055add.lua'))() end
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/wuhaz/arsenal/main/main.lua'))()
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/Insertl/QuotasHub/main/BETAv1.3'))()
-elseif table.find({3525075510,5675104029,5521255650,5954484868,5567917599,5799867123,5747480325,4724071612,5990372955,5656903219,5200655965,5901557156,1451439645,3508322461,5754877170,4568630521,3457700596,5991139138,3990106548,5924989485,2655311011,5976020326,1782832995},g) then
-    getgenv().plsnoalert=true --Project Mugetsu, Anime FantasyTD, Anime Destiny, Anime Crossover Defense, Unlimited Battlegrounds, UnknownRNG, Tongue Battles, Sorcerer Battlegrounds,Roller Skate Racing, Project XL, Project Smash, Magic RNG, Hunter Era,Heroes Battlegrounds, Fruit Battlegrounds, Football RNG, Baddies, Anime Dimensions Simulator, Admin RNG, A Universal Time
+elseif table.find({3525075510,5675104029,5521255650,5954484868,5567917599,5799867123,5747480325,4724071612,5990372955,5656903219,5200655965,5901557156,1451439645,3508322461,5754877170,4568630521,3457700596,5991139138,3990106548,5924989485,2655311011,5976020326,1782832995,5449223346},g) then
+    getgenv().plsnoalert=true --Project Mugetsu, Anime FantasyTD, Anime Destiny, Anime Crossover Defense, Unlimited Battlegrounds, UnknownRNG, Tongue Battles, Sorcerer Battlegrounds,Roller Skate Racing, Project XL, Project Smash, Magic RNG, Hunter Era,Heroes Battlegrounds, Fruit Battlegrounds, Football RNG, Baddies, Anime Dimensions Simulator, Admin RNG, A Universal Time, Anime World Tower Defense
     loadstring(game:HttpGet('https://raw.githubusercontent.com/cracklua/cracks/m/demonic'))()
 elseif (p==10919241870 or g==3938551440) then --Rarity Factory Tycoon
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/RarityFactoryTycoon.lua'))()
