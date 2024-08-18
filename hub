@@ -146,8 +146,8 @@ elseif p==13822889 then --lumbertycoon 2
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/paste/LT2.lua'))()
     sNotify("You can scroll on the left side btw!",120)
 elseif (p==142823291 or g==66654135) then --Murder Mystery 2 mm2
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/mezzopera/OMEN-MM2/main/omenmm2'))()
-    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/loader.lua'))()
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/mezzopera/OMEN-MM2/main/omenmm2'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/loader.lua'))()
 elseif (p==8737899170 or g==3317771874) then --Pet Simulator 99
 for i=1,99,1 do
     if pcall(function()getfenv(i)end) then print(i) end
