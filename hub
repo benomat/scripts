@@ -108,7 +108,7 @@ elseif p==1537690962 then --beeswarm simulator
     keyrblx()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/BaconBossScript/BeeSwarmSim/main/BeeSwarmSim'))()
 elseif g==4777817887 then --bladeball
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/BladeBallLoader.lua'))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cracklua/cracks/m/FFJV3"))'gg'
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/autoparry.lua'))()
     -- keypress(290)
 elseif (p==2753915549 or g==994732206) then--and (identifyexecutor()=="Solara" or identifyexecutor()=="Wave")then --bloxfruits solara /// wave can removed once they fix their shit
