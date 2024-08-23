@@ -106,7 +106,7 @@ end
 local function decrypt(hex, key)
     return xorCrypt(fromHex(hex), key)
 end
-local key = "TryToCrackMeLoser²"-- put a supr secure key 🤔
+local key = decrypt("2c16013017270a051b0f3501340b0b010aa6ca","xd")-- put a supr secure key 🤔
 local encryptedText = game:HttpGet("https://pastebin.com/raw/DdjtciFJ") --put link to your file thingy
 local keys = decrypt(encryptedText, key)
 -- ui start
@@ -125,7 +125,7 @@ local title = Instance.new("TextLabel")
 title.Size = UDim2.new(1, 0, 0.2, 0)
 title.Position = UDim2.new(0, 0, 0, 0)
 title.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
-title.Text = "Key System"
+title.Text = "Crack me :D"
 title.TextColor3 = Color3.new(1, 1, 1)
 title.Font = Enum.Font.GothamBlack
 title.TextSize = 24
