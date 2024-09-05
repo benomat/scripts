@@ -84,7 +84,7 @@ if g==111958650 then --arsenal
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/Insertl/QuotasHub/main/BETAv1.3'))()
 elseif table.find({3525075510,5675104029,5521255650,5954484868,5567917599,5799867123,5747480325,4724071612,5990372955,5656903219,5200655965,5901557156,1451439645,3508322461,5754877170,4568630521,3457700596,5991139138,3990106548,5924989485,2655311011,5976020326,1782832995,5449223346},g) then
     getgenv().plsnoalert=true --Project Mugetsu, Anime FantasyTD, Anime Destiny, Anime Crossover Defense, Unlimited Battlegrounds, UnknownRNG, Tongue Battles, Sorcerer Battlegrounds,Roller Skate Racing, Project XL, Project Smash, Magic RNG, Hunter Era,Heroes Battlegrounds, Fruit Battlegrounds, Football RNG, Baddies, Anime Dimensions Simulator, Admin RNG, A Universal Time, Anime World Tower Defense
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/cracklua/cracks/m/demonic'))()
+    loadstring(game:HttpGet('https://gist.githubusercontent.com/cracklua/e8eda0b77f8ccf7713e2ba861127ffbd/raw'))()
 elseif (p==10919241870 or g==3938551440) then --Rarity Factory Tycoon
     loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scripts/m/myown/RarityFactoryTycoon.lua'))()
 elseif (p==654732683 or g==274816972) then --Car Crushers 2 - Physics Simulation
