@@ -2,7 +2,7 @@ window = loadstring(game:HttpGet('https://raw.githubusercontent.com/benomat/scri
 tab=window:CreateTab("Main")
 TPTab=window:CreateTab("Teleports")
 MISCTAB=window:CreateTab("Misc")
-
+-- hi
 local LocalPlayer = game.Players.LocalPlayer
 function erm(t)
     return t[1]
