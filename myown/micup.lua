@@ -302,7 +302,11 @@ Stalltab:CreateButton("Steal stalls (you can walk up to a stall and get it)",fun
         stall.ProxPart.ProximityPrompt.Enabled=true
     end
 end)
+<<<<<<< HEAD
 Stalltab:CreateToggle("Instant stall prompts",false,function(state)
+=======
+Stalltab:CreateToggle("Insant stall prompts",false,function(state)
+>>>>>>> 42c64507a23998390df9c81bbba2c2a649006da6
     if state then ugh=0 else ugh=.5 end
     for _,stall in pairs(Workspace.Stalls:GetChildren()) do
         stall.ProxPart.ProximityPrompt.HoldDuration=ugh
