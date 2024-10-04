@@ -21,14 +21,14 @@ function LibWrapper:CreateWindow(name)
         local tabGroup = window:TabGroup()
         local tabGroupWrapper = {}
         function tabGroupWrapper:CreateTab(tabName)
-            local tab = tabGroup:CreateTab(tabName)
+            local tab = tabGroup:Tab(tabName)
 
             local tabWrapper = {}
             function tabWrapper:CreateSection(side)
                 local section=tab:Section({side=side})
                 local sectionWrapper={}
                 function sectionWrapper:CreateButton(name, callback)
-                    local Button = section:CreateButton({
+                    local Button = section:Button({
                         Name = name,
                         Callback = callback
                     })
@@ -41,7 +41,7 @@ function LibWrapper:CreateWindow(name)
                 end
                 sectionWrapper.AddButton = sectionWrapper.CreateButton
                 function sectionWrapper:CreateSection(name)
-                    local Section = section:CreateSection(name)
+                    local Section = section:Section(name)
                     local sectionWrapper = {}
                     function sectionWrapper:Set(name)
                         Section:Set(name)
@@ -50,7 +50,7 @@ function LibWrapper:CreateWindow(name)
                 end
                 sectionWrapper.AddSection = sectionWrapper.CreateSection
                 function sectionWrapper:CreateToggle(name, currentValue, callback)
-                    local Toggle = section:CreateToggle({
+                    local Toggle = section:Toggle({
                         Name = name,
                         CurrentValue = currentValue,
                         Callback = callback
@@ -65,7 +65,7 @@ function LibWrapper:CreateWindow(name)
                 sectionWrapper.AddToggle = sectionWrapper.CreateToggle
 
                 function sectionWrapper:CreateColorPicker(name, color, callback)
-                    local ColorPicker = section:CreateColorPicker({
+                    local ColorPicker = section:ColorPicker({
                         Name = name,
                         Color = color,
                         Callback = callback
@@ -80,7 +80,7 @@ function LibWrapper:CreateWindow(name)
                 sectionWrapper.AddColorPicker = sectionWrapper.CreateColorPicker
 
                 function sectionWrapper:CreateSlider(name, range, increment, suffix, currentValue, callback)
-                    local Slider = section:CreateSlider({
+                    local Slider = section:Slider({
                         Name = name,
                         Range = range,
                         Increment = increment,
@@ -98,7 +98,7 @@ function LibWrapper:CreateWindow(name)
                 sectionWrapper.AddSlider = sectionWrapper.CreateSlider
 
                 function sectionWrapper:CreateInput(name, placeholderText, removeTextAfterFocusLost, callback)
-                    local Input = section:CreateInput({
+                    local Input = section:Input({
                         Name = name,
                         PlaceholderText = placeholderText,
                         RemoveTextAfterFocusLost = removeTextAfterFocusLost,
@@ -109,7 +109,7 @@ function LibWrapper:CreateWindow(name)
                 sectionWrapper.AddInput = sectionWrapper.CreateInput
 
                 function sectionWrapper:CreateDropdown(name, options, currentOption, multipleOptions, callback)
-                    local Dropdown = section:CreateDropdown({
+                    local Dropdown = section:Dropdown({
                         Name = name,
                         Options = options,
                         CurrentOption = currentOption,
@@ -126,7 +126,7 @@ function LibWrapper:CreateWindow(name)
                 sectionWrapper.AddDropdown = sectionWrapper.CreateDropdown
 
                 function sectionWrapper:CreateKeybind(name, currentKeybind, holdToInteract, callback)
-                    local Keybind = section:CreateKeybind({
+                    local Keybind = section:Keybind({
                         Name = name,
                         CurrentKeybind = currentKeybind,
                         HoldToInteract = holdToInteract,
@@ -142,7 +142,7 @@ function LibWrapper:CreateWindow(name)
                 sectionWrapper.AddKeybind = sectionWrapper.CreateKeybind
 
                 function sectionWrapper:CreateLabel(name)
-                    local Label = section:CreateLabel(name)
+                    local Label = section:Label(name)
 
                     local labelWrapper = {}
                     function labelWrapper:Set(name)
@@ -153,7 +153,7 @@ function LibWrapper:CreateWindow(name)
                 sectionWrapper.AddLabel = sectionWrapper.CreateLabel
 
                 function sectionWrapper:CreateParagraph(title, content)
-                    local Paragraph = section:CreateParagraph({
+                    local Paragraph = section:Paragraph({
                         Title = title,
                         Content = content
                     })
